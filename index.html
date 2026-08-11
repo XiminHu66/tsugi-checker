@@ -6,6 +6,9 @@
   <meta name="theme-color" content="#090b10" />
   <title>Tsugi · 小说与漫画追更</title>
   <meta name="description" content="部署在 GitHub Pages 的小说与漫画每日追更面板" />
+  <script>
+    (()=>{const saved=localStorage.getItem('tsugi-theme');const theme=saved||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark');document.documentElement.dataset.theme=theme;})();
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="alternate" type="application/atom+xml" title="Tsugi Updates" href="data/feed.xml" />
 </head>
@@ -36,6 +39,11 @@
             <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/><path d="M6.5 8h0M17.5 8h0"/></svg></span>
             <span class="nav-copy"><span>我的书架</span><small>Cover shelf</small></span>
             <em id="libraryCount">0</em>
+          </button>
+          <button class="nav-item" data-tab="news">
+            <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h6M7 12h10M7 16h7"/></svg></span>
+            <span class="nav-copy"><span>ACG 新闻</span><small>News desk</small></span>
+            <em id="newsCount">0</em>
           </button>
           <button class="nav-item" data-tab="sources">
             <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="m8 11 8-4M8 13l8 4"/></svg></span>
@@ -78,6 +86,10 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
             <input id="search" placeholder="搜索作品、章节或来源" />
           </label>
+          <button id="themeBtn" class="icon-btn theme-btn" title="切换明暗主题" aria-label="切换明暗主题">
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8 8 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
           <button id="refreshBtn" class="icon-btn" title="刷新页面数据" aria-label="刷新">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M18.6 9A7 7 0 0 0 6.2 6.2L4 8M20 16l-2.2 1.8A7 7 0 0 1 5.4 15"/></svg>
           </button>
@@ -108,32 +120,59 @@
           </article>
         </div>
 
-        <section class="spotlight-panel">
-          <div class="section-head compact-head">
-            <div>
-              <p class="section-kicker">SPOTLIGHT</p>
-              <h2>最近更新作品</h2>
-            </div>
+        <div class="flow-switch-wrap">
+          <div class="flow-switch" id="flowSwitch">
+            <button class="flow-option active" data-flow="personal"><span>我的追更</span><small>已订阅作品</small></button>
+            <button class="flow-option" data-flow="site"><span>站点最新</span><small>全站发现</small></button>
           </div>
-          <div id="spotlightRail" class="spotlight-rail"></div>
-        </section>
-
-        <div class="feed-head modern-feed-head">
-          <div>
-            <h2>最近更新</h2>
-            <p>按抓取时间排序，点击条目即可标记为已读。</p>
-          </div>
-          <div class="toolbar">
-            <div class="chips" id="filterChips">
-              <button class="chip active" data-filter="all">全部</button>
-              <button class="chip" data-filter="novel">小说</button>
-              <button class="chip" data-filter="manga">漫画</button>
-              <button class="chip" data-filter="unread">未读</button>
-            </div>
-            <button id="markAllRead" class="text-btn">全部已读</button>
-          </div>
+          <p id="flowHint">只显示你加入 <code>library.json</code> 的作品更新。</p>
         </div>
-        <div id="updatesList" class="updates-list"></div>
+
+        <div id="personalFlow" class="flow-pane active">
+          <section class="spotlight-panel">
+            <div class="section-head compact-head">
+              <div>
+                <p class="section-kicker">MY SUBSCRIPTIONS</p>
+                <h2>最近更新作品</h2>
+              </div>
+            </div>
+            <div id="spotlightRail" class="spotlight-rail"></div>
+          </section>
+
+          <div class="feed-head modern-feed-head">
+            <div>
+              <h2>我的更新</h2>
+              <p>按检测时间排序，点击条目即可标记为已读。</p>
+            </div>
+            <div class="toolbar">
+              <div class="chips" id="filterChips">
+                <button class="chip active" data-filter="all">全部</button>
+                <button class="chip" data-filter="novel">小说</button>
+                <button class="chip" data-filter="manga">漫画</button>
+                <button class="chip" data-filter="unread">未读</button>
+              </div>
+              <button id="markAllRead" class="text-btn">全部已读</button>
+            </div>
+          </div>
+          <div id="updatesList" class="updates-list"></div>
+        </div>
+
+        <div id="siteFlow" class="flow-pane">
+          <div class="feed-head modern-feed-head site-feed-head">
+            <div>
+              <p class="section-kicker">DISCOVER / LATEST</p>
+              <h2>站点最新更新</h2>
+              <p>汇总各来源公开“最新更新”页，不需要加入你的书架。</p>
+            </div>
+            <div class="chips" id="siteFilterChips">
+              <button class="chip active" data-site-filter="all">全部</button>
+              <button class="chip" data-site-filter="novel">小说</button>
+              <button class="chip" data-site-filter="manga">漫画</button>
+            </div>
+          </div>
+          <div id="siteSourceBar" class="source-filter-bar"></div>
+          <div id="siteUpdatesGrid" class="site-updates-grid"></div>
+        </div>
       </section>
 
       <section id="library" class="tab">
@@ -145,6 +184,24 @@
           </div>
         </div>
         <div id="libraryGrid" class="library-grid"></div>
+      </section>
+
+      <section id="news" class="tab">
+        <div class="section-head news-head">
+          <div>
+            <p class="section-kicker">ACG NEWS DESK</p>
+            <h2>ACG 新闻</h2>
+            <p>中文综合、日本游戏与动画漫画新闻，随每日 Action 一起缓存。</p>
+          </div>
+          <div class="chips" id="newsFilterChips">
+            <button class="chip active" data-news-filter="all">全部</button>
+            <button class="chip" data-news-filter="gnn">GNN</button>
+            <button class="chip" data-news-filter="4gamer">4Gamer</button>
+            <button class="chip" data-news-filter="ann">ANN</button>
+          </div>
+        </div>
+        <div id="newsHero" class="news-hero"></div>
+        <div id="newsGrid" class="news-grid"></div>
       </section>
 
       <section id="sources" class="tab">
@@ -184,9 +241,9 @@
             <p>工作流每天运行并把新章节写入 <code>data/feed.json</code> 与 <code>data/feed.xml</code>。Atom 地址可直接加入 Feedly、FreshRSS、Reeder 等阅读器。</p>
           </article>
           <article class="panel">
-            <span class="panel-number">04</span><span class="panel-kicker">LOCAL STATE</span>
-            <h3>已读状态</h3>
-            <p>“已读 / 未读”保存在当前浏览器的 LocalStorage，不提交到 GitHub，也不会影响其他设备。</p>
+            <span class="panel-number">04</span><span class="panel-kicker">CONTENT & THEME</span>
+            <h3>公开内容与主题</h3>
+            <p>站点最新与 ACG 新闻源配置在 <code>config/content.json</code>。明 / 暗主题与“已读 / 未读”状态都保存在当前浏览器 LocalStorage。</p>
           </article>
         </div>
       </section>

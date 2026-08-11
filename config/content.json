@@ -1,0 +1,66 @@
+{
+  "site_updates": [
+    {
+      "id": "manhuagui",
+      "label": "漫画柜",
+      "type": "manga",
+      "url": "https://m.manhuagui.com/update/",
+      "fetch_mode": "auto",
+      "limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "linovelib",
+      "label": "BiliNovel / Linovelib",
+      "type": "novel",
+      "url": "https://tw.linovelib.com/wenku/",
+      "fetch_mode": "auto",
+      "limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "wenku8",
+      "label": "轻小说文库 · Wenku8",
+      "type": "novel",
+      "url": "https://www.wenku8.net/modules/article/toplist.php?sort=lastupdate",
+      "fetch_mode": "auto",
+      "limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "copymanga",
+      "label": "拷贝漫画 · CopyManga",
+      "type": "manga",
+      "url": "https://www.mangacopy.com/",
+      "fetch_mode": "auto",
+      "limit": 24,
+      "enabled": true
+    }
+  ],
+  "news": [
+    {
+      "id": "gnn",
+      "label": "巴哈姆特 GNN",
+      "category": "中文综合",
+      "url": "https://gnn.gamer.com.tw/rss.xml",
+      "limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "4gamer",
+      "label": "4Gamer",
+      "category": "日本游戏",
+      "url": "https://www.4gamer.net/rss/news_topics.xml",
+      "limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "ann",
+      "label": "Anime News Network",
+      "category": "动画漫画",
+      "url": "https://www.animenewsnetwork.com/all/rss.xml?ann-edition=us",
+      "limit": 24,
+      "enabled": true
+    }
+  ]
+}

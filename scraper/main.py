@@ -6,9 +6,10 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 from sources import parse, SOURCE_LABELS
+from aggregators import parse_site_latest, fetch_news_feed
 
 ROOT=Path(__file__).resolve().parents[1]
-CONFIG=ROOT/'config/library.json'; STATE=ROOT/'data/state.json'; FEED=ROOT/'data/feed.json'; XML=ROOT/'data/feed.xml'
+CONFIG=ROOT/'config/library.json'; CONTENT=ROOT/'config/content.json'; STATE=ROOT/'data/state.json'; FEED=ROOT/'data/feed.json'; XML=ROOT/'data/feed.xml'; SITE_FEED=ROOT/'data/site-updates.json'; NEWS_FEED=ROOT/'data/acg-news.json'
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36 TsugiUpdateChecker/1.0"
 
 def now(): return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
@@ -51,26 +52,62 @@ def build_atom(feed):
         entries.append(f'''  <entry><title>{xml_escape(u.get('title'))} · {xml_escape(u.get('chapter_title'))}</title><id>urn:tsugi:{xml_escape(u.get('id'))}</id><updated>{xml_escape(u.get('detected_at'))}</updated><link href="{xml_escape(u.get('chapter_url') or u.get('url'))}"/><summary>{xml_escape(u.get('source_label') or u.get('source'))}</summary></entry>''')
     return '<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom"><title>Tsugi 小说与漫画更新流</title><id>urn:tsugi:feed</id><updated>'+xml_escape(updated)+'</updated>\n'+'\n'.join(entries)+'\n</feed>\n'
 
+def refresh_site_updates(content_cfg, generated):
+    items=[]; statuses={}
+    for src in content_cfg.get('site_updates',[]):
+        if not src.get('enabled',True): continue
+        sid=src.get('id','generic'); label=src.get('label',sid)
+        try:
+            html=fetch(src['url'],src.get('fetch_mode','auto'))
+            found=parse_site_latest(html,src['url'],sid,label,src.get('type','novel'),src.get('limit',24))
+            if not found: raise RuntimeError('no latest items detected')
+            for row in found: row['fetched_at']=generated
+            items.extend(found)
+            statuses[sid]={'label':label,'ok':True,'count':len(found),'checked_at':generated}
+            print(f"SITE {sid}: {len(found)} items")
+        except Exception as e:
+            statuses[sid]={'label':label,'ok':False,'count':0,'checked_at':generated,'error':f'{type(e).__name__}: {e}'}
+            print(f"SITE ERR {sid}: {e}",file=sys.stderr)
+    SITE_FEED.write_text(json.dumps({'generated_at':generated,'items':items[:120],'sources':statuses},ensure_ascii=False,indent=2)+'\n','utf-8')
+
+def refresh_news(content_cfg, generated):
+    items=[]; statuses={}
+    for src in content_cfg.get('news',[]):
+        if not src.get('enabled',True): continue
+        sid=src.get('id','news'); label=src.get('label',sid)
+        try:
+            found=fetch_news_feed(src['url'],label,src.get('category','ACG'),sid,src.get('limit',24),user_agent=UA)
+            items.extend(found)
+            statuses[sid]={'label':label,'ok':True,'count':len(found),'checked_at':generated}
+            print(f"NEWS {sid}: {len(found)} items")
+        except Exception as e:
+            statuses[sid]={'label':label,'ok':False,'count':0,'checked_at':generated,'error':f'{type(e).__name__}: {e}'}
+            print(f"NEWS ERR {sid}: {e}",file=sys.stderr)
+    items.sort(key=lambda x:x.pop('_sort',0),reverse=True)
+    seen=set(); dedup=[]
+    for row in items:
+        key=row.get('url') or row.get('title')
+        if key in seen: continue
+        seen.add(key); dedup.append(row)
+    NEWS_FEED.write_text(json.dumps({'generated_at':generated,'items':dedup[:72],'sources':statuses},ensure_ascii=False,indent=2)+'\n','utf-8')
+
 def main():
-    cfg=load(CONFIG,{'items':[]}); state=load(STATE,{'items':{}}); oldfeed=load(FEED,{'updates':[]})
+    cfg=load(CONFIG,{'items':[]}); content_cfg=load(CONTENT,{'site_updates':[],'news':[]}); state=load(STATE,{'items':{}}); oldfeed=load(FEED,{'updates':[]})
     generated=now(); updates=list(oldfeed.get('updates',[])); item_out={}; sources={}
     enabled=[x for x in cfg.get('items',[]) if x.get('enabled',True)]
     if not enabled:
-        print('No enabled items. Add entries to config/library.json.')
-        return
+        print('No enabled library items. Skipping personal tracking; public feeds will still refresh.')
     for idx,item in enumerate(enabled):
         sid=item.get('source','generic'); sources.setdefault(sid,{'label':SOURCE_LABELS.get(sid,sid),'ok':0,'failed':0,'total':0}); sources[sid]['total']+=1
         prev=state.setdefault('items',{}).get(item['id'],{})
         try:
             html=fetch(item['url'],item.get('fetch_mode','auto'))
             p=parse(html,item['url'],item)
-            # Some detail pages only link to a catalog. Follow it once when no chapter is found.
             if not p.latest_chapter and p.catalog_url and p.catalog_url!=item['url']:
                 html2=fetch(p.catalog_url,item.get('fetch_mode','auto')); p2=parse(html2,p.catalog_url,item)
                 p.title=p.title or p2.title; p.cover=p.cover or p2.cover; p.latest_chapter=p2.latest_chapter; p.latest_url=p2.latest_url; p.chapter_count=p2.chapter_count
             key=(p.latest_url or '')+'|'+(p.latest_chapter or '')+'|'+str(p.chapter_count)
             prevkey=prev.get('key')
-            # First successful scrape initializes state without flooding the feed.
             if prevkey and key and key!=prevkey:
                 updates.insert(0,make_update(item,p,generated))
             current={'key':key,'latest_chapter':p.latest_chapter,'latest_url':p.latest_url,'chapter_count':p.chapter_count,'title':p.title,'cover':p.cover,'checked_at':generated,'ok':True}
@@ -80,12 +117,13 @@ def main():
             current={**prev,'checked_at':generated,'ok':False,'error':f'{type(e).__name__}: {e}'}; state['items'][item['id']]=current; item_out[item['id']]=current; sources[sid]['failed']+=1
             print(f"ERR {item['id']}: {e}",file=sys.stderr)
         time.sleep(float(item.get('delay',1.5)))
-    # Remove duplicate update IDs while preserving order.
     dedup=[]; seen=set()
     for u in updates:
         if u.get('id') in seen: continue
         seen.add(u.get('id')); dedup.append(u)
     feed={'generated_at':generated,'updates':dedup[:200],'items':item_out,'sources':sources}
     STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n','utf-8'); FEED.write_text(json.dumps(feed,ensure_ascii=False,indent=2)+'\n','utf-8'); XML.write_text(build_atom(feed),'utf-8')
+    refresh_site_updates(content_cfg,generated)
+    refresh_news(content_cfg,generated)
 
 if __name__=='__main__': main()

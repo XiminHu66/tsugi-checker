@@ -59,18 +59,16 @@
 
 ## 2. 第一次初始化
 
-打开 GitHub 仓库 → **Actions** → `Update novel & manga feed` → `Run workflow`。
+打开 GitHub 仓库 → **Actions** → `Update feed & deploy Pages` → `Run workflow`。
 
 第一次成功抓取只会建立基线，不会把当前所有章节当作“新更新”。以后发现最新章节 / 章节数量变化时才会生成更新条目。
 
 ## 3. 开启 GitHub Pages
 
-仓库 → **Settings → Pages**：
+仓库 → **Settings → Pages → Build and deployment**：
 
-1. Source 选择 `Deploy from a branch`
-2. Branch 选择 `main`（或你的默认分支）
-3. Folder 选择 `/ (root)`
-4. 保存
+1. Source 选择 `GitHub Actions`
+2. 保存即可；`.github/workflows/update-feed.yml` 会在抓取完成后直接部署最新静态站点
 
 之后访问 `https://你的用户名.github.io/仓库名/`。
 
@@ -105,3 +103,23 @@ python -m http.server 8000
 ```
 
 然后访问 `http://localhost:8000`。
+
+## v3 content streams
+
+The dashboard now separates three content streams:
+
+- **我的追更**: changes detected only for titles in `config/library.json`.
+- **站点最新**: public latest-update pages from enabled sources in `config/content.json`.
+- **ACG 新闻**: RSS headlines cached by GitHub Actions into `data/acg-news.json`.
+
+Default public latest sources: Manhuagui, Linovelib, Wenku8 and CopyManga. A failure from one public source does not stop the rest of the workflow.
+
+Default news feeds:
+
+- 巴哈姆特 GNN — Chinese ACG/general gaming coverage
+- 4Gamer — Japanese game/industry coverage
+- Anime News Network — anime/manga coverage
+
+Edit `config/content.json` to enable, disable or replace public content sources.
+
+The light/dark theme is a front-end preference stored in browser LocalStorage. It does not modify repository data.

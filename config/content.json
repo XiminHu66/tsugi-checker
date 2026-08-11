@@ -7,6 +7,7 @@
       "url": "https://m.manhuagui.com/update/",
       "fetch_mode": "auto",
       "limit": 24,
+      "enrich": false,
       "enabled": true
     },
     {
@@ -15,7 +16,24 @@
       "type": "novel",
       "url": "https://tw.linovelib.com/wenku/",
       "fetch_mode": "auto",
+      "detail_fetch_mode": "requests",
+      "chapter_order": "first",
       "limit": 24,
+      "enrich": true,
+      "enrich_limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "copymanga",
+      "label": "拷贝漫画 · CopyManga",
+      "type": "manga",
+      "url": "https://www.mangacopy.com/",
+      "fetch_mode": "auto",
+      "detail_fetch_mode": "requests",
+      "chapter_order": "first",
+      "limit": 24,
+      "enrich": true,
+      "enrich_limit": 12,
       "enabled": true
     },
     {
@@ -25,40 +43,39 @@
       "url": "https://www.wenku8.net/modules/article/toplist.php?sort=lastupdate",
       "fetch_mode": "auto",
       "limit": 24,
-      "enabled": true
-    },
-    {
-      "id": "copymanga",
-      "label": "拷贝漫画 · CopyManga",
-      "type": "manga",
-      "url": "https://www.mangacopy.com/",
-      "fetch_mode": "auto",
-      "limit": 24,
-      "enabled": true
+      "enabled": false
     }
   ],
   "news": [
     {
       "id": "gnn",
       "label": "巴哈姆特 GNN",
-      "category": "中文综合",
+      "category": "繁中 ACG",
       "url": "https://gnn.gamer.com.tw/rss.xml",
       "limit": 24,
       "enabled": true
     },
     {
-      "id": "4gamer",
-      "label": "4Gamer",
-      "category": "日本游戏",
-      "url": "https://www.4gamer.net/rss/news_topics.xml",
+      "id": "gamebase",
+      "label": "游戏基地 Gamebase",
+      "category": "繁中 ACG",
+      "url": "https://rsshub.app/gamebase/news",
       "limit": 24,
       "enabled": true
     },
     {
-      "id": "ann",
-      "label": "Anime News Network",
-      "category": "动画漫画",
-      "url": "https://www.animenewsnetwork.com/all/rss.xml?ann-edition=us",
+      "id": "yystv",
+      "label": "游研社",
+      "category": "中文游戏文化",
+      "url": "https://rsshub.app/yystv/docs",
+      "limit": 24,
+      "enabled": true
+    },
+    {
+      "id": "a9vg",
+      "label": "A9VG 游戏新闻",
+      "category": "中文游戏",
+      "url": "https://rsshub.app/a9vg/a9vg",
       "limit": 24,
       "enabled": true
     }

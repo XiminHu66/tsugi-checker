@@ -1,8 +1,8 @@
 from __future__ import annotations
-import json, os, sys, time, hashlib
+import json, os, sys, time, hashlib, re
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 import requests
 from bs4 import BeautifulSoup
 from sources import parse, SOURCE_LABELS
@@ -52,6 +52,51 @@ def build_atom(feed):
         entries.append(f'''  <entry><title>{xml_escape(u.get('title'))} · {xml_escape(u.get('chapter_title'))}</title><id>urn:tsugi:{xml_escape(u.get('id'))}</id><updated>{xml_escape(u.get('detected_at'))}</updated><link href="{xml_escape(u.get('chapter_url') or u.get('url'))}"/><summary>{xml_escape(u.get('source_label') or u.get('source'))}</summary></entry>''')
     return '<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom"><title>Tsugi 小说与漫画更新流</title><id>urn:tsugi:feed</id><updated>'+xml_escape(updated)+'</updated>\n'+'\n'.join(entries)+'\n</feed>\n'
 
+
+def enrich_site_rows(found, src):
+    """Optionally open work detail pages to resolve a concrete latest chapter/episode and direct URL."""
+    if not src.get('enrich', False):
+        return found
+    limit=min(len(found), int(src.get('enrich_limit', len(found))))
+    sid=src.get('id','generic')
+    for i,row in enumerate(found[:limit]):
+        try:
+            detail=fetch(row['url'], src.get('detail_fetch_mode','requests'))
+            item={
+                'id':row['id'], 'title':row.get('title'), 'url':row['url'],
+                'source':sid, 'type':row.get('type',src.get('type','novel')),
+                'chapter_order':src.get('chapter_order','first')
+            }
+            # Linovelib exposes a dedicated “最后更新·日期 章节名” link on work pages.
+            if sid == 'linovelib':
+                soup=BeautifulSoup(detail,'lxml')
+                latest_anchor=None
+                for a in soup.select('a[href]'):
+                    text=' '.join(a.stripped_strings)
+                    if re.search(r'(?:最后|最後)更新', text):
+                        latest_anchor=a; break
+                if latest_anchor:
+                    text=' '.join(latest_anchor.stripped_strings)
+                    m=re.search(r'(?:最后|最後)更新[·：:\s]*(20\d{2}[-/.]\d{1,2}[-/.]\d{1,2})?\s*(.*)', text)
+                    if m:
+                        if m.group(1): row['updated_text']=m.group(1)
+                        if m.group(2): row['latest']=m.group(2).strip()
+                    row['latest_url']=urljoin(row['url'], latest_anchor.get('href') or '')
+            parsed=parse(detail,row['url'],item)
+            if parsed.latest_chapter and (not row.get('latest') or row.get('latest')=='最新更新'):
+                row['latest']=parsed.latest_chapter
+            if parsed.latest_url and not row.get('latest_url'):
+                row['latest_url']=parsed.latest_url
+            if parsed.cover and not row.get('cover'):
+                row['cover']=parsed.cover
+            if parsed.chapter_count:
+                row['chapter_count']=parsed.chapter_count
+        except Exception as e:
+            row['enrich_error']=f'{type(e).__name__}: {e}'
+            print(f"SITE ENRICH WARN {sid} {row.get('title')}: {e}", file=sys.stderr)
+        time.sleep(float(src.get('detail_delay',0.25)))
+    return found
+
 def refresh_site_updates(content_cfg, generated):
     items=[]; statuses={}
     for src in content_cfg.get('site_updates',[]):
@@ -61,6 +106,7 @@ def refresh_site_updates(content_cfg, generated):
             html=fetch(src['url'],src.get('fetch_mode','auto'))
             found=parse_site_latest(html,src['url'],sid,label,src.get('type','novel'),src.get('limit',24))
             if not found: raise RuntimeError('no latest items detected')
+            found=enrich_site_rows(found,src)
             for row in found: row['fetched_at']=generated
             items.extend(found)
             statuses[sid]={'label':label,'ok':True,'count':len(found),'checked_at':generated}
@@ -108,9 +154,10 @@ def main():
                 p.title=p.title or p2.title; p.cover=p.cover or p2.cover; p.latest_chapter=p2.latest_chapter; p.latest_url=p2.latest_url; p.chapter_count=p2.chapter_count
             key=(p.latest_url or '')+'|'+(p.latest_chapter or '')+'|'+str(p.chapter_count)
             prevkey=prev.get('key')
-            if prevkey and key and key!=prevkey:
+            changed=bool(prevkey and key and key!=prevkey)
+            if changed:
                 updates.insert(0,make_update(item,p,generated))
-            current={'key':key,'latest_chapter':p.latest_chapter,'latest_url':p.latest_url,'chapter_count':p.chapter_count,'title':p.title,'cover':p.cover,'checked_at':generated,'ok':True}
+            current={'key':key,'latest_chapter':p.latest_chapter,'latest_url':p.latest_url,'chapter_count':p.chapter_count,'title':p.title,'cover':p.cover,'checked_at':generated,'changed_at':generated if changed else prev.get('changed_at'),'ok':True}
             state['items'][item['id']]=current; item_out[item['id']]=current; sources[sid]['ok']+=1
             print(f"OK  {item['id']}: {p.latest_chapter or 'no chapter detected'}")
         except Exception as e:

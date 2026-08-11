@@ -9,6 +9,17 @@
   <script>
     (()=>{const saved=localStorage.getItem('tsugi-theme');const theme=saved||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark');document.documentElement.dataset.theme=theme;})();
   </script>
+  <style>
+    .library-history-head{margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+    .library-new{background:rgba(143,125,255,.24)!important;border-color:rgba(143,125,255,.4)!important;color:#e9e4ff!important}
+    .book-open{display:inline-flex;align-items:center;justify-content:center;width:max-content;max-width:100%;height:32px;padding:0 11px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.08);color:#eef2f8;font-size:11px;font-weight:800;backdrop-filter:blur(10px)}
+    .book-card:hover .book-open{background:rgba(255,255,255,.14)}
+    .site-update-card .site-meta:last-child{justify-content:space-between;gap:10px}
+    .site-update-card .site-meta:last-child span:last-child{font-weight:700;color:var(--text-soft)}
+    [data-theme="light"] .library-new{background:rgba(112,91,244,.13)!important;border-color:rgba(112,91,244,.25)!important;color:#6253d7!important}
+    [data-theme="light"] .book-open{background:rgba(255,255,255,.72);color:#3f4857;border-color:rgba(20,28,40,.10)}
+    @media(max-width:700px){.library-history-head{margin-top:26px}.library-history-head .toolbar{width:100%}}
+  </style>
   <link rel="stylesheet" href="styles.css" />
   <link rel="alternate" type="application/atom+xml" title="Tsugi Updates" href="data/feed.xml" />
 </head>
@@ -79,7 +90,7 @@
         <div class="title-wrap">
           <p class="eyebrow">TSUGI / MODERN READING DASHBOARD</p>
           <h1 id="pageTitle">更新流</h1>
-          <p class="page-subtitle" id="pageSubtitle">集中查看今天新增的小说章节与漫画话数。</p>
+          <p class="page-subtitle" id="pageSubtitle">汇总各小说 / 漫画来源最新更新，并解析最新章节与话数。</p>
         </div>
         <div class="top-actions">
           <label class="search-wrap">
@@ -99,91 +110,70 @@
       <section id="updates" class="tab active">
         <div class="hero-row">
           <article class="stat-card stat-primary">
-            <div class="stat-top"><span>今日更新</span><div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></div></div>
+            <div class="stat-top"><span>本次抓取</span><div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></div></div>
             <strong id="todayUpdates">0</strong>
-            <small>检测到的新章节 / 新话</small>
+            <small>各来源最新更新条目</small>
           </article>
           <article class="stat-card compact">
-            <div class="stat-top"><span>小说</span><span class="mini-dot novel-dot"></span></div>
+            <div class="stat-top"><span>小说更新</span><span class="mini-dot novel-dot"></span></div>
             <strong id="novelCount">0</strong>
-            <small>正在追更的轻小说</small>
+            <small>最新小说 / 轻小说条目</small>
           </article>
           <article class="stat-card compact">
-            <div class="stat-top"><span>漫画</span><span class="mini-dot manga-dot"></span></div>
+            <div class="stat-top"><span>漫画更新</span><span class="mini-dot manga-dot"></span></div>
             <strong id="mangaCount">0</strong>
-            <small>正在追更的漫画</small>
+            <small>最新漫画话数 / 章节</small>
           </article>
           <article class="stat-card compact sync-stat">
             <div class="stat-top"><span>上次同步</span><span class="pulse"></span></div>
             <strong class="time-stat" id="lastSync">—</strong>
-            <small>GitHub Actions 自动更新</small>
+            <small>每日自动抓取一次</small>
           </article>
         </div>
 
-        <div class="flow-switch-wrap">
-          <div class="flow-switch" id="flowSwitch">
-            <button class="flow-option active" data-flow="personal"><span>我的追更</span><small>已订阅作品</small></button>
-            <button class="flow-option" data-flow="site"><span>站点最新</span><small>全站发现</small></button>
+        <div class="feed-head modern-feed-head site-feed-head">
+          <div>
+            <p class="section-kicker">LATEST / DISCOVER</p>
+            <h2>更新流</h2>
+            <p>直接汇总漫画柜、BiliNovel / Linovelib、拷贝漫画等来源的最新更新，并尽量解析具体章节 / 话数。</p>
           </div>
-          <p id="flowHint">只显示你加入 <code>library.json</code> 的作品更新。</p>
-        </div>
-
-        <div id="personalFlow" class="flow-pane active">
-          <section class="spotlight-panel">
-            <div class="section-head compact-head">
-              <div>
-                <p class="section-kicker">MY SUBSCRIPTIONS</p>
-                <h2>最近更新作品</h2>
-              </div>
-            </div>
-            <div id="spotlightRail" class="spotlight-rail"></div>
-          </section>
-
-          <div class="feed-head modern-feed-head">
-            <div>
-              <h2>我的更新</h2>
-              <p>按检测时间排序，点击条目即可标记为已读。</p>
-            </div>
-            <div class="toolbar">
-              <div class="chips" id="filterChips">
-                <button class="chip active" data-filter="all">全部</button>
-                <button class="chip" data-filter="novel">小说</button>
-                <button class="chip" data-filter="manga">漫画</button>
-                <button class="chip" data-filter="unread">未读</button>
-              </div>
-              <button id="markAllRead" class="text-btn">全部已读</button>
-            </div>
+          <div class="chips" id="siteFilterChips">
+            <button class="chip active" data-site-filter="all">全部</button>
+            <button class="chip" data-site-filter="novel">小说</button>
+            <button class="chip" data-site-filter="manga">漫画</button>
           </div>
-          <div id="updatesList" class="updates-list"></div>
         </div>
-
-        <div id="siteFlow" class="flow-pane">
-          <div class="feed-head modern-feed-head site-feed-head">
-            <div>
-              <p class="section-kicker">DISCOVER / LATEST</p>
-              <h2>站点最新更新</h2>
-              <p>汇总各来源公开“最新更新”页，不需要加入你的书架。</p>
-            </div>
-            <div class="chips" id="siteFilterChips">
-              <button class="chip active" data-site-filter="all">全部</button>
-              <button class="chip" data-site-filter="novel">小说</button>
-              <button class="chip" data-site-filter="manga">漫画</button>
-            </div>
-          </div>
-          <div id="siteSourceBar" class="source-filter-bar"></div>
-          <div id="siteUpdatesGrid" class="site-updates-grid"></div>
-        </div>
+        <div id="siteSourceBar" class="source-filter-bar"></div>
+        <div id="siteUpdatesGrid" class="site-updates-grid"></div>
       </section>
 
       <section id="library" class="tab">
         <div class="section-head library-head">
           <div>
-            <p class="section-kicker">COLLECTION</p>
-            <h2>大封面书架</h2>
-            <p>固定追踪的所有作品，配置来自 <code>config/library.json</code>。</p>
+            <p class="section-kicker">MY SUBSCRIPTIONS</p>
+            <h2>我的书架</h2>
+            <p>这里仅显示你订阅的作品；每张卡片会显示当前最新章节 / 话数、最近检查时间与是否刚更新。</p>
           </div>
         </div>
         <div id="libraryGrid" class="library-grid"></div>
+
+        <div class="feed-head modern-feed-head library-history-head">
+          <div>
+            <p class="section-kicker">SUBSCRIPTION HISTORY</p>
+            <h2>订阅更新记录</h2>
+            <p>当订阅作品相较上次检查出现新章节 / 新话时，会记录在这里。</p>
+          </div>
+          <div class="toolbar">
+            <div class="chips" id="filterChips">
+              <button class="chip active" data-filter="all">全部</button>
+              <button class="chip" data-filter="novel">小说</button>
+              <button class="chip" data-filter="manga">漫画</button>
+              <button class="chip" data-filter="unread">未读</button>
+            </div>
+            <button id="markAllRead" class="text-btn">全部已读</button>
+          </div>
+        </div>
+        <div id="libraryUpdatesList" class="updates-list"></div>
       </section>
 
       <section id="news" class="tab">
@@ -191,13 +181,10 @@
           <div>
             <p class="section-kicker">ACG NEWS DESK</p>
             <h2>ACG 新闻</h2>
-            <p>中文综合、日本游戏与动画漫画新闻，随每日 Action 一起缓存。</p>
+            <p>仅聚合简体中文 / 繁体中文 ACG 新闻，随每日抓取一起更新。</p>
           </div>
           <div class="chips" id="newsFilterChips">
             <button class="chip active" data-news-filter="all">全部</button>
-            <button class="chip" data-news-filter="gnn">GNN</button>
-            <button class="chip" data-news-filter="4gamer">4Gamer</button>
-            <button class="chip" data-news-filter="ann">ANN</button>
           </div>
         </div>
         <div id="newsHero" class="news-hero"></div>

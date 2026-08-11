@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "example-bilinovel",
+      "type": "novel",
+      "source": "bilinovel",
+      "title": "示例：哔哩轻小说作品",
+      "url": "https://www.bilinovel.com/novel/作品ID.html",
+      "enabled": false
+    },
+    {
+      "id": "example-wenku8",
+      "type": "novel",
+      "source": "wenku8",
+      "title": "示例：轻小说文库作品",
+      "url": "https://www.wenku8.net/book/作品ID.htm",
+      "enabled": false
+    },
+    {
+      "id": "example-manhuagui",
+      "type": "manga",
+      "source": "manhuagui",
+      "title": "示例：漫画柜作品",
+      "url": "https://www.manhuagui.com/comic/作品路径/",
+      "enabled": false
+    },
+    {
+      "id": "example-copymanga",
+      "type": "manga",
+      "source": "copymanga",
+      "title": "示例：拷贝漫画作品",
+      "url": "https://www.mangacopy.com/comic/作品路径",
+      "enabled": false
+    },
+    {
+      "id": "example-generic",
+      "type": "novel",
+      "source": "generic",
+      "title": "示例：其他中文来源",
+      "url": "https://example.com/book/123",
+      "enabled": false,
+      "chapter_selector": ".chapter-list a"
+    }
+  ]
+}

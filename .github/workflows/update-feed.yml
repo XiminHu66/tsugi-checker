@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "tsugi-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/feed.json data/feed.xml data/state.json
+          git add data/feed.json data/feed.xml data/state.json data/site-updates.json data/acg-news.json
           if git diff --cached --quiet; then
             echo "No data changes"
           else
@@ -55,10 +55,9 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site/config _site/data
-          cp index.html styles.css app.js _site/
-          touch _site/.nojekyll
-          cp config/library.json _site/config/library.json
-          cp data/feed.json data/feed.xml _site/data/
+          cp index.html styles.css app.js .nojekyll _site/
+          cp config/library.json config/content.json _site/config/
+          cp data/feed.json data/feed.xml data/site-updates.json data/acg-news.json _site/data/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

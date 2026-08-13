@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T19:55:50Z",
+  "generated_at": "2026-08-13T20:16:45Z",
   "date_jst": "2026-08-14",
   "window": {
     "past_days": 7,
@@ -8,7 +8,944 @@
     "end": "2026-11-12"
   },
   "items": {
-    "mobile": [],
+    "mobile": [
+      {
+        "id": "02c7d8cf5d83e7ab",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Barbieâ¢ ãã¼ã¹ã¬ã¹ã­ã¥ã¼",
+        "url": "https://apps.apple.com/jp/app/barbie-%E3%83%9B%E3%83%BC%E3%82%B9%E3%83%AC%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC/id6736413272",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "40b861379438225c",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Caravan SandWitch",
+        "url": "https://apps.apple.com/jp/app/caravan-sandwitch/id6744115235",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "3cb91979202698cc",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Cascadou",
+        "url": "https://apps.apple.com/jp/app/cascadou/id6767624690",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "a1768b10aa41a499",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Club Soko",
+        "url": "https://apps.apple.com/jp/app/club-soko/id6738053780",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "84c7880ba1a891f0",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ColorSweeper",
+        "url": "https://apps.apple.com/jp/app/colorsweeper/id6756171201",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "011dd76fcc5d6091",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Designer City 4",
+        "url": "https://apps.apple.com/jp/app/designer-city-4/id6742739595",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "5f5d06d165c3a8f4",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Dungeon Warfare 3",
+        "url": "https://apps.apple.com/jp/app/dungeon-warfare-3/id6758903716",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "2c82aadd8ac57834",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Game of Thrones: Dragonfire",
+        "url": "https://apps.apple.com/jp/app/game-of-thrones-dragonfire/id1642607669",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "fe9269e02fa8e0b1",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Grabby Crab",
+        "url": "https://apps.apple.com/jp/app/grabby-crab/id6764115591",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "f65330a2ab0ff1c0",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Grimoria: ãªã³ã©ã¤ã³ã«ã¼ãã²ã¼ã",
+        "url": "https://apps.apple.com/jp/app/grimoria-%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0/id6761027516",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "4a48ff019c9006f8",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Lost Twins 2",
+        "url": "https://apps.apple.com/jp/app/lost-twins-2/id6757780210",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "68326f9c72cde7e3",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Metal Slug Rush",
+        "url": "https://apps.apple.com/jp/app/metal-slug-rush/id6775727338",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "bb0ee56af49eee0c",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "NBAãã³ã¯ã·ãã£",
+        "url": "https://apps.apple.com/jp/app/nba%E3%83%80%E3%83%B3%E3%82%AF%E3%82%B7%E3%83%86%E3%82%A3/id6751222389",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "aaafb3562b097029",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Playing Prague",
+        "url": "https://apps.apple.com/jp/app/playing-prague/id6742446809",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "3b1120c4549c2c21",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "PokÃ©mon Champions",
+        "url": "https://apps.apple.com/jp/app/pok%C3%A9mon-champions/id6741503079",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "72e6e2f90ec462e4",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Shattered Dimension",
+        "url": "https://apps.apple.com/jp/app/shattered-dimension/id6743739470",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "87b9b188d6730205",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Sticker Life -Â ã¹ããã«ã¼Â å¤¢ã®é¨å±æ´çã²ã¼ã",
+        "url": "https://apps.apple.com/jp/app/sticker-life-%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC-%E5%A4%A2%E3%81%AE%E9%83%A8%E5%B1%8B%E6%95%B4%E7%90%86%E3%82%B2%E3%83%BC%E3%83%A0/id6768258203",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "e5ffe3fb8916277a",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "The Rise of the Golden Idol",
+        "url": "https://apps.apple.com/jp/app/the-rise-of-the-golden-idol/id6473898665",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "45e9f2bc19d3c269",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Twin Shot Deluxe",
+        "url": "https://apps.apple.com/jp/app/twin-shot-deluxe/id6758142218",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "7b95c81d6da7cacb",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "Voidloop",
+        "url": "https://apps.apple.com/jp/app/voidloop/id6746944662",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "925a5d7c4d927686",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "War Legends: RTS ã¹ãã©ãã¸ã¼ ã²ã¼ã",
+        "url": "https://apps.apple.com/jp/app/war-legends-rts-%E3%82%B9%E3%83%88%E3%83%A9%E3%83%86%E3%82%B8%E3%83%BC-%E3%82%B2%E3%83%BC%E3%83%A0/id6670486309",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "8c4c3ea11e0846c1",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ã¤ããºãã¤ã¬ãã³ ã¯ã­ã¹",
+        "url": "https://apps.apple.com/jp/app/%E3%82%A4%E3%83%8A%E3%82%BA%E3%83%9E%E3%82%A4%E3%83%AC%E3%83%96%E3%83%B3-%E3%82%AF%E3%83%AD%E3%82%B9/id6756994116",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "d659bcf4cb22f9aa",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ã­ã£ããã³ç¿¼:My Golden XIããã¤ã¤ã¬ã",
+        "url": "https://apps.apple.com/jp/app/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%86%E3%83%B3%E7%BF%BC-my-golden-xi-%E3%83%9E%E3%82%A4%E3%82%A4%E3%83%AC/id6761321358",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "9b5f47f774da44a6",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ã­ã³ã°ã»ãªãã»ã½ãªãã£ã¢ï¼ã¯ã¼ãããºã«",
+        "url": "https://apps.apple.com/jp/app/%E3%82%AD%E3%83%B3%E3%82%B0-%E3%82%AA%E3%83%96-%E3%82%BD%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2-%E3%83%AF%E3%83%BC%E3%83%89%E3%83%91%E3%82%BA%E3%83%AB/id6762601300",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "06ffc5ed9c4ad8bb",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ã¯ãã­ã¼ã©ã³ï¼ã¯ã©ã³ãã« - æ¾ç½®ç³»RPG",
+        "url": "https://apps.apple.com/jp/app/%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%83%A9%E3%83%B3-%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB-%E6%94%BE%E7%BD%AE%E7%B3%BBrpg/id6749251466",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "6fb37825ecd0e327",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ã½ã¦ã«ã¬ã¼ãã£ã¢ã³ãº2 - ã½ã«ãµã¬",
+        "url": "https://apps.apple.com/jp/app/%E3%82%BD%E3%82%A6%E3%83%AB%E3%82%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3%E3%82%BA2-%E3%82%BD%E3%83%AB%E3%82%B5%E3%82%AC/id6745202397",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "41066ee9eb4e928d",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ãã¬ã«ã¬",
+        "url": "https://apps.apple.com/jp/app/%E3%83%80%E3%83%AC%E3%82%AB%E3%83%AC/id6761811652",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "f0a45c4f4253dfee",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ãã³ã¸ã§ã³å´©ã",
+        "url": "https://apps.apple.com/jp/app/%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3%E5%B4%A9%E3%81%97/id6755030141",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "e78e0c67a3c1785a",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ãã¸ã¢ã³UP",
+        "url": "https://apps.apple.com/jp/app/%E3%83%87%E3%82%B8%E3%83%A2%E3%83%B3up/id6756247422",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "b531a084baca83d1",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ãã³ãã",
+        "url": "https://apps.apple.com/jp/app/%E3%83%8D%E3%82%B3%E3%83%94%E3%83%9A/id6757693216",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "4d778f850131f627",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ãã­ã©ã¤ãããªã¼ã ã¹",
+        "url": "https://apps.apple.com/jp/app/%E3%83%9B%E3%83%AD%E3%83%A9%E3%82%A4%E3%83%96%E3%83%89%E3%83%AA%E3%83%BC%E3%83%A0%E3%82%B9/id6756641135",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "da1e8033ba2cf5a5",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ãã¤ã³ãã¼",
+        "url": "https://apps.apple.com/jp/app/%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%94%E3%83%BC/id1529163722",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "d9b255f45a9fdf73",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "åã®ãã¼ã­ã¼ã¢ã«ããã¢UNITED SURVIVAL",
+        "url": "https://apps.apple.com/jp/app/%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2united-survival/id6758648051",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "07fc640cf682d351",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "å¹»æ³æ°´æ»¸ä¼ STAR LEAP",
+        "url": "https://apps.apple.com/jp/app/%E5%B9%BB%E6%83%B3%E6%B0%B4%E6%BB%B8%E4%BC%9D-star-leap/id6746180100",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "267e11ff25cd8c80",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "å¼±è«ããã« ã¬ã¾ãã³ã¹ã»ãºãã¤ãºã",
+        "url": "https://apps.apple.com/jp/app/%E5%BC%B1%E8%99%AB%E3%83%9A%E3%83%80%E3%83%AB-%E3%83%AC%E3%82%BE%E3%83%8A%E3%83%B3%E3%82%B9-%E3%81%BA%E3%83%80%E3%82%A4%E3%82%BA%E3%83%A0/id6758927408",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "a0193313bf6638c0",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着游戏",
+        "store": "iOS / iPadOS",
+        "title": "ç«ã®é¡ããå¶ããªã",
+        "url": "https://apps.apple.com/jp/app/%E7%8C%AB%E3%81%AE%E9%A1%98%E3%81%84%E3%81%8C%E5%8F%B6%E3%81%86%E3%81%AA%E3%82%89/id6762931494",
+        "cover": "https://apps.apple.com/assets/artwork/1x1.gif",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "cc61d7543baef672",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「Abyssal Soul - ローグライクカードRPG」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.chillyroom.containerofsoul.gp",
+        "cover": "https://play-lh.googleusercontent.com/HCBbJCfLUkLPWf8Y3WAypI27jXvQTiCtn7QShYOMQNeY5ntOrjNqB9meSyNWTt3CJRMhccxg3Ln_tUeEkW4kes0=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "b4290579fe69f878",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「Game of Thrones: Dragonfire」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.wb.goog.hotd.socialstrategy",
+        "cover": "https://play-lh.googleusercontent.com/bsw1K8wHf8XQGoG98VK91ycREOF3v2lK0-Kn2Lumd7GQfbC34XK9Yrs_8VJv4K02dkZv_IXbyu9E-o_cWAsnfw=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "fb8a7c62d4f6c5ce",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「LINE マジマジ：爽快魔法マージパズル」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.linecorp.LGMGMG",
+        "cover": "https://play-lh.googleusercontent.com/_5WiEdZ8gKqD0F8RllSs51n7QRUl2muaLU6VOrYyTRS4RKJK-ZOpkNU3g2VLR2zfAydgx2yFX9v10DrXSxj1cA=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "4a6c26d60555fb04",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「Medal Hunter: 軍事ゲーム」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.tensquaregames.medalhunter",
+        "cover": "https://play-lh.googleusercontent.com/WR2twMlKIjnCO0cOTgYdj_RhtmLuQfcQiBgkAIij6ippigFl-aZRDbu14ATzZoz5O8lH6AFGknjTVfKqn_xayh4=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "8a0614c9cb760482",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「Never Grave」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.Pocketpair.NeverGrave",
+        "cover": "https://play-lh.googleusercontent.com/NC1C79_fLC7WrYekJPh1JauBrdJUasGTarG-MeFks4DRY6IqDtDRuqKEW3_U9d2q43o9mFooJrvuz2c2focb=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "c86aebefefc061f6",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「RPG リンガム国の冒険酒場 ～アランと時の女神～」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=kemco.rideonjapan.sakaba4",
+        "cover": "https://play-lh.googleusercontent.com/BcwAWSXV3at_JGkZZxOjvQzuTZm8tBrzNsNHFz1h_62XLH2svFI3AUN93lsaKV3ZaPkORpFTFizoBSH6Idbwmw=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "303ed52067aa7f07",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「Race Star - Team Manager Game」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.coolcatsgames.racestaridle",
+        "cover": "https://play-lh.googleusercontent.com/GRlICeHiiCGM_UDle5mDqXLwN3ol-iqgRfdrPOBTkltIhTXLX509fijqabbFJc9q00Fk6yBjXNHk323Xwgay=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "e3527089dda6b3e0",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「The Walking Dead: Aftermath」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.ares.twd",
+        "cover": "https://play-lh.googleusercontent.com/Ewffs__fx5b1Cd6H4kRJCR_EbNGbP9l2qoMTQvXJE_jM7IrjBnaVZJlQOAbnwSZL8AsvO6QoG3i2A-FgiS4z=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "edad765cc5fef80c",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「クッキーラン：クランブル - 放置系RPG」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.devsisters.cc",
+        "cover": "https://play-lh.googleusercontent.com/nH4gayvv0-dHdjwjxUIKY9QWr_6dYnNeqFNHPwckQ3dgvJgrsJPdkIEyevgE09j0IGUiAIwpniaoAZ7Xn0PH=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "0c570f149d2898b8",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「ホロライブドリームス」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=game.qualiarts.hololive.dreams.jp",
+        "cover": "https://play-lh.googleusercontent.com/j00IPpPSDv3cGqoKVIDf0qnCw6EbZQ4KpgMr10UWkf8Rm1qO9vCSoVhJwfCF1PbbKxV_Qt_eqZ_Sp4QMHuhwYBI=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "e46a04f04473aa73",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「ポインピー」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.devolverdigital.poinpy",
+        "cover": "https://play-lh.googleusercontent.com/fDRdjIKlK6_L16SkDsmFlZLbg-taFUa5wfWm_oQ96fzmQAPfrSInOT2LfpniH0-8EhJ_Qug2UW5V_7XeLhVK=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "5b5e43780e27d90c",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「マージシティ：暇つぶしオフラインパズルゲーム」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.bigcool.puzzle.merge.city",
+        "cover": "https://play-lh.googleusercontent.com/RS_h0AnNGsLS2uPex8O3-IysgGSj7nD0BrEryBNw6jXJZqF6vBfyVoa5lMQ0KCWnUK0k71alLXaAM5RLMHKxVw=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "be7e18c8d5c5f56c",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「モンスターサバイバル」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.farlightgames.pgame.gp",
+        "cover": "https://play-lh.googleusercontent.com/nIjO9pFz1R7G_wct00QMBKVqAmLHs2TqiaCmSUJfnKPw7yG_VzSmp26TRGCmm98v-Mye0MtsW_xz8CHNdIFD1A=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "acfdffe15d9e1438",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「僕のヒーローアカデミアUNITED SURVIVAL」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.klab.heroaca.united.survival",
+        "cover": "https://play-lh.googleusercontent.com/6N68UmL37trcXjJYhv-LWsnNTqdwqBeiRVqRt3vfmbhPIW7-Ef0yEnOEAd3AroB_LXHUuib3As-0DcH2YLL6Lv0=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "894a3e7abf559ebd",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「幻想水滸伝 STAR LEAP」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=jp.konami.suikoden.starleap",
+        "cover": "https://play-lh.googleusercontent.com/CZqC6kjKA871p5R5tf734xuTrgNd7B2DC9Q2Y1Fj0Bmdg3z2I8PhgV-7JNsOg-g-BV1ZWNLRPqq0frr9byaN=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      },
+      {
+        "id": "a67720a09fde8480",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース",
+        "store": "Android",
+        "title": "「無職転生〜異世界行ったら本気だす〜クロニクル・オブ・エコーズ」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=jp.gree_ent.mushoku",
+        "cover": "https://play-lh.googleusercontent.com/UB8Y6tnArnkS2at0-pEpxZhLo_kwELCXxo9N5thtl2DVavxLGzIeYfkScY0kYdZAKv-EoiL_2S4g5Bh4LbJVnSc=s256-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "first_seen": "2026-08-14",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today"
+      }
+    ],
     "pc": [],
     "console": [
       {
@@ -82,24 +1019,6 @@
         "days_from_today": 0,
         "is_today": true,
         "timeline_status": "today"
-      },
-      {
-        "id": "4c770dac59744e1a",
-        "category": "console",
-        "source": "famitsu",
-        "source_label": "Famitsu 日本游戏发行日",
-        "store": "发行日历",
-        "title": "Mortal Shell II （PS Store ダウンロード版）",
-        "url": "https://www.famitsu.com/game/title/72476/page/1",
-        "cover": "",
-        "platforms": [
-          "PS5"
-        ],
-        "release_date": "2026-08-20",
-        "release_text": "2026年8月20日（木）発売",
-        "days_from_today": 6,
-        "is_today": false,
-        "timeline_status": "upcoming"
       },
       {
         "id": "89206968b4f72ca6",
@@ -912,24 +1831,6 @@
         "timeline_status": "upcoming"
       },
       {
-        "id": "182dedcb520d334f",
-        "category": "console",
-        "source": "famitsu",
-        "source_label": "Famitsu 日本游戏发行日",
-        "store": "发行日历",
-        "title": "Mortal Shell II",
-        "url": "https://www.famitsu.com/game/title/72476/page/1",
-        "cover": "https://www.famitsu.com/_next/image?url=https://image.kagali.kgl-systems.io/item/155649/3gAypNQd?w=160&h=160&func=bound&w=3840&q=75",
-        "platforms": [
-          "PS5"
-        ],
-        "release_date": "2026-09-17",
-        "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 34,
-        "is_today": false,
-        "timeline_status": "upcoming"
-      },
-      {
         "id": "2b73c091184d5d30",
         "category": "console",
         "source": "famitsu",
@@ -1345,20 +2246,20 @@
         "timeline_status": "upcoming"
       },
       {
-        "id": "7df7e1e61d9e7bd3",
+        "id": "e0ecb721b5711726",
         "category": "console",
         "source": "famitsu",
         "source_label": "Famitsu 日本游戏发行日",
         "store": "发行日历",
-        "title": "【PS5】2026年8月下旬～11月発売の新作ゲーム21選。『グラセフ6』『エースコンバット8』『マーベル ウルヴァリン』など注目作をチェック",
-        "url": "https://www.famitsu.com/article/202608/84023",
-        "cover": "",
+        "title": "Solarpunk ソーラーパンク：天空の島",
+        "url": "https://www.famitsu.com/game/title/72464/page/1",
+        "cover": "https://www.famitsu.com/_next/image?url=https://image.kagali.kgl-systems.io/item/155625/KTutxYiv?w=160&h=160&func=bound&w=3840&q=75",
         "platforms": [
-          "PS5"
+          "SWITCH2"
         ],
-        "release_date": "2026-09-30",
-        "release_text": "2026年9月30日（水）発売",
-        "days_from_today": 47,
+        "release_date": "2026-10-01",
+        "release_text": "2026年10月1日（木）発売",
+        "days_from_today": 48,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -2250,6 +3151,24 @@
         "timeline_status": "upcoming"
       },
       {
+        "id": "f2adbf01c2e7da1b",
+        "category": "console",
+        "source": "famitsu",
+        "source_label": "Famitsu 日本游戏发行日",
+        "store": "发行日历",
+        "title": "幻想少女大戦 - DREAM OF THE STRAY DREAMER -",
+        "url": "https://www.famitsu.com/game/title/41442/page/1",
+        "cover": "https://www.famitsu.com/_next/image?url=https://image.kagali.kgl-systems.io/item/155632/27Rdi8oN?w=160&h=160&func=bound&w=3840&q=75",
+        "platforms": [
+          "SWITCH"
+        ],
+        "release_date": "2026-10-29",
+        "release_text": "2026年10月29日（木）発売",
+        "days_from_today": 76,
+        "is_today": false,
+        "timeline_status": "upcoming"
+      },
+      {
         "id": "f6a8109017e73ad8",
         "category": "console",
         "source": "famitsu",
@@ -2258,6 +3177,24 @@
         "title": "東方少女綺想譚",
         "url": "https://www.famitsu.com/game/title/48167/page/1",
         "cover": "https://www.famitsu.com/_next/image?url=https://image.kagali.kgl-systems.io/item/155469/7rLsYYE5?w=160&h=160&func=bound&w=3840&q=75",
+        "platforms": [
+          "SWITCH"
+        ],
+        "release_date": "2026-10-29",
+        "release_text": "2026年10月29日（木）発売",
+        "days_from_today": 76,
+        "is_today": false,
+        "timeline_status": "upcoming"
+      },
+      {
+        "id": "56ca03364a62018f",
+        "category": "console",
+        "source": "famitsu",
+        "source_label": "Famitsu 日本游戏发行日",
+        "store": "发行日历",
+        "title": "鉄道にっぽん！ RealPro 立体都市交通！XROSS OVER 名古屋 編",
+        "url": "https://www.famitsu.com/game/title/72468/page/1",
+        "cover": "https://www.famitsu.com/_next/image?url=https://image.kagali.kgl-systems.io/item/155630/JScE1eKw?w=160&h=160&func=bound&w=3840&q=75",
         "platforms": [
           "SWITCH"
         ],
@@ -2400,34 +3337,36 @@
     "appstore": {
       "label": "App Store 日本 · 新着游戏",
       "ok": true,
-      "count": 0,
-      "checked_at": "2026-08-13T19:55:50Z"
+      "count": 36,
+      "checked_at": "2026-08-13T20:16:45Z"
     },
     "googleplay": {
       "label": "Google Play 日本 · 新規リリース",
       "ok": true,
-      "count": 0,
-      "checked_at": "2026-08-13T19:55:50Z"
+      "count": 16,
+      "checked_at": "2026-08-13T20:16:45Z"
     },
     "steam_popular_new": {
       "label": "Steam · Popular New Releases",
-      "ok": true,
+      "ok": false,
       "count": 0,
       "raw_count": 0,
-      "checked_at": "2026-08-13T19:55:50Z"
+      "checked_at": "2026-08-13T20:16:45Z",
+      "error": "No Steam results parsed"
     },
     "steam_popular_upcoming": {
       "label": "Steam · Popular Upcoming",
-      "ok": true,
+      "ok": false,
       "count": 0,
       "raw_count": 0,
-      "checked_at": "2026-08-13T19:55:50Z"
+      "checked_at": "2026-08-13T20:16:45Z",
+      "error": "No Steam results parsed"
     },
     "famitsu": {
       "label": "Famitsu 日本游戏发行日",
       "ok": true,
       "count": 132,
-      "checked_at": "2026-08-13T19:55:50Z"
+      "checked_at": "2026-08-13T20:16:45Z"
     }
   }
 }

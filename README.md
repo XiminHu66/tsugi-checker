@@ -10,8 +10,8 @@ Tsugi 是一个部署在 **GitHub Pages** 的静态 ACG dashboard。数据由 **
 - **我的书架**：
   - 从更新流一键加入的“本机追踪”保存在 LocalStorage；每天新的站点更新到达时自动比对。
   - `config/library.json` 中的“云端追踪”由 GitHub Actions 主动打开作品页检查，可靠性更高。
-- **音乐追踪**：Billboard JAPAN Hot 100、Apple 日本新发行，以及浏览器本机保存的艺人新曲关注。
-- **游戏追踪**：手游、PC、主机每日新发行 / 新发现。
+- **音乐追踪**：Billboard JAPAN Hot 100、Apple Music Japan 近一周新曲，以及浏览器本机保存的艺人新曲关注；周榜和新曲均提供 YouTube Music 搜索入口。
+- **游戏追踪**：过去 7 天到未来 90 天的发售时间线；PC 仅使用 Steam Popular New Releases / Popular Upcoming，手游保留最近 7 天商店新发现，主机使用 Famitsu 日本发行日历。
 - **ACG 新闻**：只启用中文或繁体中文来源。
 - **明暗主题**：浏览器本地保存偏好。
 
@@ -23,7 +23,7 @@ Tsugi 是一个部署在 **GitHub Pages** 的静态 ACG dashboard。数据由 **
 - `scraper/main.py`：总抓取入口
 - `scraper/sources.py`：单作品章节解析
 - `scraper/aggregators.py`：站点更新流与 RSS 聚合
-- `scraper/music.py`：日本音乐榜 / 新发行
+- `scraper/music.py`：日本音乐周榜 / 近一周新曲
 - `scraper/games.py`：手游 / PC / 主机新发行
 - `data/*.json`：GitHub Pages 读取的缓存数据
 

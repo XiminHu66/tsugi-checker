@@ -89,13 +89,16 @@
     "weekly_source": "Billboard JAPAN Hot 100",
     "weekly_url": "https://www.billboard-japan.com/charts/detail?a=hot100",
     "weekly_limit": 30,
-    "new_release_source": "Apple Japan new releases",
-    "new_release_limit": 40,
+    "recent_song_source": "Apple Music Japan Best New Songs",
+    "recent_song_url": "https://music.apple.com/jp/new",
+    "recent_song_limit": 30,
     "enabled": true
   },
   "games": {
     "enabled": true,
-    "limit_per_category": 80,
+    "past_days": 7,
+    "future_days": 90,
+    "limit_per_category": 160,
     "sources": {
       "appstore": {
         "enabled": true,
@@ -107,15 +110,20 @@
         "url": "https://play.google.com/store/games?hl=ja&gl=jp",
         "limit": 36
       },
-      "steam": {
+      "steam_popular_new": {
         "enabled": true,
-        "url": "https://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&l=japanese&cc=jp",
-        "limit": 60
+        "url": "https://store.steampowered.com/search/?filter=popularnew&category1=998&sort_by=Released_DESC&l=english&cc=jp",
+        "limit": 100
+      },
+      "steam_popular_upcoming": {
+        "enabled": true,
+        "url": "https://store.steampowered.com/search/?filter=popularcomingsoon&category1=998&sort_by=Released_ASC&l=english&cc=jp",
+        "limit": 100
       },
       "famitsu": {
         "enabled": true,
         "url": "https://www.famitsu.com/schedule",
-        "limit": 80
+        "limit": 200
       }
     }
   }

@@ -169,13 +169,14 @@ function unfollowArtist(id){state.followedArtists=state.followedArtists.filter(x
 function markArtistSeen(id,trackId){const a=state.followedArtists.find(x=>String(x.id)===String(id));if(a){a.last_seen_track_id=String(trackId||'');saveLocalArray(ARTIST_FOLLOWS_KEY,state.followedArtists);renderFollowedArtists()}}
 function artistFollowButton(name){const following=isFollowingName(name);return `<button class="follow-btn ${following?'following':''}" data-follow-artist="${esc(name)}" ${following?'disabled':''}>${following?'✓ 已关注':'＋ 关注艺人'}</button>`}
 function bindArtistFollowButtons(){$$('[data-follow-artist]').forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();followArtistByName(b.dataset.followArtist)})}
+function youtubeMusicSearch(title,artist){return `https://music.youtube.com/search?q=${encodeURIComponent(`${title||''} ${artist||''}`.trim())}`}
 function renderMusic(){
-  const chart=state.music?.weekly_chart||[];const releases=state.music?.new_releases||[];const q=state.query.toLowerCase();
+  const chart=state.music?.weekly_chart||[];const releases=state.music?.recent_songs||state.music?.new_releases||[];const q=state.query.toLowerCase();
   $('#musicChartCount').textContent=chart.length;$('#musicReleaseCount').textContent=releases.length;$('#followedArtistCount').textContent=state.followedArtists.length;$('#musicChartDate').textContent=state.music?.chart_date?`榜单公布：${state.music.chart_date}`:'每周更新';
   const c=chart.filter(x=>!q||`${x.title} ${x.artist}`.toLowerCase().includes(q));
-  $('#musicChartList').innerHTML=c.length?c.map(x=>`<article class="music-chart-row"><div class="music-rank">${esc(x.rank)}</div>${imageHTML({cover:x.artwork,type:'music',className:'music-cover',placeholderClass:'music-cover cover-placeholder',placeholderText:'♪'})}<div class="music-track-copy"><h4>${esc(x.title)}</h4><p>${esc(x.artist)}${x.last_rank?` · 上周 ${esc(x.last_rank)}`:''}</p></div><div class="music-row-actions">${artistFollowButton(x.artist)}<a class="site-open-link" href="${esc(x.url||`https://music.apple.com/jp/search?term=${encodeURIComponent(`${x.title} ${x.artist}`)}`)}" target="_blank" rel="noopener">打开 ↗</a></div></article>`).join(''):`<div class="empty music-empty">暂无周榜数据。</div>`;
+  $('#musicChartList').innerHTML=c.length?c.map(x=>`<article class="music-chart-row"><div class="music-rank">${esc(x.rank)}</div>${imageHTML({cover:x.artwork,type:'music',className:'music-cover',placeholderClass:'music-cover cover-placeholder',placeholderText:'♪'})}<div class="music-track-copy"><h4>${esc(x.title)}${x.is_new?'<span class="chart-new-badge">NEW</span>':''}</h4><p>${esc(x.artist)}${x.last_rank?` · 上周 ${esc(x.last_rank)}`:''}${x.weeks?` · 在榜 ${esc(x.weeks)} 周`:''}</p></div><div class="music-row-actions">${artistFollowButton(x.artist)}<a class="music-service-link yt" href="${esc(x.youtube_music_url||youtubeMusicSearch(x.title,x.artist))}" target="_blank" rel="noopener">YouTube Music ↗</a><a class="music-service-link" href="${esc(x.url||'#')}" target="_blank" rel="noopener">Billboard ↗</a></div></article>`).join(''):`<div class="empty music-empty">暂无周榜数据。</div>`;
   const r=releases.filter(x=>!q||`${x.title} ${x.artist} ${x.album||''}`.toLowerCase().includes(q));
-  $('#musicNewGrid').innerHTML=r.length?r.map(x=>`<article class="music-release-card">${imageHTML({cover:x.artwork,type:'music',className:'music-release-cover',placeholderClass:'music-release-cover cover-placeholder',placeholderText:'♪'})}<div class="music-release-copy"><span class="music-source-badge">新发行</span><h4>${esc(x.title)}</h4><p>${esc(x.artist)}</p><p>${esc(x.release_date||'')}</p><div class="music-release-actions">${artistFollowButton(x.artist)}<a class="site-open-link" href="${esc(x.url||'#')}" target="_blank" rel="noopener">试听 ↗</a></div></div></article>`).join(''):`<div class="empty music-empty">暂无新发行数据。</div>`;
+  $('#musicNewGrid').innerHTML=r.length?r.map(x=>`<article class="music-release-card">${imageHTML({cover:x.artwork,type:'music',className:'music-release-cover',placeholderClass:'music-release-cover cover-placeholder',placeholderText:'♪'})}<div class="music-release-copy"><span class="music-source-badge">${esc(x.period||'近一周')}</span><h4>${esc(x.title)}</h4><p>${esc(x.artist)}</p><p>${esc(x.source_label||'Apple Music Japan · 本周新曲')}</p><div class="music-release-actions">${artistFollowButton(x.artist)}<div class="music-service-group"><a class="music-service-link yt" href="${esc(x.youtube_music_url||youtubeMusicSearch(x.title,x.artist))}" target="_blank" rel="noopener">YT Music ↗</a><a class="music-service-link" href="${esc(x.url||'#')}" target="_blank" rel="noopener">来源 ↗</a></div></div></div></article>`).join(''):`<div class="empty music-empty">暂无近一周新曲。<small>若 Apple Music 页面结构临时变化，会自动回退到 Billboard 本周新进榜。</small></div>`;
   bindArtistFollowButtons();renderFollowedArtists();
 }
 async function renderFollowedArtists(){
@@ -191,34 +192,34 @@ async function renderFollowedArtists(){
 async function runArtistSearch(){const term=$('#artistSearchInput').value.trim();if(!term)return;$('#artistSearchResults').innerHTML='<div class="artist-loading">搜索中…</div>';try{const results=await searchArtists(term);$('#artistSearchResults').innerHTML=results.length?results.map(x=>`<div class="artist-result"><div><strong>${esc(x.artistName)}</strong><small>${esc(x.primaryGenreName||'Music')}</small></div>${artistFollowButton(x.artistName)}</div>`).join(''):'<div class="artist-loading">没有找到艺人</div>';bindArtistFollowButtons()}catch(e){$('#artistSearchResults').innerHTML=`<div class="artist-loading">搜索失败：${esc(e.message)}</div>`}}
 
 
-function renderGameCard(x){
-  const platforms=(x.platforms||[]).join(' / ');
-  const when=x.release_date?`发行 ${x.release_date}`:(x.first_seen?`首次发现 ${x.first_seen}`:'新发行列表');
-  return `<a class="game-card ${x.is_today?'today':''}" href="${esc(x.url||'#')}" target="_blank" rel="noopener">
-    <div class="game-cover-wrap">
-      ${imageHTML({cover:x.cover,type:'game',className:'game-cover',placeholderClass:'game-cover game-cover-placeholder',placeholderText:'GAME'})}
-      ${x.is_today?'<span class="game-today-badge">TODAY</span>':''}
-    </div>
-    <div class="game-card-copy">
-      <div class="game-card-meta"><span>${esc(x.source_label||x.source||'')}</span><span>${esc(x.store||'')}</span></div>
-      <h4>${esc(x.title||'未命名游戏')}</h4>
-      <p class="game-platforms">${esc(platforms||'平台未标注')}</p>
-      <div class="game-card-bottom"><span>${esc(when)}</span><span>查看 ↗</span></div>
-    </div>
+function gameEffectiveDate(x){return x.release_date||x.first_seen||''}
+function gameDateLabel(d,today){
+  if(!d)return '日期未定';
+  const x=new Date(`${d}T00:00:00`),t=new Date(`${today}T00:00:00`);if(Number.isNaN(+x)||Number.isNaN(+t))return d;
+  const diff=Math.round((x-t)/86400000);const md=new Intl.DateTimeFormat('zh-CN',{month:'numeric',day:'numeric',weekday:'short'}).format(x);
+  if(diff===0)return `${md} · 今天`;if(diff===-1)return `${md} · 昨天`;if(diff===1)return `${md} · 明天`;if(diff<0)return `${md} · ${Math.abs(diff)} 天前`;return `${md} · ${diff} 天后`;
+}
+function renderTimelineGame(x){
+  const platforms=(x.platforms||[]).join(' / ');const featured=x.featured?'<span class="game-popular-badge">热门</span>':'';const mobile=x.category==='mobile'?'<span class="game-discovery-badge">商店新发现</span>':'';
+  return `<a class="timeline-game ${x.is_today?'today':''}" href="${esc(x.url||'#')}" target="_blank" rel="noopener">
+    ${imageHTML({cover:x.cover,type:'game',className:'timeline-game-cover',placeholderClass:'timeline-game-cover game-cover-placeholder',placeholderText:'GAME'})}
+    <div class="timeline-game-copy"><div class="timeline-game-meta"><span>${esc(x.source_label||x.source||'')}</span>${featured}${mobile}</div><h4>${esc(x.title||'未命名游戏')}</h4><p>${esc(platforms||'平台未标注')}</p></div><span class="timeline-open">查看 ↗</span>
   </a>`;
 }
+function renderGameTimeline(rows,label){
+  if(!rows.length)return `<div class="empty game-empty"><div>暂无${label}时间线数据。<small>下一次每日 / 手动刷新订阅源后更新。</small></div></div>`;
+  const today=state.games?.date_jst||new Date().toISOString().slice(0,10);const groups=new Map();
+  rows.forEach(x=>{const d=gameEffectiveDate(x)||'undated';if(!groups.has(d))groups.set(d,[]);groups.get(d).push(x)});
+  return [...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([d,items])=>`<section class="game-timeline-day ${d===today?'today':''}"><div class="game-timeline-date"><span class="timeline-dot"></span><div><strong>${esc(gameDateLabel(d,today))}</strong><small>${esc(d)}</small></div></div><div class="game-timeline-items">${items.map(renderTimelineGame).join('')}</div></section>`).join('');
+}
 function renderGames(){
-  const buckets=state.games?.items||{mobile:[],pc:[],console:[]};
-  const q=state.query.toLowerCase();
+  const buckets=state.games?.items||{mobile:[],pc:[],console:[]};const q=state.query.toLowerCase();
   const get=key=>(buckets[key]||[]).filter(x=>!q||`${x.title} ${x.source_label} ${(x.platforms||[]).join(' ')}`.toLowerCase().includes(q));
-  const mobile=get('mobile'),pc=get('pc'),consoleRows=get('console');
-  const todayCount=xs=>xs.filter(x=>x.is_today).length;
-  $('#gameDate').textContent=state.games?.date_jst?`日本时间 ${state.games.date_jst}`:'等待首次抓取';
-  $('#gameMobileToday').textContent=todayCount(buckets.mobile||[]);
-  $('#gamePcToday').textContent=todayCount(buckets.pc||[]);
-  $('#gameConsoleToday').textContent=todayCount(buckets.console||[]);
-  const fill=(id,rows,label)=>{$(id).innerHTML=rows.length?rows.map(renderGameCard).join(''):`<div class="empty game-empty"><div>暂无${label}数据。<small>下一次每日 / 手动 [refresh] 抓取后更新。</small></div></div>`};
-  fill('#gameMobileGrid',mobile,'手游');fill('#gamePcGrid',pc,'PC');fill('#gameConsoleGrid',consoleRows,'主机');
+  const mobile=get('mobile'),pc=get('pc'),consoleRows=get('console');const all=[...(buckets.mobile||[]),...(buckets.pc||[]),...(buckets.console||[])];
+  const past=all.filter(x=>x.timeline_status==='past').length,todayCount=all.filter(x=>x.timeline_status==='today').length,upcoming=all.filter(x=>x.timeline_status==='upcoming').length;const w=state.games?.window||{};
+  $('#gameDate').textContent=state.games?.date_jst?`日本时间 ${state.games.date_jst} · -${w.past_days??7} 天 / +${w.future_days??90} 天`:'等待首次抓取';
+  $('#gamePastCount').textContent=past;$('#gameTodayCount').textContent=todayCount;$('#gameUpcomingCount').textContent=upcoming;
+  $('#gameMobileGrid').innerHTML=renderGameTimeline(mobile,'手游');$('#gamePcGrid').innerHTML=renderGameTimeline(pc,'PC');$('#gameConsoleGrid').innerHTML=renderGameTimeline(consoleRows,'主机');
 }
 
 function renderSources(){
@@ -235,7 +236,7 @@ function updateStats(){
 }
 function renderAll(){renderSiteUpdates();renderLibrary();renderLibraryUpdates();renderNews();renderMusic();renderGames();renderSources();updateStats()}
 function applyTheme(theme){document.documentElement.dataset.theme=theme;localStorage.setItem('tsugi-theme',theme);const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=theme==='light'?'#f4f6fb':'#090b10'}
-const titles={updates:['更新流','汇总各小说 / 漫画来源最新更新，可直接加入书架。'],library:['我的书架','合并本机一键订阅与 GitHub Actions 云端追踪，并显示更新记录。'],music:['音乐追踪','日本周榜、新发行与艺人新曲追踪。'],games:['游戏追踪','每日追踪手游、PC 与主机的新发行游戏。'],news:['ACG 新闻','仅显示简体中文 / 繁体中文的 ACG 新闻。'],sources:['来源状态','检查阅读、音乐、游戏和中文 ACG 新闻最近一次抓取是否正常。'],settings:['设置说明','订阅作品、艺人关注、游戏发行、公开来源与同步频率设置。']};
+const titles={updates:['更新流','汇总各小说 / 漫画来源最新更新，可直接加入书架。'],library:['我的书架','合并本机一键订阅与 GitHub Actions 云端追踪，并显示更新记录。'],music:['音乐追踪','Billboard 日本周榜、近一周新曲与艺人新曲追踪。'],games:['游戏追踪','过去 7 天到未来 90 天的游戏发售时间线；PC 仅保留 Steam 热门作品。'],news:['ACG 新闻','仅显示简体中文 / 繁体中文的 ACG 新闻。'],sources:['来源状态','检查阅读、音乐、游戏和中文 ACG 新闻最近一次抓取是否正常。'],settings:['设置说明','订阅作品、艺人关注、游戏发行、公开来源与同步频率设置。']};
 $$('.nav-item').forEach(b=>b.onclick=()=>{$$('.nav-item').forEach(x=>x.classList.remove('active'));b.classList.add('active');$$('.tab').forEach(x=>x.classList.remove('active'));$('#'+b.dataset.tab).classList.add('active');$('#pageTitle').textContent=titles[b.dataset.tab][0];$('#pageSubtitle').textContent=titles[b.dataset.tab][1]});
 $$('.chip[data-filter]').forEach(b=>b.onclick=()=>{$$('.chip[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.filter=b.dataset.filter;renderLibraryUpdates()});
 $$('.chip[data-site-filter]').forEach(b=>b.onclick=()=>{$$('.chip[data-site-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.siteFilter=b.dataset.siteFilter;renderSiteUpdates()});

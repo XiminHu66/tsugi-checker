@@ -89,3 +89,38 @@
 [data-theme="light"] .source-refresh-btn{background:rgba(28,170,126,.08);border-color:rgba(28,170,126,.2);color:#33404e}
 [data-theme="light"] .tsugi-toast{background:rgba(255,255,255,.94);color:#27313d}
 @media(max-width:1160px){.source-refresh-btn{width:54px;padding:0;justify-content:center}.source-refresh-btn span{display:none}}
+
+/* v7 · music links + release timeline */
+.chart-new-badge{display:inline-flex;vertical-align:middle;margin-left:7px;padding:3px 6px;border-radius:999px;background:rgba(62,210,167,.16);color:#8ff0cf;font-size:8px;font-weight:950;letter-spacing:.08em}
+.music-service-link{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 9px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--text-soft);font-size:10px;font-weight:850;white-space:nowrap}
+.music-service-link:hover{background:rgba(143,125,255,.12);border-color:rgba(143,125,255,.28)}
+.music-service-link.yt{background:rgba(255,74,74,.08);border-color:rgba(255,90,90,.20);color:#ffb3b3}
+.music-service-group{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.music-release-copy>p:last-of-type{font-size:9px;color:var(--faint)}
+[data-theme="light"] .music-service-link{background:rgba(255,255,255,.72);color:#465162}
+[data-theme="light"] .music-service-link.yt{background:rgba(222,35,35,.06);color:#bb3838}
+[data-theme="light"] .chart-new-badge{color:#167e61}
+
+/* Replace the old card wall with a Steam/Opera-GX-like chronological release rail. */
+.game-grid{display:block!important}
+.game-timeline-day{position:relative;display:grid;grid-template-columns:170px minmax(0,1fr);gap:18px;padding:0 0 18px}
+.game-timeline-day::before{content:"";position:absolute;left:8px;top:22px;bottom:-4px;width:1px;background:var(--line)}
+.game-timeline-day:last-child::before{display:none}
+.game-timeline-date{position:relative;display:flex;align-items:flex-start;gap:11px;padding-top:5px;color:var(--muted)}
+.timeline-dot{position:relative;z-index:1;width:17px;height:17px;border:4px solid var(--bg);border-radius:50%;background:#667184;box-shadow:0 0 0 1px var(--line)}
+.game-timeline-day.today .timeline-dot{background:var(--green);box-shadow:0 0 0 1px rgba(62,210,167,.36),0 0 0 7px rgba(62,210,167,.08)}
+.game-timeline-date strong{display:block;color:var(--text);font-size:13px;line-height:1.35}.game-timeline-date small{display:block;margin-top:4px;color:var(--faint);font-size:9px;letter-spacing:.04em}
+.game-timeline-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:9px}
+.timeline-game{min-width:0;display:grid;grid-template-columns:100px minmax(0,1fr) auto;gap:11px;align-items:center;padding:9px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));box-shadow:var(--shadow-md);transition:.18s ease}
+.timeline-game:hover{transform:translateY(-2px);border-color:var(--line-strong);box-shadow:var(--shadow-lg)}
+.timeline-game.today{border-color:rgba(62,210,167,.28);background:linear-gradient(180deg,rgba(62,210,167,.06),rgba(255,255,255,.018))}
+.timeline-game-cover{width:100px;height:58px;border-radius:11px;object-fit:cover;background:var(--panel-3)}
+.timeline-game-copy{min-width:0}.timeline-game-copy h4{margin:4px 0 0;font-size:13px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.timeline-game-copy p{margin:5px 0 0;color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.timeline-game-meta{display:flex;align-items:center;gap:5px;min-width:0;color:var(--faint);font-size:8px;font-weight:800}.timeline-game-meta>span:first-child{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.game-popular-badge,.game-discovery-badge{flex:0 0 auto;padding:3px 5px;border-radius:999px;font-size:7px;font-weight:950;letter-spacing:.04em}.game-popular-badge{background:rgba(143,125,255,.14);color:#c7bcff}.game-discovery-badge{background:rgba(62,210,167,.13);color:#9aeed2}
+.timeline-open{color:var(--text-soft);font-size:9px;font-weight:850;white-space:nowrap}
+[data-theme="light"] .timeline-game{background:rgba(255,255,255,.74)}[data-theme="light"] .timeline-dot{border-color:var(--bg)}[data-theme="light"] .game-popular-badge{color:#6657ce}[data-theme="light"] .game-discovery-badge{color:#197d61}
+
+@media(max-width:900px){.music-chart-row{grid-template-columns:46px 54px minmax(0,1fr)}.music-row-actions{grid-column:3;justify-content:flex-start;flex-wrap:wrap}.game-timeline-day{grid-template-columns:135px minmax(0,1fr)}.game-timeline-items{grid-template-columns:1fr}}
+@media(max-width:700px){.game-timeline-day{grid-template-columns:1fr;gap:7px;padding-left:4px}.game-timeline-day::before{left:11px;top:18px}.game-timeline-date{padding-left:2px}.game-timeline-items{padding-left:28px}.timeline-game{grid-template-columns:82px minmax(0,1fr) auto}.timeline-game-cover{width:82px;height:50px}.game-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.music-service-group{justify-content:flex-start}}
+@media(max-width:480px){.timeline-game{grid-template-columns:72px minmax(0,1fr);gap:8px}.timeline-game-cover{width:72px;height:45px}.timeline-open{grid-column:2}.game-timeline-items{padding-left:24px}.game-timeline-date strong{font-size:12px}.music-row-actions{gap:5px}.music-service-link{padding:0 7px;font-size:9px}.music-release-actions{align-items:flex-start;flex-direction:column}}

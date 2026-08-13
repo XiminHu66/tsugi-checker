@@ -196,19 +196,19 @@
           <div>
             <p class="section-kicker">JAPAN MUSIC TRACKER</p>
             <h2>音乐追踪</h2>
-            <p>查看 Billboard JAPAN Hot 100 周榜、日本新发行，并关注艺人后检查最近新曲。</p>
+            <p>查看 Billboard JAPAN Hot 100 周榜、近一周新曲，并关注艺人后检查最近新曲。</p>
           </div>
         </div>
 
         <div class="music-stats">
           <article class="music-stat"><span>周榜</span><strong id="musicChartCount">0</strong><small>Billboard JAPAN Hot 100</small></article>
-          <article class="music-stat"><span>新发行</span><strong id="musicReleaseCount">0</strong><small>Apple Music / iTunes Japan</small></article>
+          <article class="music-stat"><span>近一周新曲</span><strong id="musicReleaseCount">0</strong><small>Apple Music Japan / Billboard fallback</small></article>
           <article class="music-stat"><span>关注艺人</span><strong id="followedArtistCount">0</strong><small>保存在当前浏览器</small></article>
         </div>
 
         <div class="music-switch" id="musicSwitch">
           <button class="music-switch-btn active" data-music-view="chart">日本周榜</button>
-          <button class="music-switch-btn" data-music-view="new">新曲 / 新发行</button>
+          <button class="music-switch-btn" data-music-view="new">近一周新曲</button>
           <button class="music-switch-btn" data-music-view="artists">艺人追踪</button>
         </div>
 
@@ -218,7 +218,7 @@
         </div>
 
         <div id="musicNewPane" class="music-pane">
-          <div class="music-pane-head"><div><h3>日本新曲 / 新发行</h3><p>从 Apple 日本音乐目录的公开新发行 feed 中整理。</p></div></div>
+          <div class="music-pane-head"><div><h3>近一周新曲</h3><p>优先读取 Apple Music Japan「ベストニューソング」；若页面结构变化则自动回退到 Billboard JAPAN 本周新进榜。</p></div></div>
           <div id="musicNewGrid" class="music-new-grid"></div>
         </div>
 
@@ -246,15 +246,15 @@
           <div>
             <p class="section-kicker">DAILY GAME RELEASE TRACKER</p>
             <h2>游戏追踪</h2>
-            <p>按日本时间追踪每日新发行与商店新发现游戏，覆盖手游、PC 与主机。</p>
+            <p>参考 Steam / Opera GX 的发售日历形式，展示过去 7 天与未来 90 天的发行时间线。PC 仅保留 Steam 热门新作与热门即将发售作品。</p>
           </div>
           <span class="game-date-pill" id="gameDate">日本时间</span>
         </div>
 
         <div class="game-stats">
-          <article class="game-stat"><span>手游</span><strong id="gameMobileToday">0</strong><small>今日发行 / 今日新发现</small></article>
-          <article class="game-stat"><span>PC</span><strong id="gamePcToday">0</strong><small>今日发行</small></article>
-          <article class="game-stat"><span>主机</span><strong id="gameConsoleToday">0</strong><small>Switch / PlayStation / Xbox</small></article>
+          <article class="game-stat"><span>过去 7 天</span><strong id="gamePastCount">0</strong><small>已发行 / 商店新发现</small></article>
+          <article class="game-stat"><span>今天</span><strong id="gameTodayCount">0</strong><small>日本时间当天发行</small></article>
+          <article class="game-stat"><span>即将发售</span><strong id="gameUpcomingCount">0</strong><small>未来 90 天已公布日期</small></article>
         </div>
 
         <div class="game-switch" id="gameSwitch">
@@ -264,15 +264,15 @@
         </div>
 
         <div id="gameMobilePane" class="game-pane active">
-          <div class="game-pane-head"><div><h3>手游新发行</h3><p>App Store 日本“新着游戏”与 Google Play 日本“新規リリース”。无公开精确日期时按 Tsugi 首次发现日期标记。</p></div></div>
+          <div class="game-pane-head"><div><h3>手游 · 最近 7 天</h3><p>App Store 日本“新着游戏”与 Google Play 日本“新規リリース”。商店没有可靠未来发行日，因此手游以 Tsugi 首次发现日形成最近 7 天时间线。</p></div></div>
           <div id="gameMobileGrid" class="game-grid"></div>
         </div>
         <div id="gamePcPane" class="game-pane">
-          <div class="game-pane-head"><div><h3>PC 每日发行</h3><p>Steam 最近发行列表，并结合日本游戏发行日历补充当天 PC 版本。</p></div></div>
+          <div class="game-pane-head"><div><h3>PC 热门发售时间线</h3><p>只使用 Steam 官方 Popular New Releases 与 Popular Upcoming，过滤大量低关注度、低讨论度的普通新上架作品。</p></div></div>
           <div id="gamePcGrid" class="game-grid"></div>
         </div>
         <div id="gameConsolePane" class="game-pane">
-          <div class="game-pane-head"><div><h3>主机每日发行</h3><p>按日本发行日汇总 Nintendo Switch / Switch 2、PlayStation 与 Xbox 平台。</p></div></div>
+          <div class="game-pane-head"><div><h3>主机发售时间线</h3><p>按日本发行日汇总 Nintendo Switch / Switch 2、PlayStation 与 Xbox，覆盖过去 7 天到未来 90 天。</p></div></div>
           <div id="gameConsoleGrid" class="game-grid"></div>
         </div>
       </section>

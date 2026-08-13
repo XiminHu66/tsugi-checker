@@ -1,0 +1,99 @@
+name: Update feed & deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Daily at 09:17 America/Los_Angeles; avoids the top-of-hour Actions load spike.
+    - cron: "17 9 * * *"
+      timezone: "America/Los_Angeles"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decide whether to refresh sources
+        id: mode
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" || "${{ github.event_name }}" == "workflow_dispatch" || "${{ github.event.head_commit.message }}" == *"[refresh]"* ]]; then
+            echo "scrape=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "scrape=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Python
+        if: steps.mode.outputs.scrape == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.mode.outputs.scrape == 'true'
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Refresh reading, music, games and news feeds
+        if: steps.mode.outputs.scrape == 'true'
+        run: |
+          python scraper/main.py
+          # Steam's storefront search is JS-driven on GitHub runners. Run a browser-backed
+          # PC pass after the generic game refresh and merge it into game-releases.json.
+          python scraper/steam_pc.py
+
+      - name: Commit refreshed data
+        if: steps.mode.outputs.scrape == 'true'
+        run: |
+          git config user.name "tsugi-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/feed.json data/feed.xml data/state.json data/site-updates.json data/acg-news.json data/music.json data/game-releases.json data/game-state.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore: refresh reading feed"
+            git push
+          fi
+
+      - name: Prepare static site
+        run: |
+          rm -rf _site
+          mkdir -p _site/config _site/data
+          cp index.html styles.css v5.css app.js _site/
+          touch _site/.nojekyll
+          cp config/library.json config/content.json _site/config/
+          cp data/feed.json data/feed.xml data/site-updates.json data/acg-news.json data/music.json data/game-releases.json _site/data/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: update-and-build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

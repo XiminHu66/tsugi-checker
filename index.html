@@ -108,11 +108,15 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
             <input id="search" placeholder="搜索作品、章节或来源" />
           </label>
+          <button id="sourceRefreshBtn" class="source-refresh-btn" title="手动触发一次 GitHub Actions 订阅源刷新" aria-label="刷新订阅源">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M18.6 9A7 7 0 0 0 6.2 6.2L4 8M20 16l-2.2 1.8A7 7 0 0 1 5.4 15"/></svg>
+            <span>刷新订阅源</span>
+          </button>
           <button id="themeBtn" class="icon-btn theme-btn" title="切换明暗主题" aria-label="切换明暗主题">
             <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8 8 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg>
             <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"/></svg>
           </button>
-          <button id="refreshBtn" class="icon-btn" title="刷新页面数据" aria-label="刷新">
+          <button id="refreshBtn" class="icon-btn" title="重新读取已生成的数据" aria-label="重新读取数据">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M18.6 9A7 7 0 0 0 6.2 6.2L4 8M20 16l-2.2 1.8A7 7 0 0 1 5.4 15"/></svg>
           </button>
         </div>
@@ -333,6 +337,99 @@
       </section>
     </main>
   </div>
+  <div id="tsugiToast" class="tsugi-toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
+  <script>
+    (()=>{
+      const OWNER='XiminHu66';
+      const REPO='tsugi-checker';
+      const WORKFLOW='update-feed.yml';
+      const REF='main';
+      const TOKEN_KEY='tsugi-actions-token-session';
+      const actionsUrl=`https://github.com/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}`;
+      const dispatchUrl=`https://api.github.com/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}/dispatches`;
+      const btn=document.getElementById('sourceRefreshBtn');
+      const toast=document.getElementById('tsugiToast');
+      let toastTimer=null;
+
+      function notify(message,kind=''){
+        if(!toast)return;
+        clearTimeout(toastTimer);
+        toast.textContent=message;
+        toast.className=`tsugi-toast show ${kind}`;
+        toastTimer=setTimeout(()=>toast.className='tsugi-toast',5200);
+      }
+      function setBusy(busy){
+        if(!btn)return;
+        btn.disabled=busy;
+        btn.dataset.state=busy?'running':'';
+        const label=btn.querySelector('span');
+        if(label)label.textContent=busy?'正在触发…':'刷新订阅源';
+      }
+      async function pollForFreshData(before){
+        for(let i=0;i<24;i++){
+          await new Promise(r=>setTimeout(r,12500));
+          try{
+            const r=await fetch(`data/site-updates.json?v=${Date.now()}`,{cache:'no-store'});
+            const j=await r.json();
+            if(j.generated_at && j.generated_at!==before){
+              notify('订阅源刷新完成，页面数据已自动重新载入。','ok');
+              if(typeof load==='function')await load();
+              return;
+            }
+          }catch{}
+        }
+        notify('Action 已触发，但暂未检测到新数据。可稍后点击右侧圆形刷新按钮重新读取。');
+      }
+      async function dispatch(token){
+        const response=await fetch(dispatchUrl,{
+          method:'POST',
+          headers:{
+            'Accept':'application/vnd.github+json',
+            'Authorization':`Bearer ${token}`,
+            'X-GitHub-Api-Version':'2026-03-10',
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify({ref:REF})
+        });
+        if(![200,204].includes(response.status)){
+          let detail='';
+          try{detail=(await response.json()).message||''}catch{}
+          const err=new Error(detail||`GitHub API ${response.status}`);
+          err.status=response.status;
+          throw err;
+        }
+      }
+      btn?.addEventListener('click',async()=>{
+        let token=sessionStorage.getItem(TOKEN_KEY)||'';
+        if(!token){
+          token=(prompt('直接从 Tsugi 触发 GitHub Actions 需要一个仅授予此仓库 Actions: Read and write 的 fine-grained GitHub token。\n\nToken 只保存在当前浏览器标签页的 sessionStorage，关闭标签页后清除，不会写入仓库。\n\n粘贴 token 后点击确定；留空则打开 GitHub Actions 页面手动运行。')||'').trim();
+          if(!token){
+            window.open(actionsUrl,'_blank','noopener');
+            notify('已打开 GitHub Actions。点击 “Run workflow” 即可手动刷新全部订阅源。');
+            return;
+          }
+          sessionStorage.setItem(TOKEN_KEY,token);
+        }
+        let before='';
+        try{
+          const current=await fetch(`data/site-updates.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>r.json());
+          before=current.generated_at||'';
+        }catch{}
+        setBusy(true);
+        try{
+          await dispatch(token);
+          notify('已触发订阅源刷新。GitHub Actions 正在运行，完成后本页会自动检测新数据。','ok');
+          setBusy(false);
+          pollForFreshData(before);
+        }catch(err){
+          setBusy(false);
+          if(err.status===401||err.status===403)sessionStorage.removeItem(TOKEN_KEY);
+          notify(`无法直接触发：${err.message}。已打开 GitHub Actions 作为备用。`,'err');
+          window.open(actionsUrl,'_blank','noopener');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

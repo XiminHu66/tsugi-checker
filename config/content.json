@@ -16,12 +16,17 @@
       "type": "novel",
       "url": "https://tw.linovelib.com/wenku/",
       "fetch_mode": "auto",
-      "detail_fetch_mode": "requests",
+      "detail_fetch_mode": "browser",
       "chapter_order": "first",
-      "limit": 60,
+      "limit": 90,
       "enrich": true,
-      "enrich_limit": 30,
-      "enabled": true
+      "enrich_limit": 24,
+      "enabled": true,
+      "page_urls": [
+        "https://tw.linovelib.com/wenku/",
+        "https://tw.linovelib.com/wenku/lastupdate_0_0_0_0_0_0_0_2_0.html",
+        "https://tw.linovelib.com/wenku/lastupdate_0_0_0_0_0_0_0_3_0.html"
+      ]
     },
     {
       "id": "copymanga",
@@ -33,7 +38,7 @@
       "chapter_order": "first",
       "limit": 60,
       "enrich": true,
-      "enrich_limit": 18,
+      "enrich_limit": 24,
       "enabled": true
     },
     {

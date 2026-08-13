@@ -26,13 +26,27 @@ def fetch_requests(url):
     return r.text
 
 def fetch_browser(url):
+    return fetch_browser_batch([url]).get(url, '')
+
+def fetch_browser_batch(urls, wait_ms=900):
+    """Fetch several pages in one Chromium session to avoid repeated browser startups."""
     from playwright.sync_api import sync_playwright
-    with sync_playwright() as p:
-        browser=p.chromium.launch(headless=True)
-        page=browser.new_page(user_agent=UA,locale='zh-CN',viewport={'width':1280,'height':900})
-        page.goto(url,wait_until='domcontentloaded',timeout=45000)
-        page.wait_for_timeout(1800)
-        html=page.content(); browser.close(); return html
+    out={}
+    urls=[u for u in urls if u]
+    if not urls: return out
+    with sync_playwright() as pw:
+        browser=pw.chromium.launch(headless=True)
+        context=browser.new_context(user_agent=UA,locale='zh-CN',viewport={'width':1280,'height':900})
+        page=context.new_page()
+        for url in urls:
+            try:
+                page.goto(url,wait_until='domcontentloaded',timeout=45000)
+                page.wait_for_timeout(wait_ms)
+                out[url]=page.content()
+            except Exception as e:
+                out[url]=e
+        context.close(); browser.close()
+    return out
 
 def fetch(url,mode='auto'):
     if mode=='browser': return fetch_browser(url)
@@ -61,17 +75,23 @@ def enrich_site_rows(found, src):
         return found
     limit=min(len(found), int(src.get('enrich_limit', len(found))))
     sid=src.get('id','generic')
-    for i,row in enumerate(found[:limit]):
+    mode=src.get('detail_fetch_mode','requests')
+    batch={}
+    if mode == 'browser':
+        batch=fetch_browser_batch([row.get('url') for row in found[:limit]], wait_ms=int(src.get('detail_wait_ms',900)))
+    for row in found[:limit]:
         try:
-            detail=fetch(row['url'], src.get('detail_fetch_mode','requests'))
+            detail=batch.get(row['url']) if mode == 'browser' else fetch(row['url'], mode)
+            if isinstance(detail, Exception): raise detail
+            if not detail: raise RuntimeError('empty detail page')
             item={
                 'id':row['id'], 'title':row.get('title'), 'url':row['url'],
                 'source':sid, 'type':row.get('type',src.get('type','novel')),
                 'chapter_order':src.get('chapter_order','first')
             }
+            soup=BeautifulSoup(detail,'lxml')
             # Linovelib exposes a dedicated “最后更新·日期 章节名” link on work pages.
             if sid == 'linovelib':
-                soup=BeautifulSoup(detail,'lxml')
                 latest_anchor=None
                 for a in soup.select('a[href]'):
                     text=' '.join(a.stripped_strings)
@@ -84,6 +104,15 @@ def enrich_site_rows(found, src):
                         if m.group(1): row['updated_text']=m.group(1)
                         if m.group(2): row['latest']=m.group(2).strip()
                     row['latest_url']=urljoin(row['url'], latest_anchor.get('href') or '')
+            # CopyManga renders its chapter list client-side, but the concrete latest
+            # chapter is present in the server-rendered <title> and update date text.
+            if sid == 'copymanga':
+                title_text=' '.join(soup.title.stripped_strings) if soup.title else ''
+                m=re.search(r'-(第\s*[^-]{1,36}?(?:话|話|章|回|卷))-', title_text)
+                if m: row['latest']=m.group(1).strip()
+                page_text=' '.join(soup.stripped_strings)
+                dm=re.search(r'(?:最后|最後)更新[：:\s]*(20\d{2}[-/.]\d{1,2}[-/.]\d{1,2})', page_text)
+                if dm: row['updated_text']=dm.group(1)
             parsed=parse(detail,row['url'],item)
             if parsed.latest_chapter and (not row.get('latest') or row.get('latest')=='最新更新'):
                 row['latest']=parsed.latest_chapter
@@ -96,7 +125,7 @@ def enrich_site_rows(found, src):
         except Exception as e:
             row['enrich_error']=f'{type(e).__name__}: {e}'
             print(f"SITE ENRICH WARN {sid} {row.get('title')}: {e}", file=sys.stderr)
-        time.sleep(float(src.get('detail_delay',0.25)))
+        time.sleep(float(src.get('detail_delay',0.18)))
     return found
 
 def refresh_site_updates(content_cfg, generated):
@@ -105,8 +134,17 @@ def refresh_site_updates(content_cfg, generated):
         if not src.get('enabled',True): continue
         sid=src.get('id','generic'); label=src.get('label',sid)
         try:
-            html=fetch(src['url'],src.get('fetch_mode','auto'))
-            found=parse_site_latest(html,src['url'],sid,label,src.get('type','novel'),src.get('limit',24))
+            page_urls=src.get('page_urls') or [src['url']]
+            found=[]; seen=set()
+            for page_url in page_urls:
+                html=fetch(page_url,src.get('fetch_mode','auto'))
+                rows=parse_site_latest(html,page_url,sid,label,src.get('type','novel'),src.get('limit',24))
+                for row in rows:
+                    key=(row.get('source'),row.get('url'))
+                    if key in seen: continue
+                    seen.add(key); found.append(row)
+                if len(found)>=int(src.get('limit',24)): break
+            found=found[:int(src.get('limit',24))]
             if not found: raise RuntimeError('no latest items detected')
             found=enrich_site_rows(found,src)
             for row in found: row['fetched_at']=generated
@@ -116,7 +154,7 @@ def refresh_site_updates(content_cfg, generated):
         except Exception as e:
             statuses[sid]={'label':label,'ok':False,'count':0,'checked_at':generated,'error':f'{type(e).__name__}: {e}'}
             print(f"SITE ERR {sid}: {e}",file=sys.stderr)
-    SITE_FEED.write_text(json.dumps({'generated_at':generated,'items':items[:300],'sources':statuses},ensure_ascii=False,indent=2)+'\n','utf-8')
+    SITE_FEED.write_text(json.dumps({'generated_at':generated,'items':items[:400],'sources':statuses},ensure_ascii=False,indent=2)+'\n','utf-8')
 
 def refresh_news(content_cfg, generated):
     items=[]; statuses={}

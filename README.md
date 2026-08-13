@@ -1,125 +1,81 @@
-# Tsugi — 小说 / 漫画固定追更器
+# Tsugi — ACG 追踪中心
 
-一个适合直接部署到 **GitHub Pages** 的静态追更面板。界面参考 Mihon / Tachiyomi 的“书架 + 更新”结构，但把抓取放到 **GitHub Actions**：每天检查固定作品 URL，检测最新章节变化后生成 JSON 与 Atom 更新流。
+Tsugi 是一个部署在 **GitHub Pages** 的静态 ACG dashboard。数据由 **GitHub Actions** 定时抓取并缓存为 JSON，浏览器只负责展示和本机订阅状态。
 
-> 默认只抓取公开页面中的作品元数据、章节名称和原站链接，不镜像正文/漫画图片；不处理登录、付费内容、验证码或反爬绕过。
+> 只抓公开页面中的标题、封面、章节/话数、发行信息和原站链接；不镜像正文或漫画内容，不处理登录、付费、验证码或反爬绕过。
 
-## 目录
+## 功能
 
-- `index.html` / `styles.css` / `app.js`：GitHub Pages 前端
-- `config/library.json`：你的固定追更书架
-- `scraper/main.py`：每日检查任务
-- `scraper/sources.py`：来源解析与通用章节识别
-- `data/feed.json`：网页读取的更新流
-- `data/feed.xml`：可给 Feedly / Reeder / FreshRSS 使用的 Atom feed
-- `data/state.json`：上一次章节状态，用来判断“是否有新章节”
+- **更新流**：漫画柜、BiliNovel / Linovelib、CopyManga 等公开最新更新。
+- **我的书架**：
+  - 从更新流一键加入的“本机追踪”保存在 LocalStorage；每天新的站点更新到达时自动比对。
+  - `config/library.json` 中的“云端追踪”由 GitHub Actions 主动打开作品页检查，可靠性更高。
+- **音乐追踪**：Billboard JAPAN Hot 100、Apple 日本新发行，以及浏览器本机保存的艺人新曲关注。
+- **游戏追踪**：手游、PC、主机每日新发行 / 新发现。
+- **ACG 新闻**：只启用中文或繁体中文来源。
+- **明暗主题**：浏览器本地保存偏好。
 
-## 1. 添加作品
+## 关键文件
 
-复制 `config/library.example.json` 中的格式到 `config/library.json`。`id` 必须唯一。
+- `index.html` / `styles.css` / `v5.css` / `app.js`：前端
+- `config/content.json`：公开更新流、中文新闻、音乐、游戏来源配置
+- `config/library.json`：云端深度追踪书架
+- `scraper/main.py`：总抓取入口
+- `scraper/sources.py`：单作品章节解析
+- `scraper/aggregators.py`：站点更新流与 RSS 聚合
+- `scraper/music.py`：日本音乐榜 / 新发行
+- `scraper/games.py`：手游 / PC / 主机新发行
+- `data/*.json`：GitHub Pages 读取的缓存数据
+
+## 每日计划
+
+工作流位于 `.github/workflows/update-feed.yml`。
+
+默认每天 **09:17 America/Los_Angeles** 执行一次完整抓取，自动处理 PDT / PST。特意避开整点，降低 GitHub Actions 高负载导致延迟的概率。
+
+普通 push 只重新部署静态站点；以下情况会完整抓取：
+
+- 每日 schedule
+- Actions 页面手动 `Run workflow`
+- commit message 包含 `[refresh]`
+
+## 添加云端书架作品
+
+编辑 `config/library.json`：
 
 ```json
 {
   "items": [
     {
-      "id": "my-novel-001",
-      "type": "novel",
-      "source": "bilinovel",
-      "title": "我的轻小说",
-      "url": "https://目标网站/作品详情页",
-      "enabled": true
-    },
-    {
       "id": "my-manga-001",
       "type": "manga",
       "source": "manhuagui",
-      "title": "我的漫画",
-      "url": "https://目标网站/作品详情页",
+      "title": "作品名",
+      "url": "https://作品详情页",
       "enabled": true
     }
   ]
 }
 ```
 
-支持的 `source`：
+支持 `linovelib` / `bilinovel`、`manhuagui`、`copymanga`、`wenku8`、`generic`。
 
-- `bilinovel` / `linovelib`
-- `wenku8`
-- `manhuagui`
-- `copymanga`
-- `generic`
+第一次成功抓取只建立 baseline；以后最新章节、URL 或章节数量发生变化才生成个人更新记录。
 
-### 可选字段
+## 部署
 
-- `fetch_mode`: `auto`（默认）、`requests`、`browser`
-  - `auto` 会先普通 HTTP 请求，失败时再用无头 Chromium 渲染页面。
-- `chapter_selector`: 某站点章节链接的 CSS selector，例如 `.chapter-list a`。内置启发式识别不准时非常有用。
-- `chapter_order`: `last`（默认）或 `first`。如果该站章节列表是“最新章节在最上方”，设置为 `first`。
-- `delay`: 每本作品抓取后的暂停秒数，默认 `1.5`。
+GitHub 仓库 → **Settings → Pages → Build and deployment → Source → GitHub Actions**。
 
-## 2. 第一次初始化
-
-打开 GitHub 仓库 → **Actions** → `Update feed & deploy Pages` → `Run workflow`。
-
-第一次成功抓取只会建立基线，不会把当前所有章节当作“新更新”。以后发现最新章节 / 章节数量变化时才会生成更新条目。
-
-## 3. 开启 GitHub Pages
-
-仓库 → **Settings → Pages → Build and deployment**：
-
-1. Source 选择 `GitHub Actions`
-2. 保存即可；`.github/workflows/update-feed.yml` 会在抓取完成后直接部署最新静态站点
-
-之后访问 `https://你的用户名.github.io/仓库名/`。
-
-## 4. 每日更新与 RSS
-
-工作流默认 `16:00 UTC` 每天运行一次，约等于西雅图夏令时 `09:00`、冬令时 `08:00`。GitHub Actions 的 cron 使用 UTC；可直接修改 `.github/workflows/update-feed.yml`。
-
-Atom 地址：
-
-```text
-https://你的用户名.github.io/仓库名/data/feed.xml
-```
-
-## 5. 来源失败怎么办
-
-不同中文小说/漫画站点经常修改 DOM、启用 Cloudflare、限制机房 IP 或要求 JS 渲染，因此没有任何“永远不坏”的纯静态抓取方案。这个项目采取几层降级：
-
-1. HTTP 请求抓取
-2. 普通 Playwright Chromium 渲染（不做 stealth / 验证码绕过）
-3. 自动寻找“目录 / 章节”链接并再请求一次
-4. 通用章节标题启发式
-5. 最后允许你给单本作品指定 `chapter_selector`
-
-如果 GitHub Actions IP 被源站完全拦截，建议把该作品改为你可合法访问的其他公开来源；不要把账号 Cookie、密码或付费站点凭证提交到公开仓库。
+第一次或修改抓取器后，建议在 Actions 手动运行一次 `Update feed & deploy Pages`。
 
 ## 本地预览
-
-不要直接双击 `index.html`（浏览器可能阻止读取 JSON）。在项目目录运行：
 
 ```bash
 python -m http.server 8000
 ```
 
-然后访问 `http://localhost:8000`。
+打开 `http://localhost:8000`。不要直接双击 `index.html`，否则浏览器可能阻止读取 JSON。
 
-## v3 content streams
+## 抓取失败说明
 
-The dashboard now separates three content streams:
-
-- **我的追更**: changes detected only for titles in `config/library.json`.
-- **站点最新**: public latest-update pages from enabled sources in `config/content.json`.
-- **ACG 新闻**: RSS headlines cached by GitHub Actions into `data/acg-news.json`.
-
-Default public latest sources: Manhuagui, Linovelib, Wenku8 and CopyManga. A failure from one public source does not stop the rest of the workflow.
-
-Default news feeds:
-
-- 巴哈姆特 GNN — Chinese ACG/general gaming coverage
-- 4Gamer — Japanese game/industry coverage
-- Anime News Network — anime/manga coverage
-
-Edit `config/content.json` to enable, disable or replace public content sources.
-
-The light/dark theme is a front-end preference stored in browser LocalStorage. It does not modify repository data.
+中文小说 / 漫画站经常调整 DOM 或限制机房 IP。Tsugi 会在公开访问范围内使用普通 requests 或普通 Playwright 浏览器降级，不做 stealth、验证码绕过或账号 Cookie 注入。单一来源失败不会阻止其他来源和 Pages 部署。

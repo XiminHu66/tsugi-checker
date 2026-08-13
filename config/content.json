@@ -107,17 +107,17 @@
       },
       "googleplay": {
         "enabled": true,
-        "url": "https://play.google.com/store/games?hl=ja&gl=jp",
+        "url": "https://play.google.com/store/apps/collection/promotion_3000791_new_releases_games?hl=ja&gl=jp",
         "limit": 36
       },
       "steam_popular_new": {
         "enabled": true,
-        "url": "https://store.steampowered.com/search/?filter=popularnew&category1=998&sort_by=Released_DESC&l=english&cc=jp",
+        "url": "https://store.steampowered.com/search/?filter=popularnew&sort_by=Released_DESC&l=english&cc=jp&ignore_preferences=1",
         "limit": 100
       },
       "steam_popular_upcoming": {
         "enabled": true,
-        "url": "https://store.steampowered.com/search/?filter=popularcomingsoon&category1=998&sort_by=Released_ASC&l=english&cc=jp",
+        "url": "https://store.steampowered.com/search/?filter=popularcomingsoon&sort_by=Released_ASC&l=english&cc=jp&ignore_preferences=1",
         "limit": 100
       },
       "famitsu": {

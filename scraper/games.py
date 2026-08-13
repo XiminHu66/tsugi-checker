@@ -5,7 +5,7 @@ import json
 import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -34,6 +34,22 @@ def get_html(url: str, ua: str, timeout: int = 30, accept_language: str = "ja-JP
     )
     r.raise_for_status()
     return r.text
+
+
+def get_browser_html(url: str, ua: str, locale: str = "ja-JP", wait_ms: int = 2200) -> str:
+    """Render storefront pages that return a mostly empty app shell to plain requests."""
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(user_agent=ua, locale=locale)
+        page = context.new_page()
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        page.wait_for_timeout(wait_ms)
+        html = page.content()
+        context.close()
+        browser.close()
+        return html
 
 
 def parse_jp_date(text: str) -> str:
@@ -80,23 +96,30 @@ def closest_card(anchor, max_chars: int = 650):
     return anchor.parent
 
 
-def app_title(anchor) -> str:
-    for key in ("aria-label", "title"):
-        t = clean(anchor.get(key))
-        if 2 <= len(t) <= 100:
-            return t
-    img = anchor.select_one("img")
-    if img:
-        t = clean(img.get("alt"))
-        if 2 <= len(t) <= 100:
-            return t
-    for sel in ("h2", "h3", "h4", "strong", "b", "span"):
-        n = anchor.select_one(sel)
-        t = clean(n.get_text(" ")) if n else ""
-        if 2 <= len(t) <= 100:
-            return t
-    text = clean(anchor.get_text(" "))
-    return text[:100] if 2 <= len(text) <= 140 else ""
+def app_title(anchor, card=None) -> str:
+    noise = {"表示", "入手", "開く", "インストール", "install", "open", "view"}
+    nodes = [anchor]
+    if card is not None and card is not anchor:
+        nodes.append(card)
+    for node in nodes:
+        for key in ("aria-label", "title"):
+            t = clean(node.get(key)) if hasattr(node, "get") else ""
+            if 2 <= len(t) <= 120 and t.casefold() not in noise:
+                return t
+        img = node.select_one("img") if hasattr(node, "select_one") else None
+        if img:
+            t = clean(img.get("alt") or img.get("aria-label"))
+            if 2 <= len(t) <= 120 and t.casefold() not in noise:
+                return t
+        for sel in ("h1", "h2", "h3", "h4", "strong", ".title", "[data-testid*=title]", "span"):
+            n = node.select_one(sel) if hasattr(node, "select_one") else None
+            t = clean(n.get_text(" ")) if n else ""
+            if 2 <= len(t) <= 120 and t.casefold() not in noise:
+                return t
+    text = clean((card or anchor).get_text(" "))
+    text = re.sub(r"\s+[0-5](?:\.[0-9])?\s*(?:star|★).*$", "", text, flags=re.I)
+    text = re.sub(r"\s+(?:表示|入手|インストール).*$", "", text)
+    return text[:120] if 2 <= len(text) <= 180 and text.casefold() not in noise else ""
 
 
 def section_links(soup: BeautifulSoup, marker_re: re.Pattern, href_re: re.Pattern, limit: int = 36):
@@ -117,64 +140,121 @@ def section_links(soup: BeautifulSoup, marker_re: re.Pattern, href_re: re.Patter
     return out
 
 
-def fetch_appstore_new(cfg: dict, ua: str):
-    url = cfg.get("url") or "https://apps.apple.com/jp/iphone/room/1435822938"
-    html = get_html(url, ua)
-    soup = BeautifulSoup(html, "lxml")
-    anchors = section_links(soup, re.compile(r"新着ゲーム|New Games", re.I), re.compile(r"/app/", re.I), int(cfg.get("limit", 36)))
-    rows = []
-    for a in anchors:
-        title = app_title(a)
-        href = urljoin(url, a.get("href") or "")
-        if not title or "/app/" not in href:
+def _store_anchors(soup: BeautifulSoup, href_re: re.Pattern, limit: int):
+    out = []
+    seen = set()
+    for a in soup.select("a[href]"):
+        href = a.get("href") or ""
+        if not href_re.search(href) or href in seen:
             continue
-        card = closest_card(a)
+        seen.add(href)
+        out.append(a)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _parse_mobile_store(html: str, url: str, source: str, label: str, store: str, platform: str, href_re: re.Pattern, limit: int):
+    soup = BeautifulSoup(html, "lxml")
+    anchors = _store_anchors(soup, href_re, max(limit * 3, limit))
+    rows = []
+    seen = set()
+    for a in anchors:
+        href = urljoin(url, a.get("href") or "")
+        if href in seen:
+            continue
+        card = closest_card(a, 1000)
+        title = app_title(a, card)
+        if not title:
+            continue
+        # Skip generic CTAs accidentally captured as titles.
+        if title.casefold() in {"表示", "入手", "open", "install", "view"}:
+            continue
+        seen.add(href)
         rows.append({
-            "id": stable_id("appstore", href, title),
+            "id": stable_id(source, href, title),
             "category": "mobile",
-            "source": "appstore",
-            "source_label": "App Store 日本 · 新着游戏",
-            "store": "iOS / iPadOS",
+            "source": source,
+            "source_label": label,
+            "store": store,
             "title": title,
             "url": href,
             "cover": image_from(card, url),
-            "platforms": ["iOS"],
+            "platforms": [platform],
             "release_date": "",
         })
+        if len(rows) >= limit:
+            break
+    return rows
+
+
+def fetch_appstore_new(cfg: dict, ua: str):
+    url = cfg.get("url") or "https://apps.apple.com/jp/iphone/room/1435822938"
+    limit = int(cfg.get("limit", 36))
+    label = "App Store 日本 · 新着游戏"
+    href_re = re.compile(r"(?:https?://apps\.apple\.com)?/jp/app/|/app/", re.I)
+    html = get_html(url, ua)
+    rows = _parse_mobile_store(html, url, "appstore", label, "iOS / iPadOS", "iOS", href_re, limit)
+    if not rows:
+        html = get_browser_html(url, ua, "ja-JP")
+        rows = _parse_mobile_store(html, url, "appstore", label, "iOS / iPadOS", "iOS", href_re, limit)
     return rows
 
 
 def fetch_googleplay_new(cfg: dict, ua: str):
-    url = cfg.get("url") or "https://play.google.com/store/games?hl=ja&gl=jp"
+    # A dedicated Google Play collection is much more stable than trying to locate
+    # the section inside the generic /store/games landing page.
+    url = cfg.get("url") or "https://play.google.com/store/apps/collection/promotion_3000791_new_releases_games?hl=ja&gl=jp"
+    limit = int(cfg.get("limit", 36))
+    label = "Google Play 日本 · 新規リリース"
+    href_re = re.compile(r"/store/apps/details\?(?:[^#]*&)?id=", re.I)
     html = get_html(url, ua)
-    soup = BeautifulSoup(html, "lxml")
-    anchors = section_links(soup, re.compile(r"新規リリースのゲーム|New releases", re.I), re.compile(r"/store/apps/details\?id=", re.I), int(cfg.get("limit", 36)))
-    rows = []
-    for a in anchors:
-        title = app_title(a)
-        href = urljoin("https://play.google.com", a.get("href") or "")
-        if not title or "details?id=" not in href:
-            continue
-        card = closest_card(a)
-        title = re.sub(r"\s+\d(?:\.\d)?\s*star.*$", "", title, flags=re.I).strip()
-        rows.append({
-            "id": stable_id("googleplay", href, title),
-            "category": "mobile",
-            "source": "googleplay",
-            "source_label": "Google Play 日本 · 新規リリース",
-            "store": "Android",
-            "title": title,
-            "url": href,
-            "cover": image_from(card, url),
-            "platforms": ["Android"],
-            "release_date": "",
-        })
+    rows = _parse_mobile_store(html, url, "googleplay", label, "Android", "Android", href_re, limit)
+    if not rows:
+        html = get_browser_html(url, ua, "ja-JP", 3000)
+        rows = _parse_mobile_store(html, url, "googleplay", label, "Android", "Android", href_re, limit)
     return rows
 
 
+def _steam_result_html(cfg: dict, ua: str, source_id: str) -> str:
+    """Use Steam's search-results response instead of the JS-heavy search shell."""
+    page_url = cfg.get("url") or ""
+    parsed = urlparse(page_url)
+    qs = parse_qs(parsed.query)
+    filter_name = (qs.get("filter") or ["popularnew" if source_id == "steam_popular_new" else "popularcomingsoon"])[0]
+    sort_by = (qs.get("sort_by") or ["Released_DESC" if source_id == "steam_popular_new" else "Released_ASC"])[0]
+    limit = int(cfg.get("limit", 100))
+    endpoint = "https://store.steampowered.com/search/results/"
+    params = {
+        "filter": filter_name,
+        "start": 0,
+        "count": limit,
+        "sort_by": sort_by,
+        "cc": "jp",
+        "l": "english",
+        "ignore_preferences": 1,
+        "infinite": 1,
+        "json": 1,
+    }
+    r = requests.get(endpoint, params=params, headers={"User-Agent": ua, "Accept-Language": "en-US,en;q=0.9"}, timeout=30)
+    r.raise_for_status()
+    try:
+        data = r.json()
+    except Exception:
+        data = {}
+    html = data.get("results_html") or data.get("html") or ""
+    if html:
+        return html
+    # Fallback to a rendered search page if Steam changes the JSON envelope.
+    fallback = page_url or f"https://store.steampowered.com/search/?filter={filter_name}&sort_by={sort_by}&l=english&cc=jp&ignore_preferences=1"
+    joiner = "&" if "?" in fallback else "?"
+    if "ignore_preferences=" not in fallback:
+        fallback += joiner + "ignore_preferences=1"
+    return get_browser_html(fallback, ua, "en-US", 2500)
+
+
 def fetch_steam_popular(cfg: dict, ua: str, source_id: str, source_label: str):
-    url = cfg["url"]
-    html = get_html(url, ua, accept_language="en-US,en;q=0.9")
+    html = _steam_result_html(cfg, ua, source_id)
     soup = BeautifulSoup(html, "lxml")
     rows = []
     for a in soup.select("a.search_result_row")[: int(cfg.get("limit", 100))]:
@@ -187,7 +267,6 @@ def fetch_steam_popular(cfg: dict, ua: str, source_id: str, source_label: str):
         date_text = clean(date_node.get_text(" ")) if date_node else ""
         release_date = parse_any_date(date_text)
         if not release_date:
-            # Skip 'Coming soon' entries without an actual date: the timeline is date-driven.
             continue
         img = a.select_one("img")
         cover = (img.get("src") or img.get("data-src") or "") if img else ""
@@ -355,7 +434,9 @@ def refresh_games(content_cfg: dict, generated: str, output_path: Path, state_pa
         try:
             found = fn(scfg, ua)
             rows.extend(found)
-            statuses[sid] = {"label": label, "ok": True, "count": len(found), "checked_at": generated}
+            statuses[sid] = {"label": label, "ok": bool(found), "count": len(found), "checked_at": generated}
+            if not found:
+                statuses[sid]["error"] = "No items parsed"
             print(f"GAMES {sid}: {len(found)} items")
         except Exception as e:
             statuses[sid] = {"label": label, "ok": False, "count": 0, "checked_at": generated, "error": f"{type(e).__name__}: {e}"}
@@ -382,7 +463,9 @@ def refresh_games(content_cfg: dict, generated: str, output_path: Path, state_pa
                 elif sid == "steam_popular_upcoming" and today < d <= future_end:
                     filtered.append(row)
             rows.extend(filtered)
-            statuses[sid] = {"label": label, "ok": True, "count": len(filtered), "raw_count": len(found), "checked_at": generated}
+            statuses[sid] = {"label": label, "ok": bool(found), "count": len(filtered), "raw_count": len(found), "checked_at": generated}
+            if not found:
+                statuses[sid]["error"] = "No Steam results parsed"
             print(f"GAMES {sid}: {len(filtered)} timeline items ({len(found)} raw)")
         except Exception as e:
             statuses[sid] = {"label": label, "ok": False, "count": 0, "checked_at": generated, "error": f"{type(e).__name__}: {e}"}

@@ -1,292 +1,552 @@
 {
-  "generated_at": "2026-08-13T19:18:02Z",
+  "generated_at": "2026-08-13T19:55:50Z",
   "chart_date": "2026/08/12",
   "weekly_chart": [
     {
       "rank": 1,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "SODA SODA",
       "artist": "TWS",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_H1371518W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/782834"
+      "url": "https://www.billboard-japan.com/goods/detail/782834",
+      "youtube_music_url": "https://music.youtube.com/search?q=SODA+SODA+TWS"
     },
     {
       "rank": 2,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "花咲く道",
       "artist": "ME:I",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000166/202x_P2_H1363239W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/780130"
+      "url": "https://www.billboard-japan.com/goods/detail/780130",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E8%8A%B1%E5%92%B2%E3%81%8F%E9%81%93+ME%3AI"
     },
     {
       "rank": 3,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "サマーツインテール",
       "artist": "≒JOY",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_G3936187W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/781934"
+      "url": "https://www.billboard-japan.com/goods/detail/781934",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%84%E3%82%A4%E3%83%B3%E3%83%86%E3%83%BC%E3%83%AB+%E2%89%92JOY"
     },
     {
       "rank": 4,
       "last_rank": "4",
       "weeks": 4,
+      "is_new": false,
       "title": "Brand New",
       "artist": "Mrs.GREEN APPLE",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000284/202x_image284167.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/688845"
+      "url": "https://www.billboard-japan.com/artists/detail/688845",
+      "youtube_music_url": "https://music.youtube.com/search?q=Brand+New+Mrs.GREEN+APPLE"
     },
     {
       "rank": 5,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
       "artist": "M!LK",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000286/202x_image286842.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/701819"
+      "url": "https://www.billboard-japan.com/artists/detail/701819",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9+%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29+M%21LK"
     },
     {
       "rank": 6,
       "last_rank": "3",
       "weeks": 4,
+      "is_new": false,
       "title": "BAD",
       "artist": "ATEEZ",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_G3937333W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/781781"
+      "url": "https://www.billboard-japan.com/goods/detail/781781",
+      "youtube_music_url": "https://music.youtube.com/search?q=BAD+ATEEZ"
     },
     {
       "rank": 7,
       "last_rank": "8",
       "weeks": 41,
+      "is_new": false,
       "title": "好きすぎて滅!",
       "artist": "M!LK",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000242/202x_image242237.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/701819"
+      "url": "https://www.billboard-japan.com/artists/detail/701819",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E5%A5%BD%E3%81%8D%E3%81%99%E3%81%8E%E3%81%A6%E6%BB%85%21+M%21LK"
     },
     {
       "rank": 8,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "見知らぬ糸",
       "artist": "スピッツ",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000286/202x_image286843.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/170740"
+      "url": "https://www.billboard-japan.com/artists/detail/170740",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E8%A6%8B%E7%9F%A5%E3%82%89%E3%81%AC%E7%B3%B8+%E3%82%B9%E3%83%94%E3%83%83%E3%83%84"
     },
     {
       "rank": 9,
       "last_rank": "10",
       "weeks": 26,
+      "is_new": false,
       "title": "爆裂愛してる",
       "artist": "M!LK",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000164/202x_P2_H1335141W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/772207"
+      "url": "https://www.billboard-japan.com/goods/detail/772207",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E7%88%86%E8%A3%82%E6%84%9B%E3%81%97%E3%81%A6%E3%82%8B+M%21LK"
     },
     {
       "rank": 10,
       "last_rank": "12",
       "weeks": 15,
+      "is_new": false,
       "title": "It's Me",
       "artist": "ILLIT",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000274/202x_image274395.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/1057561"
+      "url": "https://www.billboard-japan.com/artists/detail/1057561",
+      "youtube_music_url": "https://music.youtube.com/search?q=It%27s+Me+ILLIT"
     },
     {
       "rank": 11,
       "last_rank": "9",
       "weeks": 2,
+      "is_new": false,
       "title": "GO GHOST",
       "artist": "King Gnu",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000285/202x_image285974.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/802246"
+      "url": "https://www.billboard-japan.com/artists/detail/802246",
+      "youtube_music_url": "https://music.youtube.com/search?q=GO+GHOST+King+Gnu"
     },
     {
       "rank": 12,
       "last_rank": "11",
       "weeks": 26,
+      "is_new": false,
       "title": "夜の踊り子",
       "artist": "サカナクション",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000076/202x_P2_G1639441W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/355491"
+      "url": "https://www.billboard-japan.com/goods/detail/355491",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E5%A4%9C%E3%81%AE%E8%B8%8A%E3%82%8A%E5%AD%90+%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3"
     },
     {
       "rank": 13,
       "last_rank": "14",
       "weeks": 6,
+      "is_new": false,
       "title": "Yes! 東京 (feat. 超特急,M!LK,SUPER★DRAGON,Sakurashimeji,ONE N' ONLY,原因は自分にある。,BUDDiiS,ICEx,Lienel)",
       "artist": "EBiDAN",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_G4885697W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/779851"
+      "url": "https://www.billboard-japan.com/goods/detail/779851",
+      "youtube_music_url": "https://music.youtube.com/search?q=Yes%21+%E6%9D%B1%E4%BA%AC+%28feat.+%E8%B6%85%E7%89%B9%E6%80%A5%2CM%21LK%2CSUPER%E2%98%85DRAGON%2CSakurashimeji%2CONE+N%27+ONLY%2C%E5%8E%9F%E5%9B%A0%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AB%E3%81%82%E3%82%8B%E3%80%82%2CBUDDiiS%2CICEx%2CLienel%29+EBiDAN"
     },
     {
       "rank": 14,
       "last_rank": "13",
       "weeks": 47,
+      "is_new": false,
       "title": "IRIS OUT",
       "artist": "米津玄師",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000162/202x_P2_G4821835W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/765292"
+      "url": "https://www.billboard-japan.com/goods/detail/765292",
+      "youtube_music_url": "https://music.youtube.com/search?q=IRIS+OUT+%E7%B1%B3%E6%B4%A5%E7%8E%84%E5%B8%AB"
     },
     {
       "rank": 15,
       "last_rank": "2",
       "weeks": 2,
+      "is_new": false,
       "title": "I Got Your Back (feat. JISOO,MOMOKA of HANA)",
       "artist": "ILLIT",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000285/202x_image285981.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/1057561"
+      "url": "https://www.billboard-japan.com/artists/detail/1057561",
+      "youtube_music_url": "https://music.youtube.com/search?q=I+Got+Your+Back+%28feat.+JISOO%2CMOMOKA+of+HANA%29+ILLIT"
     },
     {
       "rank": 16,
       "last_rank": "19",
       "weeks": 2,
+      "is_new": false,
       "title": "好き",
       "artist": "星野源",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000285/202x_image285984.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/82529"
+      "url": "https://www.billboard-japan.com/artists/detail/82529",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E5%A5%BD%E3%81%8D+%E6%98%9F%E9%87%8E%E6%BA%90"
     },
     {
       "rank": 17,
       "last_rank": "16",
       "weeks": 8,
+      "is_new": false,
       "title": "烏",
       "artist": "米津玄師",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000280/202x_image280540.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/71465"
+      "url": "https://www.billboard-japan.com/artists/detail/71465",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E7%83%8F+%E7%B1%B3%E6%B4%A5%E7%8E%84%E5%B8%AB"
     },
     {
       "rank": 18,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "On My Road",
       "artist": "Travis Japan",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000165/202x_P2_G3912885W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/774221"
+      "url": "https://www.billboard-japan.com/goods/detail/774221",
+      "youtube_music_url": "https://music.youtube.com/search?q=On+My+Road+Travis+Japan"
     },
     {
       "rank": 19,
       "last_rank": "15",
       "weeks": 4,
+      "is_new": false,
       "title": "You!Joy!Parade!",
       "artist": "M!LK",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000284/202x_image284170.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/701819"
+      "url": "https://www.billboard-japan.com/artists/detail/701819",
+      "youtube_music_url": "https://music.youtube.com/search?q=You%21Joy%21Parade%21+M%21LK"
     },
     {
       "rank": 20,
       "last_rank": "17",
       "weeks": 4,
+      "is_new": false,
       "title": "夜鷹",
       "artist": "米津玄師",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000284/202x_image284169.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/71465"
+      "url": "https://www.billboard-japan.com/artists/detail/71465",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E5%A4%9C%E9%B7%B9+%E7%B1%B3%E6%B4%A5%E7%8E%84%E5%B8%AB"
     },
     {
       "rank": 21,
       "last_rank": "29",
       "weeks": 4,
+      "is_new": false,
       "title": "マイオンリー",
       "artist": "SixTONES",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000283/202x_image283120.jpg",
-      "url": "https://www.billboard-japan.com/goods/detail/784813"
+      "url": "https://www.billboard-japan.com/goods/detail/784813",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E3%83%9E%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%AA%E3%83%BC+SixTONES"
     },
     {
       "rank": 22,
       "last_rank": "1",
       "weeks": 2,
+      "is_new": false,
       "title": "消えない花火",
       "artist": "timelesz",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000166/202x_P2_G4870486W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/781850"
+      "url": "https://www.billboard-japan.com/goods/detail/781850",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E6%B6%88%E3%81%88%E3%81%AA%E3%81%84%E8%8A%B1%E7%81%AB+timelesz"
     },
     {
       "rank": 23,
       "last_rank": "-",
       "weeks": 1,
+      "is_new": true,
       "title": "恋、はじめました。",
       "artist": "=LOVE",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_H1373354W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/783483"
+      "url": "https://www.billboard-japan.com/goods/detail/783483",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82+%3DLOVE"
     },
     {
       "rank": 24,
       "last_rank": "21",
       "weeks": 30,
+      "is_new": false,
       "title": "lulu.",
       "artist": "Mrs.GREEN APPLE",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000260/202x_image260021.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/688845"
+      "url": "https://www.billboard-japan.com/artists/detail/688845",
+      "youtube_music_url": "https://music.youtube.com/search?q=lulu.+Mrs.GREEN+APPLE"
     },
     {
       "rank": 25,
       "last_rank": "22",
       "weeks": 15,
+      "is_new": false,
       "title": "アイドルパワー",
       "artist": "M!LK",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000274/202x_image274388.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/701819"
+      "url": "https://www.billboard-japan.com/artists/detail/701819",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%91%E3%83%AF%E3%83%BC+M%21LK"
     },
     {
       "rank": 26,
       "last_rank": "20",
       "weeks": 6,
+      "is_new": false,
       "title": "Missing",
       "artist": "BE:FIRST",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000166/202x_P2_H1357574W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/781059"
+      "url": "https://www.billboard-japan.com/goods/detail/781059",
+      "youtube_music_url": "https://music.youtube.com/search?q=Missing+BE%3AFIRST"
     },
     {
       "rank": 27,
       "last_rank": "24",
       "weeks": 8,
+      "is_new": false,
       "title": "HOT LIMIT",
       "artist": "T.M.Revolution",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000054/202x_P2_G4343228W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/281825"
+      "url": "https://www.billboard-japan.com/goods/detail/281825",
+      "youtube_music_url": "https://music.youtube.com/search?q=HOT+LIMIT+T.M.Revolution"
     },
     {
       "rank": 28,
       "last_rank": "28",
       "weeks": 31,
+      "is_new": false,
       "title": "AIZO",
       "artist": "King Gnu",
       "artwork": "https://www.billboard-japan.com/scale/jackets/00000165/202x_P2_H1336863W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/771720"
+      "url": "https://www.billboard-japan.com/goods/detail/771720",
+      "youtube_music_url": "https://music.youtube.com/search?q=AIZO+King+Gnu"
     },
     {
       "rank": 29,
       "last_rank": "23",
       "weeks": 4,
+      "is_new": false,
       "title": "BUGS LIFE",
       "artist": "Number_i",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000284/202x_image284166.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/1081632"
+      "url": "https://www.billboard-japan.com/artists/detail/1081632",
+      "youtube_music_url": "https://music.youtube.com/search?q=BUGS+LIFE+Number_i"
     },
     {
       "rank": 30,
       "last_rank": "48",
       "weeks": 4,
+      "is_new": false,
       "title": "かげろう",
       "artist": "Vaundy",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000279/202x_image279681.jpg",
-      "url": "https://www.billboard-japan.com/artists/detail/908728"
+      "url": "https://www.billboard-japan.com/artists/detail/908728",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E3%81%8B%E3%81%92%E3%82%8D%E3%81%86+Vaundy"
     }
   ],
-  "new_releases": [],
+  "new_releases": [
+    {
+      "id": "8a22b849a51d791f",
+      "title": "SODA SODA",
+      "artist": "TWS",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_H1371518W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/782834",
+      "youtube_music_url": "https://music.youtube.com/search?q=SODA+SODA+TWS",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "70c71f227be02435",
+      "title": "花咲く道",
+      "artist": "ME:I",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000166/202x_P2_H1363239W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/780130",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E8%8A%B1%E5%92%B2%E3%81%8F%E9%81%93+ME%3AI",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "d7e83889fa811bf9",
+      "title": "サマーツインテール",
+      "artist": "≒JOY",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_G3936187W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/781934",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%84%E3%82%A4%E3%83%B3%E3%83%86%E3%83%BC%E3%83%AB+%E2%89%92JOY",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "befa70583172e7ec",
+      "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
+      "artist": "M!LK",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000286/202x_image286842.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/701819",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9+%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29+M%21LK",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "44ff07b0d8d8cf7a",
+      "title": "見知らぬ糸",
+      "artist": "スピッツ",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000286/202x_image286843.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/170740",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E8%A6%8B%E7%9F%A5%E3%82%89%E3%81%AC%E7%B3%B8+%E3%82%B9%E3%83%94%E3%83%83%E3%83%84",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "612351ec617711da",
+      "title": "On My Road",
+      "artist": "Travis Japan",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000165/202x_P2_G3912885W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/774221",
+      "youtube_music_url": "https://music.youtube.com/search?q=On+My+Road+Travis+Japan",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "34effe0aff15f944",
+      "title": "恋、はじめました。",
+      "artist": "=LOVE",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_H1373354W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/783483",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82+%3DLOVE",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    }
+  ],
+  "recent_songs": [
+    {
+      "id": "8a22b849a51d791f",
+      "title": "SODA SODA",
+      "artist": "TWS",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_H1371518W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/782834",
+      "youtube_music_url": "https://music.youtube.com/search?q=SODA+SODA+TWS",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "70c71f227be02435",
+      "title": "花咲く道",
+      "artist": "ME:I",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000166/202x_P2_H1363239W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/780130",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E8%8A%B1%E5%92%B2%E3%81%8F%E9%81%93+ME%3AI",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "d7e83889fa811bf9",
+      "title": "サマーツインテール",
+      "artist": "≒JOY",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_G3936187W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/781934",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%84%E3%82%A4%E3%83%B3%E3%83%86%E3%83%BC%E3%83%AB+%E2%89%92JOY",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "befa70583172e7ec",
+      "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
+      "artist": "M!LK",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000286/202x_image286842.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/701819",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9+%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29+M%21LK",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "44ff07b0d8d8cf7a",
+      "title": "見知らぬ糸",
+      "artist": "スピッツ",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000286/202x_image286843.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/170740",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E8%A6%8B%E7%9F%A5%E3%82%89%E3%81%AC%E7%B3%B8+%E3%82%B9%E3%83%94%E3%83%83%E3%83%84",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "612351ec617711da",
+      "title": "On My Road",
+      "artist": "Travis Japan",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000165/202x_P2_G3912885W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/774221",
+      "youtube_music_url": "https://music.youtube.com/search?q=On+My+Road+Travis+Japan",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    },
+    {
+      "id": "34effe0aff15f944",
+      "title": "恋、はじめました。",
+      "artist": "=LOVE",
+      "artist_id": "",
+      "album": "",
+      "release_date": "",
+      "period": "本周新进榜",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000167/202x_P2_H1373354W.JPG",
+      "url": "https://www.billboard-japan.com/goods/detail/783483",
+      "youtube_music_url": "https://music.youtube.com/search?q=%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82+%3DLOVE",
+      "source": "billboard_debut",
+      "source_label": "Billboard JAPAN · 本周新进榜"
+    }
+  ],
   "sources": {
     "billboard_japan": {
       "label": "Billboard JAPAN Hot 100",
       "ok": true,
       "count": 30,
-      "checked_at": "2026-08-13T19:18:02Z"
+      "checked_at": "2026-08-13T19:55:50Z"
     },
-    "apple_japan_new": {
-      "label": "Apple 日本新发行",
-      "ok": false,
-      "count": 0,
-      "checked_at": "2026-08-13T19:18:02Z",
-      "error": "RuntimeError: https://rss.marketingtools.apple.com/api/v2/jp/music/new-music/50/songs.json: HTTPError: 404 Client Error: Not Found for url: https://rss.marketingtools.apple.com/api/v2/jp/music/new-music/50/songs.json; https://rss.marketingtools.apple.com/api/v2/jp/music/new-releases/50/songs.json: HTTPError: 404 Client Error: Not Found for url: https://rss.marketingtools.apple.com/api/v2/jp/music/new-releases/50/songs.json; https://itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/newreleases/sf=143462/genre=27/limit=50/rss.xml: HTTPError: 503 Server Error: Service Unavailable for url: https://rss.itunes.apple.com"
+    "apple_music_weekly_new": {
+      "label": "Apple Music Japan · 本周新曲",
+      "ok": true,
+      "count": 7,
+      "checked_at": "2026-08-13T19:55:50Z",
+      "fallback": "Billboard JAPAN Hot 100 本周新进榜",
+      "error": "RuntimeError: Apple Music Best New Songs heading not found"
     }
   }
 }

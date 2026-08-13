@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T19:18:02Z",
+  "generated_at": "2026-08-13T19:55:50Z",
   "items": [
     {
       "id": "b802b6502e14a219",
@@ -271,27 +271,27 @@
       "label": "巴哈姆特 GNN",
       "ok": true,
       "count": 24,
-      "checked_at": "2026-08-13T19:18:02Z"
+      "checked_at": "2026-08-13T19:55:50Z"
     },
     "gamebase": {
       "label": "游戏基地 Gamebase",
       "ok": false,
       "count": 0,
-      "checked_at": "2026-08-13T19:18:02Z",
+      "checked_at": "2026-08-13T19:55:50Z",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://rsshub.app/gamebase/news"
     },
     "yystv": {
       "label": "游研社",
       "ok": false,
       "count": 0,
-      "checked_at": "2026-08-13T19:18:02Z",
+      "checked_at": "2026-08-13T19:55:50Z",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://rsshub.app/yystv/docs"
     },
     "a9vg": {
       "label": "A9VG 游戏新闻",
       "ok": false,
       "count": 0,
-      "checked_at": "2026-08-13T19:18:02Z",
+      "checked_at": "2026-08-13T19:55:50Z",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://rsshub.app/a9vg/a9vg"
     }
   }

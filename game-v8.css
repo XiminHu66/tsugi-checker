@@ -52,3 +52,165 @@
   .pc-today-priority{padding:12px 10px 1px;border-radius:18px}
   .pc-window-head{align-items:center}.pc-window-head strong{font-size:21px}
 }
+
+
+/* Tsugi v8.1 · readability pass
+   Keeps the compact 4-column desktop layout, but raises the smallest type sizes. */
+
+/* Main game titles */
+.timeline-game.pc-rich .timeline-game-copy h4{
+  font-size:15.5px;
+  line-height:1.42;
+  font-weight:850;
+  letter-spacing:-.015em;
+}
+.timeline-game-copy h4{
+  font-size:14.5px;
+  line-height:1.4;
+}
+
+/* Source / platform / secondary title */
+.timeline-game-meta{
+  gap:6px;
+  font-size:10px;
+  line-height:1.35;
+}
+.timeline-game-copy p{
+  margin-top:6px;
+  font-size:11.5px;
+  line-height:1.4;
+}
+.game-title-en{
+  margin-top:4px;
+  font-size:10.5px;
+  line-height:1.35;
+}
+
+/* Heat / rank / publisher badges */
+.game-heat-badge,
+.game-publisher-badge,
+.game-rank-badge,
+.game-popular-badge,
+.game-discovery-badge{
+  padding:4px 7px;
+  font-size:9px;
+  line-height:1;
+}
+
+/* Developer / publisher fields */
+.game-company-lines{
+  gap:5px;
+  margin-top:9px;
+}
+.game-company-lines>div{
+  grid-template-columns:34px minmax(0,1fr);
+  gap:7px;
+  font-size:11px;
+  line-height:1.35;
+}
+.game-company-lines b{
+  font-size:9.5px;
+  font-weight:850;
+}
+.game-company-lines span{
+  font-size:11px;
+}
+
+/* Genre/type tags */
+.game-mini-tags{
+  gap:5px;
+  margin-top:9px;
+}
+.game-mini-tags span{
+  padding:4px 7px;
+  font-size:9.5px;
+  line-height:1.1;
+}
+
+/* Review / rating indicator */
+.game-review-note{
+  margin-top:8px;
+  font-size:10px;
+  line-height:1.35;
+}
+
+/* Open link */
+.timeline-open{
+  font-size:10.5px;
+  padding-top:2px;
+}
+
+/* Give the richer cards a little more breathing room without changing columns. */
+.timeline-game.pc-rich{
+  grid-template-columns:116px minmax(0,1fr) auto;
+  gap:12px;
+  padding:12px;
+}
+.timeline-game.pc-rich .timeline-game-cover{
+  width:116px;
+  height:68px;
+}
+
+/* Timeline headings are also slightly easier to scan. */
+.game-timeline-date strong{
+  font-size:14px;
+}
+.game-timeline-date small{
+  font-size:10px;
+}
+.pc-window-head span{
+  font-size:16px;
+}
+.pc-window-head small{
+  font-size:11px;
+}
+.pc-window-details>summary span{
+  font-size:14px;
+}
+.pc-window-details>summary small{
+  font-size:10.5px;
+}
+.pc-window-details>summary strong{
+  font-size:12px;
+}
+
+/* Mobile cards use the same readable minimums. */
+#gameMobileGrid .timeline-game-meta,
+#gameConsoleGrid .timeline-game-meta{
+  font-size:10px;
+}
+#gameMobileGrid .timeline-game-copy p,
+#gameConsoleGrid .timeline-game-copy p{
+  font-size:11px;
+}
+#gameMobileGrid .game-review-note{
+  font-size:10px;
+}
+
+/* Do not make the cards oversized on narrow screens. */
+@media(max-width:900px){
+  .timeline-game.pc-rich{
+    grid-template-columns:102px minmax(0,1fr) auto;
+  }
+  .timeline-game.pc-rich .timeline-game-cover{
+    width:102px;
+    height:61px;
+  }
+}
+@media(max-width:700px){
+  .timeline-game.pc-rich{
+    grid-template-columns:88px minmax(0,1fr);
+    gap:10px;
+  }
+  .timeline-game.pc-rich .timeline-game-cover{
+    width:88px;
+    height:54px;
+  }
+  .timeline-game.pc-rich .timeline-game-copy h4{
+    font-size:14.5px;
+  }
+  .game-company-lines>div,
+  .game-company-lines span{
+    font-size:10.5px;
+  }
+}

@@ -3,6 +3,10 @@
    v7.4 scraping/rendering code untouched. */
 (() => {
   const sameText=(a,b)=>String(a||'').trim().toLocaleLowerCase()===String(b||'').trim().toLocaleLowerCase();
+  const cleanGameTitle=t=>String(t||'').trim()
+    .replace(/^「(.+)」のアイコン画像$/,'$1')
+    .replace(/^(.+?)のアイコン画像$/,'$1')
+    .replace(/^「(.+)」アイコン画像$/,'$1');
   const gameDays=(x,today)=>{
     const d=gameEffectiveDate(x);if(!d)return null;
     const a=new Date(`${d}T00:00:00`),b=new Date(`${today}T00:00:00`);
@@ -22,7 +26,7 @@
 
   renderTimelineGame=function(x){
     const platforms=(x.platforms||[]).join(' / ');
-    const displayTitle=x.title_zh||x.title||'未命名游戏';
+    const displayTitle=cleanGameTitle(x.title_zh||x.title||'未命名游戏');
     const altTitle=x.title_en&&!sameText(x.title_en,displayTitle)?x.title_en:'';
     const heat=x.heat_label?`<span class="game-heat-badge ${esc(x.heat_level||'medium')}">${esc(x.heat_label)}</span>`:'';
     const publisherBadge=x.notable_publisher?`<span class="game-publisher-badge">知名发行</span>`:'';

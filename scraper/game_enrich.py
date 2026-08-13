@@ -5,7 +5,7 @@ import math
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -318,7 +318,7 @@ def main():
         enriched_mobile = [temp[i] for i in range(len(mobile_rows))]
     items["mobile"] = enriched_mobile
 
-    payload["metadata_enriched_at"] = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    payload["metadata_enriched_at"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     GAME_FEED.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
     pc_meta = sum(1 for x in enriched_pc if x.get("publishers") or x.get("developers"))

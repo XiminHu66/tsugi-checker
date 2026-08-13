@@ -1,10 +1,904 @@
 {
-  "generated_at": null,
-  "date_jst": null,
+  "generated_at": "2026-08-13T19:18:02Z",
+  "date_jst": "2026-08-14",
   "items": {
     "mobile": [],
-    "pc": [],
-    "console": []
+    "pc": [
+      {
+        "id": "b242f954157ba1ca",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "30 Days On Ship: Castaway – The First Days",
+        "url": "https://store.steampowered.com/app/4866180/30_Days_On_Ship_Castaway__The_First_Days/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4866180/c58edfb331bd2b8450602e24a4041ecdab13e0e6/capsule_231x87.jpg?t=1786646385",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "6b347a44878f841d",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Blendefine",
+        "url": "https://store.steampowered.com/app/3743730/Blendefine/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3743730/b47b701680283da66050661239dfd10f17fe7324/capsule_231x87_japanese.jpg?t=1786645628",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "7c50d313b22627bb",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "100FRIENDS",
+        "url": "https://store.steampowered.com/app/4214610/100FRIENDS/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4214610/e5cc3d351966f9c34c583f52e32e29ad95d69f82/capsule_231x87.jpg?t=1786643663",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "fa7541e32c421a9b",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Kingdoms vs Zombies",
+        "url": "https://store.steampowered.com/app/4799450/Kingdoms_vs_Zombies/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4799450/d5c235243925cee8f986b031b76a02e59db73a62/capsule_231x87.jpg?t=1786648284",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "1ec942a414eb883b",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Pizza Man Simulator",
+        "url": "https://store.steampowered.com/app/4162260/Pizza_Man_Simulator/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4162260/2f29571dc57e3c73babe0971925c56ef1b077924/capsule_231x87.jpg?t=1786646382",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "181a86c2231b5993",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Witchblood",
+        "url": "https://store.steampowered.com/app/3358340/Witchblood/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3358340/df2e5d53ada6506d4dd153740f3c543302a0b46b/capsule_231x87.jpg?t=1786640652",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "bd5ec32dd60681a5",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Baby Kings",
+        "url": "https://store.steampowered.com/app/3670180/Baby_Kings/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3670180/d63a0fa141df093be45972376652ca065d82c92b/capsule_231x87.jpg?t=1786640414",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "2aa1c3b79ec0b8c4",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Open The Gate: Just A Little",
+        "url": "https://store.steampowered.com/app/4244210/Open_The_Gate_Just_A_Little/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4244210/d36fff5c33038cd44909b80ce53dc65732baf64e/capsule_231x87.jpg?t=1786640414",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "4c3230c4cc7c85f8",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Scratch the Ticket",
+        "url": "https://store.steampowered.com/app/4626940/Scratch_the_Ticket/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4626940/af663d71151523617a1433c1b686353a6bdbc8ae/capsule_231x87.jpg?t=1786640385",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "dc47baf4b0baf1f7",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Flock of the Seraphim",
+        "url": "https://store.steampowered.com/app/4290680/Flock_of_the_Seraphim/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4290680/3d2992d936e608e1000784639e5fb2d2d8d87254/capsule_231x87.jpg?t=1786642460",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "ec576b68646a004d",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Wild Blue Skies",
+        "url": "https://store.steampowered.com/app/1921490/Wild_Blue_Skies/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1921490/e6be217a13b22c2b4b5f7c6a64e15fd64a557261/capsule_231x87.jpg?t=1786640318",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "ce31b921911d3a67",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Choppa: Rescue Rivals",
+        "url": "https://store.steampowered.com/app/1173100/Choppa_Rescue_Rivals/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1173100/4e88789207f4334fe631492a6ca4bf4a227d6515/capsule_231x87.jpg?t=1786638817",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "de4de5aa77a1a37d",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Storm Horse Simulator",
+        "url": "https://store.steampowered.com/app/3826170/Storm_Horse_Simulator/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3826170/771e764d53fb018800d4860f0506792222df38d1/capsule_231x87.jpg?t=1786637788",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "5fc75e358a3aed8c",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Karma Keepers",
+        "url": "https://store.steampowered.com/app/3979140/Karma_Keepers/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3979140/a1f05bb5ccc17b14b30f2c796fe9f97bdc7e0143/capsule_231x87.jpg?t=1786640809",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "183ee41e7dd479dd",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Memoirium",
+        "url": "https://store.steampowered.com/app/3294440/Memoirium/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3294440/7297598ef75c5ab56f4a8fd0b69d83169b9da36b/capsule_231x87.jpg?t=1786636819",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "bdcc0cc6271627e6",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Hell Let Loose: Vietnam",
+        "url": "https://store.steampowered.com/app/3079210/Hell_Let_Loose_Vietnam/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3079210/fafbea801ff2a4945f59cd1fc045cbf3a9f43cd4/capsule_231x87.jpg?t=1786637345",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "0371b2c126a67b45",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Future Knight",
+        "url": "https://store.steampowered.com/app/4235410/Future_Knight/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4235410/3434c289e3871e27fc7476460773d872cae1e529/capsule_231x87.jpg?t=1786636237",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "055462b56c22c13f",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Creepshow",
+        "url": "https://store.steampowered.com/app/3462650/Creepshow/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3462650/a0bf8b5c74c52b265ba39394eef556902a761e78/capsule_231x87.jpg?t=1786641380",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "1352a33494e2f33b",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Dead Stop - No Vacancy",
+        "url": "https://store.steampowered.com/app/4396440/Dead_Stop__No_Vacancy/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4396440/3036ad7c5e66b8045d731924bc1790b03c8c88e3/capsule_231x87.jpg?t=1786634744",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "cca5aca57118647c",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Low-Budget Repairs",
+        "url": "https://store.steampowered.com/app/3167920/LowBudget_Repairs/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3167920/e815514eaaf8719d1fa1b15ae6b78bf40b411ba0/capsule_231x87.jpg?t=1786641315",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "4fdf19fffbe9f1ed",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Sandustry サンダストリー",
+        "url": "https://store.steampowered.com/app/2764460/Sandustry/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2764460/5f237b3919bf73d388b970602712a58f778c0553/capsule_231x87_japanese.jpg?t=1786641888",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "088f9b43efa6cc6f",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Grit Shot",
+        "url": "https://store.steampowered.com/app/4446370/Grit_Shot/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4446370/f52129ff118a432ee5dfa33251560bdc008babb2/capsule_231x87.jpg?t=1786630177",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "21d7022223416c14",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "怪物浪潮",
+        "url": "https://store.steampowered.com/app/4948670/_/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4948670/d7a2476488b6173e93a59d7764f08f9e12ca5035/capsule_231x87.jpg?t=1786630174",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "d12874b1b88d75fb",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Sort Them Ducks",
+        "url": "https://store.steampowered.com/app/4992070/Sort_Them_Ducks/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4992070/7a3601e89aea7fa346dc39f6feeca2b04da12414/capsule_231x87.jpg?t=1786629601",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "a3772ea693e33580",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Dagger Directive",
+        "url": "https://store.steampowered.com/app/2437670/Dagger_Directive/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2437670/9d9d513d251adf77dd7cb653da585420723f818a/capsule_231x87_alt_assets_0.jpg?t=1786625907",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "eb0696a3a9c0863f",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Wild West Miner Simulator",
+        "url": "https://store.steampowered.com/app/3967130/Wild_West_Miner_Simulator/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3967130/430f56ca0f9cefa1a39878052b1de6ff98d3fa61/capsule_231x87.jpg?t=1786627130",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "0765a541b154e00c",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Duskfade",
+        "url": "https://store.steampowered.com/app/2542020/Duskfade/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2542020/fd8911e8ecfdd361b1fd50a565d98ad526f903ff/capsule_231x87.jpg?t=1786631734",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "8a98cac3f8c3c1b7",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Banzai Escape 2: Subterranean",
+        "url": "https://store.steampowered.com/app/1758950/Banzai_Escape_2_Subterranean/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1758950/c7c07f279756e6d06719b1bd559253a16d1f1ec0/capsule_231x87.jpg?t=1786624525",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "6a460d5cdacaa470",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "シャーウェイ猫伝説：マフィアの仕出し",
+        "url": "https://store.steampowered.com/app/3960830/_/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3960830/f054b2b53b29a2a99e60e37c9c6a5ca9b7f41e27/capsule_231x87.jpg?t=1786623979",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "83317ea09c90d798",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Servant of the Lake",
+        "url": "https://store.steampowered.com/app/3636770/Servant_of_the_Lake/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3636770/c7258556e7065e6031ac6bb9bd8c255bdfd64f56/capsule_231x87.jpg?t=1786622239",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "db2221db659f3e23",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Drink Factory Simulator",
+        "url": "https://store.steampowered.com/app/3913840/Drink_Factory_Simulator/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3913840/dc019391e6ab4c285b4fc4df4c9195d2f3ac2ecb/capsule_231x87.jpg?t=1786620956",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "44b8d92804893135",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Soul's Remnant",
+        "url": "https://store.steampowered.com/app/3451980/Souls_Remnant/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3451980/dfd0da1e7e3da81893c53d87e2e2905c03e54c56/capsule_231x87.jpg?t=1786618773",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "b740b4f62f53cc66",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "バカバカしいサッカーミニゲーム：ドリブルマスター",
+        "url": "https://store.steampowered.com/app/4929930/_/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4929930/ae447c68114b92b56a608736e25891ece778c335/capsule_231x87.jpg?t=1786617469",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "6b80e1900cb6fdd0",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Spear of the Sky",
+        "url": "https://store.steampowered.com/app/4642840/Spear_of_the_Sky/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4642840/a7e0c807b50fabb1e8f57a31468ffaeb842265df/capsule_231x87.jpg?t=1786616815",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "0a263ea5f84c62fa",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Cropia",
+        "url": "https://store.steampowered.com/app/3714180/Cropia/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3714180/987ce7bde2b4cf2b028e9be322e8031a8e258d35/capsule_231x87.jpg?t=1786616929",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "2c21840e8d0b55cd",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Aquasushi Cat",
+        "url": "https://store.steampowered.com/app/5009510/Aquasushi_Cat/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5009510/1d8dd7f361f945b96dab49d918d89c65943761cf/capsule_231x87.jpg?t=1786616359",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "f69e24476b54a7da",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "赤か黒：ポーカー・スレイ",
+        "url": "https://store.steampowered.com/app/4416760/_/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4416760/e953523b122f505069a8edbea02788a1289599c7/capsule_231x87.jpg?t=1786615844",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "37d9dd9593e12316",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "縦横麻雀",
+        "url": "https://store.steampowered.com/app/3967760/_/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3967760/d7497f657255061cc26f4d6e7e7aed0befb87be5/capsule_231x87_japanese.jpg?t=1786635157",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "cef4399f54360202",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Zombie Tag",
+        "url": "https://store.steampowered.com/app/4936630/Zombie_Tag/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4936630/fce3c5b63f1eac81409eca9784e7b564e3634e77/capsule_231x87_japanese.jpg?t=1786608999",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "9446f96c62cf92b1",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Purr in Bloom",
+        "url": "https://store.steampowered.com/app/4966840/Purr_in_Bloom/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4966840/3d46be75617a8e85fc3c35e3e6f9edf43309d81a/capsule_231x87.jpg?t=1786607144",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "610ecaf01caebf21",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Spacewar",
+        "url": "https://store.steampowered.com/app/4989790/Spacewar/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4989790/7c902cb693d0229edef7e0e6041111ba6913c47a/capsule_231x87.jpg?t=1786607017",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "b535fb655ba25641",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Pixelora Tech Store",
+        "url": "https://store.steampowered.com/app/4540340/Pixelora_Tech_Store/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4540340/e6eb889409a357aa51d6b96fb1b724718ba2311a/capsule_231x87.jpg?t=1786606517",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "e9424d7796d2b271",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "女魔王様、勇者を演じる",
+        "url": "https://store.steampowered.com/app/4986930/_/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4986930/ca9c71eb803ade2ee024641c6e7fa77e6e67eda4/capsule_231x87_japanese.jpg?t=1786604974",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "09c35f45e2db37bb",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "VanySlash",
+        "url": "https://store.steampowered.com/app/2871010/VanySlash/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2871010/capsule_231x87_japanese.jpg?t=1786604426",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-13",
+        "release_text": "2026年8月13日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "f8e820933edc6b54",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Tidy Mart",
+        "url": "https://store.steampowered.com/app/4967500/Tidy_Mart/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4967500/3806b385b0f568c150cec7eb4d31521356ce1dd9/capsule_231x87.jpg?t=1786597263",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-12",
+        "release_text": "2026年8月12日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "b8eb6888ab75ac5b",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "IGS クラシック アーケード コレクション",
+        "url": "https://store.steampowered.com/app/3417140/IGS/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3417140/30ffa5f9253925bbd7b5336ab86e01aa284e5a68/capsule_231x87.jpg?t=1786609562",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-12",
+        "release_text": "2026年8月12日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "e01b22593b56d2a9",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Area Survivors",
+        "url": "https://store.steampowered.com/app/4980380/Area_Survivors/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4980380/5363a940be3a00227b8d8f7efa52a71cb8e94b84/capsule_231x87.jpg?t=1786593696",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-12",
+        "release_text": "2026年8月12日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "95d77059a6ae105b",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Dinotica 恐竜ユートピア",
+        "url": "https://store.steampowered.com/app/3336520/Dinotica/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3336520/57e0beb2e2931b32a6ae3221c41a6e101df60c42/capsule_231x87.jpg?t=1786589593",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-12",
+        "release_text": "2026年8月12日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "ed5bacc57055554f",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Agrocracy",
+        "url": "https://store.steampowered.com/app/4367180/Agrocracy/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4367180/dd7c0391d91d8c6daaf95d4f378070023294ed2f/capsule_231x87.jpg?t=1786586789",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-12",
+        "release_text": "2026年8月12日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      },
+      {
+        "id": "21e57be191336c4e",
+        "category": "pc",
+        "source": "steam",
+        "source_label": "Steam · Recently Released",
+        "store": "Steam",
+        "title": "Circuit Stance",
+        "url": "https://store.steampowered.com/app/3180830/Circuit_Stance/?snr=1_7_7_230_150_1",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3180830/a5763b6b2dd7e513923acabf6d5262ff9f4bbf9c/capsule_231x87.jpg?t=1786609657",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-12",
+        "release_text": "2026年8月12日",
+        "first_seen": "2026-08-14",
+        "is_today": false
+      }
+    ],
+    "console": [
+      {
+        "id": "d2c8697f0fbd3f8d",
+        "source": "famitsu",
+        "source_label": "Famitsu 日本游戏发行日",
+        "store": "发行日历",
+        "title": "Hell Let Loose： Vietnam （PS Store ダウンロード版）",
+        "url": "https://www.famitsu.com/game/title/72333/page/1",
+        "cover": "",
+        "platforms": [
+          "PS5"
+        ],
+        "release_date": "2026-08-14",
+        "release_text": "2026年8月14日",
+        "category": "console",
+        "first_seen": "2026-08-14",
+        "is_today": true
+      }
+    ]
   },
-  "sources": {}
+  "sources": {
+    "appstore": {
+      "label": "App Store 日本 · 新着游戏",
+      "ok": true,
+      "count": 0,
+      "checked_at": "2026-08-13T19:18:02Z"
+    },
+    "googleplay": {
+      "label": "Google Play 日本 · 新規リリース",
+      "ok": true,
+      "count": 0,
+      "checked_at": "2026-08-13T19:18:02Z"
+    },
+    "steam": {
+      "label": "Steam · Recently Released",
+      "ok": true,
+      "count": 50,
+      "checked_at": "2026-08-13T19:18:02Z"
+    },
+    "famitsu": {
+      "label": "Famitsu 日本游戏发行日",
+      "ok": true,
+      "count": 1,
+      "checked_at": "2026-08-13T19:18:02Z"
+    }
+  }
 }

@@ -120,16 +120,6 @@
         "url": "https://www.taptap.cn/upcoming",
         "limit": 8
       },
-      "steam_popular_new": {
-        "enabled": true,
-        "api_url": "https://store.steampowered.com/api/featuredcategories",
-        "limit": 30
-      },
-      "steam_popular_upcoming": {
-        "enabled": true,
-        "api_url": "https://store.steampowered.com/api/featuredcategories",
-        "limit": 30
-      },
       "famitsu": {
         "enabled": true,
         "url": "https://www.famitsu.com/schedule",

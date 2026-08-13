@@ -1,0 +1,577 @@
+/* Tsugi · games.css
+   Consolidated from the former game-v8.css + game-v83.css layers.
+   Keep later rules lower in this file when overriding earlier game styles. */
+
+/* Tsugi v8 · game intelligence / prioritized PC timeline */
+
+.game-heat-badge,.game-publisher-badge,.game-rank-badge{
+  flex:0 0 auto;padding:3px 6px;border-radius:999px;font-size:7px;font-weight:950;letter-spacing:.03em
+}
+.game-heat-badge{background:rgba(255,177,72,.13);color:#ffc978;border:1px solid rgba(255,177,72,.15)}
+.game-heat-badge.high{background:rgba(255,100,91,.15);color:#ff9f96;border-color:rgba(255,100,91,.22)}
+.game-publisher-badge{background:rgba(143,125,255,.15);color:#c7bcff;border:1px solid rgba(143,125,255,.18)}
+.game-rank-badge{background:rgba(62,210,167,.13);color:#9aeed2;border:1px solid rgba(62,210,167,.16)}
+.timeline-game.high-heat{border-color:rgba(255,115,92,.25);box-shadow:0 10px 30px rgba(255,92,73,.055),var(--shadow-md)}
+.timeline-game.pc-rich{align-items:flex-start;grid-template-columns:112px minmax(0,1fr) auto;padding:11px}
+.timeline-game.pc-rich .timeline-game-cover{width:112px;height:65px;margin-top:2px}
+.timeline-game.pc-rich .timeline-game-copy h4{white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:14px}
+.game-title-en{margin-top:3px;color:var(--faint);font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.game-company-lines{display:grid;gap:3px;margin-top:7px}
+.game-company-lines>div{display:grid;grid-template-columns:30px minmax(0,1fr);gap:5px;align-items:baseline;min-width:0;font-size:9px}
+.game-company-lines b{color:var(--faint);font-size:8px}.game-company-lines span{color:var(--text-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.game-mini-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:7px}
+.game-mini-tags span{padding:3px 6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.025);color:var(--muted);font-size:8px;font-weight:750}
+.game-review-note{margin-top:7px;color:var(--faint);font-size:8px;font-weight:750}
+
+.pc-window-block{margin:0 0 26px}
+.pc-window-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 13px;padding:0 2px}
+.pc-window-head>div{display:grid;gap:3px}.pc-window-head span{font-size:15px;font-weight:900;color:var(--text)}.pc-window-head small{font-size:10px;color:var(--muted)}
+.pc-window-head strong{font-size:26px;letter-spacing:-.06em;color:var(--text)}
+.pc-today-priority{padding:16px 16px 2px;border:1px solid rgba(62,210,167,.18);border-radius:22px;background:linear-gradient(180deg,rgba(62,210,167,.055),rgba(62,210,167,0))}
+.pc-today-priority .pc-window-head span{color:#9ff1d6}
+.pc-window-details{margin:12px 0;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.018);overflow:hidden}
+.pc-window-details>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;user-select:none}
+.pc-window-details>summary::-webkit-details-marker{display:none}
+.pc-window-details>summary>div{display:grid;gap:3px}.pc-window-details>summary span{font-size:13px;font-weight:900;color:var(--text)}.pc-window-details>summary small{font-size:9px;color:var(--muted)}
+.pc-window-details>summary strong{min-width:32px;text-align:center;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.05);font-size:11px}
+.pc-window-details>summary:after{content:"＋";color:var(--muted);font-weight:900}
+.pc-window-details[open]>summary:after{content:"−"}
+.pc-window-detail-body{padding:4px 14px 14px;border-top:1px solid var(--line)}
+.pc-past{opacity:.78}.pc-past[open]{opacity:.9}.pc-past .timeline-game{filter:saturate(.72);opacity:.76}.pc-past .timeline-game:hover{opacity:1;filter:none}
+.pc-later .timeline-game{opacity:.86}
+
+[data-theme="light"] .game-heat-badge{color:#a86206;background:rgba(224,143,28,.09)}
+[data-theme="light"] .game-heat-badge.high{color:#c24438;background:rgba(226,77,61,.08)}
+[data-theme="light"] .game-publisher-badge{color:#6657ce;background:rgba(112,91,244,.08)}
+[data-theme="light"] .game-rank-badge{color:#197d61}
+[data-theme="light"] .pc-today-priority{background:linear-gradient(180deg,rgba(39,173,132,.06),rgba(255,255,255,.28));border-color:rgba(39,173,132,.16)}
+[data-theme="light"] .pc-today-priority .pc-window-head span{color:#17775d}
+[data-theme="light"] .pc-window-details{background:rgba(255,255,255,.58)}
+[data-theme="light"] .game-mini-tags span{background:rgba(255,255,255,.7)}
+
+@media(max-width:700px){
+  .timeline-game.pc-rich{grid-template-columns:88px minmax(0,1fr);gap:9px}
+  .timeline-game.pc-rich .timeline-game-cover{width:88px;height:54px}
+  .timeline-game.pc-rich .timeline-open{grid-column:2}
+  .pc-today-priority{padding:12px 10px 1px;border-radius:18px}
+  .pc-window-head{align-items:center}.pc-window-head strong{font-size:21px}
+}
+
+
+/* Tsugi v8.1 · readability pass
+   Keeps the compact 4-column desktop layout, but raises the smallest type sizes. */
+
+/* Main game titles */
+.timeline-game.pc-rich .timeline-game-copy h4{
+  font-size:15.5px;
+  line-height:1.42;
+  font-weight:850;
+  letter-spacing:-.015em;
+}
+.timeline-game-copy h4{
+  font-size:14.5px;
+  line-height:1.4;
+}
+
+/* Source / platform / secondary title */
+.timeline-game-meta{
+  gap:6px;
+  font-size:10px;
+  line-height:1.35;
+}
+.timeline-game-copy p{
+  margin-top:6px;
+  font-size:11.5px;
+  line-height:1.4;
+}
+.game-title-en{
+  margin-top:4px;
+  font-size:10.5px;
+  line-height:1.35;
+}
+
+/* Heat / rank / publisher badges */
+.game-heat-badge,
+.game-publisher-badge,
+.game-rank-badge,
+.game-popular-badge,
+.game-discovery-badge{
+  padding:4px 7px;
+  font-size:9px;
+  line-height:1;
+}
+
+/* Developer / publisher fields */
+.game-company-lines{
+  gap:5px;
+  margin-top:9px;
+}
+.game-company-lines>div{
+  grid-template-columns:34px minmax(0,1fr);
+  gap:7px;
+  font-size:11px;
+  line-height:1.35;
+}
+.game-company-lines b{
+  font-size:9.5px;
+  font-weight:850;
+}
+.game-company-lines span{
+  font-size:11px;
+}
+
+/* Genre/type tags */
+.game-mini-tags{
+  gap:5px;
+  margin-top:9px;
+}
+.game-mini-tags span{
+  padding:4px 7px;
+  font-size:9.5px;
+  line-height:1.1;
+}
+
+/* Review / rating indicator */
+.game-review-note{
+  margin-top:8px;
+  font-size:10px;
+  line-height:1.35;
+}
+
+/* Open link */
+.timeline-open{
+  font-size:10.5px;
+  padding-top:2px;
+}
+
+/* Give the richer cards a little more breathing room without changing columns. */
+.timeline-game.pc-rich{
+  grid-template-columns:116px minmax(0,1fr) auto;
+  gap:12px;
+  padding:12px;
+}
+.timeline-game.pc-rich .timeline-game-cover{
+  width:116px;
+  height:68px;
+}
+
+/* Timeline headings are also slightly easier to scan. */
+.game-timeline-date strong{
+  font-size:14px;
+}
+.game-timeline-date small{
+  font-size:10px;
+}
+.pc-window-head span{
+  font-size:16px;
+}
+.pc-window-head small{
+  font-size:11px;
+}
+.pc-window-details>summary span{
+  font-size:14px;
+}
+.pc-window-details>summary small{
+  font-size:10.5px;
+}
+.pc-window-details>summary strong{
+  font-size:12px;
+}
+
+/* Mobile cards use the same readable minimums. */
+#gameMobileGrid .timeline-game-meta,
+#gameConsoleGrid .timeline-game-meta{
+  font-size:10px;
+}
+#gameMobileGrid .timeline-game-copy p,
+#gameConsoleGrid .timeline-game-copy p{
+  font-size:11px;
+}
+#gameMobileGrid .game-review-note{
+  font-size:10px;
+}
+
+/* Do not make the cards oversized on narrow screens. */
+@media(max-width:900px){
+  .timeline-game.pc-rich{
+    grid-template-columns:102px minmax(0,1fr) auto;
+  }
+  .timeline-game.pc-rich .timeline-game-cover{
+    width:102px;
+    height:61px;
+  }
+}
+@media(max-width:700px){
+  .timeline-game.pc-rich{
+    grid-template-columns:88px minmax(0,1fr);
+    gap:10px;
+  }
+  .timeline-game.pc-rich .timeline-game-cover{
+    width:88px;
+    height:54px;
+  }
+  .timeline-game.pc-rich .timeline-game-copy h4{
+    font-size:14.5px;
+  }
+  .game-company-lines>div,
+  .game-company-lines span{
+    font-size:10.5px;
+  }
+}
+
+/* Tsugi v8.3 · PC game card visual redesign
+   Media-first cards, less spreadsheet-like density, no stretched empty card bodies. */
+
+/* ----- PC timeline structure ----- */
+#gamePcGrid .pc-today-priority{
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:none;
+}
+#gamePcGrid .pc-window-head{
+  align-items:center;
+  margin:0 0 14px;
+  padding:0 2px;
+}
+#gamePcGrid .pc-window-head>div{
+  gap:4px;
+}
+#gamePcGrid .pc-window-head span{
+  font-size:18px;
+  letter-spacing:-.025em;
+}
+#gamePcGrid .pc-window-head small{
+  font-size:11px;
+  line-height:1.5;
+}
+#gamePcGrid .pc-window-head strong{
+  min-width:34px;
+  padding:5px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  color:var(--text-soft);
+  font-size:11px;
+  line-height:1;
+  letter-spacing:0;
+}
+[data-theme="light"] #gamePcGrid .pc-window-head strong{
+  background:rgba(255,255,255,.72);
+}
+
+#gamePcGrid .game-timeline-day{
+  grid-template-columns:122px minmax(0,1fr);
+  gap:14px;
+  padding-bottom:16px;
+}
+#gamePcGrid .game-timeline-day::before{
+  left:7px;
+  opacity:.68;
+}
+#gamePcGrid .game-timeline-date{
+  gap:9px;
+  padding-top:8px;
+}
+#gamePcGrid .game-timeline-date strong{
+  font-size:13px;
+  line-height:1.35;
+}
+#gamePcGrid .game-timeline-date small{
+  margin-top:3px;
+  font-size:9px;
+}
+#gamePcGrid .timeline-dot{
+  width:15px;
+  height:15px;
+  border-width:4px;
+}
+
+/* Auto defaults to a readable 3-ish columns on a wide desktop.
+   Explicit 2/3/4/5 choices from the Settings panel still override this. */
+#gamePcGrid .game-timeline-items{
+  grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+  align-items:start;
+  gap:11px;
+}
+
+/* ----- Card shell ----- */
+#gamePcGrid .timeline-game.pc-rich{
+  position:relative;
+  align-self:start;
+  height:auto;
+  min-height:0;
+  display:grid;
+  grid-template-columns:136px minmax(0,1fr);
+  gap:13px;
+  align-items:start;
+  padding:11px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:18px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018)),
+    var(--panel);
+  box-shadow:0 8px 24px rgba(0,0,0,.13);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+#gamePcGrid .timeline-game.pc-rich:hover{
+  transform:translateY(-2px);
+  border-color:rgba(143,125,255,.24);
+  box-shadow:0 14px 34px rgba(0,0,0,.19);
+}
+#gamePcGrid .timeline-game.pc-rich.today{
+  border-color:rgba(62,210,167,.22);
+  background:
+    linear-gradient(180deg,rgba(62,210,167,.055),rgba(255,255,255,.018)),
+    var(--panel);
+}
+#gamePcGrid .timeline-game.pc-rich.high-heat{
+  border-color:rgba(255,128,98,.26);
+}
+[data-theme="light"] #gamePcGrid .timeline-game.pc-rich{
+  border-color:rgba(19,28,40,.075);
+  background:rgba(255,255,255,.80);
+  box-shadow:0 8px 26px rgba(30,48,70,.07);
+}
+[data-theme="light"] #gamePcGrid .timeline-game.pc-rich:hover{
+  border-color:rgba(112,91,244,.20);
+  box-shadow:0 12px 30px rgba(30,48,70,.10);
+}
+
+/* ----- Cover ----- */
+#gamePcGrid .timeline-game.pc-rich .timeline-game-cover{
+  width:136px;
+  height:77px;
+  margin:0;
+  border-radius:12px;
+  object-fit:cover;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+}
+#gamePcGrid .timeline-game.pc-rich .game-cover-placeholder{
+  display:grid;
+  place-items:center;
+  font-size:11px;
+  letter-spacing:.10em;
+}
+
+/* ----- Header/meta ----- */
+#gamePcGrid .timeline-game-meta{
+  min-height:20px;
+  gap:5px;
+  padding-right:25px;
+  margin:0 0 3px;
+  font-size:9px;
+  line-height:1.15;
+}
+#gamePcGrid .timeline-game-meta>span:first-child{
+  flex:0 0 auto;
+  max-width:none;
+  font-size:0;
+  overflow:visible;
+}
+#gamePcGrid .timeline-game-meta>span:first-child::before{
+  content:"STEAM";
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:.09em;
+  color:var(--faint);
+}
+
+/* Upcoming is a useful filter signal, but visually it should not overpower the title. */
+#gamePcGrid .game-heat-badge{
+  padding:4px 7px;
+  border:1px solid rgba(245,190,91,.15);
+  background:rgba(245,190,91,.08);
+  color:#c99a45;
+  font-size:8px;
+  font-weight:850;
+}
+#gamePcGrid .game-heat-badge.high{
+  border-color:rgba(255,100,91,.22);
+  background:rgba(255,100,91,.13);
+  color:#ff8c82;
+}
+#gamePcGrid .game-publisher-badge{
+  padding:4px 7px;
+  font-size:8px;
+}
+[data-theme="light"] #gamePcGrid .game-heat-badge{
+  color:#9a671e;
+}
+[data-theme="light"] #gamePcGrid .game-heat-badge.high{
+  color:#bf4439;
+}
+
+/* ----- Title hierarchy ----- */
+#gamePcGrid .timeline-game.pc-rich .timeline-game-copy{
+  min-width:0;
+}
+#gamePcGrid .timeline-game.pc-rich .timeline-game-copy h4{
+  margin:1px 0 0;
+  min-height:0;
+  font-size:15px;
+  line-height:1.3;
+  font-weight:850;
+  letter-spacing:-.025em;
+  -webkit-line-clamp:2;
+}
+#gamePcGrid .game-title-en{
+  margin-top:3px;
+  color:var(--faint);
+  font-size:9.5px;
+  line-height:1.25;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* PC is already known from the active tab: don't spend a whole row repeating it. */
+#gamePcGrid .timeline-game.pc-rich .timeline-game-copy>p{
+  display:none;
+}
+
+/* ----- Developer / publisher condensed into one horizontal band ----- */
+#gamePcGrid .game-company-lines{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:7px;
+  margin-top:9px;
+  padding-top:8px;
+  border-top:1px solid var(--line);
+}
+#gamePcGrid .game-company-lines>div{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  min-width:0;
+  font-size:10px;
+  line-height:1.25;
+}
+#gamePcGrid .game-company-lines b{
+  flex:0 0 auto;
+  font-size:8px;
+  font-weight:850;
+  color:var(--faint);
+}
+#gamePcGrid .game-company-lines span{
+  min-width:0;
+  font-size:10px;
+  color:var(--text-soft);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* ----- Tags / review ----- */
+#gamePcGrid .game-mini-tags{
+  gap:4px;
+  flex-wrap:nowrap;
+  margin-top:7px;
+  overflow:hidden;
+}
+#gamePcGrid .game-mini-tags span{
+  flex:0 0 auto;
+  padding:3px 6px;
+  border-color:rgba(255,255,255,.07);
+  background:rgba(255,255,255,.025);
+  color:var(--muted);
+  font-size:8px;
+  line-height:1.1;
+}
+#gamePcGrid .game-mini-tags span:nth-child(n+4){
+  display:none;
+}
+[data-theme="light"] #gamePcGrid .game-mini-tags span{
+  border-color:rgba(20,28,40,.07);
+  background:rgba(20,28,40,.025);
+}
+#gamePcGrid .game-review-note{
+  margin-top:7px;
+  font-size:8.5px;
+  color:var(--faint);
+}
+
+/* Entire card is clickable, so the action becomes a small directional affordance. */
+#gamePcGrid .timeline-open{
+  position:absolute;
+  top:11px;
+  right:11px;
+  width:24px;
+  height:24px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:rgba(255,255,255,.035);
+  color:var(--text-soft);
+  font-size:0;
+  opacity:.72;
+}
+#gamePcGrid .timeline-open::after{
+  content:"↗";
+  font-size:12px;
+  font-weight:900;
+}
+#gamePcGrid .timeline-game:hover .timeline-open{
+  opacity:1;
+  background:rgba(143,125,255,.10);
+  border-color:rgba(143,125,255,.20);
+}
+
+/* ----- Collapsed past / later groups ----- */
+#gamePcGrid .pc-window-details{
+  border-radius:16px;
+}
+#gamePcGrid .pc-window-details>summary{
+  padding:12px 14px;
+}
+#gamePcGrid .pc-past{
+  opacity:.72;
+}
+#gamePcGrid .pc-past[open]{
+  opacity:.88;
+}
+#gamePcGrid .pc-past .timeline-game{
+  opacity:.72;
+  filter:saturate(.68);
+}
+#gamePcGrid .pc-past .timeline-game:hover{
+  opacity:1;
+  filter:none;
+}
+
+/* Tablet and mobile */
+@media(max-width:1180px){
+  #gamePcGrid .game-timeline-items{
+    grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  }
+}
+@media(max-width:900px){
+  #gamePcGrid .game-timeline-day{
+    grid-template-columns:112px minmax(0,1fr);
+  }
+  #gamePcGrid .game-timeline-items{
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:700px){
+  #gamePcGrid .game-timeline-day{
+    grid-template-columns:1fr;
+    gap:7px;
+  }
+  #gamePcGrid .timeline-game.pc-rich{
+    grid-template-columns:102px minmax(0,1fr);
+    gap:10px;
+    padding:10px;
+  }
+  #gamePcGrid .timeline-game.pc-rich .timeline-game-cover{
+    width:102px;
+    height:60px;
+  }
+  #gamePcGrid .game-company-lines{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+}

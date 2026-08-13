@@ -1,53 +1,87 @@
 # Tsugi — ACG 追踪中心
 
-Tsugi 是一个部署在 **GitHub Pages** 的静态 ACG dashboard。数据由 **GitHub Actions** 定时抓取并缓存为 JSON，浏览器只负责展示和本机订阅状态。
+Tsugi 是部署在 **GitHub Pages** 的静态 ACG dashboard。GitHub Actions 每日抓取公开数据并缓存为 JSON；浏览器负责展示、本机订阅和界面设置。
 
-> 只抓公开页面中的标题、封面、章节/话数、发行信息和原站链接；不镜像正文或漫画内容，不处理登录、付费、验证码或反爬绕过。
-
-## 功能
+## 当前功能
 
 - **更新流**：漫画柜、BiliNovel / Linovelib、CopyManga 等公开最新更新。
-- **我的书架**：
-  - 从更新流一键加入的“本机追踪”保存在 LocalStorage；每天新的站点更新到达时自动比对。
-  - `config/library.json` 中的“云端追踪”由 GitHub Actions 主动打开作品页检查，可靠性更高。
-- **音乐追踪**：Billboard JAPAN Hot 100、Apple Music Japan 近一周新曲，以及浏览器本机保存的艺人新曲关注；周榜和新曲均提供 YouTube Music 搜索入口。
-- **游戏追踪**：过去 7 天到未来 90 天的发售时间线；PC 仅使用 Steam Popular New Releases / Popular Upcoming，手游保留最近 7 天商店新发现，主机使用 Famitsu 日本发行日历。
-- **ACG 新闻**：只启用中文或繁体中文来源。
-- **明暗主题**：浏览器本地保存偏好。
+- **我的书架**：本机 LocalStorage 订阅 + `config/library.json` 云端深度追踪。
+- **音乐追踪**：Billboard JAPAN Hot 100、近一周新曲、艺人关注、YouTube Music 入口。
+- **游戏追踪**：
+  - 手游：日本 App Store / Google Play + 国内 TapTap，经过数量与热度筛选。
+  - PC：`scraper/steam_pc.py` 抓 Steam 热门新作 / 热门待发，`game_enrich.py` 补中文名、开发/发行商、类型与讨论度。
+  - 主机：Famitsu 日本发售时间线。
+- **ACG 新闻**：仅中文 / 繁中来源。
+- **界面设置**：字号/缩放、密度、列数、主题图位置/透明度/模糊、明暗模式等，保存在浏览器本地。
 
-## 关键文件
+## 目录
 
-- `index.html` / `styles.css` / `v5.css` / `app.js`：前端
-- `config/content.json`：公开更新流、中文新闻、音乐、游戏来源配置
-- `config/library.json`：云端深度追踪书架
-- `scraper/main.py`：总抓取入口
-- `scraper/sources.py`：单作品章节解析
-- `scraper/aggregators.py`：站点更新流与 RSS 聚合
-- `scraper/music.py`：日本音乐周榜 / 近一周新曲
-- `scraper/games.py`：手游 / PC / 主机新发行
-- `data/*.json`：GitHub Pages 读取的缓存数据
+```text
+index.html
+styles.css
+v5.css
+app.js
+games.css
+games.js
+ui-settings.css
+ui-settings.js
 
-## 每日计划
+config/
+  content.json
+  library.json
+  library.example.json
 
-工作流位于 `.github/workflows/update-feed.yml`。
+data/
+  feed.json
+  feed.xml
+  state.json
+  site-updates.json
+  acg-news.json
+  music.json
+  game-releases.json
+  game-state.json
 
-默认每天 **09:17 America/Los_Angeles** 执行一次完整抓取，自动处理 PDT / PST。特意避开整点，降低 GitHub Actions 高负载导致延迟的概率。
+scraper/
+  main.py
+  sources.py
+  aggregators.py
+  music.py
+  games.py
+  steam_pc.py
+  game_enrich.py
 
-普通 push 只重新部署静态站点；以下情况会完整抓取：
+.github/workflows/update-feed.yml
+```
 
-- 每日 schedule
-- Actions 页面手动 `Run workflow`
-- commit message 包含 `[refresh]`
+## 调度
 
-## 添加云端书架作品
+`.github/workflows/update-feed.yml`：
 
-编辑 `config/library.json`：
+- 每天 **09:17 America/Los_Angeles** 完整刷新；
+- Actions 页面手动 `Run workflow` 完整刷新；
+- commit message 含 `[refresh]` 时完整刷新；
+- 普通 push 只部署，不重复爬取。
+
+PC 的稳定抓取链是：
+
+```text
+main.py
+→ steam_pc.py
+→ game_enrich.py
+→ data/game-releases.json
+```
+
+`config/content.json` 不再保留已失效的 `featuredcategories` Steam legacy source。
+
+## 书架
+
+云端深度追踪编辑 `config/library.json`：
 
 ```json
 {
   "items": [
     {
-      "id": "my-manga-001",
+      "id": "my-title",
       "type": "manga",
       "source": "manhuagui",
       "title": "作品名",
@@ -58,15 +92,7 @@ Tsugi 是一个部署在 **GitHub Pages** 的静态 ACG dashboard。数据由 **
 }
 ```
 
-支持 `linovelib` / `bilinovel`、`manhuagui`、`copymanga`、`wenku8`、`generic`。
-
-第一次成功抓取只建立 baseline；以后最新章节、URL 或章节数量发生变化才生成个人更新记录。
-
-## 部署
-
-GitHub 仓库 → **Settings → Pages → Build and deployment → Source → GitHub Actions**。
-
-第一次或修改抓取器后，建议在 Actions 手动运行一次 `Update feed & deploy Pages`。
+第一次成功抓取只建立 baseline；之后章节 / 话数变化才产生个人更新记录。
 
 ## 本地预览
 
@@ -74,8 +100,10 @@ GitHub 仓库 → **Settings → Pages → Build and deployment → Source → G
 python -m http.server 8000
 ```
 
-打开 `http://localhost:8000`。不要直接双击 `index.html`，否则浏览器可能阻止读取 JSON。
+然后打开 `http://localhost:8000`。
 
-## 抓取失败说明
+## 部署
 
-中文小说 / 漫画站经常调整 DOM 或限制机房 IP。Tsugi 会在公开访问范围内使用普通 requests 或普通 Playwright 浏览器降级，不做 stealth、验证码绕过或账号 Cookie 注入。单一来源失败不会阻止其他来源和 Pages 部署。
+GitHub → **Settings → Pages → Source → GitHub Actions**。
+
+前端资源现在直接写在 `index.html` 中，不再由 workflow 临时修改 HTML，因此仓库源码与线上 Pages 结构一致。

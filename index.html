@@ -21,6 +21,7 @@
     @media(max-width:700px){.library-history-head{margin-top:26px}.library-history-head .toolbar{width:100%}}
   </style>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="v5.css" />
   <link rel="alternate" type="application/atom+xml" title="Tsugi Updates" href="data/feed.xml" />
 </head>
 <body>
@@ -50,6 +51,16 @@
             <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/><path d="M6.5 8h0M17.5 8h0"/></svg></span>
             <span class="nav-copy"><span>我的书架</span><small>Cover shelf</small></span>
             <em id="libraryCount">0</em>
+          </button>
+          <button class="nav-item" data-tab="music">
+            <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
+            <span class="nav-copy"><span>音乐追踪</span><small>Japan music</small></span>
+            <em id="musicCount">0</em>
+          </button>
+          <button class="nav-item" data-tab="games">
+            <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10a5 5 0 0 1 4.7 6.7l-1 2.7a2 2 0 0 1-3.3.8L15.2 16H8.8l-2.2 2.2a2 2 0 0 1-3.3-.8l-1-2.7A5 5 0 0 1 7 8Z"/><path d="M8 11v4M6 13h4"/><circle cx="16" cy="12" r=".7"/><circle cx="18" cy="14" r=".7"/></svg></span>
+            <span class="nav-copy"><span>游戏追踪</span><small>Daily releases</small></span>
+            <em id="gameCount">0</em>
           </button>
           <button class="nav-item" data-tab="news">
             <span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h6M7 12h10M7 16h7"/></svg></span>
@@ -176,6 +187,92 @@
         <div id="libraryUpdatesList" class="updates-list"></div>
       </section>
 
+      <section id="music" class="tab">
+        <div class="section-head music-head">
+          <div>
+            <p class="section-kicker">JAPAN MUSIC TRACKER</p>
+            <h2>音乐追踪</h2>
+            <p>查看 Billboard JAPAN Hot 100 周榜、日本新发行，并关注艺人后检查最近新曲。</p>
+          </div>
+        </div>
+
+        <div class="music-stats">
+          <article class="music-stat"><span>周榜</span><strong id="musicChartCount">0</strong><small>Billboard JAPAN Hot 100</small></article>
+          <article class="music-stat"><span>新发行</span><strong id="musicReleaseCount">0</strong><small>Apple Music / iTunes Japan</small></article>
+          <article class="music-stat"><span>关注艺人</span><strong id="followedArtistCount">0</strong><small>保存在当前浏览器</small></article>
+        </div>
+
+        <div class="music-switch" id="musicSwitch">
+          <button class="music-switch-btn active" data-music-view="chart">日本周榜</button>
+          <button class="music-switch-btn" data-music-view="new">新曲 / 新发行</button>
+          <button class="music-switch-btn" data-music-view="artists">艺人追踪</button>
+        </div>
+
+        <div id="musicChartPane" class="music-pane active">
+          <div class="music-pane-head"><div><h3>Billboard JAPAN Hot 100</h3><p id="musicChartDate">每周更新</p></div></div>
+          <div id="musicChartList" class="music-chart-list"></div>
+        </div>
+
+        <div id="musicNewPane" class="music-pane">
+          <div class="music-pane-head"><div><h3>日本新曲 / 新发行</h3><p>从 Apple 日本音乐目录的公开新发行 feed 中整理。</p></div></div>
+          <div id="musicNewGrid" class="music-new-grid"></div>
+        </div>
+
+        <div id="musicArtistsPane" class="music-pane">
+          <div class="artist-search-panel">
+            <div>
+              <p class="section-kicker">FOLLOW ARTIST</p>
+              <h3>关注艺人</h3>
+              <p>可以从周榜 / 新曲直接关注，也可以手动搜索艺人。关注列表只保存在当前浏览器。</p>
+            </div>
+            <div class="artist-search-row">
+              <input id="artistSearchInput" placeholder="搜索日本艺人，例如 Ado / 米津玄師" />
+              <button id="artistSearchBtn" class="primary-btn">搜索</button>
+            </div>
+            <div id="artistSearchResults" class="artist-search-results"></div>
+          </div>
+          <div class="music-pane-head followed-head"><div><h3>我关注的艺人</h3><p>使用 Apple iTunes Lookup 获取艺人最近歌曲；发现新 track 时显示 NEW。</p></div><button id="refreshArtistsBtn" class="text-btn">刷新艺人</button></div>
+          <div id="followedArtistsGrid" class="followed-artists-grid"></div>
+        </div>
+      </section>
+
+
+      <section id="games" class="tab">
+        <div class="section-head game-head">
+          <div>
+            <p class="section-kicker">DAILY GAME RELEASE TRACKER</p>
+            <h2>游戏追踪</h2>
+            <p>按日本时间追踪每日新发行与商店新发现游戏，覆盖手游、PC 与主机。</p>
+          </div>
+          <span class="game-date-pill" id="gameDate">日本时间</span>
+        </div>
+
+        <div class="game-stats">
+          <article class="game-stat"><span>手游</span><strong id="gameMobileToday">0</strong><small>今日发行 / 今日新发现</small></article>
+          <article class="game-stat"><span>PC</span><strong id="gamePcToday">0</strong><small>今日发行</small></article>
+          <article class="game-stat"><span>主机</span><strong id="gameConsoleToday">0</strong><small>Switch / PlayStation / Xbox</small></article>
+        </div>
+
+        <div class="game-switch" id="gameSwitch">
+          <button class="game-switch-btn active" data-game-view="mobile">手游</button>
+          <button class="game-switch-btn" data-game-view="pc">PC</button>
+          <button class="game-switch-btn" data-game-view="console">主机</button>
+        </div>
+
+        <div id="gameMobilePane" class="game-pane active">
+          <div class="game-pane-head"><div><h3>手游新发行</h3><p>App Store 日本“新着游戏”与 Google Play 日本“新規リリース”。无公开精确日期时按 Tsugi 首次发现日期标记。</p></div></div>
+          <div id="gameMobileGrid" class="game-grid"></div>
+        </div>
+        <div id="gamePcPane" class="game-pane">
+          <div class="game-pane-head"><div><h3>PC 每日发行</h3><p>Steam 最近发行列表，并结合日本游戏发行日历补充当天 PC 版本。</p></div></div>
+          <div id="gamePcGrid" class="game-grid"></div>
+        </div>
+        <div id="gameConsolePane" class="game-pane">
+          <div class="game-pane-head"><div><h3>主机每日发行</h3><p>按日本发行日汇总 Nintendo Switch / Switch 2、PlayStation 与 Xbox 平台。</p></div></div>
+          <div id="gameConsoleGrid" class="game-grid"></div>
+        </div>
+      </section>
+
       <section id="news" class="tab">
         <div class="section-head news-head">
           <div>
@@ -206,7 +303,7 @@
           <article class="panel">
             <span class="panel-number">01</span><span class="panel-kicker">ADD TITLE</span>
             <h3>添加追更作品</h3>
-            <p>打开仓库中的 <code>config/library.json</code>，复制一个条目并填入作品详情页 URL。建议使用“作品详情 / 目录页”，不要使用站内搜索页。</p>
+            <p>更新流里的作品可以直接点击“加入书架”，作为本机订阅保存到浏览器。若需要 GitHub Actions 对某一本作品进行独立深度检查，仍可把它加入 <code>config/library.json</code>。</p>
             <pre><code>{
   "id": "my-title",
   "type": "novel",
@@ -228,9 +325,9 @@
             <p>工作流每天运行并把新章节写入 <code>data/feed.json</code> 与 <code>data/feed.xml</code>。Atom 地址可直接加入 Feedly、FreshRSS、Reeder 等阅读器。</p>
           </article>
           <article class="panel">
-            <span class="panel-number">04</span><span class="panel-kicker">CONTENT & THEME</span>
+            <span class="panel-number">04</span><span class="panel-kicker">LOCAL FOLLOW & THEME</span>
             <h3>公开内容与主题</h3>
-            <p>站点最新与 ACG 新闻源配置在 <code>config/content.json</code>。明 / 暗主题与“已读 / 未读”状态都保存在当前浏览器 LocalStorage。</p>
+            <p>站点更新与 ACG 新闻源配置在 <code>config/content.json</code>。一键加入书架、关注艺人、明暗主题和已读状态均保存在当前浏览器 LocalStorage；云端订阅仍由 <code>library.json</code> 驱动。</p>
           </article>
         </div>
       </section>

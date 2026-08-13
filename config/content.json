@@ -6,7 +6,7 @@
       "type": "manga",
       "url": "https://m.manhuagui.com/update/",
       "fetch_mode": "auto",
-      "limit": 24,
+      "limit": 60,
       "enrich": false,
       "enabled": true
     },
@@ -18,9 +18,9 @@
       "fetch_mode": "auto",
       "detail_fetch_mode": "requests",
       "chapter_order": "first",
-      "limit": 24,
+      "limit": 60,
       "enrich": true,
-      "enrich_limit": 24,
+      "enrich_limit": 30,
       "enabled": true
     },
     {
@@ -31,9 +31,9 @@
       "fetch_mode": "auto",
       "detail_fetch_mode": "requests",
       "chapter_order": "first",
-      "limit": 24,
+      "limit": 60,
       "enrich": true,
-      "enrich_limit": 12,
+      "enrich_limit": 18,
       "enabled": true
     },
     {
@@ -79,5 +79,39 @@
       "limit": 24,
       "enabled": true
     }
-  ]
+  ],
+  "music": {
+    "weekly_source": "Billboard JAPAN Hot 100",
+    "weekly_url": "https://www.billboard-japan.com/charts/detail?a=hot100",
+    "weekly_limit": 30,
+    "new_release_source": "Apple Japan new releases",
+    "new_release_limit": 40,
+    "enabled": true
+  },
+  "games": {
+    "enabled": true,
+    "limit_per_category": 80,
+    "sources": {
+      "appstore": {
+        "enabled": true,
+        "url": "https://apps.apple.com/jp/iphone/room/1435822938",
+        "limit": 36
+      },
+      "googleplay": {
+        "enabled": true,
+        "url": "https://play.google.com/store/games?hl=ja&gl=jp",
+        "limit": 36
+      },
+      "steam": {
+        "enabled": true,
+        "url": "https://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&l=japanese&cc=jp",
+        "limit": 60
+      },
+      "famitsu": {
+        "enabled": true,
+        "url": "https://www.famitsu.com/schedule",
+        "limit": 80
+      }
+    }
+  }
 }

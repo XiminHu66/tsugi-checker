@@ -7,9 +7,11 @@ import requests
 from bs4 import BeautifulSoup
 from sources import parse, SOURCE_LABELS
 from aggregators import parse_site_latest, fetch_news_feed
+from music import refresh_music
+from games import refresh_games
 
 ROOT=Path(__file__).resolve().parents[1]
-CONFIG=ROOT/'config/library.json'; CONTENT=ROOT/'config/content.json'; STATE=ROOT/'data/state.json'; FEED=ROOT/'data/feed.json'; XML=ROOT/'data/feed.xml'; SITE_FEED=ROOT/'data/site-updates.json'; NEWS_FEED=ROOT/'data/acg-news.json'
+CONFIG=ROOT/'config/library.json'; CONTENT=ROOT/'config/content.json'; STATE=ROOT/'data/state.json'; FEED=ROOT/'data/feed.json'; XML=ROOT/'data/feed.xml'; SITE_FEED=ROOT/'data/site-updates.json'; NEWS_FEED=ROOT/'data/acg-news.json'; MUSIC_FEED=ROOT/'data/music.json'; GAME_FEED=ROOT/'data/game-releases.json'; GAME_STATE=ROOT/'data/game-state.json'
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36 TsugiUpdateChecker/1.0"
 
 def now(): return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
@@ -114,7 +116,7 @@ def refresh_site_updates(content_cfg, generated):
         except Exception as e:
             statuses[sid]={'label':label,'ok':False,'count':0,'checked_at':generated,'error':f'{type(e).__name__}: {e}'}
             print(f"SITE ERR {sid}: {e}",file=sys.stderr)
-    SITE_FEED.write_text(json.dumps({'generated_at':generated,'items':items[:120],'sources':statuses},ensure_ascii=False,indent=2)+'\n','utf-8')
+    SITE_FEED.write_text(json.dumps({'generated_at':generated,'items':items[:300],'sources':statuses},ensure_ascii=False,indent=2)+'\n','utf-8')
 
 def refresh_news(content_cfg, generated):
     items=[]; statuses={}
@@ -172,5 +174,7 @@ def main():
     STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n','utf-8'); FEED.write_text(json.dumps(feed,ensure_ascii=False,indent=2)+'\n','utf-8'); XML.write_text(build_atom(feed),'utf-8')
     refresh_site_updates(content_cfg,generated)
     refresh_news(content_cfg,generated)
+    refresh_music(content_cfg,generated,MUSIC_FEED,UA)
+    refresh_games(content_cfg,generated,GAME_FEED,GAME_STATE,UA)
 
 if __name__=='__main__': main()

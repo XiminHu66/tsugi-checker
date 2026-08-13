@@ -1,48 +1,87 @@
 from __future__ import annotations
 
 import hashlib
+import html as html_lib
 import json
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
 
 JST = timezone(timedelta(hours=9))
+CST = timezone(timedelta(hours=8))
 DATE_JP_RE = re.compile(r"(20\d{2})年\s*(\d{1,2})月\s*(\d{1,2})日")
-DATE_EN_RE = re.compile(r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2}),\s+(20\d{2})\b", re.I)
+DATE_EN_RE = re.compile(
+    r"\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2}),\s+(20\d{2})\b",
+    re.I,
+)
 PLATFORM_RE = re.compile(r"\b(Switch2|Switch|PS5|PS4|XSX|XONE|Xbox Series X\|S|Xbox One|PC|Steam)\b", re.I)
-MONTHS = {m.lower(): i for i, m in enumerate(("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), 1)}
+MONTHS = {
+    "jan": 1, "january": 1, "feb": 2, "february": 2, "mar": 3, "march": 3,
+    "apr": 4, "april": 4, "may": 5, "jun": 6, "june": 6, "jul": 7, "july": 7,
+    "aug": 8, "august": 8, "sep": 9, "sept": 9, "september": 9, "oct": 10,
+    "october": 10, "nov": 11, "november": 11, "dec": 12, "december": 12,
+}
 CONSOLE_PLATFORMS = {"SWITCH", "SWITCH2", "PS5", "PS4", "XSX", "XONE"}
+MOJIBAKE_HINTS = ("ã", "â", "Â", "æ", "å", "ç", "ï¿½", "ð")
 
 
 def clean(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
-def stable_id(source: str, url: str, title: str) -> str:
+def repair_text(value: str) -> str:
+    """Repair the common UTF-8-as-Latin-1 mojibake seen on apps.apple.com."""
+    text = html_lib.unescape(clean(value))
+    if not text or not any(mark in text for mark in MOJIBAKE_HINTS):
+        return text
+    try:
+        candidate = text.encode("latin-1").decode("utf-8")
+    except Exception:
+        return text
+    old_score = sum(text.count(x) for x in MOJIBAKE_HINTS)
+    new_score = sum(candidate.count(x) for x in MOJIBAKE_HINTS)
+    return candidate if new_score < old_score else text
+
+
+def stable_id(source: str, url: str, title: str = "") -> str:
     return hashlib.sha1(f"{source}|{url}|{title}".encode("utf-8")).hexdigest()[:16]
+
+
+def _decode_response(r: requests.Response) -> str:
+    # Apple storefront HTML has historically omitted / confused charset metadata.
+    # Prefer UTF-8 because the JP storefront is UTF-8, then fall back to Requests detection.
+    try:
+        return r.content.decode("utf-8")
+    except UnicodeDecodeError:
+        enc = r.apparent_encoding or r.encoding or "utf-8"
+        return r.content.decode(enc, errors="replace")
 
 
 def get_html(url: str, ua: str, timeout: int = 30, accept_language: str = "ja-JP,ja;q=0.95,en;q=0.7") -> str:
     r = requests.get(
         url,
-        headers={"User-Agent": ua, "Accept-Language": accept_language},
+        headers={
+            "User-Agent": ua,
+            "Accept-Language": accept_language,
+            "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+        },
         timeout=timeout,
     )
     r.raise_for_status()
-    return r.text
+    return _decode_response(r)
 
 
 def get_browser_html(url: str, ua: str, locale: str = "ja-JP", wait_ms: int = 2200) -> str:
-    """Render storefront pages that return a mostly empty app shell to plain requests."""
     from playwright.sync_api import sync_playwright
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(user_agent=ua, locale=locale)
+        context = browser.new_context(user_agent=ua, locale=locale, viewport={"width": 1440, "height": 1200})
         page = context.new_page()
         page.goto(url, wait_until="domcontentloaded", timeout=45000)
         page.wait_for_timeout(wait_ms)
@@ -67,82 +106,91 @@ def parse_en_date(text: str) -> str:
     m = DATE_EN_RE.search(text or "")
     if not m:
         return ""
-    return f"{int(m.group(3)):04d}-{MONTHS[m.group(1).lower()]:02d}-{int(m.group(2)):02d}"
+    month = MONTHS.get(m.group(1).lower())
+    return f"{int(m.group(3)):04d}-{month:02d}-{int(m.group(2)):02d}" if month else ""
 
 
 def parse_any_date(text: str) -> str:
     return parse_jp_date(text) or parse_en_date(text)
 
 
-def image_from(node, base: str) -> str:
-    if not node:
+def _srcset_best(value: str) -> str:
+    if not value:
         return ""
-    img = node.select_one("img") if hasattr(node, "select_one") else None
+    candidates = []
+    for part in value.split(","):
+        bit = part.strip().split()
+        if bit:
+            candidates.append(bit[0])
+    return candidates[-1] if candidates else ""
+
+
+def image_from(node, base: str) -> str:
+    if not node or not hasattr(node, "select_one"):
+        return ""
+    img = node.select_one("img")
     if not img:
         return ""
-    src = img.get("src") or img.get("data-src") or img.get("data-original") or ""
-    if not src or src.startswith("data:"):
-        return ""
-    return urljoin(base, src)
+    # Prefer lazy/real images and srcset. App Store's plain src is often a 1x1 GIF.
+    candidates = [
+        img.get("data-src"), img.get("data-original"), img.get("data-lazy-src"),
+        _srcset_best(img.get("data-srcset") or ""), _srcset_best(img.get("srcset") or ""),
+    ]
+    picture = img.parent if getattr(img.parent, "name", None) == "picture" else None
+    if picture:
+        for source in picture.select("source[srcset]"):
+            candidates.append(_srcset_best(source.get("srcset") or ""))
+    candidates.append(img.get("src"))
+    for src in candidates:
+        src = clean(src)
+        if not src or src.startswith("data:") or "1x1.gif" in src:
+            continue
+        return urljoin(base, src)
+    return ""
 
 
-def closest_card(anchor, max_chars: int = 650):
+def closest_card(anchor, max_chars: int = 1000):
+    best = None
     for p in anchor.parents:
         if getattr(p, "name", None) not in ("li", "article", "div", "section"):
             continue
         text = clean(p.get_text(" "))
         if 2 <= len(text) <= max_chars:
-            return p
-    return anchor.parent
+            best = p
+            # A card with an image and only a handful of links is usually the right scope.
+            if p.select_one("img") and len(p.select("a[href]")) <= 6:
+                return p
+    return best or anchor.parent
 
 
 def app_title(anchor, card=None) -> str:
-    noise = {"表示", "入手", "開く", "インストール", "install", "open", "view"}
+    noise = {"表示", "入手", "開く", "インストール", "install", "open", "view", "get"}
     nodes = [anchor]
     if card is not None and card is not anchor:
         nodes.append(card)
     for node in nodes:
         for key in ("aria-label", "title"):
-            t = clean(node.get(key)) if hasattr(node, "get") else ""
-            if 2 <= len(t) <= 120 and t.casefold() not in noise:
+            t = repair_text(node.get(key)) if hasattr(node, "get") else ""
+            if 2 <= len(t) <= 140 and t.casefold() not in noise:
                 return t
         img = node.select_one("img") if hasattr(node, "select_one") else None
         if img:
-            t = clean(img.get("alt") or img.get("aria-label"))
-            if 2 <= len(t) <= 120 and t.casefold() not in noise:
+            t = repair_text(img.get("alt") or img.get("aria-label"))
+            if 2 <= len(t) <= 140 and t.casefold() not in noise:
                 return t
         for sel in ("h1", "h2", "h3", "h4", "strong", ".title", "[data-testid*=title]", "span"):
             n = node.select_one(sel) if hasattr(node, "select_one") else None
-            t = clean(n.get_text(" ")) if n else ""
-            if 2 <= len(t) <= 120 and t.casefold() not in noise:
+            t = repair_text(n.get_text(" ")) if n else ""
+            if 2 <= len(t) <= 140 and t.casefold() not in noise:
                 return t
-    text = clean((card or anchor).get_text(" "))
+    text = repair_text((card or anchor).get_text(" "))
     text = re.sub(r"\s+[0-5](?:\.[0-9])?\s*(?:star|★).*$", "", text, flags=re.I)
     text = re.sub(r"\s+(?:表示|入手|インストール).*$", "", text)
-    return text[:120] if 2 <= len(text) <= 180 and text.casefold() not in noise else ""
-
-
-def section_links(soup: BeautifulSoup, marker_re: re.Pattern, href_re: re.Pattern, limit: int = 36):
-    marker = soup.find(string=marker_re)
-    start = marker.parent if marker else soup
-    out = []
-    seen = set()
-    for a in start.find_all_next("a", href=True):
-        href = a.get("href") or ""
-        if not href_re.search(href):
-            continue
-        if href in seen:
-            continue
-        seen.add(href)
-        out.append(a)
-        if len(out) >= limit:
-            break
-    return out
+    return text[:140] if 2 <= len(text) <= 220 and text.casefold() not in noise else ""
 
 
 def _store_anchors(soup: BeautifulSoup, href_re: re.Pattern, limit: int):
-    out = []
-    seen = set()
+    out, seen = [], set()
     for a in soup.select("a[href]"):
         href = a.get("href") or ""
         if not href_re.search(href) or href in seen:
@@ -156,23 +204,27 @@ def _store_anchors(soup: BeautifulSoup, href_re: re.Pattern, limit: int):
 
 def _parse_mobile_store(html: str, url: str, source: str, label: str, store: str, platform: str, href_re: re.Pattern, limit: int):
     soup = BeautifulSoup(html, "lxml")
-    anchors = _store_anchors(soup, href_re, max(limit * 3, limit))
-    rows = []
-    seen = set()
+    anchors = _store_anchors(soup, href_re, max(limit * 4, limit))
+    rows, seen = [], set()
     for a in anchors:
         href = urljoin(url, a.get("href") or "")
         if href in seen:
             continue
-        card = closest_card(a, 1000)
+        card = closest_card(a, 1200)
         title = app_title(a, card)
-        if not title:
-            continue
-        # Skip generic CTAs accidentally captured as titles.
-        if title.casefold() in {"表示", "入手", "open", "install", "view"}:
+        if not title or title.casefold() in {"表示", "入手", "open", "install", "view", "get"}:
             continue
         seen.add(href)
+        # URL-only ID keeps first_seen stable even if storefront wording/encoding changes.
+        row_id = stable_id(source, href)
+        legacy_title = ""
+        try:
+            legacy_title = title.encode("utf-8").decode("latin-1")
+        except Exception:
+            pass
         rows.append({
-            "id": stable_id(source, href, title),
+            "id": row_id,
+            "legacy_id": stable_id(source, href, legacy_title) if legacy_title else "",
             "category": "mobile",
             "source": source,
             "source_label": label,
@@ -182,6 +234,9 @@ def _parse_mobile_store(html: str, url: str, source: str, label: str, store: str
             "cover": image_from(card, url),
             "platforms": [platform],
             "release_date": "",
+            "region": "JP",
+            "featured": True,
+            "popularity_label": "日本新着精选",
         })
         if len(rows) >= limit:
             break
@@ -191,100 +246,238 @@ def _parse_mobile_store(html: str, url: str, source: str, label: str, store: str
 def fetch_appstore_new(cfg: dict, ua: str):
     url = cfg.get("url") or "https://apps.apple.com/jp/iphone/room/1435822938"
     limit = int(cfg.get("limit", 36))
-    label = "App Store 日本 · 新着游戏"
     href_re = re.compile(r"(?:https?://apps\.apple\.com)?/jp/app/|/app/", re.I)
-    html = get_html(url, ua)
-    rows = _parse_mobile_store(html, url, "appstore", label, "iOS / iPadOS", "iOS", href_re, limit)
+    rows = _parse_mobile_store(get_html(url, ua), url, "appstore", "App Store 日本 · 新着精选", "iOS / iPadOS", "iOS", href_re, limit)
     if not rows:
-        html = get_browser_html(url, ua, "ja-JP")
-        rows = _parse_mobile_store(html, url, "appstore", label, "iOS / iPadOS", "iOS", href_re, limit)
+        rows = _parse_mobile_store(get_browser_html(url, ua), url, "appstore", "App Store 日本 · 新着精选", "iOS / iPadOS", "iOS", href_re, limit)
     return rows
 
 
 def fetch_googleplay_new(cfg: dict, ua: str):
-    # A dedicated Google Play collection is much more stable than trying to locate
-    # the section inside the generic /store/games landing page.
     url = cfg.get("url") or "https://play.google.com/store/apps/collection/promotion_3000791_new_releases_games?hl=ja&gl=jp"
     limit = int(cfg.get("limit", 36))
-    label = "Google Play 日本 · 新規リリース"
     href_re = re.compile(r"/store/apps/details\?(?:[^#]*&)?id=", re.I)
-    html = get_html(url, ua)
-    rows = _parse_mobile_store(html, url, "googleplay", label, "Android", "Android", href_re, limit)
+    rows = _parse_mobile_store(get_html(url, ua), url, "googleplay", "Google Play 日本 · 新規リリース精选", "Android", "Android", href_re, limit)
     if not rows:
-        html = get_browser_html(url, ua, "ja-JP", 3000)
-        rows = _parse_mobile_store(html, url, "googleplay", label, "Android", "Android", href_re, limit)
+        rows = _parse_mobile_store(get_browser_html(url, ua, "ja-JP", 3000), url, "googleplay", "Google Play 日本 · 新規リリース精选", "Android", "Android", href_re, limit)
     return rows
 
 
-def _steam_result_html(cfg: dict, ua: str, source_id: str) -> str:
-    """Use Steam's search-results response instead of the JS-heavy search shell."""
-    page_url = cfg.get("url") or ""
-    parsed = urlparse(page_url)
-    qs = parse_qs(parsed.query)
-    filter_name = (qs.get("filter") or ["popularnew" if source_id == "steam_popular_new" else "popularcomingsoon"])[0]
-    sort_by = (qs.get("sort_by") or ["Released_DESC" if source_id == "steam_popular_new" else "Released_ASC"])[0]
-    limit = int(cfg.get("limit", 100))
-    endpoint = "https://store.steampowered.com/search/results/"
-    params = {
-        "filter": filter_name,
-        "start": 0,
-        "count": limit,
-        "sort_by": sort_by,
-        "cc": "jp",
-        "l": "english",
-        "ignore_preferences": 1,
-        "infinite": 1,
-        "json": 1,
-    }
-    r = requests.get(endpoint, params=params, headers={"User-Agent": ua, "Accept-Language": "en-US,en;q=0.9"}, timeout=30)
-    r.raise_for_status()
-    try:
-        data = r.json()
-    except Exception:
-        data = {}
-    html = data.get("results_html") or data.get("html") or ""
-    if html:
-        return html
-    # Fallback to a rendered search page if Steam changes the JSON envelope.
-    fallback = page_url or f"https://store.steampowered.com/search/?filter={filter_name}&sort_by={sort_by}&l=english&cc=jp&ignore_preferences=1"
-    joiner = "&" if "?" in fallback else "?"
-    if "ignore_preferences=" not in fallback:
-        fallback += joiner + "ignore_preferences=1"
-    return get_browser_html(fallback, ua, "en-US", 2500)
+
+def _taptap_title(anchor, card=None) -> str:
+    """Extract the game title from TapTap ranking/calendar cards."""
+    nodes = [anchor]
+    if card is not None and card is not anchor:
+        nodes.append(card)
+    for node in nodes:
+        if hasattr(node, "select_one"):
+            img = node.select_one("img[alt]")
+            if img:
+                title = repair_text(img.get("alt"))
+                title = re.sub(r"\s*(?:icon|图标)$", "", title, flags=re.I).strip()
+                if 2 <= len(title) <= 100:
+                    return title
+            for sel in ("h1", "h2", "h3", "h4", ".title", "[class*=title]"):
+                n = node.select_one(sel)
+                if n:
+                    title = repair_text(n.get_text(" "))
+                    if 2 <= len(title) <= 100:
+                        return title
+    text = repair_text(anchor.get_text(" "))
+    text = re.sub(r"^(?:首发|预下载|新游预约|限量测试|不限量测试|测试招募)\s*(?:\d{1,2}:\d{2}\s*开始)?\s*", "", text)
+    # TapTap cards usually separate the rating into its own span; when flattened,
+    # cut at the first standalone score token rather than at digits inside titles.
+    text = re.split(r"\s+(?:(?:10(?:\.0)?)|(?:[0-9](?:\.\d)?))\s+", text, maxsplit=1)[0]
+    return text.strip()[:100]
 
 
-def fetch_steam_popular(cfg: dict, ua: str, source_id: str, source_label: str):
-    html = _steam_result_html(cfg, ua, source_id)
-    soup = BeautifulSoup(html, "lxml")
-    rows = []
-    for a in soup.select("a.search_result_row")[: int(cfg.get("limit", 100))]:
-        title_node = a.select_one("span.title") or a.select_one(".title")
-        title = clean(title_node.get_text(" ")) if title_node else ""
-        href = a.get("href") or ""
-        if not title or not href:
+def _taptap_rating(card) -> float | None:
+    if not card:
+        return None
+    text = clean(card.get_text(" "))
+    vals = []
+    for m in re.finditer(r"(?<![\d.])(10(?:\.0)?|[5-9](?:\.\d)?)(?![\d.])", text):
+        try:
+            vals.append(float(m.group(1)))
+        except Exception:
+            pass
+    return vals[0] if vals else None
+
+
+def fetch_taptap_new(cfg: dict, ua: str):
+    """Mainland-China mobile discovery: TapTap's download-weighted new-game chart."""
+    url = cfg.get("url") or "https://www.taptap.cn/top/download/new"
+    limit = int(cfg.get("limit", 8))
+    soup = BeautifulSoup(get_html(url, ua, accept_language="zh-CN,zh;q=0.95"), "lxml")
+    rows, seen = [], set()
+    for a in soup.select('a[href*="/app/"]'):
+        href = urljoin(url, a.get("href") or "")
+        if not re.search(r"/app/\d+", href) or href in seen:
             continue
-        date_node = a.select_one(".search_released")
-        date_text = clean(date_node.get_text(" ")) if date_node else ""
-        release_date = parse_any_date(date_text)
-        if not release_date:
+        card = closest_card(a, 900)
+        title = _taptap_title(a, card)
+        if not title or title in {"下载手机 APP", "下载 TapTap"}:
             continue
-        img = a.select_one("img")
-        cover = (img.get("src") or img.get("data-src") or "") if img else ""
-        clean_url = href.split("?")[0]
+        seen.add(href)
+        rank = len(rows) + 1
+        rating = _taptap_rating(card)
         rows.append({
-            "id": stable_id(source_id, clean_url, title),
+            "id": stable_id("taptap_cn_new", href),
+            "category": "mobile",
+            "source": "taptap_cn_new",
+            "source_label": "TapTap 中国 · 新品榜",
+            "store": "TapTap",
+            "title": title,
+            "url": href,
+            "cover": image_from(card, url),
+            "platforms": ["移动端"],
+            "release_date": "",
+            "region": "CN",
+            "featured": True,
+            "popularity_rank": rank,
+            "rating": rating,
+            "popularity_label": f"TapTap 新品榜 #{rank}",
+        })
+        if len(rows) >= limit:
+            break
+    return rows
+
+
+def _date_from_month_day(month: int, day: int, today: date) -> date:
+    candidate = date(today.year, month, day)
+    # Upcoming pages can cross New Year. Treat a date far behind today as next year.
+    if candidate < today - timedelta(days=45):
+        candidate = date(today.year + 1, month, day)
+    return candidate
+
+
+def fetch_taptap_upcoming(cfg: dict, ua: str):
+    """Popular upcoming mainland-China releases from TapTap's release calendar.
+
+    Only true '首发' entries are included; tests, preloads and version updates are
+    intentionally excluded so the mobile timeline remains a release timeline.
+    """
+    url = cfg.get("url") or "https://www.taptap.cn/upcoming"
+    limit = int(cfg.get("limit", 8))
+    today_cn = datetime.now(timezone.utc).astimezone(CST).date()
+    soup = BeautifulSoup(get_html(url, ua, accept_language="zh-CN,zh;q=0.95"), "lxml")
+    start_text = soup.find(string=lambda x: x and clean(x) == "即将上线")
+    start = start_text.parent if start_text else soup
+    current_date = None
+    rows, seen = [], set()
+    date_re = re.compile(r"^(\d{1,2})/(\d{1,2})\s*周")
+    for node in start.find_all_next():
+        if getattr(node, "name", None) in ("script", "style"):
+            continue
+        text = repair_text(node.get_text(" ")) if hasattr(node, "get_text") else repair_text(node)
+        if text in {"下载手机 APP", "热门游戏"} and rows:
+            break
+        if len(text) <= 32:
+            dm = date_re.search(text)
+            if dm:
+                try:
+                    current_date = _date_from_month_day(int(dm.group(1)), int(dm.group(2)), today_cn)
+                except Exception:
+                    current_date = None
+                continue
+        if getattr(node, "name", None) != "a" or not node.get("href") or current_date is None:
+            continue
+        href = urljoin(url, node.get("href") or "")
+        if not re.search(r"/app/\d+", href) or href in seen:
+            continue
+        card = closest_card(node, 900)
+        event_text = repair_text(card.get_text(" ")) if card else repair_text(node.get_text(" "))
+        if "首发" not in event_text:
+            continue
+        title = _taptap_title(node, card)
+        if not title:
+            continue
+        seen.add(href)
+        rating = _taptap_rating(card)
+        rows.append({
+            "id": stable_id("taptap_cn_upcoming", href),
+            "category": "mobile",
+            "source": "taptap_cn_upcoming",
+            "source_label": "TapTap 中国 · 即将首发",
+            "store": "TapTap",
+            "title": title,
+            "url": href,
+            "cover": image_from(card, url),
+            "platforms": ["移动端"],
+            "release_date": current_date.isoformat(),
+            "release_text": current_date.strftime("%m/%d") + " 首发",
+            "region": "CN",
+            "featured": True,
+            "rating": rating,
+            "popularity_label": "TapTap 即将上线",
+        })
+        if len(rows) >= limit:
+            break
+    return rows
+
+def _steam_release_detail(appid: int, ua: str):
+    url = "https://store.steampowered.com/api/appdetails"
+    try:
+        r = requests.get(url, params={"appids": appid, "cc": "jp", "l": "english"}, headers={"User-Agent": ua}, timeout=20)
+        r.raise_for_status()
+        payload = r.json().get(str(appid), {})
+        if not payload.get("success"):
+            return appid, "", ""
+        data = payload.get("data") or {}
+        release = clean((data.get("release_date") or {}).get("date"))
+        return appid, parse_any_date(release), release
+    except Exception:
+        return appid, "", ""
+
+
+def fetch_steam_featured(cfg: dict, ua: str, source_id: str, source_label: str, category: str):
+    """Use Steam's storefront featured-category JSON instead of brittle search-result DOM.
+
+    new_releases / coming_soon are front-page curated sets, which is a better fit for
+    'known / discussed' titles than all Recently Released products.
+    """
+    endpoint = cfg.get("api_url") or "https://store.steampowered.com/api/featuredcategories"
+    limit = int(cfg.get("limit", 30))
+    r = requests.get(endpoint, params={"cc": "jp", "l": "english"}, headers={"User-Agent": ua, "Accept": "application/json"}, timeout=30)
+    r.raise_for_status()
+    payload = r.json()
+    items = ((payload.get(category) or {}).get("items") or [])[:limit]
+    if not items:
+        raise RuntimeError(f"Steam featuredcategories returned no {category} items")
+
+    appids = [int(x.get("id")) for x in items if x.get("id") and int(x.get("type", 0)) == 0]
+    details = {}
+    with ThreadPoolExecutor(max_workers=min(8, max(1, len(appids)))) as pool:
+        futures = [pool.submit(_steam_release_detail, appid, ua) for appid in appids]
+        for fut in as_completed(futures):
+            appid, release_iso, release_text = fut.result()
+            details[appid] = (release_iso, release_text)
+
+    rows = []
+    for item in items:
+        if int(item.get("type", 0)) != 0:
+            continue
+        appid = int(item.get("id") or 0)
+        title = repair_text(item.get("name"))
+        release_date, release_text = details.get(appid, ("", ""))
+        if not appid or not title or not release_date:
+            continue
+        app_url = f"https://store.steampowered.com/app/{appid}/"
+        cover = item.get("large_capsule_image") or item.get("header_image") or item.get("small_capsule_image") or ""
+        rows.append({
+            "id": stable_id(source_id, app_url),
             "category": "pc",
             "source": source_id,
             "source_label": source_label,
             "store": "Steam",
             "title": title,
-            "url": href,
+            "url": app_url,
             "cover": cover,
             "platforms": ["PC"],
             "release_date": release_date,
-            "release_text": date_text,
+            "release_text": release_text,
             "featured": True,
-            "popularity_label": "Steam 热门",
+            "popularity_label": "Steam 精选",
         })
     return rows
 
@@ -309,20 +502,15 @@ def _month_iter(start: date, end: date):
     last = date(end.year, end.month, 1)
     while current <= last:
         yield current
-        if current.month == 12:
-            current = date(current.year + 1, 1, 1)
-        else:
-            current = date(current.year, current.month + 1, 1)
+        current = date(current.year + 1, 1, 1) if current.month == 12 else date(current.year, current.month + 1, 1)
 
 
 def fetch_famitsu_console_window(cfg: dict, ua: str, start_date: date, end_date: date):
     base_url = (cfg.get("url") or "https://www.famitsu.com/schedule").rstrip("/")
-    rows = []
-    seen = set()
+    rows, seen = [], set()
     for month in _month_iter(start_date, end_date):
         url = f"{base_url}/all-platforms/{month:%Y%m}" if base_url.endswith("/schedule") else base_url
-        html = get_html(url, ua)
-        soup = BeautifulSoup(html, "lxml")
+        soup = BeautifulSoup(get_html(url, ua), "lxml")
         for heading in soup.find_all(["h2", "h3"]):
             heading_text = clean(heading.get_text(" "))
             dm = DATE_JP_RE.search(heading_text)
@@ -337,11 +525,11 @@ def fetch_famitsu_console_window(cfg: dict, ua: str, start_date: date, end_date:
                     break
                 if getattr(node, "name", None) != "a" or not node.get("href"):
                     continue
-                text = clean(node.get_text(" "))
+                text = repair_text(node.get_text(" "))
                 if not text or text in ("その他のバージョンを見る", "詳細を見る") or len(text) > 180:
                     continue
-                card = closest_card(node, 1000)
-                context = clean(card.get_text(" ")) if card else text
+                card = closest_card(node, 1200)
+                context = repair_text(card.get_text(" ")) if card else text
                 platforms = _famitsu_platforms(context)
                 if not any(p in CONSOLE_PLATFORMS for p in platforms):
                     continue
@@ -372,10 +560,13 @@ def fetch_famitsu_console_window(cfg: dict, ua: str, start_date: date, end_date:
 
 
 def dedupe(rows):
-    out = []
-    seen = set()
+    out, seen = [], set()
     for row in sorted(rows, key=lambda x: (bool(x.get("featured")), bool(x.get("cover"))), reverse=True):
-        key = (row.get("category"), row.get("release_date") or row.get("first_seen") or "", re.sub(r"\W+", "", row.get("title", "").lower()))
+        key = (
+            row.get("category"),
+            row.get("release_date") or row.get("first_seen") or "",
+            re.sub(r"\W+", "", row.get("title", "").lower()),
+        )
         if not key[2] or key in seen:
             continue
         seen.add(key)
@@ -419,142 +610,137 @@ def refresh_games(content_cfg: dict, generated: str, output_path: Path, state_pa
         old_state = {"seen": {}}
     seen_state = old_state.get("seen", {}) if isinstance(old_state, dict) else {}
 
-    rows = []
-    statuses = {}
+    rows, statuses = [], {}
     source_cfg = cfg.get("sources", {}) if isinstance(cfg.get("sources", {}), dict) else {}
 
-    # Mobile: store discovery dates. App stores don't provide a reliable future release calendar.
+    # Mobile: JP storefront discovery + CN TapTap popularity-filtered discovery.
+    # App Store / Google Play rows use first discovery as their date. TapTap upcoming
+    # rows carry explicit future release dates. Source limits are intentionally small
+    # so mobile never becomes an unfiltered storefront dump.
     for sid, label, fn in [
-        ("appstore", "App Store 日本 · 新着游戏", fetch_appstore_new),
-        ("googleplay", "Google Play 日本 · 新規リリース", fetch_googleplay_new),
+        ("appstore", "App Store 日本 · 新着精选", fetch_appstore_new),
+        ("googleplay", "Google Play 日本 · 新規リリース精选", fetch_googleplay_new),
+        ("taptap_cn_new", "TapTap 中国 · 新品榜", fetch_taptap_new),
+        ("taptap_cn_upcoming", "TapTap 中国 · 即将首发", fetch_taptap_upcoming),
     ]:
         scfg = source_cfg.get(sid, {})
         if scfg.get("enabled", True) is False:
             continue
         try:
             found = fn(scfg, ua)
-            rows.extend(found)
-            statuses[sid] = {"label": label, "ok": bool(found), "count": len(found), "checked_at": generated}
             if not found:
-                statuses[sid]["error"] = "No items parsed"
+                raise RuntimeError("No items parsed")
+            for row in found:
+                prior = seen_state.get(row["id"])
+                if not prior and row.get("legacy_id"):
+                    prior = seen_state.get(row["legacy_id"])
+                first_seen = (prior or {}).get("first_seen") or today_jst
+                row["first_seen"] = first_seen
+                row.pop("legacy_id", None)
+                rows.append(row)
+                seen_state[row["id"]] = {
+                    "first_seen": first_seen,
+                    "last_seen": today_jst,
+                    "title": row["title"],
+                    "source": sid,
+                }
+            statuses[sid] = {"label": label, "ok": True, "count": len(found), "checked_at": generated}
             print(f"GAMES {sid}: {len(found)} items")
         except Exception as e:
             statuses[sid] = {"label": label, "ok": False, "count": 0, "checked_at": generated, "error": f"{type(e).__name__}: {e}"}
             print(f"GAMES ERR {sid}: {e}")
 
-    # PC: deliberately use Steam's own popularity-curated lists instead of every release.
-    steam_defs = [
-        ("steam_popular_new", "Steam · Popular New Releases"),
-        ("steam_popular_upcoming", "Steam · Popular Upcoming"),
+    # Steam: use storefront curated JSON sets + appdetails for exact dates.
+    steam_specs = [
+        ("steam_popular_new", "Steam · 精选新品", "new_releases"),
+        ("steam_popular_upcoming", "Steam · 精选即将推出", "coming_soon"),
     ]
-    for sid, label in steam_defs:
+    for sid, label, category in steam_specs:
         scfg = source_cfg.get(sid, {})
         if scfg.get("enabled", True) is False:
             continue
         try:
-            found = fetch_steam_popular(scfg, ua, sid, label)
+            found = fetch_steam_featured(scfg, ua, sid, label, category)
+            raw_count = len(found)
             filtered = []
             for row in found:
-                d = _as_date(row.get("release_date") or "")
-                if not d:
-                    continue
-                if sid == "steam_popular_new" and past_start <= d <= today:
-                    filtered.append(row)
-                elif sid == "steam_popular_upcoming" and today < d <= future_end:
+                d = _as_date(row.get("release_date", ""))
+                if d and past_start <= d <= future_end:
                     filtered.append(row)
             rows.extend(filtered)
-            statuses[sid] = {"label": label, "ok": bool(found), "count": len(filtered), "raw_count": len(found), "checked_at": generated}
-            if not found:
-                statuses[sid]["error"] = "No Steam results parsed"
-            print(f"GAMES {sid}: {len(filtered)} timeline items ({len(found)} raw)")
+            statuses[sid] = {
+                "label": label,
+                "ok": bool(raw_count),
+                "count": len(filtered),
+                "raw_count": raw_count,
+                "checked_at": generated,
+            }
+            if not raw_count:
+                statuses[sid]["error"] = "No items parsed"
+            print(f"GAMES {sid}: {len(filtered)} timeline items ({raw_count} raw)")
         except Exception as e:
-            statuses[sid] = {"label": label, "ok": False, "count": 0, "checked_at": generated, "error": f"{type(e).__name__}: {e}"}
+            statuses[sid] = {"label": label, "ok": False, "count": 0, "raw_count": 0, "checked_at": generated, "error": f"{type(e).__name__}: {e}"}
             print(f"GAMES ERR {sid}: {e}")
 
-    # Console: Famitsu provides explicit Japanese release dates across multiple months.
-    fcfg = source_cfg.get("famitsu", {})
-    if fcfg.get("enabled", True) is not False:
+    # Console: Famitsu supplies exact dates and already works reliably in this repo.
+    famitsu_cfg = source_cfg.get("famitsu", {})
+    if famitsu_cfg.get("enabled", True) is not False:
         try:
-            found = fetch_famitsu_console_window(fcfg, ua, past_start, future_end)
+            found = fetch_famitsu_console_window(famitsu_cfg, ua, past_start, future_end)
             rows.extend(found)
-            statuses["famitsu"] = {"label": "Famitsu 日本游戏发行日", "ok": True, "count": len(found), "checked_at": generated}
+            statuses["famitsu"] = {"label": "Famitsu 日本游戏发行日", "ok": bool(found), "count": len(found), "checked_at": generated}
+            if not found:
+                statuses["famitsu"]["error"] = "No items parsed"
             print(f"GAMES famitsu: {len(found)} timeline items")
         except Exception as e:
             statuses["famitsu"] = {"label": "Famitsu 日本游戏发行日", "ok": False, "count": 0, "checked_at": generated, "error": f"{type(e).__name__}: {e}"}
             print(f"GAMES ERR famitsu: {e}")
 
-    # Persist mobile discovery history so the UI can actually show the previous 7 days.
-    new_seen = dict(seen_state)
-    current_mobile_ids = set()
-    for row in rows:
-        if row.get("category") != "mobile":
+    decorated = [_decorate_timeline(x, today) for x in dedupe(rows)]
+    mobile = []
+    for x in decorated:
+        if x.get("category") != "mobile":
             continue
-        sid = row["id"]
-        current_mobile_ids.add(sid)
-        old = seen_state.get(sid, {}) if isinstance(seen_state.get(sid, {}), dict) else {}
-        first_seen = old.get("first_seen") or today_jst
-        row["first_seen"] = first_seen
-        new_seen[sid] = {
-            "first_seen": first_seen,
-            "last_seen": today_jst,
-            "title": row.get("title"),
-            "source": row.get("source"),
-            "row": {k: v for k, v in row.items() if k not in ("is_today", "timeline_status", "days_from_today")},
-        }
+        release_d = _as_date(x.get("release_date", ""))
+        seen_d = _as_date(x.get("first_seen", ""))
+        if release_d:
+            if past_start <= release_d <= future_end:
+                mobile.append(x)
+        elif seen_d and seen_d >= past_start:
+            mobile.append(x)
 
-    # Rehydrate mobile games first seen within the last 7 days even if a store list rotated them out.
-    for sid, saved in seen_state.items():
-        if sid in current_mobile_ids or not isinstance(saved, dict):
-            continue
-        first = _as_date(saved.get("first_seen") or "")
-        row = saved.get("row")
-        if first and past_start <= first <= today and isinstance(row, dict) and row.get("category") == "mobile":
-            restored = dict(row)
-            restored["first_seen"] = saved.get("first_seen")
-            rows.append(restored)
+    # Final mobile cap by region/status. This prevents one storefront refresh from
+    # flooding the page while retaining a useful mix of JP/CN recent and CN upcoming.
+    mf = cfg.get("mobile_filter", {}) or {}
+    jp_recent_limit = int(mf.get("jp_recent_limit", 10))
+    cn_recent_limit = int(mf.get("cn_recent_limit", 8))
+    cn_upcoming_limit = int(mf.get("cn_upcoming_limit", 8))
+    jp_recent = [x for x in mobile if x.get("region") == "JP" and x.get("timeline_status") != "upcoming"]
+    jp_recent.sort(key=lambda x: (0 if x.get("source") == "appstore" else 1, x.get("title", "").casefold()))
+    jp_recent = jp_recent[:jp_recent_limit]
+    cn_recent = [x for x in mobile if x.get("region") == "CN" and x.get("timeline_status") != "upcoming"]
+    cn_recent.sort(key=lambda x: (x.get("popularity_rank") or 999, -(x.get("rating") or 0)))
+    cn_recent = cn_recent[:cn_recent_limit]
+    cn_upcoming = [x for x in mobile if x.get("region") == "CN" and x.get("timeline_status") == "upcoming"]
+    cn_upcoming.sort(key=lambda x: (x.get("release_date") or "9999-99-99", -(x.get("rating") or 0)))
+    cn_upcoming = cn_upcoming[:cn_upcoming_limit]
+    mobile = jp_recent + cn_recent + cn_upcoming
+    pc = [x for x in decorated if x.get("category") == "pc" and x.get("timeline_status") in ("past", "today", "upcoming")]
+    console = [x for x in decorated if x.get("category") == "console" and x.get("timeline_status") in ("past", "today", "upcoming")]
 
-    rows = dedupe(rows)
-    rows = [_decorate_timeline(row, today) for row in rows]
+    # Chronological timeline. Same-day featured items retain their source ordering reasonably well.
+    key_fn = lambda x: (x.get("release_date") or x.get("first_seen") or "9999-99-99", x.get("title", "").casefold())
+    mobile.sort(key=key_fn)
+    pc.sort(key=key_fn)
+    console.sort(key=key_fn)
 
-    grouped = {"mobile": [], "pc": [], "console": []}
-    for row in rows:
-        category = row.get("category")
-        if category not in grouped:
-            continue
-        effective = _as_date(row.get("release_date") or row.get("first_seen") or "")
-        if category == "mobile":
-            if not effective or not (past_start <= effective <= today):
-                continue
-        else:
-            if not effective or not (past_start <= effective <= future_end):
-                continue
-        grouped[category].append(row)
-
-    for key in grouped:
-        grouped[key].sort(key=lambda x: (x.get("release_date") or x.get("first_seen") or "", x.get("title") or ""))
-        grouped[key] = grouped[key][: int(cfg.get("limit_per_category", 160))]
-
-    # Prune discovery state after a reasonable retention window.
-    retention_start = today - timedelta(days=max(past_days + 30, 45))
-    pruned_seen = {}
-    for sid, saved in new_seen.items():
-        if not isinstance(saved, dict):
-            continue
-        first = _as_date(saved.get("first_seen") or "")
-        last = _as_date(saved.get("last_seen") or "")
-        if (last and last >= retention_start) or (first and first >= retention_start):
-            pruned_seen[sid] = saved
-
-    state_path.write_text(json.dumps({"generated_at": generated, "seen": pruned_seen}, ensure_ascii=False, indent=2) + "\n", "utf-8")
-    output_path.write_text(json.dumps({
+    limit = int(cfg.get("limit_per_category", 160))
+    payload = {
         "generated_at": generated,
         "date_jst": today_jst,
-        "window": {
-            "past_days": past_days,
-            "future_days": future_days,
-            "start": past_start.isoformat(),
-            "end": future_end.isoformat(),
-        },
-        "items": grouped,
+        "window": {"past_days": past_days, "future_days": future_days, "start": past_start.isoformat(), "end": future_end.isoformat()},
+        "items": {"mobile": mobile[:limit], "pc": pc[:limit], "console": console[:limit]},
         "sources": statuses,
-    }, ensure_ascii=False, indent=2) + "\n", "utf-8")
+    }
+    output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", "utf-8")
+    state_path.write_text(json.dumps({"generated_at": generated, "seen": seen_state}, ensure_ascii=False, indent=2) + "\n", "utf-8")

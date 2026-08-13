@@ -61,10 +61,10 @@
       "enabled": true
     },
     {
-      "id": "gamebase",
-      "label": "游戏基地 Gamebase",
-      "category": "繁中 ACG",
-      "url": "https://rsshub.app/gamebase/news",
+      "id": "gcores",
+      "label": "机核 GCORES",
+      "category": "中文游戏文化",
+      "url": "https://www.gcores.com/rss",
       "limit": 24,
       "enabled": true
     },
@@ -72,15 +72,15 @@
       "id": "yystv",
       "label": "游研社",
       "category": "中文游戏文化",
-      "url": "https://rsshub.app/yystv/docs",
+      "url": "https://www.yystv.cn/rss/feed",
       "limit": 24,
       "enabled": true
     },
     {
-      "id": "a9vg",
-      "label": "A9VG 游戏新闻",
-      "category": "中文游戏",
-      "url": "https://rsshub.app/a9vg/a9vg",
+      "id": "gamelook",
+      "label": "GameLook 游戏大观",
+      "category": "中文游戏产业",
+      "url": "http://www.gamelook.com.cn/feed",
       "limit": 24,
       "enabled": true
     }
@@ -103,28 +103,43 @@
       "appstore": {
         "enabled": true,
         "url": "https://apps.apple.com/jp/iphone/room/1435822938",
-        "limit": 36
+        "limit": 8
       },
       "googleplay": {
         "enabled": true,
         "url": "https://play.google.com/store/apps/collection/promotion_3000791_new_releases_games?hl=ja&gl=jp",
-        "limit": 36
+        "limit": 6
+      },
+      "taptap_cn_new": {
+        "enabled": true,
+        "url": "https://www.taptap.cn/top/download/new",
+        "limit": 8
+      },
+      "taptap_cn_upcoming": {
+        "enabled": true,
+        "url": "https://www.taptap.cn/upcoming",
+        "limit": 8
       },
       "steam_popular_new": {
         "enabled": true,
-        "url": "https://store.steampowered.com/search/?filter=popularnew&sort_by=Released_DESC&l=english&cc=jp&ignore_preferences=1",
-        "limit": 100
+        "api_url": "https://store.steampowered.com/api/featuredcategories",
+        "limit": 30
       },
       "steam_popular_upcoming": {
         "enabled": true,
-        "url": "https://store.steampowered.com/search/?filter=popularcomingsoon&sort_by=Released_ASC&l=english&cc=jp&ignore_preferences=1",
-        "limit": 100
+        "api_url": "https://store.steampowered.com/api/featuredcategories",
+        "limit": 30
       },
       "famitsu": {
         "enabled": true,
         "url": "https://www.famitsu.com/schedule",
         "limit": 200
       }
+    },
+    "mobile_filter": {
+      "jp_recent_limit": 10,
+      "cn_recent_limit": 8,
+      "cn_upcoming_limit": 8
     }
   }
 }

@@ -18,7 +18,7 @@
       "fetch_mode": "auto",
       "detail_fetch_mode": "browser",
       "chapter_order": "first",
-      "limit": 90,
+      "limit": 60,
       "enrich": true,
       "enrich_limit": 24,
       "enabled": true,
@@ -26,7 +26,8 @@
         "https://tw.linovelib.com/wenku/",
         "https://tw.linovelib.com/wenku/lastupdate_0_0_0_0_0_0_0_2_0.html",
         "https://tw.linovelib.com/wenku/lastupdate_0_0_0_0_0_0_0_3_0.html"
-      ]
+      ],
+      "date_enrich": true
     },
     {
       "id": "copymanga",
@@ -36,10 +37,11 @@
       "fetch_mode": "auto",
       "detail_fetch_mode": "requests",
       "chapter_order": "first",
-      "limit": 60,
+      "limit": 48,
       "enrich": true,
       "enrich_limit": 24,
-      "enabled": true
+      "enabled": true,
+      "date_enrich": true
     },
     {
       "id": "wenku8",

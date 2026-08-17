@@ -24,6 +24,34 @@
     #updates>.modern-feed-head{margin-top:2px}
     .site-update-card .site-meta:last-child>span:first-child::before{content:"最后更新 · ";color:var(--faint);font-weight:650}
     .site-update-card .site-meta:last-child>span:first-child:empty::before{content:"最后更新 · 未解析";color:var(--faint);font-weight:650}
+
+    /* v9.1: subtle global data timestamp under the page subtitle. */
+    .page-updated-at{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      width:max-content;
+      margin-top:7px;
+      color:var(--faint);
+      font-size:10px;
+      line-height:1.2;
+      font-weight:650;
+      letter-spacing:.01em;
+      opacity:.82;
+      font-variant-numeric:tabular-nums;
+    }
+    .page-updated-at::before{
+      content:"";
+      width:5px;
+      height:5px;
+      flex:0 0 auto;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 3px rgba(62,210,167,.08);
+      opacity:.8;
+    }
+    [data-theme="light"] .page-updated-at{opacity:.72}
+
   </style>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="v5.css" />
@@ -440,5 +468,54 @@
       });
     })();
   </script>
+
+  <script>
+    // Small, non-blocking timestamp for the actual reading update feed.
+    (() => {
+      const host = document.querySelector('.title-wrap');
+      const subtitle = document.getElementById('pageSubtitle');
+      if (!host || !subtitle) return;
+
+      let el = document.getElementById('pageUpdatedAt');
+      if (!el) {
+        el = document.createElement('span');
+        el.id = 'pageUpdatedAt';
+        el.className = 'page-updated-at';
+        el.textContent = '最后同步 · 读取中';
+        subtitle.insertAdjacentElement('afterend', el);
+      }
+
+      const shortFmt = new Intl.DateTimeFormat('zh-CN', {
+        month:'2-digit', day:'2-digit',
+        hour:'2-digit', minute:'2-digit',
+        hour12:false
+      });
+      const fullFmt = new Intl.DateTimeFormat('zh-CN', {
+        year:'numeric', month:'2-digit', day:'2-digit',
+        hour:'2-digit', minute:'2-digit', second:'2-digit',
+        hour12:false, timeZoneName:'short'
+      });
+
+      fetch(`data/site-updates.json?v=${Date.now()}`, {cache:'no-store'})
+        .then(r => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
+        })
+        .then(data => {
+          const raw = data?.generated_at;
+          const d = raw ? new Date(raw) : null;
+          if (!d || Number.isNaN(+d)) {
+            el.textContent = '最后同步 · 尚无记录';
+            return;
+          }
+          el.textContent = `最后同步 · ${shortFmt.format(d)}`;
+          el.title = `阅读更新流最后完成抓取：${fullFmt.format(d)}`;
+        })
+        .catch(() => {
+          el.textContent = '最后同步 · 暂不可用';
+        });
+    })();
+  </script>
+
 </body>
 </html>

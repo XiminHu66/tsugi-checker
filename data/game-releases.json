@@ -1,159 +1,14 @@
 {
-  "generated_at": "2026-08-20T16:51:56Z",
-  "date_jst": "2026-08-21",
+  "generated_at": "2026-08-21T16:34:01Z",
+  "date_jst": "2026-08-22",
   "window": {
     "past_days": 7,
     "future_days": 90,
-    "start": "2026-08-14",
-    "end": "2026-11-19"
+    "start": "2026-08-15",
+    "end": "2026-11-20"
   },
   "items": {
     "mobile": [
-      {
-        "id": "dbd9700af7356b53",
-        "category": "mobile",
-        "source": "appstore",
-        "source_label": "App Store 日本 · 新着精选",
-        "store": "iOS / iPadOS",
-        "title": "Caravan SandWitch",
-        "url": "https://apps.apple.com/jp/app/caravan-sandwitch/id6744115235",
-        "cover": "",
-        "platforms": [
-          "iOS"
-        ],
-        "release_date": "",
-        "region": "JP",
-        "featured": true,
-        "popularity_label": "日本新着精选",
-        "first_seen": "2026-08-14",
-        "days_from_today": -7,
-        "is_today": false,
-        "timeline_status": "past",
-        "rating": 2.66667,
-        "rating_count": 18,
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 0.0
-      },
-      {
-        "id": "dd652dbdea2aa1b9",
-        "category": "mobile",
-        "source": "appstore",
-        "source_label": "App Store 日本 · 新着精选",
-        "store": "iOS / iPadOS",
-        "title": "僕のヒーローアカデミアUNITED SURVIVAL",
-        "url": "https://apps.apple.com/jp/app/%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2united-survival/id6758648051",
-        "cover": "",
-        "platforms": [
-          "iOS"
-        ],
-        "release_date": "",
-        "region": "JP",
-        "featured": true,
-        "popularity_label": "日本新着精选",
-        "first_seen": "2026-08-14",
-        "days_from_today": -7,
-        "is_today": false,
-        "timeline_status": "past",
-        "rating": 4.63248,
-        "rating_count": 13825,
-        "heat_label": "高讨论",
-        "heat_labels": [
-          "高讨论"
-        ],
-        "heat_level": "high",
-        "heat_score": 88.0
-      },
-      {
-        "id": "e7751dc37f23e2d9",
-        "category": "mobile",
-        "source": "taptap_cn_new",
-        "source_label": "TapTap 中国 · 新品榜",
-        "store": "TapTap",
-        "title": "完蛋！我被男同学包围了",
-        "url": "https://www.taptap.cn/app/798699",
-        "cover": "https://img-tc.tapimg.com/market/images/a3de733c22dcee003d67499052b89875.png/_tap_appicon_s.jpg",
-        "platforms": [
-          "移动端"
-        ],
-        "release_date": "",
-        "region": "CN",
-        "featured": true,
-        "popularity_rank": 2,
-        "rating": 8.8,
-        "popularity_label": "TapTap 新品榜 #2",
-        "first_seen": "2026-08-14",
-        "days_from_today": -7,
-        "is_today": false,
-        "timeline_status": "past",
-        "heat_label": "高热 TOP2",
-        "heat_labels": [
-          "高热 TOP2",
-          "高口碑 8.8"
-        ],
-        "heat_level": "high",
-        "heat_score": 105.0
-      },
-      {
-        "id": "79b8f5d6426e61f8",
-        "category": "mobile",
-        "source": "appstore",
-        "source_label": "App Store 日本 · 新着精选",
-        "store": "iOS / iPadOS",
-        "title": "幻想水滸伝 STAR LEAP",
-        "url": "https://apps.apple.com/jp/app/%E5%B9%BB%E6%83%B3%E6%B0%B4%E6%BB%B8%E4%BC%9D-star-leap/id6746180100",
-        "cover": "",
-        "platforms": [
-          "iOS"
-        ],
-        "release_date": "",
-        "region": "JP",
-        "featured": true,
-        "popularity_label": "日本新着精选",
-        "first_seen": "2026-08-14",
-        "days_from_today": -7,
-        "is_today": false,
-        "timeline_status": "past",
-        "rating": 4.75716,
-        "rating_count": 12992,
-        "heat_label": "高讨论",
-        "heat_labels": [
-          "高讨论",
-          "高口碑 4.8★"
-        ],
-        "heat_level": "high",
-        "heat_score": 98.0
-      },
-      {
-        "id": "1819bace318bdb15",
-        "category": "mobile",
-        "source": "taptap_cn_new",
-        "source_label": "TapTap 中国 · 新品榜",
-        "store": "TapTap",
-        "title": "花掉马斯克的金钱",
-        "url": "https://www.taptap.cn/app/884085",
-        "cover": "https://img-tc.tapimg.com/market/images/FrQmaanY3O2MCATQVDlJsEGjHZ3Y.png/_tap_appicon_s.jpg",
-        "platforms": [
-          "移动端"
-        ],
-        "release_date": "",
-        "region": "CN",
-        "featured": true,
-        "popularity_rank": 4,
-        "rating": 7.5,
-        "popularity_label": "TapTap 新品榜 #4",
-        "first_seen": "2026-08-14",
-        "days_from_today": -7,
-        "is_today": false,
-        "timeline_status": "past",
-        "heat_label": "新品榜 #4",
-        "heat_labels": [
-          "新品榜 #4"
-        ],
-        "heat_level": "medium",
-        "heat_score": 68.0
-      },
       {
         "id": "c76fecd0f41f21b8",
         "category": "mobile",
@@ -171,7 +26,7 @@
         "featured": true,
         "popularity_label": "日本新着精选",
         "first_seen": "2026-08-15",
-        "days_from_today": -6,
+        "days_from_today": -7,
         "is_today": false,
         "timeline_status": "past",
         "rating": 3,
@@ -198,7 +53,7 @@
         "featured": true,
         "popularity_label": "日本新着精选",
         "first_seen": "2026-08-15",
-        "days_from_today": -6,
+        "days_from_today": -7,
         "is_today": false,
         "timeline_status": "past",
         "rating": 0,
@@ -225,36 +80,11 @@
         "featured": true,
         "popularity_label": "日本新着精选",
         "first_seen": "2026-08-15",
-        "days_from_today": -6,
+        "days_from_today": -7,
         "is_today": false,
         "timeline_status": "past",
-        "rating": 4.92727,
-        "rating_count": 440,
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 0.0
-      },
-      {
-        "id": "d4a91588d20d7247",
-        "category": "mobile",
-        "source": "googleplay",
-        "source_label": "Google Play 日本 · 新規リリース精选",
-        "store": "Android",
-        "title": "「Abyssal Soul - ローグライクカードRPG」のアイコン画像",
-        "url": "https://play.google.com/store/apps/details?id=com.chillyroom.containerofsoul.gp",
-        "cover": "https://play-lh.googleusercontent.com/HCBbJCfLUkLPWf8Y3WAypI27jXvQTiCtn7QShYOMQNeY5ntOrjNqB9meSyNWTt3CJRMhccxg3Ln_tUeEkW4kes0=s512-rw",
-        "platforms": [
-          "Android"
-        ],
-        "release_date": "",
-        "region": "JP",
-        "featured": true,
-        "popularity_label": "日本新着精选",
-        "first_seen": "2026-08-15",
-        "days_from_today": -6,
-        "is_today": false,
-        "timeline_status": "past",
+        "rating": 4.92842,
+        "rating_count": 461,
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
@@ -277,7 +107,7 @@
         "featured": true,
         "popularity_label": "日本新着精选",
         "first_seen": "2026-08-15",
-        "days_from_today": -6,
+        "days_from_today": -7,
         "is_today": false,
         "timeline_status": "past",
         "heat_label": "",
@@ -302,11 +132,11 @@
         "featured": true,
         "popularity_label": "日本新着精选",
         "first_seen": "2026-08-15",
-        "days_from_today": -6,
+        "days_from_today": -7,
         "is_today": false,
         "timeline_status": "past",
-        "rating": 4.9095,
-        "rating_count": 221,
+        "rating": 4.91111,
+        "rating_count": 225,
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
@@ -329,7 +159,7 @@
         "featured": true,
         "popularity_label": "日本新着精选",
         "first_seen": "2026-08-15",
-        "days_from_today": -6,
+        "days_from_today": -7,
         "is_today": false,
         "timeline_status": "past",
         "rating": 4.90475,
@@ -358,7 +188,7 @@
         "rating": 5.0,
         "popularity_label": "TapTap 新品榜 #5",
         "first_seen": "2026-08-17",
-        "days_from_today": -4,
+        "days_from_today": -5,
         "is_today": false,
         "timeline_status": "past",
         "heat_label": "新品榜 #5",
@@ -387,7 +217,7 @@
         "rating": 6.2,
         "popularity_label": "TapTap 新品榜 #3",
         "first_seen": "2026-08-17",
-        "days_from_today": -4,
+        "days_from_today": -5,
         "is_today": false,
         "timeline_status": "past",
         "heat_label": "高热 TOP3",
@@ -396,35 +226,6 @@
         ],
         "heat_level": "high",
         "heat_score": 92.0
-      },
-      {
-        "id": "666ca58788fa9ac4",
-        "category": "mobile",
-        "source": "taptap_cn_new",
-        "source_label": "TapTap 中国 · 新品榜",
-        "store": "TapTap",
-        "title": "追迹迷城",
-        "url": "https://www.taptap.cn/app/716987",
-        "cover": "https://img-tc.tapimg.com/market/images/079d6f24acbdbc0b8dad103a9c11fa4c.png/_tap_appicon_s.jpg",
-        "platforms": [
-          "移动端"
-        ],
-        "release_date": "",
-        "region": "CN",
-        "featured": true,
-        "popularity_rank": 6,
-        "rating": 6.0,
-        "popularity_label": "TapTap 新品榜 #6",
-        "first_seen": "2026-08-17",
-        "days_from_today": -4,
-        "is_today": false,
-        "timeline_status": "past",
-        "heat_label": "新品榜 #6",
-        "heat_labels": [
-          "新品榜 #6"
-        ],
-        "heat_level": "medium",
-        "heat_score": 66.0
       },
       {
         "id": "445fa3d5e772d8a2",
@@ -441,19 +242,19 @@
         "release_date": "",
         "region": "CN",
         "featured": true,
-        "popularity_rank": 7,
-        "rating": 7.0,
-        "popularity_label": "TapTap 新品榜 #7",
+        "popularity_rank": 6,
+        "rating": 6.0,
+        "popularity_label": "TapTap 新品榜 #6",
         "first_seen": "2026-08-20",
-        "days_from_today": -1,
+        "days_from_today": -2,
         "is_today": false,
         "timeline_status": "past",
-        "heat_label": "新品榜 #7",
+        "heat_label": "新品榜 #6",
         "heat_labels": [
-          "新品榜 #7"
+          "新品榜 #6"
         ],
         "heat_level": "medium",
-        "heat_score": 65.0
+        "heat_score": 66.0
       },
       {
         "id": "ef79f46a3a1f26fb",
@@ -471,10 +272,10 @@
         "region": "CN",
         "featured": true,
         "popularity_rank": 1,
-        "rating": 7.8,
+        "rating": 8.0,
         "popularity_label": "TapTap 新品榜 #1",
         "first_seen": "2026-08-20",
-        "days_from_today": -1,
+        "days_from_today": -2,
         "is_today": false,
         "timeline_status": "past",
         "heat_label": "高热 TOP1",
@@ -485,163 +286,197 @@
         "heat_score": 94.0
       },
       {
-        "id": "420a42a5204b1eea",
+        "id": "ab663802432b92da",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着精选",
+        "store": "iOS / iPadOS",
+        "title": "Dawnfolk",
+        "url": "https://apps.apple.com/jp/app/dawnfolk/id6759442443",
+        "cover": "",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "region": "JP",
+        "featured": true,
+        "popularity_label": "日本新着精选",
+        "first_seen": "2026-08-22",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today",
+        "rating": 3,
+        "rating_count": 1,
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 0.0
+      },
+      {
+        "id": "9d2b16c410f7f5da",
+        "category": "mobile",
+        "source": "appstore",
+        "source_label": "App Store 日本 · 新着精选",
+        "store": "iOS / iPadOS",
+        "title": "Slots & Daggers",
+        "url": "https://apps.apple.com/jp/app/slots-daggers/id6762803589",
+        "cover": "",
+        "platforms": [
+          "iOS"
+        ],
+        "release_date": "",
+        "region": "JP",
+        "featured": true,
+        "popularity_label": "日本新着精选",
+        "first_seen": "2026-08-22",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today",
+        "rating": 4.78946,
+        "rating_count": 38,
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 0.0
+      },
+      {
+        "id": "0988a896aabcc6db",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース精选",
+        "store": "Android",
+        "title": "「Medal Hunter: 軍事ゲーム」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.tensquaregames.medalhunter",
+        "cover": "https://play-lh.googleusercontent.com/WR2twMlKIjnCO0cOTgYdj_RhtmLuQfcQiBgkAIij6ippigFl-aZRDbu14ATzZoz5O8lH6AFGknjTVfKqn_xayh4=s512-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "region": "JP",
+        "featured": true,
+        "popularity_label": "日本新着精选",
+        "first_seen": "2026-08-22",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 0.0
+      },
+      {
+        "id": "9dd231145128a39b",
+        "category": "mobile",
+        "source": "googleplay",
+        "source_label": "Google Play 日本 · 新規リリース精选",
+        "store": "Android",
+        "title": "「グノーシア」のアイコン画像",
+        "url": "https://play.google.com/store/apps/details?id=com.PLAYISM.GNOSIA",
+        "cover": "https://play-lh.googleusercontent.com/WOiMdBNSuZBKxPhjKaR2Y0IM7muKirrgeiKNbtsUue6MO39n3ZzMIIq46khF5mx3tIxdgr4d8N5kNLnX1PK7BQ=s512-rw",
+        "platforms": [
+          "Android"
+        ],
+        "release_date": "",
+        "region": "JP",
+        "featured": true,
+        "popularity_label": "日本新着精选",
+        "first_seen": "2026-08-22",
+        "days_from_today": 0,
+        "is_today": true,
+        "timeline_status": "today",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 0.0
+      },
+      {
+        "id": "c06b518090734250",
         "category": "mobile",
         "source": "taptap_cn_new",
         "source_label": "TapTap 中国 · 新品榜",
         "store": "TapTap",
-        "title": "穿越80年代",
-        "url": "https://www.taptap.cn/app/902912",
-        "cover": "https://img-tc.tapimg.com/market/images/e95d425be0aa9b8b3026cead50d1d913.png/_tap_appicon_s.jpg",
+        "title": "菜鸡梦想家",
+        "url": "https://www.taptap.cn/app/378464",
+        "cover": "https://img-tc.tapimg.com/market/images/20b515daf2449422c68d543aa483f6cd.jpg/_tap_appicon_s.jpg",
         "platforms": [
           "移动端"
         ],
         "release_date": "",
         "region": "CN",
         "featured": true,
-        "popularity_rank": 8,
-        "rating": 8.0,
-        "popularity_label": "TapTap 新品榜 #8",
-        "first_seen": "2026-08-21",
+        "popularity_rank": 2,
+        "rating": 8.9,
+        "popularity_label": "TapTap 新品榜 #2",
+        "first_seen": "2026-08-22",
         "days_from_today": 0,
         "is_today": true,
         "timeline_status": "today",
-        "heat_label": "新品榜 #8",
+        "heat_label": "高热 TOP2",
         "heat_labels": [
-          "新品榜 #8"
+          "高热 TOP2",
+          "高口碑 8.9"
+        ],
+        "heat_level": "high",
+        "heat_score": 105.0
+      },
+      {
+        "id": "a6eae4f42d7b5fa4",
+        "category": "mobile",
+        "source": "taptap_cn_upcoming",
+        "source_label": "TapTap 中国 · 即将首发",
+        "store": "TapTap",
+        "title": "菜鸡梦想家",
+        "url": "https://www.taptap.cn/app/378464",
+        "cover": "https://img-tc.tapimg.com/market/images/20b515daf2449422c68d543aa483f6cd.jpg/_tap_appicon_m.jpg",
+        "platforms": [
+          "移动端"
+        ],
+        "release_date": "2026-08-27",
+        "release_text": "08/27 首发",
+        "region": "CN",
+        "featured": true,
+        "rating": 8.9,
+        "popularity_label": "TapTap 即将上线",
+        "first_seen": "2026-08-14",
+        "days_from_today": 5,
+        "is_today": false,
+        "timeline_status": "upcoming",
+        "heat_label": "高口碑待发 8.9",
+        "heat_labels": [
+          "高口碑待发 8.9"
         ],
         "heat_level": "medium",
-        "heat_score": 64.0
+        "heat_score": 68.0
+      },
+      {
+        "id": "d9c9a26432355300",
+        "category": "mobile",
+        "source": "taptap_cn_upcoming",
+        "source_label": "TapTap 中国 · 即将首发",
+        "store": "TapTap",
+        "title": "诡秘之主",
+        "url": "https://www.taptap.cn/app/281223",
+        "cover": "https://img-tc.tapimg.com/market/images/db050dcbc3fdaee8c8e862699345950f.png/_tap_appicon_m.jpg",
+        "platforms": [
+          "移动端"
+        ],
+        "release_date": "2026-08-27",
+        "release_text": "08/27 首发",
+        "region": "CN",
+        "featured": true,
+        "rating": 8.0,
+        "popularity_label": "TapTap 即将上线",
+        "first_seen": "2026-08-14",
+        "days_from_today": 5,
+        "is_today": false,
+        "timeline_status": "upcoming",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 0.0
       }
     ],
     "pc": [
-      {
-        "id": "steam-steam_popular_new-3091140",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "Lootbound",
-        "url": "https://store.steampowered.com/app/3091140/Lootbound/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3091140/3312fff1cb61f42b46e9b2c864ecf2d124cfd8dd/capsule_231x87.jpg?t=1786953687",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-14",
-        "release_text": "Aug 14, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3091140",
-        "title_en": "Lootbound",
-        "title_zh": "掠宝旅团",
-        "developers": [
-          "ArtDock"
-        ],
-        "publishers": [
-          "Dreland Enterprises"
-        ],
-        "tags": [
-          "冒险",
-          "休闲",
-          "独立",
-          "角色扮演",
-          "策略"
-        ],
-        "review_count": 985,
-        "review_positive": 824,
-        "review_negative": 161,
-        "review_positive_percent": 84,
-        "review_score_desc": "特别好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 56.88,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_new-4950470",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "Tidy Up Together",
-        "url": "https://store.steampowered.com/app/4950470/Tidy_Up_Together/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4950470/2d8c9e193929ca63d938243b935c54a1c30bd680/capsule_231x87.jpg?t=1786698522",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-14",
-        "release_text": "Aug 14, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "4950470",
-        "title_en": "Tidy Up Together",
-        "title_zh": "Tidy Up Together",
-        "developers": [
-          "Malum Games"
-        ],
-        "publishers": [
-          "Malum Games"
-        ],
-        "tags": [
-          "休闲",
-          "独立",
-          "模拟"
-        ],
-        "review_count": 115,
-        "review_positive": 91,
-        "review_negative": 24,
-        "review_positive_percent": 79,
-        "review_score_desc": "多半好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 39.22,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_new-4579940",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "Crownhold",
-        "url": "https://store.steampowered.com/app/4579940/Crownhold/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4579940/66eef40c46948140b964a4edc7c95396cf74e63e/capsule_231x87.jpg?t=1786950114",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-17",
-        "release_text": "Aug 17, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "4579940",
-        "title_en": "Crownhold",
-        "title_zh": "Crownhold",
-        "developers": [
-          "Tobias Mikula"
-        ],
-        "publishers": [
-          "Tobias Mikula"
-        ],
-        "tags": [
-          "独立",
-          "策略"
-        ],
-        "review_count": 210,
-        "review_positive": 167,
-        "review_negative": 43,
-        "review_positive_percent": 80,
-        "review_score_desc": "多半好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 44.16,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
       {
         "id": "steam-steam_popular_new-3503710",
         "category": "pc",
@@ -650,7 +485,7 @@
         "store": "Steam",
         "title": "Medieval Horse Dealer Simulator",
         "url": "https://store.steampowered.com/app/3503710/Medieval_Horse_Dealer_Simulator/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3503710/3cc6d376ddd271c531af2e8ad4f5b0bf24529a04/capsule_231x87.jpg?t=1786971630",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3503710/3cc6d376ddd271c531af2e8ad4f5b0bf24529a04/capsule_231x87.jpg?t=1786971630",
         "platforms": [
           "PC"
         ],
@@ -670,60 +505,15 @@
         "tags": [
           "模拟"
         ],
-        "review_count": 73,
-        "review_positive": 68,
+        "review_count": 89,
+        "review_positive": 84,
         "review_negative": 5,
-        "review_positive_percent": 93,
+        "review_positive_percent": 94,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 35.52,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_new-2477710",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "Nimbit Frontier",
-        "url": "https://store.steampowered.com/app/2477710/Nimbit_Frontier/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2477710/59b5073e395d64c3d1f93813111dea5ecbe804c7/capsule_231x87.jpg?t=1786996079",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-17",
-        "release_text": "Aug 17, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "2477710",
-        "title_en": "Nimbit Frontier",
-        "title_zh": "Nimbit Frontier",
-        "developers": [
-          "Megasploot"
-        ],
-        "publishers": [
-          "Megasploot"
-        ],
-        "tags": [
-          "动作",
-          "冒险",
-          "独立",
-          "角色扮演",
-          "模拟",
-          "抢先体验"
-        ],
-        "review_count": 52,
-        "review_positive": 50,
-        "review_negative": 2,
-        "review_positive_percent": 96,
-        "review_score_desc": "特别好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 32.76,
+        "heat_score": 37.13,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -735,7 +525,7 @@
         "store": "Steam",
         "title": "The Lantern of the Laughless Saint",
         "url": "https://store.steampowered.com/app/3849000/The_Lantern_of_the_Laughless_Saint/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3849000/eea9e8dd6a08d82e413e8c2643017d8d38e70764/capsule_231x87.jpg?t=1786975870",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3849000/eea9e8dd6a08d82e413e8c2643017d8d38e70764/capsule_231x87.jpg?t=1786975870",
         "platforms": [
           "PC"
         ],
@@ -758,60 +548,15 @@
           "角色扮演",
           "抢先体验"
         ],
-        "review_count": 615,
-        "review_positive": 538,
-        "review_negative": 77,
+        "review_count": 693,
+        "review_positive": 604,
+        "review_negative": 89,
         "review_positive_percent": 87,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 53.0,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_new-4796830",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "WE ARE SO DEAD",
-        "url": "https://store.steampowered.com/app/4796830/WE_ARE_SO_DEAD/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4796830/15ae44bc1ee99426941b730a03771857df696d50/capsule_231x87.jpg?t=1787157022",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-17",
-        "release_text": "Aug 17, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "4796830",
-        "title_en": "WE ARE SO DEAD",
-        "title_zh": "WE ARE SO DEAD",
-        "developers": [
-          "REAL PLAYERS"
-        ],
-        "publishers": [
-          "REAL PLAYERS"
-        ],
-        "tags": [
-          "冒险",
-          "休闲",
-          "独立",
-          "角色扮演",
-          "模拟",
-          "策略"
-        ],
-        "review_count": 269,
-        "review_positive": 189,
-        "review_negative": 80,
-        "review_positive_percent": 70,
-        "review_score_desc": "多半好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 46.2,
+        "heat_score": 53.99,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -823,7 +568,7 @@
         "store": "Steam",
         "title": "Entropy",
         "url": "https://store.steampowered.com/app/3940340/Entropy/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3940340/f3f06b81f5c6890140221c341f4123ebc937b8f5/capsule_231x87.jpg?t=1787064929",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3940340/f3f06b81f5c6890140221c341f4123ebc937b8f5/capsule_231x87.jpg?t=1787064929",
         "platforms": [
           "PC"
         ],
@@ -847,15 +592,15 @@
           "角色扮演",
           "抢先体验"
         ],
-        "review_count": 99,
-        "review_positive": 95,
+        "review_count": 120,
+        "review_positive": 116,
         "review_negative": 4,
-        "review_positive_percent": 96,
+        "review_positive_percent": 97,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 38.0,
+        "heat_score": 39.57,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -867,7 +612,7 @@
         "store": "Steam",
         "title": "Last Pirates: Die Together",
         "url": "https://store.steampowered.com/app/4317790/Last_Pirates_Die_Together/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4317790/227793ccff53432207d816e3e2445156552ee590/capsule_231x87.jpg?t=1787239894",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4317790/227793ccff53432207d816e3e2445156552ee590/capsule_231x87.jpg?t=1787239894",
         "platforms": [
           "PC"
         ],
@@ -891,57 +636,15 @@
           "冒险",
           "抢先体验"
         ],
-        "review_count": 132,
-        "review_positive": 95,
-        "review_negative": 37,
-        "review_positive_percent": 72,
+        "review_count": 162,
+        "review_positive": 119,
+        "review_negative": 43,
+        "review_positive_percent": 73,
         "review_score_desc": "多半好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 40.35,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_new-3729550",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "Stackmon",
-        "url": "https://store.steampowered.com/app/3729550/Stackmon/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3729550/bfb13afc36147fa208308979011372a1b9aabf41/capsule_231x87_alt_assets_1.jpg?t=1787064711",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-18",
-        "release_text": "Aug 18, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3729550",
-        "title_en": "Stackmon",
-        "title_zh": "堆叠妖怪",
-        "developers": [
-          "Riftpoint Entertainment"
-        ],
-        "publishers": [
-          "Alibi Games"
-        ],
-        "tags": [
-          "冒险",
-          "独立",
-          "策略"
-        ],
-        "review_count": 155,
-        "review_positive": 117,
-        "review_negative": 38,
-        "review_positive_percent": 75,
-        "review_score_desc": "多半好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 41.67,
+        "heat_score": 42.03,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -953,7 +656,7 @@
         "store": "Steam",
         "title": "Starsand Island",
         "url": "https://store.steampowered.com/app/2966320/Starsand_Island/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2966320/c23bdd20a8f7faad0973adce1adf97672ada0259/capsule_231x87.jpg?t=1787059688",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2966320/c23bdd20a8f7faad0973adce1adf97672ada0259/capsule_231x87.jpg?t=1787059688",
         "platforms": [
           "PC"
         ],
@@ -976,17 +679,17 @@
           "角色扮演",
           "模拟"
         ],
-        "review_count": 6672,
-        "review_positive": 5362,
-        "review_negative": 1310,
+        "review_count": 6724,
+        "review_positive": 5366,
+        "review_negative": 1358,
         "review_positive_percent": 80,
-        "review_score_desc": "特别好评",
+        "review_score_desc": "多半好评",
         "heat_label": "热门",
         "heat_labels": [
           "热门"
         ],
         "heat_level": "medium",
-        "heat_score": 72.66,
+        "heat_score": 72.73,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -998,7 +701,7 @@
         "store": "Steam",
         "title": "The Sinking City 2",
         "url": "https://store.steampowered.com/app/2825860/The_Sinking_City_2/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2825860/ed82cb1a0bfd2331c5bbcf297dba3e6a5635d56e/capsule_231x87.jpg?t=1787235451",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2825860/ed82cb1a0bfd2331c5bbcf297dba3e6a5635d56e/capsule_231x87.jpg?t=1787235451",
         "platforms": [
           "PC"
         ],
@@ -1019,15 +722,15 @@
           "动作",
           "冒险"
         ],
-        "review_count": 610,
-        "review_positive": 539,
-        "review_negative": 71,
-        "review_positive_percent": 88,
+        "review_count": 714,
+        "review_positive": 620,
+        "review_negative": 94,
+        "review_positive_percent": 87,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 52.93,
+        "heat_score": 54.23,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1039,7 +742,7 @@
         "store": "Steam",
         "title": "Twisted Tower",
         "url": "https://store.steampowered.com/app/1575990/Twisted_Tower/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1575990/4154309e6f82c8a33e400d3fdd95b4bccae5d0f1/capsule_231x87.jpg?t=1787162035",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1575990/4154309e6f82c8a33e400d3fdd95b4bccae5d0f1/capsule_231x87.jpg?t=1787251359",
         "platforms": [
           "PC"
         ],
@@ -1061,15 +764,15 @@
           "冒险",
           "独立"
         ],
-        "review_count": 738,
-        "review_positive": 710,
-        "review_negative": 28,
+        "review_count": 900,
+        "review_positive": 861,
+        "review_negative": 39,
         "review_positive_percent": 96,
         "review_score_desc": "好评如潮",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 54.5,
+        "heat_score": 56.14,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1081,7 +784,7 @@
         "store": "Steam",
         "title": "Hearth and Hamlet",
         "url": "https://store.steampowered.com/app/4315040/Hearth_and_Hamlet/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4315040/cef23bc7f825aa8da91b16ea1d57ac1ce677b9ea/capsule_231x87.jpg?t=1787170538",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4315040/cef23bc7f825aa8da91b16ea1d57ac1ce677b9ea/capsule_231x87.jpg?t=1787170538",
         "platforms": [
           "PC"
         ],
@@ -1104,57 +807,15 @@
           "模拟",
           "策略"
         ],
-        "review_count": 383,
-        "review_positive": 322,
-        "review_negative": 61,
-        "review_positive_percent": 84,
-        "review_score_desc": "特别好评",
+        "review_count": 774,
+        "review_positive": 616,
+        "review_negative": 158,
+        "review_positive_percent": 80,
+        "review_score_desc": "多半好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 49.1,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_new-4961460",
-        "category": "pc",
-        "source": "steam_popular_new",
-        "source_label": "Steam · Popular New Releases",
-        "store": "Steam",
-        "title": "MarginCall",
-        "url": "https://store.steampowered.com/app/4961460/MarginCall/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4961460/905cd056e57e6094f6d3daf9362c4d673131a3d9/capsule_231x87.jpg?t=1787158768",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-19",
-        "release_text": "Aug 19, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "4961460",
-        "title_en": "MarginCall",
-        "title_zh": "MarginCall",
-        "developers": [
-          "Functionally Human"
-        ],
-        "publishers": [
-          "Functionally Human"
-        ],
-        "tags": [
-          "独立",
-          "模拟",
-          "策略"
-        ],
-        "review_count": 34,
-        "review_positive": 28,
-        "review_negative": 6,
-        "review_positive_percent": 82,
-        "review_score_desc": "好评",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 29.34,
+        "heat_score": 54.9,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1166,7 +827,7 @@
         "store": "Steam",
         "title": "Pizza House Simulator🍕",
         "url": "https://store.steampowered.com/app/4132330/Pizza_House_Simulator/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_231x87.jpg?t=1787218826",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_231x87.jpg?t=1787256029",
         "platforms": [
           "PC"
         ],
@@ -1190,15 +851,15 @@
           "模拟",
           "策略"
         ],
-        "review_count": 77,
-        "review_positive": 66,
-        "review_negative": 11,
-        "review_positive_percent": 86,
+        "review_count": 115,
+        "review_positive": 101,
+        "review_negative": 14,
+        "review_positive_percent": 88,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 35.95,
+        "heat_score": 39.22,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1210,7 +871,7 @@
         "store": "Steam",
         "title": "Project P.I.T.T.",
         "url": "https://store.steampowered.com/app/4026250/Project_PITT/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4026250/5f126997a54b8b733bb4d5671229b3d83bb1be7e/capsule_231x87.jpg?t=1787223275",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4026250/5f126997a54b8b733bb4d5671229b3d83bb1be7e/capsule_231x87.jpg?t=1787223275",
         "platforms": [
           "PC"
         ],
@@ -1233,15 +894,15 @@
           "独立",
           "模拟"
         ],
-        "review_count": 161,
-        "review_positive": 137,
-        "review_negative": 24,
-        "review_positive_percent": 85,
+        "review_count": 261,
+        "review_positive": 216,
+        "review_negative": 45,
+        "review_positive_percent": 83,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 41.98,
+        "heat_score": 45.95,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1253,7 +914,7 @@
         "store": "Steam",
         "title": "STEINS;GATE RE:BOOT",
         "url": "https://store.steampowered.com/app/4012810/STEINSGATE_REBOOT/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4012810/66cd3882f3926e2d0e88c598fde47213517e9a70/capsule_231x87.jpg?t=1787210343",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4012810/66cd3882f3926e2d0e88c598fde47213517e9a70/capsule_231x87.jpg?t=1787210343",
         "platforms": [
           "PC"
         ],
@@ -1274,44 +935,27 @@
           "冒险",
           "休闲"
         ],
-        "review_count": 270,
-        "review_positive": 220,
-        "review_negative": 50,
-        "review_positive_percent": 81,
+        "review_count": 357,
+        "review_positive": 293,
+        "review_negative": 64,
+        "review_positive_percent": 82,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 46.23,
+        "heat_score": 48.52,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_new-https://store.steampowered.com/sub/1707312/",
+        "id": "steam-steam_popular_new-903930",
         "category": "pc",
         "source": "steam_popular_new",
         "source_label": "Steam · Popular New Releases",
         "store": "Steam",
-        "title": "STEINS;GATE REBOOT DIGITAL DELUXE EDITION",
-        "url": "https://store.steampowered.com/sub/1707312/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1707312/1385e7d595719924b63f5a33c0c19f774b08ff99/capsule_231x87.jpg?t=1787152750",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-19",
-        "release_text": "Aug 19, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门"
-      },
-      {
-        "id": "steam-steam_popular_upcoming-903930",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
         "title": "Brigador Killers",
         "url": "https://store.steampowered.com/app/903930/Brigador_Killers/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/903930/82917d7834a73d52595aa95d5fe8fc72ace97ba6/capsule_231x87.jpg?t=1787232163",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/903930/82917d7834a73d52595aa95d5fe8fc72ace97ba6/capsule_231x87.jpg?t=1787262286",
         "platforms": [
           "PC"
         ],
@@ -1334,24 +978,27 @@
           "独立",
           "抢先体验"
         ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
+        "review_count": 162,
+        "review_positive": 120,
+        "review_negative": 42,
+        "review_positive_percent": 74,
+        "review_score_desc": "多半好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 42.03,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_upcoming-2836460",
+        "id": "steam-steam_popular_new-2836460",
         "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
         "store": "Steam",
         "title": "Cozy Marbles",
         "url": "https://store.steampowered.com/app/2836460/Cozy_Marbles/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2836460/29d4f05204d7b5f779fc6d63f70c38d57a6e5c48/capsule_231x87.jpg?t=1786006951",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2836460/29d4f05204d7b5f779fc6d63f70c38d57a6e5c48/capsule_231x87.jpg?t=1787245773",
         "platforms": [
           "PC"
         ],
@@ -1374,12 +1021,143 @@
           "竞速",
           "模拟"
         ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
+        "review_count": 25,
+        "review_positive": 24,
+        "review_negative": 1,
+        "review_positive_percent": 96,
+        "review_score_desc": "好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 26.88,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_new-3958820",
+        "category": "pc",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
+        "store": "Steam",
+        "title": "Drive Me Broke",
+        "url": "https://store.steampowered.com/app/3958820/Drive_Me_Broke/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3958820/fae9e34d521642ed0bcb9794034de0984ae69c66/capsule_231x87.jpg?t=1787320486",
+        "platforms": [
+          "PC"
         ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
+        "release_date": "2026-08-20",
+        "release_text": "Aug 20, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "3958820",
+        "title_en": "Drive Me Broke",
+        "title_zh": "Drive Me Broke",
+        "developers": [
+          "Onur AD"
+        ],
+        "publishers": [
+          "Long Shift Games"
+        ],
+        "tags": [
+          "冒险",
+          "独立",
+          "竞速",
+          "模拟"
+        ],
+        "review_count": 26,
+        "review_positive": 18,
+        "review_negative": 8,
+        "review_positive_percent": 69,
+        "review_score_desc": "褒贬不一",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 27.2,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_new-3966510",
+        "category": "pc",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
+        "store": "Steam",
+        "title": "Feed the Scorchpot",
+        "url": "https://store.steampowered.com/app/3966510/Feed_the_Scorchpot/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3966510/188b3e7bb5a1aa0ddc6959c5479499b469fe53d9/capsule_231x87.jpg?t=1787244972",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-20",
+        "release_text": "Aug 20, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "3966510",
+        "title_en": "Feed the Scorchpot",
+        "title_zh": "喂龙高手",
+        "developers": [
+          "Moravian"
+        ],
+        "publishers": [
+          "Indieformer",
+          "WhisperGames"
+        ],
+        "tags": [
+          "独立",
+          "策略"
+        ],
+        "review_count": 51,
+        "review_positive": 51,
+        "review_negative": 0,
+        "review_positive_percent": 100,
+        "review_score_desc": "特别好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 32.6,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_new-2332150",
+        "category": "pc",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
+        "store": "Steam",
+        "title": "Frog Island",
+        "url": "https://store.steampowered.com/app/2332150/Frog_Island/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2332150/7a4973d623961614ec4a6a4788e1a514a65b46d1/capsule_231x87.jpg?t=1787244867",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-20",
+        "release_text": "Aug 20, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "2332150",
+        "title_en": "Frog Island",
+        "title_zh": "Frog Island",
+        "developers": [
+          "DevFrog"
+        ],
+        "publishers": [
+          "Shovel Sprout"
+        ],
+        "tags": [
+          "独立",
+          "角色扮演",
+          "模拟",
+          "免费开玩"
+        ],
+        "review_count": 29,
+        "review_positive": 28,
+        "review_negative": 1,
+        "review_positive_percent": 97,
+        "review_score_desc": "好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 28.07,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1391,7 +1169,7 @@
         "store": "Steam",
         "title": "Gallipoli",
         "url": "https://store.steampowered.com/app/3065940/Gallipoli/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8241f8f3e49226d916e09f31f642fb0f5d05f463/capsule_231x87.jpg?t=1787244879",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3065940/8b129934c39739bc486f62fbd72d9356d230d6bb/capsule_231x87_alt_assets_0.jpg?t=1787315713",
         "platforms": [
           "PC"
         ],
@@ -1415,15 +1193,17 @@
           "模拟",
           "策略"
         ],
-        "review_count": 428,
-        "review_positive": 284,
-        "review_negative": 144,
-        "review_positive_percent": 66,
-        "review_score_desc": "褒贬不一",
-        "heat_label": "",
-        "heat_labels": [],
-        "heat_level": "none",
-        "heat_score": 50.02,
+        "review_count": 1306,
+        "review_positive": 1015,
+        "review_negative": 291,
+        "review_positive_percent": 78,
+        "review_score_desc": "多半好评",
+        "heat_label": "有讨论度",
+        "heat_labels": [
+          "有讨论度"
+        ],
+        "heat_level": "medium",
+        "heat_score": 59.21,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1435,7 +1215,7 @@
         "store": "Steam",
         "title": "How to Fish",
         "url": "https://store.steampowered.com/app/4001890/How_to_Fish/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_231x87.jpg?t=1787234618",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_231x87.jpg?t=1787234618",
         "platforms": [
           "PC"
         ],
@@ -1458,15 +1238,99 @@
           "独立",
           "模拟"
         ],
-        "review_count": 149,
-        "review_positive": 144,
-        "review_negative": 5,
-        "review_positive_percent": 97,
-        "review_score_desc": "特别好评",
+        "review_count": 1933,
+        "review_positive": 1851,
+        "review_negative": 82,
+        "review_positive_percent": 96,
+        "review_score_desc": "好评如潮",
+        "heat_label": "有讨论度",
+        "heat_labels": [
+          "有讨论度"
+        ],
+        "heat_level": "medium",
+        "heat_score": 62.44,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_new-4294490",
+        "category": "pc",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
+        "store": "Steam",
+        "title": "KOTAMON: My Sis Found A Super-Rare Card In Her Cereal Box, So I Became A Garbage Man To Find The Entire Collection And Earn $1,000,000",
+        "url": "https://store.steampowered.com/app/4294490/KOTAMON_My_Sis_Found_A_SuperRare_Card_In_Her_Cereal_Box_So_I_Became_A_Garbage_Man_To_Find_The_Entire_Collection_And_Earn_1000000/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4294490/40d4e5b73d269b2e5b93202f43d65cf417862697/capsule_231x87.jpg?t=1787304812",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-20",
+        "release_text": "Aug 20, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4294490",
+        "title_en": "KOTAMON: My Sis Found A Super-Rare Card In Her Cereal Box, So I Became A Garbage Man To Find The Entire Collection And Earn $1,000,000",
+        "title_zh": "KOTAMON：妹妹麦片盒开出超稀有卡牌，我干脆当垃圾清运工集齐整套藏品怒赚百万美元",
+        "developers": [
+          "KotaMota Games"
+        ],
+        "publishers": [
+          "Polnoch"
+        ],
+        "tags": [
+          "独立",
+          "模拟"
+        ],
+        "review_count": 335,
+        "review_positive": 251,
+        "review_negative": 84,
+        "review_positive_percent": 75,
+        "review_score_desc": "多半好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 41.35,
+        "heat_score": 48.0,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_new-3764970",
+        "category": "pc",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
+        "store": "Steam",
+        "title": "Mexican Ninja",
+        "url": "https://store.steampowered.com/app/3764970/Mexican_Ninja/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3764970/31c8a2c8d7044f51181f5718d4a150fc496a62ce/capsule_231x87.jpg?t=1787268632",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-20",
+        "release_text": "Aug 20, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "3764970",
+        "title_en": "Mexican Ninja",
+        "title_zh": "墨西哥忍者",
+        "developers": [
+          "Madbricks"
+        ],
+        "publishers": [
+          "Amber Studio"
+        ],
+        "tags": [
+          "动作",
+          "独立"
+        ],
+        "review_count": 43,
+        "review_positive": 42,
+        "review_negative": 1,
+        "review_positive_percent": 98,
+        "review_score_desc": "好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 31.23,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1478,7 +1342,7 @@
         "store": "Steam",
         "title": "Mortal Shell II",
         "url": "https://store.steampowered.com/app/2584270/Mortal_Shell_II/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584270/be45d87c9974a36f690480bceb01f03987a0c23a/capsule_231x87.jpg?t=1787231571",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2584270/be45d87c9974a36f690480bceb01f03987a0c23a/capsule_231x87.jpg?t=1787326472",
         "platforms": [
           "PC"
         ],
@@ -1499,20 +1363,63 @@
           "动作",
           "角色扮演"
         ],
-        "review_count": 4393,
-        "review_positive": 3493,
-        "review_negative": 900,
-        "review_positive_percent": 80,
+        "review_count": 6111,
+        "review_positive": 4851,
+        "review_negative": 1260,
+        "review_positive_percent": 79,
         "review_score_desc": "多半好评",
-        "heat_label": "有讨论度",
+        "heat_label": "热门",
         "heat_labels": [
-          "有讨论度",
+          "热门",
           "知名发行商"
         ],
         "heat_level": "medium",
-        "heat_score": 87.21,
+        "heat_score": 89.94,
         "notable_publisher": true,
         "notable_publisher_name": "Playstack"
+      },
+      {
+        "id": "steam-steam_popular_new-2766910",
+        "category": "pc",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
+        "store": "Steam",
+        "title": "PengPong",
+        "url": "https://store.steampowered.com/app/2766910/PengPong/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2766910/4c9e595611021f83827cc05a23f630f816f7e335/capsule_231x87.jpg?t=1787305064",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-20",
+        "release_text": "Aug 20, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "2766910",
+        "title_en": "PengPong",
+        "title_zh": "PengPong 弹企鹅",
+        "developers": [
+          "SANDY FLOOR"
+        ],
+        "publishers": [
+          "SANDY FLOOR",
+          "Gamirror Games"
+        ],
+        "tags": [
+          "动作",
+          "休闲",
+          "独立"
+        ],
+        "review_count": 80,
+        "review_positive": 75,
+        "review_negative": 5,
+        "review_positive_percent": 94,
+        "review_score_desc": "特别好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 36.26,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
       },
       {
         "id": "steam-steam_popular_new-2768380",
@@ -1522,7 +1429,7 @@
         "store": "Steam",
         "title": "Repterra",
         "url": "https://store.steampowered.com/app/2768380/Repterra/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2768380/2545fcb86712de437218599ce47aa9a3791c3002/capsule_231x87_alt_assets_2.jpg?t=1787223378",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2768380/2545fcb86712de437218599ce47aa9a3791c3002/capsule_231x87_alt_assets_2.jpg?t=1787223378",
         "platforms": [
           "PC"
         ],
@@ -1542,15 +1449,15 @@
         "tags": [
           "策略"
         ],
-        "review_count": 87,
-        "review_positive": 79,
+        "review_count": 92,
+        "review_positive": 84,
         "review_negative": 8,
         "review_positive_percent": 91,
         "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 36.95,
+        "heat_score": 37.4,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1562,7 +1469,7 @@
         "store": "Steam",
         "title": "Sensory Overload",
         "url": "https://store.steampowered.com/app/4403510/Sensory_Overload/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4403510/a97638822bef5086c9b5301988f225aaa59f08bf/capsule_231x87.jpg?t=1787234377",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4403510/b2b97539a23c775a0dda01be530ae42c0a630798/capsule_231x87.jpg?t=1787324895",
         "platforms": [
           "PC"
         ],
@@ -1584,15 +1491,15 @@
           "休闲",
           "独立"
         ],
-        "review_count": 18,
-        "review_positive": 17,
+        "review_count": 59,
+        "review_positive": 58,
         "review_negative": 1,
-        "review_positive_percent": 94,
-        "review_score_desc": "好评",
+        "review_positive_percent": 98,
+        "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 24.3,
+        "heat_score": 33.78,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1604,7 +1511,7 @@
         "store": "Steam",
         "title": "Slayblade",
         "url": "https://store.steampowered.com/app/4117730/Slayblade/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4117730/76ba17af014980199e1c05bccf1640714827048a/capsule_231x87.jpg?t=1787234305",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4117730/76ba17af014980199e1c05bccf1640714827048a/capsule_231x87.jpg?t=1787260027",
         "platforms": [
           "PC"
         ],
@@ -1628,27 +1535,27 @@
           "角色扮演",
           "模拟"
         ],
-        "review_count": 23,
-        "review_positive": 18,
-        "review_negative": 5,
-        "review_positive_percent": 78,
+        "review_count": 127,
+        "review_positive": 93,
+        "review_negative": 34,
+        "review_positive_percent": 73,
         "review_score_desc": "多半好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 26.22,
+        "heat_score": 40.04,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_upcoming-4000770",
+        "id": "steam-steam_popular_new-4000770",
         "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
         "store": "Steam",
         "title": "Swarmdustry",
         "url": "https://store.steampowered.com/app/4000770/Swarmdustry/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000770/bcd2f4b1cfbfe22f346c2fce3cb88d32e760d1c6/capsule_231x87.jpg?t=1785711792",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4000770/bcd2f4b1cfbfe22f346c2fce3cb88d32e760d1c6/capsule_231x87.jpg?t=1787329854",
         "platforms": [
           "PC"
         ],
@@ -1671,24 +1578,27 @@
           "策略",
           "抢先体验"
         ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
+        "review_count": 19,
+        "review_positive": 17,
+        "review_negative": 2,
+        "review_positive_percent": 89,
+        "review_score_desc": "好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 24.72,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_new-1091870",
+        "id": "steam-steam_popular_new-3196440",
         "category": "pc",
         "source": "steam_popular_new",
         "source_label": "Steam · Popular New Releases",
         "store": "Steam",
-        "title": "Theropods",
-        "url": "https://store.steampowered.com/app/1091870/Theropods/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091870/6575e831f9b137a7d82c2d9584c0db9a0e88612c/capsule_231x87.jpg?t=1787235076",
+        "title": "Vacation Cafe Simulator",
+        "url": "https://store.steampowered.com/app/3196440/Vacation_Cafe_Simulator/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3196440/340a42b4587a124e7352a28c42765479631ddafd/capsule_231x87.jpg?t=1787306679",
         "platforms": [
           "PC"
         ],
@@ -1696,28 +1606,29 @@
         "release_text": "Aug 20, 2026",
         "featured": true,
         "popularity_label": "Steam 热门",
-        "steam_appid": "1091870",
-        "title_en": "Theropods",
-        "title_zh": "两个世界的过客",
+        "steam_appid": "3196440",
+        "title_en": "Vacation Cafe Simulator",
+        "title_zh": "度假咖啡厅模拟器",
         "developers": [
-          "Lost Token"
+          "Alice Games"
         ],
         "publishers": [
-          "Dionous Games",
-          "Gamersky Games"
+          "Alice Games"
         ],
         "tags": [
-          "冒险"
+          "休闲",
+          "独立",
+          "模拟"
         ],
-        "review_count": 21,
-        "review_positive": 21,
-        "review_negative": 0,
-        "review_positive_percent": 100,
-        "review_score_desc": "好评",
+        "review_count": 163,
+        "review_positive": 149,
+        "review_negative": 14,
+        "review_positive_percent": 91,
+        "review_score_desc": "特别好评",
         "heat_label": "",
         "heat_labels": [],
         "heat_level": "none",
-        "heat_score": 25.51,
+        "heat_score": 42.08,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1729,7 +1640,7 @@
         "store": "Steam",
         "title": "Yet Another Zombie Survivors",
         "url": "https://store.steampowered.com/app/2163330/Yet_Another_Zombie_Survivors/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_231x87.jpg?t=1787234279",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_231x87.jpg?t=1787327155",
         "platforms": [
           "PC"
         ],
@@ -1752,9 +1663,9 @@
           "独立",
           "角色扮演"
         ],
-        "review_count": 13743,
-        "review_positive": 12566,
-        "review_negative": 1177,
+        "review_count": 13896,
+        "review_positive": 12712,
+        "review_negative": 1184,
         "review_positive_percent": 91,
         "review_score_desc": "特别好评",
         "heat_label": "热门",
@@ -1762,7 +1673,7 @@
           "热门"
         ],
         "heat_level": "medium",
-        "heat_score": 78.62,
+        "heat_score": 78.72,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -1774,7 +1685,7 @@
         "store": "Steam",
         "title": "Alien Apocalypse",
         "url": "https://store.steampowered.com/app/3635510/Alien_Apocalypse/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3635510/c2abca04388637dbaaceda30fc49a1df4e3e8b26/capsule_231x87.jpg?t=1786993643",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3635510/c2abca04388637dbaaceda30fc49a1df4e3e8b26/capsule_231x87.jpg?t=1786993643",
         "platforms": [
           "PC"
         ],
@@ -1809,6 +1720,86 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-4523340",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "C.U.B.E",
+        "url": "https://store.steampowered.com/app/4523340/CUBE/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4523340/17b0e382b7895bf1bfb8cf490348f9752d417293/capsule_231x87.jpg?t=1787327747",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-21",
+        "release_text": "Aug 21, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4523340",
+        "title_en": "C.U.B.E",
+        "title_zh": "C.U.B.E",
+        "developers": [
+          "LovDEV"
+        ],
+        "publishers": [
+          "LovDEV"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "抢先体验"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_upcoming-4783780",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Call of Duty®: Modern Warfare® 4 - Beta",
+        "url": "https://store.steampowered.com/app/4783780/Call_of_Duty_Modern_Warfare_4__Beta/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4783780/76e77b22c4c9e874ad565da068deee3569b831f4/capsule_231x87.jpg?t=1787321111",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-21",
+        "release_text": "Aug 21, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4783780",
+        "title_en": "Call of Duty®: Modern Warfare® 4 - Beta",
+        "title_zh": "《使命召唤®：现代战争® 4》试玩",
+        "developers": [
+          "Infinity Ward",
+          "Beenox",
+          "Digital Legends",
+          "Activision Shanghai"
+        ],
+        "publishers": [
+          "Activision"
+        ],
+        "tags": [
+          "动作"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发",
+          "知名发行商"
+        ],
+        "heat_level": "medium",
+        "heat_score": 35.72,
+        "notable_publisher": true,
+        "notable_publisher_name": "Activision"
+      },
+      {
         "id": "steam-steam_popular_upcoming-3817250",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -1816,7 +1807,7 @@
         "store": "Steam",
         "title": "CICADAMATA\"",
         "url": "https://store.steampowered.com/app/3817250/CICADAMATA/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3817250/381867c88c95fce5b8e8c8202fb3e02e562954fd/capsule_231x87.jpg?t=1786640594",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3817250/381867c88c95fce5b8e8c8202fb3e02e562954fd/capsule_231x87.jpg?t=1786640594",
         "platforms": [
           "PC"
         ],
@@ -1847,45 +1838,6 @@
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_upcoming-3946950",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Click the Button",
-        "url": "https://store.steampowered.com/app/3946950/Click_the_Button/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3946950/322299ee17e59eafc395a1b9d023612bd7a17f87/capsule_231x87.jpg?t=1787113414",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3946950",
-        "title_en": "Click the Button",
-        "title_zh": "Click the Button",
-        "developers": [
-          "LoopCap"
-        ],
-        "publishers": [
-          "LoopCap"
-        ],
-        "tags": [
-          "休闲",
-          "独立",
-          "模拟"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
         "id": "steam-steam_popular_upcoming-4646020",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -1893,7 +1845,7 @@
         "store": "Steam",
         "title": "Crystal Breaker Inc",
         "url": "https://store.steampowered.com/app/4646020/Crystal_Breaker_Inc/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4646020/2e532c947be13515d310e757af19fd1df3cdf477/capsule_231x87.jpg?t=1787145314",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4646020/2e532c947be13515d310e757af19fd1df3cdf477/capsule_231x87.jpg?t=1787145314",
         "platforms": [
           "PC"
         ],
@@ -1923,211 +1875,14 @@
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_upcoming-2127340",
+        "id": "steam-steam_popular_new-4962010",
         "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "DAWN ONE",
-        "url": "https://store.steampowered.com/app/2127340/DAWN_ONE/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2127340/0f0c79d6a602be14a9f15201f30ff2b9846a7640/capsule_231x87.jpg?t=1786638334",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "2127340",
-        "title_en": "DAWN ONE",
-        "title_zh": "DAWN ONE",
-        "developers": [
-          "shaderbunny"
-        ],
-        "publishers": [
-          "shaderbunny"
-        ],
-        "tags": [
-          "动作",
-          "独立"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-3561740",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Detective Sherlock: Shadow Stalker",
-        "url": "https://store.steampowered.com/app/3561740/Detective_Sherlock_Shadow_Stalker/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3561740/6065e62557d5168dafae5926330790c549807fc0/capsule_231x87.jpg?t=1787237478",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3561740",
-        "title_en": "Detective Sherlock: Shadow Stalker",
-        "title_zh": "神探夏洛克：暗夜追踪者",
-        "developers": [
-          "Gamercury"
-        ],
-        "publishers": [
-          "Gamercury"
-        ],
-        "tags": [
-          "冒险",
-          "独立",
-          "角色扮演",
-          "抢先体验"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-3312250",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "FEAR OF FAITH",
-        "url": "https://store.steampowered.com/app/3312250/FEAR_OF_FAITH/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3312250/106d3a0d206c5a696abd5eae016cec1b00698e2b/capsule_231x87.jpg?t=1786828555",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3312250",
-        "title_en": "FEAR OF FAITH",
-        "title_zh": "FEAR OF FAITH",
-        "developers": [
-          "UNBREAKABLE ARK"
-        ],
-        "publishers": [
-          "UNBREAKABLE ARK"
-        ],
-        "tags": [
-          "动作",
-          "冒险",
-          "独立",
-          "抢先体验"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-3925730",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Furry Roommates",
-        "url": "https://store.steampowered.com/app/3925730/Furry_Roommates/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3925730/8e3a339d30efd53f96d7d6f5be61cf6b3876d7f1/capsule_231x87.jpg?t=1785473547",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3925730",
-        "title_en": "Furry Roommates",
-        "title_zh": "Furry Roommates",
-        "developers": [
-          "Nova B12"
-        ],
-        "publishers": [
-          "Nova B12"
-        ],
-        "tags": [
-          "休闲",
-          "独立"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-3971650",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Lazy Witch's Factory",
-        "url": "https://store.steampowered.com/app/3971650/Lazy_Witchs_Factory/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3971650/6d0bc7d6fafc9065b2d26d622c6a70cbf37f6b1c/capsule_231x87.jpg?t=1787210255",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3971650",
-        "title_en": "Lazy Witch's Factory",
-        "title_zh": "魔女工厂",
-        "developers": [
-          "MELTCLOCK.Inc"
-        ],
-        "publishers": [
-          "Phoenixx Inc."
-        ],
-        "tags": [
-          "休闲",
-          "独立",
-          "模拟",
-          "策略",
-          "抢先体验"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-4962010",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
+        "source": "steam_popular_new",
+        "source_label": "Steam · Popular New Releases",
         "store": "Steam",
         "title": "Mall: Tidy Up Together",
         "url": "https://store.steampowered.com/app/4962010/Mall_Tidy_Up_Together/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4962010/6df94c53a4768e198bd04602007c4782519117a4/capsule_231x87.jpg?t=1787223908",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4962010/6df94c53a4768e198bd04602007c4782519117a4/capsule_231x87.jpg?t=1787313936",
         "platforms": [
           "PC"
         ],
@@ -2150,12 +1905,15 @@
           "独立",
           "模拟"
         ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
+        "review_count": 23,
+        "review_positive": 20,
+        "review_negative": 3,
+        "review_positive_percent": 87,
+        "review_score_desc": "好评",
+        "heat_label": "",
+        "heat_labels": [],
+        "heat_level": "none",
+        "heat_score": 26.22,
         "notable_publisher": false,
         "notable_publisher_name": ""
       },
@@ -2167,7 +1925,7 @@
         "store": "Steam",
         "title": "Moo Who?",
         "url": "https://store.steampowered.com/app/4948000/Moo_Who/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4948000/1d1a4405fab2ae1a883ab2c7ef8ca8ddbcfeb967/capsule_231x87.jpg?t=1787222611",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4948000/1d1a4405fab2ae1a883ab2c7ef8ca8ddbcfeb967/capsule_231x87.jpg?t=1787222611",
         "platforms": [
           "PC"
         ],
@@ -2199,165 +1957,6 @@
         "notable_publisher_name": ""
       },
       {
-        "id": "steam-steam_popular_upcoming-4210300",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Pawbay: Cat Chaos",
-        "url": "https://store.steampowered.com/app/4210300/Pawbay_Cat_Chaos/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4210300/268ce82c72d6c3cc977b3fada4c6ce8b6a9050b6/capsule_231x87.jpg?t=1787218379",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "4210300",
-        "title_en": "Pawbay: Cat Chaos",
-        "title_zh": "Pawbay: Cat Chaos",
-        "developers": [
-          "COMMANDO PANDA"
-        ],
-        "publishers": [
-          "COMMANDO PANDA"
-        ],
-        "tags": [
-          "动作",
-          "冒险",
-          "休闲",
-          "独立"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-3396920",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Settler's Domain",
-        "url": "https://store.steampowered.com/app/3396920/Settlers_Domain/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3396920/dcfa740d484c8921e82f759a902b0415cf05aed9/capsule_231x87.jpg?t=1787082186",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3396920",
-        "title_en": "Settler's Domain",
-        "title_zh": "Settler's Domain",
-        "developers": [
-          "rick"
-        ],
-        "publishers": [
-          "rick"
-        ],
-        "tags": [
-          "独立",
-          "策略"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-3222890",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "Taste of the Wind",
-        "url": "https://store.steampowered.com/app/3222890/Taste_of_the_Wind/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3222890/cdf1efc7a66bb03102d7f96f8bf7cce9bcb98c07/capsule_231x87.jpg?t=1785223795",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "3222890",
-        "title_en": "Taste of the Wind",
-        "title_zh": "醉风酒",
-        "developers": [
-          "一留留"
-        ],
-        "publishers": [
-          "一留留"
-        ],
-        "tags": [
-          "休闲",
-          "独立",
-          "角色扮演",
-          "模拟",
-          "策略"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
-        "id": "steam-steam_popular_upcoming-1843400",
-        "category": "pc",
-        "source": "steam_popular_upcoming",
-        "source_label": "Steam · Popular Upcoming",
-        "store": "Steam",
-        "title": "The Last Disease Z",
-        "url": "https://store.steampowered.com/app/1843400/The_Last_Disease_Z/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1843400/586ecd8cd672b468d062cf27fe007253d244e4cd/capsule_231x87.jpg?t=1786508201",
-        "platforms": [
-          "PC"
-        ],
-        "release_date": "2026-08-21",
-        "release_text": "Aug 21, 2026",
-        "featured": true,
-        "popularity_label": "Steam 热门",
-        "steam_appid": "1843400",
-        "title_en": "The Last Disease Z",
-        "title_zh": "The Last Disease Z",
-        "developers": [
-          "Bublig"
-        ],
-        "publishers": [
-          "Bublig"
-        ],
-        "tags": [
-          "动作",
-          "冒险",
-          "独立",
-          "抢先体验"
-        ],
-        "heat_label": "热门待发",
-        "heat_labels": [
-          "热门待发"
-        ],
-        "heat_level": "medium",
-        "heat_score": 17.72,
-        "notable_publisher": false,
-        "notable_publisher_name": ""
-      },
-      {
         "id": "steam-steam_popular_upcoming-4120790",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2365,7 +1964,7 @@
         "store": "Steam",
         "title": "The Sorting Bureau",
         "url": "https://store.steampowered.com/app/4120790/The_Sorting_Bureau/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4120790/3cd48b16a0732e6ae691feb96f348e1629b5dbe0/capsule_231x87.jpg?t=1786962671",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4120790/3cd48b16a0732e6ae691feb96f348e1629b5dbe0/capsule_231x87.jpg?t=1787297941",
         "platforms": [
           "PC"
         ],
@@ -2404,7 +2003,7 @@
         "store": "Steam",
         "title": "Unpossess 2: Exorcism Simulator",
         "url": "https://store.steampowered.com/app/4373870/Unpossess_2_Exorcism_Simulator/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4373870/f8e258d0f018492ad13121536a02117e0edf913d/capsule_231x87.jpg?t=1786193697",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4373870/f8e258d0f018492ad13121536a02117e0edf913d/capsule_231x87.jpg?t=1786193697",
         "platforms": [
           "PC"
         ],
@@ -2436,6 +2035,46 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-4178200",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "V.A.U.L.T. PROTOCOL",
+        "url": "https://store.steampowered.com/app/4178200/VAULT_PROTOCOL/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4178200/92c2a224bb5178b970b17fc252073e32ae82eed3/capsule_231x87.jpg?t=1787321672",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-21",
+        "release_text": "Aug 21, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4178200",
+        "title_en": "V.A.U.L.T. PROTOCOL",
+        "title_zh": "V.A.U.L.T. PROTOCOL",
+        "developers": [
+          "Ignus Nex Entertainment"
+        ],
+        "publishers": [
+          "Kiki Games"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "抢先体验"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-4131730",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2443,7 +2082,7 @@
         "store": "Steam",
         "title": "VHOLUME",
         "url": "https://store.steampowered.com/app/4131730/VHOLUME/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4131730/1eae8c678a24821f505ff8ab4f150697672ce092/capsule_231x87.jpg?t=1786815381",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4131730/1eae8c678a24821f505ff8ab4f150697672ce092/capsule_231x87.jpg?t=1787246432",
         "platforms": [
           "PC"
         ],
@@ -2476,6 +2115,45 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-4596010",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Bar After Bar",
+        "url": "https://store.steampowered.com/app/4596010/Bar_After_Bar/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4596010/0cb8fb5f5404e46cda413592827582f0c8a1b9d7/capsule_231x87.jpg?t=1787321897",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-24",
+        "release_text": "Aug 24, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4596010",
+        "title_en": "Bar After Bar",
+        "title_zh": "Bar After Bar",
+        "developers": [
+          "OneMan Tim"
+        ],
+        "publishers": [
+          "OneMan Tim"
+        ],
+        "tags": [
+          "动作",
+          "休闲",
+          "独立"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-3985330",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2483,7 +2161,7 @@
         "store": "Steam",
         "title": "BURNED HORIZONS",
         "url": "https://store.steampowered.com/app/3985330/BURNED_HORIZONS/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3985330/f8f733cf963af75bb17ebeec29348a6d18e6aa93/capsule_231x87.jpg?t=1786807293",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3985330/f8f733cf963af75bb17ebeec29348a6d18e6aa93/capsule_231x87.jpg?t=1786807293",
         "platforms": [
           "PC"
         ],
@@ -2524,7 +2202,7 @@
         "store": "Steam",
         "title": "Combolands: Roguelike Citybuilder",
         "url": "https://store.steampowered.com/app/4075620/Combolands_Roguelike_Citybuilder/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4075620/5f264ff8c29a1a5f848ffc2997482a618ecafd8d/capsule_231x87.jpg?t=1786787638",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4075620/5f264ff8c29a1a5f848ffc2997482a618ecafd8d/capsule_231x87.jpg?t=1787319640",
         "platforms": [
           "PC"
         ],
@@ -2562,7 +2240,7 @@
         "store": "Steam",
         "title": "Exit Ways",
         "url": "https://store.steampowered.com/app/3605140/Exit_Ways/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3605140/8017c6eec71b1d1b862015d92a5f0a8594c53b7c/capsule_231x87.jpg?t=1787236691",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3605140/8017c6eec71b1d1b862015d92a5f0a8594c53b7c/capsule_231x87.jpg?t=1787253189",
         "platforms": [
           "PC"
         ],
@@ -2593,6 +2271,44 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-4001350",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Iron Blight",
+        "url": "https://store.steampowered.com/app/4001350/Iron_Blight/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001350/435d37e79c8530467740d1618a8befec1fdccf08/capsule_231x87.jpg?t=1786551539",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-24",
+        "release_text": "Aug 24, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4001350",
+        "title_en": "Iron Blight",
+        "title_zh": "Iron Blight",
+        "developers": [
+          "Ronesans Interactive"
+        ],
+        "publishers": [
+          "Rock Paper Publisher"
+        ],
+        "tags": [
+          "动作",
+          "独立"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-3491690",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2600,7 +2316,7 @@
         "store": "Steam",
         "title": "lovebyte.exe",
         "url": "https://store.steampowered.com/app/3491690/lovebyteexe/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3491690/3ab8c82d3baf1d748c73110599eadf9248f3a2f3/capsule_231x87.jpg?t=1786548728",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3491690/3ab8c82d3baf1d748c73110599eadf9248f3a2f3/capsule_231x87.jpg?t=1787279468",
         "platforms": [
           "PC"
         ],
@@ -2641,7 +2357,7 @@
         "store": "Steam",
         "title": "Money for Girls: Amortized",
         "url": "https://store.steampowered.com/app/4833450/Money_for_Girls_Amortized/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4833450/87e3dec9f91181b927c00a5aa73e804d0426c240/capsule_231x87.jpg?t=1786766241",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4833450/87e3dec9f91181b927c00a5aa73e804d0426c240/capsule_231x87.jpg?t=1786766241",
         "platforms": [
           "PC"
         ],
@@ -2679,7 +2395,7 @@
         "store": "Steam",
         "title": "Shelve the Potions!",
         "url": "https://store.steampowered.com/app/4928820/Shelve_the_Potions/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928820/1c6aeab3db96129e6287b8ef69f23b519e26574f/capsule_231x87_alt_assets_0.jpg?t=1786766367",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4928820/1c6aeab3db96129e6287b8ef69f23b519e26574f/capsule_231x87_alt_assets_0.jpg?t=1787300588",
         "platforms": [
           "PC"
         ],
@@ -2718,7 +2434,7 @@
         "store": "Steam",
         "title": "Titanic Escape Simulator™",
         "url": "https://store.steampowered.com/app/4645360/Titanic_Escape_Simulator/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4645360/6cc47a13551a26c418d8ce8b59e562d3b93199a7/capsule_231x87.jpg?t=1786540399",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4645360/6cc47a13551a26c418d8ce8b59e562d3b93199a7/capsule_231x87.jpg?t=1786540399",
         "platforms": [
           "PC"
         ],
@@ -2751,6 +2467,46 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-4195110",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Ultrapool",
+        "url": "https://store.steampowered.com/app/4195110/Ultrapool/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4195110/134bf8acbbdc7b63f644e363de353ddc948ebfbb/capsule_231x87.jpg?t=1787090492",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-24",
+        "release_text": "Aug 24, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4195110",
+        "title_en": "Ultrapool",
+        "title_zh": "胡闹台球 Ultrapool",
+        "developers": [
+          "Icedrop Games"
+        ],
+        "publishers": [
+          "offbrand games"
+        ],
+        "tags": [
+          "休闲",
+          "独立",
+          "体育",
+          "策略"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-3949550",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2758,7 +2514,7 @@
         "store": "Steam",
         "title": "1666: Amsterdam",
         "url": "https://store.steampowered.com/app/3949550/1666_Amsterdam/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3949550/7a4619bcd473bc51b4cad9d18b3624ccac70e96d/capsule_231x87.jpg?t=1786612220",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3949550/7a4619bcd473bc51b4cad9d18b3624ccac70e96d/capsule_231x87.jpg?t=1786612220",
         "platforms": [
           "PC"
         ],
@@ -2796,7 +2552,7 @@
         "store": "Steam",
         "title": "Aliens: Fireteam Elite 2",
         "url": "https://store.steampowered.com/app/3448650/Aliens_Fireteam_Elite_2/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3448650/ca75b2be4cfcfbbb74518f8bf963f09bbc111bf5/capsule_231x87.jpg?t=1787095124",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3448650/ca75b2be4cfcfbbb74518f8bf963f09bbc111bf5/capsule_231x87.jpg?t=1787274684",
         "platforms": [
           "PC"
         ],
@@ -2833,7 +2589,7 @@
         "store": "Steam",
         "title": "Western Rye",
         "url": "https://store.steampowered.com/app/2358630/Western_Rye/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358630/1fceb78ca9d835f56a62a366279982f53e31a355/capsule_231x87.jpg?t=1787047657",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2358630/1fceb78ca9d835f56a62a366279982f53e31a355/capsule_231x87.jpg?t=1787047657",
         "platforms": [
           "PC"
         ],
@@ -2873,7 +2629,7 @@
         "store": "Steam",
         "title": "BRIGANDINE ABYSS",
         "url": "https://store.steampowered.com/app/3211430/BRIGANDINE_ABYSS/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3211430/e4b6bac1c89095f23c514147be534223c6fb19ac/capsule_231x87.jpg?t=1779667319",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3211430/e4b6bac1c89095f23c514147be534223c6fb19ac/capsule_231x87.jpg?t=1779667319",
         "platforms": [
           "PC"
         ],
@@ -2905,6 +2661,86 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-4627110",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Fell & Sell",
+        "url": "https://store.steampowered.com/app/4627110/Fell__Sell/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4627110/58f86a9cf3bf33495e3f603079a4096e785509a1/capsule_231x87.jpg?t=1787312444",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-26",
+        "release_text": "Aug 26, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4627110",
+        "title_en": "Fell & Sell",
+        "title_zh": "Fell & Sell",
+        "developers": [
+          "Art Games Studio S.A."
+        ],
+        "publishers": [
+          "Art Games Studio S.A.",
+          "PlayWay S.A."
+        ],
+        "tags": [
+          "动作",
+          "角色扮演",
+          "模拟"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_upcoming-4073860",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Sludgineers",
+        "url": "https://store.steampowered.com/app/4073860/Sludgineers/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4073860/6cb8376da45b5b8ff39a649f81e0f02d4e035340/capsule_231x87.jpg?t=1787201301",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-26",
+        "release_text": "Aug 26, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4073860",
+        "title_en": "Sludgineers",
+        "title_zh": "吸吸吸有限公司",
+        "developers": [
+          "Snickerdoodle Games",
+          "Funk Games"
+        ],
+        "publishers": [
+          "Funk Games",
+          "Gamersky Games"
+        ],
+        "tags": [
+          "休闲",
+          "模拟"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-4323130",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2912,7 +2748,7 @@
         "store": "Steam",
         "title": "Sniper Camouflage Orange Spy Warrior I Buried Two Bodies in the Garden and the Police Haven't Figured Out Yet That They're Missing Because They Were a Lonely Old Couple Who Had No Relatives Simulator 2026",
         "url": "https://store.steampowered.com/app/4323130/Sniper_Camouflage_Orange_Spy_Warrior_I_Buried_Two_Bodies_in_the_Garden_and_the_Police_Havent_Figured_Out_Yet_That_Theyre_Missing_Because_They_Were_a_Lonely_Old_Couple_Who_Had_No_Relatives_Simulator_2026/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4323130/a43b404684aa4748f45a41d3d75d92c96351c533/capsule_231x87.jpg?t=1787133705",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4323130/a43b404684aa4748f45a41d3d75d92c96351c533/capsule_231x87.jpg?t=1787133705",
         "platforms": [
           "PC"
         ],
@@ -2954,7 +2790,7 @@
         "store": "Steam",
         "title": "Water You Doing?",
         "url": "https://store.steampowered.com/app/4429930/Water_You_Doing/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4429930/111a36e77a7eb23c2776c187d14ef2b85c00ab4f/capsule_231x87.jpg?t=1787051938",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4429930/111a36e77a7eb23c2776c187d14ef2b85c00ab4f/capsule_231x87.jpg?t=1787263511",
         "platforms": [
           "PC"
         ],
@@ -2985,6 +2821,45 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-2100020",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Lou's Lagoon",
+        "url": "https://store.steampowered.com/app/2100020/Lous_Lagoon/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2100020/11b350eff342fcdeca2d49031643997a90ac92c1/capsule_231x87.jpg?t=1787218507",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-27",
+        "release_text": "Aug 27, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "2100020",
+        "title_en": "Lou's Lagoon",
+        "title_zh": "卢湖采风",
+        "developers": [
+          "Tiny Roar"
+        ],
+        "publishers": [
+          "Megabit Publishing",
+          "rokaplay"
+        ],
+        "tags": [
+          "冒险",
+          "模拟"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-3859630",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -2992,7 +2867,7 @@
         "store": "Steam",
         "title": "METAL GEAR SOLID: MASTER COLLECTION Vol.2",
         "url": "https://store.steampowered.com/app/3859630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol2/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3859630/a535e2d0ad9f9483ca1c01b68d4df708e4e673f8/capsule_231x87.jpg?t=1785227706",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3859630/a535e2d0ad9f9483ca1c01b68d4df708e4e673f8/capsule_231x87.jpg?t=1785227706",
         "platforms": [
           "PC"
         ],
@@ -3031,7 +2906,7 @@
         "store": "Steam",
         "title": "Resonance: A Plague Tale Legacy",
         "url": "https://store.steampowered.com/app/2713000/Resonance_A_Plague_Tale_Legacy/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_231x87.jpg?t=1786978207",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_231x87.jpg?t=1786978207",
         "platforms": [
           "PC"
         ],
@@ -3070,7 +2945,7 @@
         "store": "Steam",
         "title": "STAR WARS Zero Company™",
         "url": "https://store.steampowered.com/app/2075800/STAR_WARS_Zero_Company/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2075800/56484e8832119b4b37b3fa3a6a5ec23209cd835c/capsule_231x87.jpg?t=1787045473",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2075800/56484e8832119b4b37b3fa3a6a5ec23209cd835c/capsule_231x87.jpg?t=1787045473",
         "platforms": [
           "PC"
         ],
@@ -3108,7 +2983,7 @@
         "store": "Steam",
         "title": "Divinum",
         "url": "https://store.steampowered.com/app/1148130/Divinum/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1148130/8600d51953a9f23a61e54a642ecf8f947c6c73d4/capsule_231x87.jpg?t=1787132170",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1148130/8600d51953a9f23a61e54a642ecf8f947c6c73d4/capsule_231x87.jpg?t=1787300577",
         "platforms": [
           "PC"
         ],
@@ -3148,7 +3023,7 @@
         "store": "Steam",
         "title": "Inferno Protocol",
         "url": "https://store.steampowered.com/app/3908940/Inferno_Protocol/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3908940/82e9a433a0320f70eb6e6a898a68f59001c73147/capsule_231x87.jpg?t=1787137616",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3908940/82e9a433a0320f70eb6e6a898a68f59001c73147/capsule_231x87.jpg?t=1787254729",
         "platforms": [
           "PC"
         ],
@@ -3188,7 +3063,7 @@
         "store": "Steam",
         "title": "Breathedge 2",
         "url": "https://store.steampowered.com/app/2412960/Breathedge_2/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2412960/cefe019bbfe451516fb65d6efa180910715bd72e/capsule_231x87.jpg?t=1787158305",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2412960/cefe019bbfe451516fb65d6efa180910715bd72e/capsule_231x87.jpg?t=1787312919",
         "platforms": [
           "PC"
         ],
@@ -3221,6 +3096,45 @@
         "notable_publisher_name": ""
       },
       {
+        "id": "steam-steam_popular_upcoming-2067210",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Serious Sam: Shatterverse",
+        "url": "https://store.steampowered.com/app/2067210/Serious_Sam_Shatterverse/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2067210/73245bd44a42f694aaa91a64ca17d417fc650304/capsule_231x87.jpg?t=1786694702",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-08-31",
+        "release_text": "Aug 31, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "2067210",
+        "title_en": "Serious Sam: Shatterverse",
+        "title_zh": "英雄萨姆：破碎宇宙",
+        "developers": [
+          "Behaviour Interactive Inc."
+        ],
+        "publishers": [
+          "Devolver Digital"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发",
+          "知名发行商"
+        ],
+        "heat_level": "medium",
+        "heat_score": 35.72,
+        "notable_publisher": true,
+        "notable_publisher_name": "Devolver Digital"
+      },
+      {
         "id": "steam-steam_popular_upcoming-4317690",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -3228,7 +3142,7 @@
         "store": "Steam",
         "title": "Crimson Moon",
         "url": "https://store.steampowered.com/app/4317690/Crimson_Moon/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4317690/3449fabc6e795e20f0bb7a7a656add8e68f211f8/capsule_231x87.jpg?t=1786771151",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4317690/3449fabc6e795e20f0bb7a7a656add8e68f211f8/capsule_231x87.jpg?t=1787254290",
         "platforms": [
           "PC"
         ],
@@ -3267,7 +3181,7 @@
         "store": "Steam",
         "title": "WheelMates",
         "url": "https://store.steampowered.com/app/3905450/WheelMates/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3905450/24f780d796d4a7c96a7868bbc4fc669393194c1e/capsule_231x87.jpg?t=1787172834",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3905450/24f780d796d4a7c96a7868bbc4fc669393194c1e/capsule_231x87.jpg?t=1787172834",
         "platforms": [
           "PC"
         ],
@@ -3306,7 +3220,7 @@
         "store": "Steam",
         "title": "BOMBANANA!",
         "url": "https://store.steampowered.com/app/4656000/BOMBANANA/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_231x87.jpg?t=1787056194",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_231x87.jpg?t=1787313184",
         "platforms": [
           "PC"
         ],
@@ -3344,7 +3258,7 @@
         "store": "Steam",
         "title": "The Blood of Dawnwalker",
         "url": "https://store.steampowered.com/app/3751260/The_Blood_of_Dawnwalker/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/512cea7b8d6470681fc081ab933290bf14a8f956/capsule_231x87.jpg?t=1787058893",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751260/512cea7b8d6470681fc081ab933290bf14a8f956/capsule_231x87.jpg?t=1787058893",
         "platforms": [
           "PC"
         ],
@@ -3377,6 +3291,46 @@
         "notable_publisher_name": "Bandai Namco Entertainment"
       },
       {
+        "id": "steam-steam_popular_upcoming-2798330",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Dungeon Settlers",
+        "url": "https://store.steampowered.com/app/2798330/Dungeon_Settlers/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2798330/a142dd72485c214b0fe0e6f2d631e73113450220/capsule_231x87.jpg?t=1786160818",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-09-04",
+        "release_text": "Sep 4, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "2798330",
+        "title_en": "Dungeon Settlers",
+        "title_zh": "地城拓荒 Dungeon Settlers",
+        "developers": [
+          "CanOpener"
+        ],
+        "publishers": [
+          "CanOpener",
+          "WhisperGames"
+        ],
+        "tags": [
+          "模拟",
+          "策略",
+          "抢先体验"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-2638890",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -3384,7 +3338,7 @@
         "store": "Steam",
         "title": "Onimusha: Way of the Sword",
         "url": "https://store.steampowered.com/app/2638890/Onimusha_Way_of_the_Sword/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2638890/4aa8bcfcb20173a0250f03ee15473abece15f6b0/capsule_231x87.jpg?t=1784162334",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2638890/4aa8bcfcb20173a0250f03ee15473abece15f6b0/capsule_231x87.jpg?t=1784162334",
         "platforms": [
           "PC"
         ],
@@ -3424,7 +3378,7 @@
         "store": "Steam",
         "title": "WARDOGS",
         "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/11d3bb7607c5568c61108fe70e7c670b4940269e/capsule_231x87.jpg?t=1787240917",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/11d3bb7607c5568c61108fe70e7c670b4940269e/capsule_231x87.jpg?t=1787240917",
         "platforms": [
           "PC"
         ],
@@ -3459,6 +3413,88 @@
         "notable_publisher_name": "Team17"
       },
       {
+        "id": "steam-steam_popular_upcoming-3195440",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "Welcome to Elderfield",
+        "url": "https://store.steampowered.com/app/3195440/Welcome_to_Elderfield/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3195440/87679730eaad41a36418de1c4f0e3738b4c8d541/capsule_231x87.jpg?t=1787147242",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-09-10",
+        "release_text": "Sep 10, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "3195440",
+        "title_en": "Welcome to Elderfield",
+        "title_zh": "欢迎来到古原镇",
+        "developers": [
+          "Chris Cote"
+        ],
+        "publishers": [
+          "Kwalee"
+        ],
+        "tags": [
+          "冒险",
+          "休闲",
+          "独立",
+          "角色扮演",
+          "模拟",
+          "策略"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
+        "id": "steam-steam_popular_upcoming-4890760",
+        "category": "pc",
+        "source": "steam_popular_upcoming",
+        "source_label": "Steam · Popular Upcoming",
+        "store": "Steam",
+        "title": "THE DEAD WE KNEW: Open World Survival",
+        "url": "https://store.steampowered.com/app/4890760/THE_DEAD_WE_KNEW_Open_World_Survival/",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4890760/fb907128802e801189829972334439cbcf3dcaf3/capsule_231x87.jpg?t=1787180587",
+        "platforms": [
+          "PC"
+        ],
+        "release_date": "2026-09-17",
+        "release_text": "Sep 17, 2026",
+        "featured": true,
+        "popularity_label": "Steam 热门",
+        "steam_appid": "4890760",
+        "title_en": "THE DEAD WE KNEW: Open World Survival",
+        "title_zh": "THE DEAD WE KNEW: Open World Survival",
+        "developers": [
+          "MAY19 STUDIO"
+        ],
+        "publishers": [
+          "MAY19 STUDIO"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演",
+          "模拟"
+        ],
+        "heat_label": "热门待发",
+        "heat_labels": [
+          "热门待发"
+        ],
+        "heat_level": "medium",
+        "heat_score": 17.72,
+        "notable_publisher": false,
+        "notable_publisher_name": ""
+      },
+      {
         "id": "steam-steam_popular_upcoming-1488490",
         "category": "pc",
         "source": "steam_popular_upcoming",
@@ -3466,7 +3502,7 @@
         "store": "Steam",
         "title": "Nivalis Nights",
         "url": "https://store.steampowered.com/app/1488490/Nivalis_Nights/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1488490/7e483ece1117906b11bd6959a16e1f77f5a6e4d5/capsule_231x87.jpg?t=1786355242",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1488490/7e483ece1117906b11bd6959a16e1f77f5a6e4d5/capsule_231x87.jpg?t=1786355242",
         "platforms": [
           "PC"
         ],
@@ -3506,7 +3542,7 @@
         "store": "Steam",
         "title": "Call of Duty®: Modern Warfare® 4",
         "url": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4435490/50d218e79ead2650bc6b7360995cc8dd3fbe2c29/capsule_231x87.jpg?t=1787243124",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4435490/50d218e79ead2650bc6b7360995cc8dd3fbe2c29/capsule_231x87.jpg?t=1787327331",
         "platforms": [
           "PC"
         ],
@@ -3547,7 +3583,7 @@
         "store": "Steam",
         "title": "Phantom Blade Zero",
         "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
-        "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/aef06490c9a4ad912142fe3b766ee08a2b38ef80/capsule_231x87.jpg?t=1787142639",
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4115450/aef06490c9a4ad912142fe3b766ee08a2b38ef80/capsule_231x87.jpg?t=1787142639",
         "platforms": [
           "PC"
         ],
@@ -3580,24 +3616,6 @@
     ],
     "console": [
       {
-        "id": "a12776b4ef547516",
-        "category": "console",
-        "source": "famitsu",
-        "source_label": "Famitsu 日本游戏发行日",
-        "store": "发行日历",
-        "title": "Hell Let Loose： Vietnam （PS Store ダウンロード版）",
-        "url": "https://www.famitsu.com/game/title/72333/page/1",
-        "cover": "",
-        "platforms": [
-          "PS5"
-        ],
-        "release_date": "2026-08-14",
-        "release_text": "2026年8月14日（金）発売",
-        "days_from_today": -7,
-        "is_today": false,
-        "timeline_status": "past"
-      },
-      {
         "id": "378fe47526887cd3",
         "category": "console",
         "source": "famitsu",
@@ -3611,7 +3629,7 @@
         ],
         "release_date": "2026-08-18",
         "release_text": "2026年8月18日（火）発売",
-        "days_from_today": -3,
+        "days_from_today": -4,
         "is_today": false,
         "timeline_status": "past"
       },
@@ -3629,7 +3647,7 @@
         ],
         "release_date": "2026-08-20",
         "release_text": "2026年8月20日（木）発売",
-        "days_from_today": -1,
+        "days_from_today": -2,
         "is_today": false,
         "timeline_status": "past"
       },
@@ -3647,7 +3665,7 @@
         ],
         "release_date": "2026-08-20",
         "release_text": "2026年8月20日（木）発売",
-        "days_from_today": -1,
+        "days_from_today": -2,
         "is_today": false,
         "timeline_status": "past"
       },
@@ -3665,7 +3683,7 @@
         ],
         "release_date": "2026-08-20",
         "release_text": "2026年8月20日（木）発売",
-        "days_from_today": -1,
+        "days_from_today": -2,
         "is_today": false,
         "timeline_status": "past"
       },
@@ -3683,7 +3701,7 @@
         ],
         "release_date": "2026-08-20",
         "release_text": "2026年8月20日（木）発売",
-        "days_from_today": -1,
+        "days_from_today": -2,
         "is_today": false,
         "timeline_status": "past"
       },
@@ -3701,7 +3719,7 @@
         ],
         "release_date": "2026-08-26",
         "release_text": "2026年8月26日（水）発売",
-        "days_from_today": 5,
+        "days_from_today": 4,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3719,7 +3737,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3737,7 +3755,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3755,7 +3773,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3773,7 +3791,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3791,7 +3809,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3809,7 +3827,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3827,7 +3845,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3845,7 +3863,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3863,7 +3881,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3881,7 +3899,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3899,7 +3917,7 @@
         ],
         "release_date": "2026-08-27",
         "release_text": "2026年8月27日（木）発売",
-        "days_from_today": 6,
+        "days_from_today": 5,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3917,7 +3935,7 @@
         ],
         "release_date": "2026-08-28",
         "release_text": "2026年8月28日（金）発売",
-        "days_from_today": 7,
+        "days_from_today": 6,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3935,7 +3953,7 @@
         ],
         "release_date": "2026-08-28",
         "release_text": "2026年8月28日（金）発売",
-        "days_from_today": 7,
+        "days_from_today": 6,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3953,7 +3971,7 @@
         ],
         "release_date": "2026-08-28",
         "release_text": "2026年8月28日（金）発売",
-        "days_from_today": 7,
+        "days_from_today": 6,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3971,7 +3989,7 @@
         ],
         "release_date": "2026-08-31",
         "release_text": "2026年8月31日（月）発売",
-        "days_from_today": 10,
+        "days_from_today": 9,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -3989,7 +4007,7 @@
         ],
         "release_date": "2026-09-01",
         "release_text": "2026年9月1日（火）発売",
-        "days_from_today": 11,
+        "days_from_today": 10,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4007,7 +4025,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4025,7 +4043,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4043,7 +4061,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4061,7 +4079,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4079,7 +4097,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4097,7 +4115,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4115,7 +4133,7 @@
         ],
         "release_date": "2026-09-03",
         "release_text": "2026年9月3日（木）発売",
-        "days_from_today": 13,
+        "days_from_today": 12,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4133,7 +4151,7 @@
         ],
         "release_date": "2026-09-04",
         "release_text": "2026年9月4日（金）発売",
-        "days_from_today": 14,
+        "days_from_today": 13,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4151,7 +4169,7 @@
         ],
         "release_date": "2026-09-04",
         "release_text": "2026年9月4日（金）発売",
-        "days_from_today": 14,
+        "days_from_today": 13,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4169,7 +4187,7 @@
         ],
         "release_date": "2026-09-04",
         "release_text": "2026年9月4日（金）発売",
-        "days_from_today": 14,
+        "days_from_today": 13,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4187,7 +4205,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4205,7 +4223,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4223,7 +4241,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4241,7 +4259,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4259,7 +4277,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4277,7 +4295,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4295,7 +4313,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4313,7 +4331,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4331,7 +4349,7 @@
         ],
         "release_date": "2026-09-10",
         "release_text": "2026年9月10日（木）発売",
-        "days_from_today": 20,
+        "days_from_today": 19,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4349,7 +4367,7 @@
         ],
         "release_date": "2026-09-15",
         "release_text": "2026年9月15日（火）発売",
-        "days_from_today": 25,
+        "days_from_today": 24,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4367,7 +4385,7 @@
         ],
         "release_date": "2026-09-16",
         "release_text": "2026年9月16日（水）発売",
-        "days_from_today": 26,
+        "days_from_today": 25,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4385,7 +4403,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4403,7 +4421,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4421,7 +4439,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4439,7 +4457,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4457,7 +4475,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4475,7 +4493,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4493,7 +4511,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4511,7 +4529,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4529,7 +4547,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4547,7 +4565,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4565,7 +4583,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4584,7 +4602,7 @@
         ],
         "release_date": "2026-09-17",
         "release_text": "2026年9月17日（木）発売",
-        "days_from_today": 27,
+        "days_from_today": 26,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4602,7 +4620,7 @@
         ],
         "release_date": "2026-09-18",
         "release_text": "2026年9月18日（金）発売",
-        "days_from_today": 28,
+        "days_from_today": 27,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4620,7 +4638,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4638,7 +4656,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4656,7 +4674,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4674,7 +4692,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4692,7 +4710,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4710,7 +4728,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4728,7 +4746,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4746,7 +4764,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4764,7 +4782,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4782,7 +4800,7 @@
         ],
         "release_date": "2026-09-24",
         "release_text": "2026年9月24日（木）発売",
-        "days_from_today": 34,
+        "days_from_today": 33,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4800,7 +4818,7 @@
         ],
         "release_date": "2026-09-25",
         "release_text": "2026年9月25日（金）発売",
-        "days_from_today": 35,
+        "days_from_today": 34,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4818,7 +4836,7 @@
         ],
         "release_date": "2026-09-26",
         "release_text": "2026年9月26日（土）発売",
-        "days_from_today": 36,
+        "days_from_today": 35,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4836,7 +4854,7 @@
         ],
         "release_date": "2026-09-29",
         "release_text": "2026年9月29日（火）発売",
-        "days_from_today": 39,
+        "days_from_today": 38,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4854,7 +4872,7 @@
         ],
         "release_date": "2026-09-29",
         "release_text": "2026年9月29日（火）発売",
-        "days_from_today": 39,
+        "days_from_today": 38,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4872,7 +4890,7 @@
         ],
         "release_date": "2026-09-30",
         "release_text": "2026年9月30日（水）発売",
-        "days_from_today": 40,
+        "days_from_today": 39,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4890,7 +4908,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4908,7 +4926,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4926,7 +4944,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4944,7 +4962,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4963,7 +4981,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4981,7 +4999,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -4999,7 +5017,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5017,7 +5035,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5035,7 +5053,7 @@
         ],
         "release_date": "2026-10-01",
         "release_text": "2026年10月1日（木）発売",
-        "days_from_today": 41,
+        "days_from_today": 40,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5053,7 +5071,7 @@
         ],
         "release_date": "2026-10-02",
         "release_text": "2026年10月2日（金）発売",
-        "days_from_today": 42,
+        "days_from_today": 41,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5071,7 +5089,7 @@
         ],
         "release_date": "2026-10-02",
         "release_text": "2026年10月2日（金）発売",
-        "days_from_today": 42,
+        "days_from_today": 41,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5089,7 +5107,7 @@
         ],
         "release_date": "2026-10-06",
         "release_text": "2026年10月6日（火）発売",
-        "days_from_today": 46,
+        "days_from_today": 45,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5107,7 +5125,7 @@
         ],
         "release_date": "2026-10-07",
         "release_text": "2026年10月7日（水）発売",
-        "days_from_today": 47,
+        "days_from_today": 46,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5125,7 +5143,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5143,7 +5161,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5161,7 +5179,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5179,7 +5197,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5197,7 +5215,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5215,7 +5233,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5233,7 +5251,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5251,7 +5269,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5269,7 +5287,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5287,7 +5305,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5305,7 +5323,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5324,7 +5342,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5342,7 +5360,7 @@
         ],
         "release_date": "2026-10-08",
         "release_text": "2026年10月8日（木）発売",
-        "days_from_today": 48,
+        "days_from_today": 47,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5360,7 +5378,7 @@
         ],
         "release_date": "2026-10-09",
         "release_text": "2026年10月9日（金）発売",
-        "days_from_today": 49,
+        "days_from_today": 48,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5378,7 +5396,7 @@
         ],
         "release_date": "2026-10-15",
         "release_text": "2026年10月15日（木）発売",
-        "days_from_today": 55,
+        "days_from_today": 54,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5396,7 +5414,7 @@
         ],
         "release_date": "2026-10-15",
         "release_text": "2026年10月15日（木）発売",
-        "days_from_today": 55,
+        "days_from_today": 54,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5414,7 +5432,7 @@
         ],
         "release_date": "2026-10-15",
         "release_text": "2026年10月15日（木）発売",
-        "days_from_today": 55,
+        "days_from_today": 54,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5432,7 +5450,7 @@
         ],
         "release_date": "2026-10-15",
         "release_text": "2026年10月15日（木）発売",
-        "days_from_today": 55,
+        "days_from_today": 54,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5450,7 +5468,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5468,7 +5486,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5486,7 +5504,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5505,7 +5523,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5523,7 +5541,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5541,7 +5559,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5559,7 +5577,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5577,7 +5595,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5595,7 +5613,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5613,7 +5631,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5631,7 +5649,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5649,7 +5667,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5668,7 +5686,7 @@
         ],
         "release_date": "2026-10-22",
         "release_text": "2026年10月22日（木）発売",
-        "days_from_today": 62,
+        "days_from_today": 61,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5686,7 +5704,7 @@
         ],
         "release_date": "2026-10-23",
         "release_text": "2026年10月23日（金）発売",
-        "days_from_today": 63,
+        "days_from_today": 62,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5704,7 +5722,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5722,7 +5740,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5741,7 +5759,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5759,7 +5777,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5777,7 +5795,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5795,7 +5813,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5813,7 +5831,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5831,7 +5849,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5850,7 +5868,7 @@
         ],
         "release_date": "2026-10-29",
         "release_text": "2026年10月29日（木）発売",
-        "days_from_today": 69,
+        "days_from_today": 68,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5868,7 +5886,7 @@
         ],
         "release_date": "2026-11-05",
         "release_text": "2026年11月5日（木）発売",
-        "days_from_today": 76,
+        "days_from_today": 75,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5886,7 +5904,7 @@
         ],
         "release_date": "2026-11-05",
         "release_text": "2026年11月5日（木）発売",
-        "days_from_today": 76,
+        "days_from_today": 75,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5904,7 +5922,7 @@
         ],
         "release_date": "2026-11-06",
         "release_text": "2026年11月6日（金）発売",
-        "days_from_today": 77,
+        "days_from_today": 76,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5922,7 +5940,7 @@
         ],
         "release_date": "2026-11-12",
         "release_text": "2026年11月12日（木）発売",
-        "days_from_today": 83,
+        "days_from_today": 82,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5940,7 +5958,7 @@
         ],
         "release_date": "2026-11-12",
         "release_text": "2026年11月12日（木）発売",
-        "days_from_today": 83,
+        "days_from_today": 82,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5958,7 +5976,7 @@
         ],
         "release_date": "2026-11-12",
         "release_text": "2026年11月12日（木）発売",
-        "days_from_today": 83,
+        "days_from_today": 82,
         "is_today": false,
         "timeline_status": "upcoming"
       },
@@ -5976,7 +5994,7 @@
         ],
         "release_date": "2026-11-19",
         "release_text": "2026年11月19日（木）発売",
-        "days_from_today": 90,
+        "days_from_today": 89,
         "is_today": false,
         "timeline_status": "upcoming"
       }
@@ -5987,48 +6005,48 @@
       "label": "App Store 日本 · 新着精选",
       "ok": true,
       "count": 8,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "checked_at": "2026-08-21T16:34:01Z"
     },
     "googleplay": {
       "label": "Google Play 日本 · 新規リリース精选",
       "ok": true,
       "count": 6,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "checked_at": "2026-08-21T16:34:01Z"
     },
     "taptap_cn_new": {
       "label": "TapTap 中国 · 新品榜",
       "ok": true,
       "count": 8,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "checked_at": "2026-08-21T16:34:01Z"
     },
     "taptap_cn_upcoming": {
       "label": "TapTap 中国 · 即将首发",
       "ok": true,
-      "count": 1,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "count": 2,
+      "checked_at": "2026-08-21T16:34:01Z"
     },
     "steam_popular_new": {
       "label": "Steam · Popular New Releases",
       "ok": true,
-      "count": 27,
+      "count": 29,
       "raw_count": 50,
       "dom_count": 50,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "checked_at": "2026-08-21T16:34:01Z"
     },
     "steam_popular_upcoming": {
       "label": "Steam · Popular Upcoming",
       "ok": true,
-      "count": 49,
-      "raw_count": 49,
+      "count": 48,
+      "raw_count": 48,
       "dom_count": 50,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "checked_at": "2026-08-21T16:34:01Z"
     },
     "famitsu": {
       "label": "Famitsu 日本游戏发行日",
       "ok": true,
-      "count": 133,
-      "checked_at": "2026-08-20T16:51:56Z"
+      "count": 132,
+      "checked_at": "2026-08-21T16:34:01Z"
     }
   },
-  "metadata_enriched_at": "2026-08-20T16:55:06Z"
+  "metadata_enriched_at": "2026-08-21T16:35:59Z"
 }

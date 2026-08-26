@@ -335,3 +335,72 @@
   // The theme button can change light/dark after this script; keep preview shade in sync.
   document.getElementById('themeBtn')?.addEventListener('click',()=>setTimeout(updatePreview,0));
 })();
+
+/* v9.2 · keep the subtle "最后同步" timestamp in sync with data refreshes. */
+(() => {
+  const shortFmt = new Intl.DateTimeFormat('zh-CN', {
+    month:'2-digit', day:'2-digit',
+    hour:'2-digit', minute:'2-digit',
+    hour12:false
+  });
+  const fullFmt = new Intl.DateTimeFormat('zh-CN', {
+    year:'numeric', month:'2-digit', day:'2-digit',
+    hour:'2-digit', minute:'2-digit', second:'2-digit',
+    hour12:false, timeZoneName:'short'
+  });
+
+  async function readSiteStamp(){
+    const response=await fetch(`data/site-updates.json?v=${Date.now()}`,{cache:'no-store'});
+    if(!response.ok)throw new Error(`HTTP ${response.status}`);
+    const data=await response.json();
+    return data?.generated_at||'';
+  }
+
+  function renderSiteStamp(raw){
+    const el=document.getElementById('pageUpdatedAt');
+    if(!el)return;
+    const d=raw?new Date(raw):null;
+    if(!d||Number.isNaN(+d)){
+      el.textContent='最后同步 · 尚无记录';
+      el.removeAttribute('title');
+      return;
+    }
+    el.textContent=`最后同步 · ${shortFmt.format(d)}`;
+    el.title=`阅读更新流最后完成抓取：${fullFmt.format(d)}`;
+  }
+
+  async function refreshSiteStamp(){
+    try{renderSiteStamp(await readSiteStamp())}
+    catch{
+      const el=document.getElementById('pageUpdatedAt');
+      if(el)el.textContent='最后同步 · 暂不可用';
+    }
+  }
+
+  // Expose one shared hook so future refresh flows can update the same timestamp.
+  window.refreshPageUpdatedAt=refreshSiteStamp;
+
+  // The small circular button reloads generated JSON through app.js.
+  // Refresh this independent timestamp immediately after that reload starts.
+  document.getElementById('refreshBtn')?.addEventListener('click',()=>{
+    setTimeout(refreshSiteStamp,180);
+  });
+
+  // "刷新订阅源" completes asynchronously in GitHub Actions. Watch the same
+  // generated_at field so the timestamp changes as soon as the new Pages data appears.
+  document.getElementById('sourceRefreshBtn')?.addEventListener('click',async()=>{
+    let before='';
+    try{before=await readSiteStamp()}catch{}
+    for(let i=0;i<24;i++){
+      await new Promise(r=>setTimeout(r,12500));
+      try{
+        const current=await readSiteStamp();
+        if(current&&current!==before){
+          renderSiteStamp(current);
+          return;
+        }
+      }catch{}
+    }
+  });
+})();
+

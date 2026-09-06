@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-09-05T17:22:51Z",
+  "generated_at": "2026-09-06T17:37:13Z",
   "items": [
+    {
+      "id": "c02b59d080b23175",
+      "source": "gcores",
+      "source_label": "机核 GCORES",
+      "category": "中文游戏文化",
+      "title": "生化危机 - 浣熊市的挽歌 Vol.1",
+      "url": "https://www.gcores.com/radios/218980",
+      "summary": "本期时间轴制作：天行 浣熊市，作为电子游戏历史上最负盛名的虚构城市之一，即使是对从来没有玩过生化危机系列的玩家来说也耳熟能详。更兼生化IP下多媒介扩展内容极其丰富，使得即使是对很少接触电子游戏的人来说，这个名字也很可能并不陌生。但盛名之下有趣的是，在如此众多的作品中出现的这座小城，却一直只是“毁灭”与“灾难”背景，人们对浣熊市本身，除了那间著名而奇特的警局，并无太多具体的认识和印象。本期节目中，就让我们化身“浣熊市文旅”，一起来还原一下这个小镇毁灭之前的模样。",
+      "image": "https://image.gcores.com/33718774b045fb7e5ddf81f0c1c91fd0-1600-900.jpg?x-oss-process=image/resize,limit_1,m_fill,w_626,h_292/quality,q_90",
+      "published_at": "2026-09-06T15:00:00Z"
+    },
     {
       "id": "b48283223919f20f",
       "source": "gcores",
@@ -8,7 +19,7 @@
       "category": "中文游戏文化",
       "title": "每个人都该来玩《空之轨迹》重制版",
       "url": "https://www.gcores.com/articles/219299",
-      "summary": "前言 屏幕另一头的朋友你好吗？又到了「引擎打游戏」的时间啦。在这里，我会用几千字简单聊聊我最近玩过的各式各样的游戏。在这些作品中，有的在时代车轮后面徐行缓步，有的在战争迷雾中翩翩起舞，他们大胆、独特、精致，又或者守旧、古板、保守。不论我喜欢与否，我都会把游戏吸引我的闪光点如实讲出。 因此，在这档游戏体验分享的系列文章里，我会玩到哪里写到哪里，想到什么写什么～。它不是七八千字的详细评测，更不是几十个字的短评。单纯的，引擎打游戏了，想找个时间给你讲讲我玩了什么。 那么，今天要玩的",
+      "summary": "你在看什么 屏幕另一头的朋友你好吗？又到了「引擎打游戏」的时间啦。在这里，我会用几千字简单聊聊我最近玩过的各式各样的游戏。在这些作品中，有的在时代车轮后面徐行缓步，有的在战争迷雾中翩翩起舞，他们大胆、独特、精致，又或者守旧、古板、保守。不论我喜欢与否，我都会把游戏吸引我的闪光点如实讲出。 因此，在这档游戏体验分享的系列文章里，我会玩到哪里写到哪里，想到什么写什么～。它不是七八千字的详细评测，更不是几十个字的短评。单纯的，引擎打游戏了，想找个时间给你讲讲我玩了什么。 那么，今天",
       "image": "https://image.gcores.com/e2672b4650d0c3bf17138362cbe3738d-1280-720.JPEG?x-oss-process=image/resize,limit_1,m_fill,w_626,h_292/quality,q_90",
       "published_at": "2026-09-05T15:53:31Z"
     },
@@ -530,17 +541,6 @@
       "published_at": "2026-09-04T02:40:00Z"
     },
     {
-      "id": "4e42261e78b89389",
-      "source": "gcores",
-      "source_label": "机核 GCORES",
-      "category": "中文游戏文化",
-      "title": "节奏游戏《UTA MACROSS》复活企划启动！9月10日开启众筹项目",
-      "url": "https://www.gcores.com/articles/219222",
-      "summary": "AUGUST宣布，正在开发以2022年结束运营的智能手机节奏游戏《UTA MACROSS Smartphone De Culture（歌超时空要塞 手机De文化）》（以下简称“运营版”）为基础的买断制游戏《UTA MACROSS》，预计于2027年春季发售，登陆PC（Steam）及移动端（iOS/Android）平台。同时为了扩展对应平台、追加新乐曲本作将于2026年9月10日起开启众筹。以下为官方公布的内容。 针对离线版重构游戏系统 《UTA MACROSS》是一款跨越作品",
-      "image": "https://image.gcores.com/b1c74e5fe8360853eff2687acef6e8f6-1293-726.png?x-oss-process=image/resize,limit_1,m_fill,w_626,h_292/quality,q_90",
-      "published_at": "2026-09-04T02:14:17Z"
-    },
-    {
       "id": "81cb7aa02c63f8c4",
       "source": "gamelook",
       "source_label": "GameLook 游戏大观",
@@ -799,25 +799,25 @@
       "label": "巴哈姆特 GNN",
       "ok": true,
       "count": 24,
-      "checked_at": "2026-09-05T17:22:51Z"
+      "checked_at": "2026-09-06T17:37:13Z"
     },
     "gcores": {
       "label": "机核 GCORES",
       "ok": true,
       "count": 20,
-      "checked_at": "2026-09-05T17:22:51Z"
+      "checked_at": "2026-09-06T17:37:13Z"
     },
     "yystv": {
       "label": "游研社",
       "ok": true,
       "count": 12,
-      "checked_at": "2026-09-05T17:22:51Z"
+      "checked_at": "2026-09-06T17:37:13Z"
     },
     "gamelook": {
       "label": "GameLook 游戏大观",
       "ok": true,
       "count": 24,
-      "checked_at": "2026-09-05T17:22:51Z"
+      "checked_at": "2026-09-06T17:37:13Z"
     }
   }
 }

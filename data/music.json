@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T19:05:08Z",
+  "generated_at": "2026-09-18T18:32:22Z",
   "chart_date": "2026/09/16",
   "weekly_chart": [
     {
@@ -307,7 +307,7 @@
       "title": "MISMATCH",
       "artist": "LEE JISOO",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000291/202x_image291334.jpg",
-      "url": "https://www.billboard-japan.com/charts/detail?a=hot100",
+      "url": "https://www.billboard-japan.com/artists/detail/1080559",
       "youtube_music_url": "https://music.youtube.com/search?q=MISMATCH+LEE+JISOO"
     },
     {
@@ -455,7 +455,7 @@
       "release_date": "",
       "period": "本周新进榜",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000291/202x_image291334.jpg",
-      "url": "https://www.billboard-japan.com/charts/detail?a=hot100",
+      "url": "https://www.billboard-japan.com/artists/detail/1080559",
       "youtube_music_url": "https://music.youtube.com/search?q=MISMATCH+LEE+JISOO",
       "source": "billboard_debut",
       "source_label": "Billboard JAPAN · 本周新进榜"
@@ -583,7 +583,7 @@
       "release_date": "",
       "period": "本周新进榜",
       "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000291/202x_image291334.jpg",
-      "url": "https://www.billboard-japan.com/charts/detail?a=hot100",
+      "url": "https://www.billboard-japan.com/artists/detail/1080559",
       "youtube_music_url": "https://music.youtube.com/search?q=MISMATCH+LEE+JISOO",
       "source": "billboard_debut",
       "source_label": "Billboard JAPAN · 本周新进榜"
@@ -594,13 +594,13 @@
       "label": "Billboard JAPAN Hot 100",
       "ok": true,
       "count": 30,
-      "checked_at": "2026-09-17T19:05:08Z"
+      "checked_at": "2026-09-18T18:32:22Z"
     },
     "apple_music_weekly_new": {
       "label": "Apple Music Japan · 本周新曲",
       "ok": true,
       "count": 9,
-      "checked_at": "2026-09-17T19:05:08Z",
+      "checked_at": "2026-09-18T18:32:22Z",
       "fallback": "Billboard JAPAN Hot 100 本周新进榜",
       "error": "RuntimeError: Apple Music Best New Songs heading not found"
     }

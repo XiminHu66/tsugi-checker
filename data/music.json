@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T18:13:48Z",
+  "generated_at": "2026-09-21T20:00:59Z",
   "chart_date": "2026/09/16",
   "weekly_chart": [
     {
@@ -594,13 +594,13 @@
       "label": "Billboard JAPAN Hot 100",
       "ok": true,
       "count": 30,
-      "checked_at": "2026-09-20T18:13:48Z"
+      "checked_at": "2026-09-21T20:00:59Z"
     },
     "apple_music_weekly_new": {
       "label": "Apple Music Japan · 本周新曲",
       "ok": true,
       "count": 9,
-      "checked_at": "2026-09-20T18:13:48Z",
+      "checked_at": "2026-09-21T20:00:59Z",
       "fallback": "Billboard JAPAN Hot 100 本周新进榜",
       "error": "RuntimeError: Apple Music Best New Songs heading not found"
     }

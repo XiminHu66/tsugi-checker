@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T20:05:23Z",
+  "generated_at": "2026-10-01T20:22:18Z",
   "chart_date": "2026/09/30",
   "weekly_chart": [
     {
@@ -174,7 +174,7 @@
       "is_new": false,
       "title": "愛MUST BE",
       "artist": "櫻坂46",
-      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000292/202x_image292320.jpg",
+      "artwork": "https://www.billboard-japan.com/scale/jackets/00000168/202x_P2_G4893958W.JPG",
       "url": "https://www.billboard-japan.com/goods/detail/787470",
       "youtube_music_url": "https://music.youtube.com/search?q=%E6%84%9BMUST+BE+%E6%AB%BB%E5%9D%8246"
     },
@@ -482,13 +482,13 @@
       "label": "Billboard JAPAN Hot 100",
       "ok": true,
       "count": 30,
-      "checked_at": "2026-09-30T20:05:23Z"
+      "checked_at": "2026-10-01T20:22:18Z"
     },
     "apple_music_weekly_new": {
       "label": "Apple Music Japan · 本周新曲",
       "ok": true,
       "count": 5,
-      "checked_at": "2026-09-30T20:05:23Z",
+      "checked_at": "2026-10-01T20:22:18Z",
       "fallback": "Billboard JAPAN Hot 100 本周新进榜",
       "error": "RuntimeError: Apple Music Best New Songs heading not found"
     }

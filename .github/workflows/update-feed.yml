@@ -5,11 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Backup probe. If GitHub delays it by ~55 min, it lands around 09:12.
-    - cron: "17 8 * * *"
+    # Primary daily refresh at 08:00 Pacific. GitHub handles PST/PDT.
+    - cron: "0 8 * * *"
       timezone: "America/Los_Angeles"
-    # Primary daily refresh.
-    - cron: "17 9 * * *"
+    # Retry at 08:30. It skips scraping when the 08:00 run already succeeded.
+    - cron: "30 8 * * *"
       timezone: "America/Los_Angeles"
 
 permissions:
@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Decide whether to refresh sources
         id: mode
@@ -48,15 +50,8 @@ jobs:
             exit 0
           fi
 
-          LOCAL_HOUR="$(TZ=America/Los_Angeles date +%H)"
-          if (( 10#$LOCAL_HOUR < 9 )); then
-            echo "scrape=false" >> "$GITHUB_OUTPUT"
-            echo "reason=backup_probe_arrived_before_09" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # Read the latest main branch, not only this schedule event's checkout.
-          # This lets the second schedule notice a successful first refresh.
+          # Read the latest main branch so the 08:30 retry can see a successful
+          # 08:00 refresh even if this scheduled run started from an older SHA.
           git fetch origin main --quiet
           if git show origin/main:data/site-updates.json > /tmp/tsugi-site-updates.json 2>/dev/null; then
             if python - <<'PY'
@@ -70,20 +65,20 @@ jobs:
               data = json.load(open("/tmp/tsugi-site-updates.json", encoding="utf-8"))
               raw = data.get("generated_at") or ""
               refreshed = datetime.fromisoformat(raw.replace("Z", "+00:00")).astimezone(tz)
-              fresh = refreshed.date() == now.date() and refreshed.hour >= 9
+              fresh = refreshed.date() == now.date() and refreshed.hour >= 8
           except Exception:
               fresh = False
           sys.exit(0 if fresh else 1)
           PY
             then
               echo "scrape=false" >> "$GITHUB_OUTPUT"
-              echo "reason=already_refreshed_after_09_today" >> "$GITHUB_OUTPUT"
+              echo "reason=already_refreshed_after_08_today" >> "$GITHUB_OUTPUT"
               exit 0
             fi
           fi
 
           echo "scrape=true" >> "$GITHUB_OUTPUT"
-          echo "reason=scheduled_morning_refresh_needed" >> "$GITHUB_OUTPUT"
+          echo "reason=scheduled_08_refresh_needed" >> "$GITHUB_OUTPUT"
 
       - name: Show refresh decision
         run: |
@@ -121,7 +116,8 @@ jobs:
             echo "No data changes"
           else
             git commit -m "chore: refresh reading feed"
-            git push
+            git pull --rebase -X theirs origin main
+            git push origin HEAD:main
           fi
 
       - name: Prepare static site

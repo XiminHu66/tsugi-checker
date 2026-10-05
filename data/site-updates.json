@@ -1,19 +1,646 @@
 {
-  "generated_at": "2026-10-04T18:31:01Z",
+  "generated_at": "2026-10-05T21:48:03Z",
   "items": [
+    {
+      "id": "2a800161f296ff02",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "不相容的異種族妻子們",
+      "latest": "正文 第194話 剩餘的任務（3）",
+      "updated_text": "2026-10-06",
+      "url": "https://tw.linovelib.com/novel/5340.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5340/5340s.jpg?1790207947",
+      "latest_url": "https://tw.linovelib.com/novel/5340/catalog",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "bea50475a828e50a",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "落魄的哥哥其實是最強的",
+      "latest": "最新更新",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/luopodegegeqishishizuiqiangde",
+      "cover": "https://sl.mangafunb.fun/l/luopodegegeqishishizuiqiangde/cover/1790965447.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "68a499f1d45ef699",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "隱瞞黑歷史的玩家",
+      "latest": "第114话",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/yimmanheilishiwanjia",
+      "cover": "https://sy.mangafunb.fun/y/yimmanheilishiwanjia/cover/1693815110.jfif.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "d6a53d9722e275e5",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "午後四點。透明、偶爾聲優",
+      "latest": "第02話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/wuhousidiantoumingouershengyou",
+      "cover": "https://sw.mangafunb.fun/w/wuhousidiantoumingouershengyou/cover/1789751303.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "82641c84c4a82911",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "及格線上亦青春！",
+      "latest": "第11話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/jigexianshangyiqingchun",
+      "cover": "https://sj.mangafunb.fun/j/jigexianshangyiqingchun/cover/1785174818.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "48218cf88538e7ac",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "嫁神隨神",
+      "latest": "第18话",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/shenmingqizideyouxianrichang",
+      "cover": "https://ss.mangafunb.fun/s/shenmingqizideyouxianrichang/cover/1651390065.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "3feae29da1ec1f9b",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "南條同學想要我抱",
+      "latest": "第34話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/nttxxywb",
+      "cover": "https://sn.mangafunb.fun/n/nttxxywb/cover/1710772064.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "8597133c09dc11da",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "惡癖貴族努力奮鬥，打造出了真心相待的後宮",
+      "latest": "第06話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/epgznlfddzclzxxddhg",
+      "cover": "https://se.mangafunb.fun/e/epgznlfddzclzxxddhg/cover/1791120784.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "293408557c37b481",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "太空兒UB",
+      "latest": "最新更新",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/taikongerub",
+      "cover": "https://st.mangafunb.fun/t/taikongerub/cover/1651095812.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "8e15573fa1b47990",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "被處刑的炮灰王子、由我來讓他幸福！",
+      "latest": "第06話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/beichuxingdepaohuiwangziyouwolairangtaxingfu",
+      "cover": "https://sb.mangafunb.fun/b/beichuxingdepaohuiwangziyouwolairangtaxingfu/cover/1780423625.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "4330ecd5ce7012ab",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "雖是被嫌棄的王妃，卻溺愛可愛的兒子",
+      "latest": "第02話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/suishibxqdwfqnakadez",
+      "cover": "https://ss.mangafunb.fun/s/suishibxqdwfqnakadez/cover/1787575236.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "9bc814fee54ca8ba",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "火鳳燎原",
+      "latest": "第636话",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/fenghuoliaoyuan",
+      "cover": "https://sf.mangafunb.fun/f/fenghuoliaoyuan/cover/1654001252.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "c3da945e93d97202",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "人偶：魔女與咒的碎片",
+      "latest": "第05話",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/renoumonvyuzhoudesuipian",
+      "cover": "https://sr.mangafunb.fun/r/renoumonvyuzhoudesuipian/cover/1780860151.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "01ba82777a115d02",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "致百年後的妳 總集篇版",
+      "latest": "最新更新",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/zhibainianqiandeni",
+      "cover": "https://sz.mangafunb.fun/z/zhibainianqiandeni/cover/1791230408.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "811bd439db8645b8",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "被稱為無能的精靈使～其實是異能，傳說中的英雄",
+      "latest": "最新更新",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/bcwwndjlsqssyncszdyx",
+      "cover": "https://sb.mangafunb.fun/b/bcwwndjlsqssyncszdyx/cover/1791229509.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "0816825f9f90f875",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "宛如層層積雪",
+      "latest": "最新更新",
+      "updated_text": "2026-10-06",
+      "url": "https://www.mangacopy.com/comic/wanruocengcengjixue",
+      "cover": "https://sw.mangafunb.fun/w/wanruocengcengjixue/cover/1791229348.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "8cf62b5a138587ed",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "狱中！",
+      "latest": "更新至： 奖励3",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/52905/",
+      "cover": "https://cf.mhgui.com/cpic/m/52905.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "b53b5857fb2dedc8",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "mono",
+      "latest": "更新至： 第85话机翻",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/30509/",
+      "cover": "https://cf.mhgui.com/cpic/m/30509.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "1f1d1a42b8af1595",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "BEAST COMPLEX",
+      "latest": "更新至： 第28话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/28240/",
+      "cover": "https://cf.mhgui.com/cpic/m/28240_47.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "a34bd867d92845f5",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "我不再爱你了",
+      "latest": "更新至： 第64话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/40319/",
+      "cover": "https://cf.mhgui.com/cpic/m/40319.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "fd4b79fef5eafd2c",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "女友的朋友",
+      "latest": "更新至： 第132话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/40678/",
+      "cover": "https://cf.mhgui.com/cpic/m/40678_28.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "a8ee4eef9df8111a",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "寄生人母",
+      "latest": "更新至： 第76.2话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/36831/",
+      "cover": "https://cf.mhgui.com/cpic/m/36831.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "7159cacb0f8f041c",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "回复术士的重来人生",
+      "latest": "更新至： 第80.2话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/26332/",
+      "cover": "https://cf.mhgui.com/cpic/m/26332.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "3aa275a2463b4d76",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "平行天堂",
+      "latest": "更新至： 第341话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/23333/",
+      "cover": "https://cf.mhgui.com/cpic/m/23333.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "861c66b70ce44982",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "弱弱老师",
+      "latest": "更新至： 第41话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/46511/",
+      "cover": "https://cf.mhgui.com/cpic/m/46511_28.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "be18161eb92fe43a",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "今生我会成为家主",
+      "latest": "更新至： 第233话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/39536/",
+      "cover": "https://cf.mhgui.com/cpic/m/39536.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "0e1cfdfa3d8a4bc7",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "BLADE ＆ BASTARD",
+      "latest": "更新至： 第17话机翻",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/53834/",
+      "cover": "https://cf.mhgui.com/cpic/m/53834.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "46a538a38f695d87",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "雅尼猫",
+      "latest": "更新至： 第411话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/50263/",
+      "cover": "https://cf.mhgui.com/cpic/m/50263.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "be24aa9975b4d985",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "魔都精兵的奴隶",
+      "latest": "更新至： 第188话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/30609/",
+      "cover": "https://cf.mhgui.com/cpic/m/30609_03.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "625b75bceb9a179b",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "蓝兰岛漂流记",
+      "latest": "更新至： 第262话机翻",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/1750/",
+      "cover": "https://cf.mhgui.com/cpic/m/1750.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "e4e4bd98684dde43",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "我被生物狂包围了!",
+      "latest": "更新至： 第20话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/54975/",
+      "cover": "https://cf.mhgui.com/cpic/m/54975.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "ffc8829813ab82b5",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "以为是第二次人生，没想到其实是第三次。",
+      "latest": "更新至： 第13话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/61462/",
+      "cover": "https://cf.mhgui.com/cpic/m/61462.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "513f3c0aef9feb00",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "猪贵族似乎能开创未来",
+      "latest": "更新至： 第24话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/53522/",
+      "cover": "https://cf.mhgui.com/cpic/m/53522.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "00cfd31066130adf",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "今天画出来的年糕也很美味",
+      "latest": "更新至： 汉化05卷",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/42684/",
+      "cover": "https://cf.mhgui.com/cpic/m/42684.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "3b0d78b960264f95",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "弱气MAX的大小姐、居然接受了铁腕未婚夫的赌约",
+      "latest": "更新至： 动画应援绘",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/39336/",
+      "cover": "https://cf.mhgui.com/cpic/m/39336.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "fe93b40d992859f0",
+      "type": "manga",
+      "source": "manhuagui",
+      "source_label": "漫画柜",
+      "title": "魔王宠孙物语",
+      "latest": "更新至： 第07话",
+      "updated_text": "2026-10-05",
+      "url": "https://m.manhuagui.com/comic/60921/",
+      "cover": "https://cf.mhgui.com/cpic/m/60921.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "ec3b126547cce845",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "魔法★探險家 轉生為成人遊戲萬...",
+      "latest": "第九卷 后记",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/2782.html",
+      "cover": "https://tw.linovelib.com/files/article/image/2/2782/2782s.jpg?1791209183",
+      "latest_url": "https://tw.linovelib.com/novel/2782/catalog",
+      "chapter_count": 3,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "e9847747b8ecb197",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "海布魯克家三男是小惡魔正太",
+      "latest": "第二卷 后记",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/4982.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4982/4982s.jpg?1791208136",
+      "latest_url": "https://tw.linovelib.com/novel/4982/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "f8f9278c5c7a89b3",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "鄉下大叔成為劍聖 ～只是區區鄉...",
+      "latest": "第五卷 后记",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/4184.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4184/4184s.jpg?1791206402",
+      "latest_url": "https://tw.linovelib.com/novel/4184/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "f215845a416f8e70",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "泳裝姊妹",
+      "latest": "全一册 终章 幸福！泳装姐妹",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5426.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5426/5426s.jpg?1791210371",
+      "latest_url": "https://tw.linovelib.com/novel/5426/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "7ec3bc0c8def421d",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "喜歡♡情喜劇的主人公嗎？",
+      "latest": "第十四卷　初中生  后篇 第598话　你喜欢胁田卓吗？　２（未润色）",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/4480.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4480/4480s.jpg?1791205433",
+      "latest_url": "https://tw.linovelib.com/novel/4480/catalog",
+      "chapter_count": 2,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "3050302aa6d6344e",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "絕對不願工作的地下城主想要一...",
+      "latest": "第十三卷 第1章",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/2534.html",
+      "cover": "https://tw.linovelib.com/files/article/image/2/2534/2534s.jpg?1753867150",
+      "latest_url": "https://tw.linovelib.com/novel/2534/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "f4d63447f87894a7",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "只有顏值是優點的同學，以猛烈...",
+      "latest": "Web版 第51话",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5374.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5374/5374s.jpg?1789913691",
+      "latest_url": "https://tw.linovelib.com/novel/5374/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "31d31bbef2078d71",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "想回到原世界的我，與絕對不想...",
+      "latest": "第二部 第58話　複雜的心意",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5336.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5336/5336s.jpg?1791031859",
+      "latest_url": "https://tw.linovelib.com/novel/5336/catalog",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "88dc98b91c48a01a",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "牢籠中的囚鳥們 ～從【仙境】開...",
+      "latest": "04-纠缠不休的往昔 【Side：■■■】自我价值",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5407.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5407/5407s.jpg?1791108507",
+      "latest_url": "https://tw.linovelib.com/novel/5407/catalog",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "6bd7a46cc6f3719d",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "我是不才惡女 ～雛宮蝶鼠互換傳～",
+      "latest": "第十三卷 第6章 玲琳，倒下",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/3042.html",
+      "cover": "https://tw.linovelib.com/files/article/image/3/3042/3042s.jpg?1791184021",
+      "latest_url": "https://tw.linovelib.com/novel/3042/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "1e351eb75428abc5",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "異世界公會飯",
+      "latest": "第一卷 暗黑邪龙与炸肉排咖哩 限定版独家附录「店主的小动物研究」",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5425.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5425/5425s.jpg?1791183558",
+      "latest_url": "https://tw.linovelib.com/novel/5425/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "895166ad7f50c224",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "莫里亞提計畫",
+      "latest": "第二卷 名侦探与运动会怪人之谜 第十五章 谢幕",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5424.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5424/5424s.jpg?1791181653",
+      "latest_url": "https://tw.linovelib.com/novel/5424/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "247e0550ab68d735",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "唯獨不會選擇你",
+      "latest": "web版 第十五章 交易（2）",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5271.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5271/5271s.jpg?1784188384",
+      "latest_url": "https://tw.linovelib.com/novel/5271/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "109cf8309c5f0d43",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "沒有幽靈的夏天",
+      "latest": "第一卷 间章之三",
+      "updated_text": "2026-10-05",
+      "url": "https://tw.linovelib.com/novel/5325.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5325/5325s.jpg?1791127995",
+      "latest_url": "https://tw.linovelib.com/novel/5325/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
     {
       "id": "a505987c58c25d33",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
       "title": "開始上門家政的兼職後被學園第...",
-      "latest": "Web版 第一百九十话 东条绫香的决意⑦ 后篇",
+      "latest": "Web版 第一百九十五话 更加亲密",
       "updated_text": "2026-10-05",
       "url": "https://tw.linovelib.com/novel/4313.html",
       "cover": "https://tw.linovelib.com/files/article/image/4/4313/4313s.jpg?1774074860",
       "latest_url": "https://tw.linovelib.com/novel/4313/catalog",
       "chapter_count": 1,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "87b13d27a2481ca2",
@@ -27,381 +654,115 @@
       "cover": "https://tw.linovelib.com/files/article/image/5/5209/5209s.jpg?1789737600",
       "latest_url": "https://tw.linovelib.com/novel/5209/catalog",
       "chapter_count": 1,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "be910204bb7d670d",
+      "id": "469cf7df09af986f",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "與戀共鳴",
-      "latest": "第10话",
+      "title": "讓本尊來毀滅世界臥槽這麼髒我回去了",
+      "latest": "第411话",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/yuliangongming",
-      "cover": "https://sy.mangafunb.fun/y/yuliangongming/cover/1764004054.jpeg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/yanimao",
+      "cover": "https://sy.mangafunb.fun/y/yanimao/cover/1786036043.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "914827c6f94a034e",
+      "id": "f0e1529fd43f8ed9",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "愛之誓約莫輕許",
-      "latest": "第10話",
+      "title": "突然成爲公寓管理員",
+      "latest": "第85話",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/aizhishiyuemoqingxu",
-      "cover": "https://sa.mangafunb.fun/a/aizhishiyuemoqingxu/cover/1769940078.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/turanchengweigongyuguanliyuan",
+      "cover": "https://st.mangafunb.fun/t/turanchengweigongyuguanliyuan/cover/1781749712.png.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "5b99739556c918b4",
+      "id": "fcb673fb579c5ead",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "mono",
+      "title": "魔都精兵的奴隸",
+      "latest": "第188话",
+      "updated_text": "2026-10-05",
+      "url": "https://www.mangacopy.com/comic/modujingbingdenuli",
+      "cover": "https://sm.mangafunb.fun/m/modujingbingdenuli/cover/1684896820.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "af5a9af380802b50",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "暴力萬歲",
+      "latest": "第72话",
+      "updated_text": "2026-10-05",
+      "url": "https://www.mangacopy.com/comic/baoliwansui",
+      "cover": "https://sb.mangafunb.fun/b/baoliwansui/cover/1741168027.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "120b1910352cbbb1",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "闪闪发光部的崩坏",
       "latest": "最新更新",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/monoofro",
-      "cover": "https://sm.mangafunb.fun/m/monoofro/cover/1766648592.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/shanshanfaguangbudebenhuai",
+      "cover": "https://ss.mangafunb.fun/s/shanshanfaguangbudebenhuai/cover/1791214615.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "beaf5a75903b3ace",
+      "id": "c5199f4839dba395",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "隙中焰刃",
-      "latest": "第9话",
+      "title": "白鳥運子31畫",
+      "latest": "第01話",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/xizhongyanren",
-      "cover": "https://sx.mangafunb.fun/x/xizhongyanren/cover/1781117921.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/bainiaoyunzi31hua",
+      "cover": "https://sb.mangafunb.fun/b/bainiaoyunzi31hua/cover/1791177189.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "2ba2af405db1dde0",
+      "id": "6034353de0d2dd14",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "下輩子我再好好過",
-      "latest": "第24话",
+      "title": "舞-乙HiME",
+      "latest": "第23话",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/xiabeiziwozaihaohaoguo",
-      "cover": "https://sx.mangafunb.fun/x/xiabeiziwozaihaohaoguo/cover/1651148411.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/wuyihime",
+      "cover": "https://sw.mangafunb.fun/w/wuyihime/cover/1791173693.jpeg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "be063542d109d677",
+      "id": "69f0abdfbeecee6b",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "獄中！",
-      "latest": "最新更新",
+      "title": "青春草莓蛋",
+      "latest": "第3话",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/yuzhong",
-      "cover": "https://sy.mangafunb.fun/y/yuzhong/cover/1719031589.png.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/qccmd",
+      "cover": "https://sq.mangafunb.fun/q/qccmd/cover/1791173532.png.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "df323a4e99997672",
+      "id": "898272f4ef120081",
       "type": "manga",
       "source": "copymanga",
       "source_label": "拷贝漫画 · CopyManga",
-      "title": "用自己的方法降服叛逆姐姐的日子",
-      "latest": "第88話",
+      "title": "致命戀愛體驗",
+      "latest": "第14话",
       "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/yongzijidefangfaxiangfupannijiejiederizi",
-      "cover": "https://sy.mangafunb.fun/y/yongzijidefangfaxiangfupannijiejiederizi/cover/1759864717.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "6b737a8093dad82f",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "殺手的營業術",
-      "latest": "第09話",
-      "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/shahsoudeyingyeshu",
-      "cover": "https://ss.mangafunb.fun/s/shahsoudeyingyeshu/cover/1781549290.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "d22c03818c2b51df",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "關於前女友弟弟很可愛的那件事",
-      "latest": "最新更新",
-      "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/guanyuqiannvyoudidihenkeaidenajianshi",
-      "cover": "https://sg.mangafunb.fun/g/guanyuqiannvyoudidihenkeaidenajianshi/cover/1651135539.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "dd659663b78b1c7a",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "代號阿納斯塔西亞",
-      "latest": "第74话",
-      "updated_text": "2026-10-05",
-      "url": "https://www.mangacopy.com/comic/daihaoanasitaxiya",
-      "cover": "https://sd.mangafunb.fun/d/daihaoanasitaxiya/cover/1692085713.jfif.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "a971fe99e30639e8",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "越陷越深的义姐弟恋爱故事",
-      "latest": "更新至： 二卷番外",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/58289/",
-      "cover": "https://cf.mhgui.com/cpic/m/58289.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "436f9c9c25afa967",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "我的可爱对黑岩目高不管用",
-      "latest": "更新至： 第232话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/38725/",
-      "cover": "https://cf.mhgui.com/cpic/m/38725_1.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "bfae859d0c48f9dd",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "兔女郎的夜晚疗愈",
-      "latest": "更新至： 第18话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/55392/",
-      "cover": "https://cf.mhgui.com/cpic/m/55392_2.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "93300d0bd8af8ccb",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "那样的、14岁。",
-      "latest": "更新至： 第07话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/60936/",
-      "cover": "https://cf.mhgui.com/cpic/m/60936_1.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "10bb45c23f3c1289",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "姬骑士是蛮族的新娘",
-      "latest": "更新至： 第35.2话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/38951/",
-      "cover": "https://cf.mhgui.com/cpic/m/38951_83.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "6b9476c80374853f",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "春临云上",
-      "latest": "更新至： 第07.1话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/60342/",
-      "cover": "https://cf.mhgui.com/cpic/m/60342_2.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "c6565902e48c82fb",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "女朋友、借我一下",
-      "latest": "更新至： 第442话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/24591/",
-      "cover": "https://cf.mhgui.com/cpic/m/24591_14.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "48e3dae67bfeaae0",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "登峰路上的蒲公英",
-      "latest": "更新至： 第15话机翻",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/58900/",
-      "cover": "https://cf.mhgui.com/cpic/m/58900.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "76dfc1f25e5c9cd5",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "36",
-      "latest": "更新至： 第19话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/61231/",
-      "cover": "https://cf.mhgui.com/cpic/m/61231.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "8cc02c00da992f4f",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "常人假面",
-      "latest": "更新至： 第13话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/46835/",
-      "cover": "https://cf.mhgui.com/cpic/m/46835.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "87e25293ab2a874e",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "叹息的亡灵好想隐退~最弱猎手的最强队伍养成术~",
-      "latest": "更新至： 第66话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/31876/",
-      "cover": "https://cf.mhgui.com/cpic/m/31876.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "4e163d38438970fc",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "转生大圣女的异世界悠哉纪行",
-      "latest": "更新至： 第48话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/40382/",
-      "cover": "https://cf.mhgui.com/cpic/m/40382.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "81537da68c065dfe",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "Demons Roots 命中注定的败北",
-      "latest": "更新至： 第2话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/61647/",
-      "cover": "https://cf.mhgui.com/cpic/m/61647.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "9cc2eff2f740465e",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "猛鬼追魂：复苏",
-      "latest": "更新至： 修道士归来",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/61646/",
-      "cover": "https://cf.mhgui.com/cpic/m/61646.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "ddfc07501348af59",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "青之驱魔师",
-      "latest": "更新至： 第165话试看",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/4707/",
-      "cover": "https://cf.mhgui.com/cpic/m/4707.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "262a00c5e45c3dc0",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "南条同学想要我抱",
-      "latest": "更新至： 第33话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/51788/",
-      "cover": "https://cf.mhgui.com/cpic/m/51788.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "41cb549e9029ca41",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "战姬完食Symphogear～调饭～",
-      "latest": "更新至： 第10话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/55225/",
-      "cover": "https://cf.mhgui.com/cpic/m/55225.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "0655bec8e32f6074",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "前囚犯魔法洛亚，被释放了",
-      "latest": "更新至： 第21话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/59742/",
-      "cover": "https://cf.mhgui.com/cpic/m/59742.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "a8118c4a6823a298",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "召唤勇者，亚鲁欧的外挂能力很微妙",
-      "latest": "更新至： 第21话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/59741/",
-      "cover": "https://cf.mhgui.com/cpic/m/59741.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "0e92e84f3aa2c683",
-      "type": "manga",
-      "source": "manhuagui",
-      "source_label": "漫画柜",
-      "title": "进与妮可",
-      "latest": "更新至： 第02话",
-      "updated_text": "2026-10-04",
-      "url": "https://m.manhuagui.com/comic/60779/",
-      "cover": "https://cf.mhgui.com/cpic/m/60779.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "88dc98b91c48a01a",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "牢籠中的囚鳥們 ～從【仙境】開...",
-      "latest": "04-纠缠不休的往昔 第八章 过往的回音",
-      "updated_text": "2026-10-04",
-      "url": "https://tw.linovelib.com/novel/5407.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5407/5407s.jpg?1791108507",
-      "latest_url": "https://tw.linovelib.com/novel/5407/catalog",
-      "chapter_count": 1,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://www.mangacopy.com/comic/zhiminglianaitiyan",
+      "cover": "https://sz.mangafunb.fun/z/zhiminglianaitiyan/cover/1791173089.webp.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "197565be8e6b0605",
@@ -412,23 +773,10 @@
       "latest": "第二卷 短篇 温柔的注视",
       "updated_text": "2026-10-04",
       "url": "https://tw.linovelib.com/novel/4832.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4832/4832s.jpg?1791106501",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4832/4832s.jpg?1791184663",
       "latest_url": "https://tw.linovelib.com/novel/4832/catalog",
       "chapter_count": 1,
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "2a800161f296ff02",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "不相容的異種族妻子們",
-      "latest": "New 不相容的異種族妻子們 正文",
-      "updated_text": "2026-10-04",
-      "url": "https://tw.linovelib.com/novel/5340.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5340/5340s.jpg?1790207947",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/5340/vol_333597.html"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "a566550eb4cb6833",
@@ -436,12 +784,13 @@
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
       "title": "SEEKER迷宮探索者",
-      "latest": "New SEEKER迷宫探索者 2",
+      "latest": "第二卷 终章",
       "updated_text": "2026-10-04",
       "url": "https://tw.linovelib.com/novel/5423.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5423/5423s.jpg?1791100630",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/5423/vol_337692.html"
+      "latest_url": "https://tw.linovelib.com/novel/5423/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "5eec27c8eb0a0c9b",
@@ -449,12 +798,13 @@
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
       "title": "崩壞世界的魔杖匠人",
-      "latest": "New 崩坏世界的魔杖匠人 4",
+      "latest": "第四卷 后记",
       "updated_text": "2026-10-04",
       "url": "https://tw.linovelib.com/novel/4877.html",
       "cover": "https://tw.linovelib.com/files/article/image/4/4877/4877s.jpg?1789140105",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/4877/vol_333985.html"
+      "latest_url": "https://tw.linovelib.com/novel/4877/catalog",
+      "chapter_count": 2,
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "c66ae6051f02af1c",
@@ -462,12 +812,13 @@
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
       "title": "DEGEN MÄDCHEN 銘刀少女",
-      "latest": "New DEGEN MÄDCHEN 铭刀少女 2 池袋，穿孔",
+      "latest": "第二卷 池袋，穿孔 后记",
       "updated_text": "2026-10-04",
       "url": "https://tw.linovelib.com/novel/1900.html",
       "cover": "https://tw.linovelib.com/files/article/image/1/1900/1900s.jpg?1791100189",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/1900/vol_337668.html"
+      "latest_url": "https://tw.linovelib.com/novel/1900/catalog",
+      "chapter_count": 1,
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "096312e6f4864e26",
@@ -475,213 +826,126 @@
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
       "title": "君主·埃爾梅羅二世的冒險",
-      "latest": "New 君主·埃尔梅罗二世的冒险 11 星冠密议（3）",
+      "latest": "第十一卷 星冠密议（3） 后记",
       "updated_text": "2026-10-04",
       "url": "https://tw.linovelib.com/novel/2926.html",
       "cover": "https://tw.linovelib.com/files/article/image/2/2926/2926s.jpg?1791053575",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/2926/vol_337653.html"
-    },
-    {
-      "id": "bea50475a828e50a",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "落魄的哥哥其實是最強的",
-      "latest": "最新更新",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/luopodegegeqishishizuiqiangde",
-      "cover": "https://sl.mangafunb.fun/l/luopodegegeqishishizuiqiangde/cover/1790965447.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "f0e1529fd43f8ed9",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "突然成爲公寓管理員",
-      "latest": "第84話",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/turanchengweigongyuguanliyuan",
-      "cover": "https://st.mangafunb.fun/t/turanchengweigongyuguanliyuan/cover/1781749712.png.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "9736ef72c972b12a",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "葬龍者潔",
-      "latest": "最新更新",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/zanglongzhejie",
-      "cover": "https://sz.mangafunb.fun/z/zanglongzhejie/cover/1713968062.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "c520a34c0846c4f8",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "天降托蒂！",
-      "latest": "第76話",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/tianjiangtuodi",
-      "cover": "https://st.mangafunb.fun/t/tianjiangtuodi/cover/1770387240.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "e8da697861dd5b58",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "鄰國來的新娘太可愛了該怎麼辦",
-      "latest": "第01卷",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/lgldxntkalgzmb",
-      "cover": "https://sl.mangafunb.fun/l/lgldxntkalgzmb/cover/1791121527.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "33ef3f944852a496",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "一千個。",
-      "latest": "最新更新",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/yiqiange",
-      "cover": "https://sy.mangafunb.fun/y/yiqiange/cover/1791121382.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "5b108ad406c86d5a",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "接吻練習？",
-      "latest": "最新更新",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/jiewenlianxi",
-      "cover": "https://sj.mangafunb.fun/j/jiewenlianxi/cover/1791121248.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "2a685c39fc417ed8",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "曉之神隱",
-      "latest": "第1.1話",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/xiaozhishengying",
-      "cover": "https://sx.mangafunb.fun/x/xiaozhishengying/cover/1791121120.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "209e4d5004c2209c",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "獸耳前輩的傳聞",
-      "latest": "最新更新",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/shouerqianbeidechuanwen",
-      "cover": "https://ss.mangafunb.fun/s/shouerqianbeidechuanwen/cover/1791120928.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "8597133c09dc11da",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "惡癖貴族努力奮鬥，打造出了真心相待的後宮",
-      "latest": "第01話",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/epgznlfddzclzxxddhg",
-      "cover": "https://se.mangafunb.fun/e/epgznlfddzclzxxddhg/cover/1791120784.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "510396b46e99de4a",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "朝霞下的香煙之吻",
-      "latest": "最新更新",
-      "updated_text": "2026-10-04",
-      "url": "https://www.mangacopy.com/comic/zhaoxiaxiadexyzhiwen",
-      "cover": "https://sz.mangafunb.fun/z/zhaoxiaxiadexyzhiwen/cover/1791120628.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "1a8954298d898b19",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "東京迷途魔法師",
-      "latest": "第三卷 后记",
-      "updated_text": "2026-10-03",
-      "url": "https://tw.linovelib.com/novel/5421.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5421/5421s.jpg?1791041323",
-      "latest_url": "https://tw.linovelib.com/novel/5421/catalog",
+      "latest_url": "https://tw.linovelib.com/novel/2926/catalog",
       "chapter_count": 1,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "6d7a0edf46896167",
+      "id": "02180b83543efcdd",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "古立特宇宙",
-      "latest": "番外篇 扩展宇宙 尾声 更加广阔的宇宙",
-      "updated_text": "2026-10-03",
-      "url": "https://tw.linovelib.com/novel/3713.html",
-      "cover": "https://tw.linovelib.com/files/article/image/3/3713/3713s.jpg?1791039291",
-      "latest_url": "https://tw.linovelib.com/novel/3713/catalog",
-      "chapter_count": 2,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "title": "轉生附體炮灰♂角色的我絕不放棄...",
+      "latest": "转生附体炮灰♂角色的我绝不放弃TS！ 鸣谢名单",
+      "updated_text": "2026-10-04",
+      "url": "https://tw.linovelib.com/novel/4774.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4774/4774s.jpg?1788685013",
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/4774/vol_292985.html"
     },
     {
-      "id": "ce63cb1553994a75",
+      "id": "c5651a7ad9dc9ca5",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "絕對劍感",
-      "latest": "第七卷 第82话 传言成真",
-      "updated_text": "2026-10-03",
-      "url": "https://tw.linovelib.com/novel/5245.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5245/5245s.jpg?1782491192",
-      "latest_url": "https://tw.linovelib.com/novel/5245/catalog",
-      "chapter_count": 1,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "title": "與攻陷了無數女生的海王交換了身體",
+      "latest": "New 与攻陷了无数女生的海王交换了身体 5",
+      "updated_text": "2026-10-04",
+      "url": "https://tw.linovelib.com/novel/4971.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4971/4971s.jpg?1786433314",
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/4971/vol_333241.html"
     },
     {
-      "id": "f045051847b9c435",
+      "id": "3766b582434073e5",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "平凡職業造就世界最強",
-      "latest": "后日谈最终篇 全世界防卫战③ 亲爱的邻居，我没有说谎哟",
-      "updated_text": "2026-10-03",
-      "url": "https://tw.linovelib.com/novel/71.html",
-      "cover": "https://tw.linovelib.com/files/article/image/0/71/71s.jpg?1750473482",
-      "latest_url": "https://tw.linovelib.com/novel/71/catalog",
-      "chapter_count": 2,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "title": "靠美容魔法開啟異世界冒險後宮",
+      "latest": "返回",
+      "updated_text": "2026-10-04",
+      "url": "https://tw.linovelib.com/novel/5414.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5414/5414s.jpg?1790708214",
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/"
     },
     {
-      "id": "31d31bbef2078d71",
+      "id": "0c3bc20f6242385b",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "想回到原世界的我，與絕對不想...",
-      "latest": "第二部 第57話　逐漸改變的人們",
+      "title": "御姐派的我，為何會喜歡上蘿莉...",
+      "latest": "New 御姐派的我，为何会喜欢上萝莉的你？ 2",
+      "updated_text": "2026-10-04",
+      "url": "https://tw.linovelib.com/novel/5243.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5243/5243s.jpg?1790876263",
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/5243/vol_337393.html"
+    },
+    {
+      "id": "250bb766bf330ce4",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "登峰路上的蒲公英",
+      "latest": "最新更新",
+      "updated_text": "2026-10-04",
+      "url": "https://www.mangacopy.com/comic/dengfenglushangdepugongying",
+      "cover": "https://sd.mangafunb.fun/d/dengfenglushangdepugongying/cover/1772204786.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "97a1a18f514d8e39",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "憑藉遊戲知識成為最強士兵，卻想隱藏真正的實力",
+      "latest": "最新更新",
+      "updated_text": "2026-10-04",
+      "url": "https://www.mangacopy.com/comic/pingjieyouxizhishichengweizuiqiangshibingquexiangyincangzhenzhengdeshili",
+      "cover": "https://sp.mangafunb.fun/p/pingjieyouxizhishichengweizuiqiangshibingquexiangyincangzhenzhengdeshili/cover/1770367383.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "bbd314f8ffa5aed3",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "秘密模式",
+      "latest": "第16话",
+      "updated_text": "2026-10-04",
+      "url": "https://www.mangacopy.com/comic/mimimoshi",
+      "cover": "https://sm.mangafunb.fun/m/mimimoshi/cover/1732510318.jpg.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "4d0430a0a528e303",
+      "type": "manga",
+      "source": "copymanga",
+      "source_label": "拷贝漫画 · CopyManga",
+      "title": "只是體檢而已",
+      "latest": "最新更新",
+      "updated_text": "2026-10-04",
+      "url": "https://www.mangacopy.com/comic/zstjey",
+      "cover": "https://sz.mangafunb.fun/z/zstjey/cover/1779671557.png.328x422.jpg",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "57dbf76295e9d8d2",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "中了40億圓樂透的我要搬到異世...",
+      "latest": "New 中了40亿圆乐透的我要搬到异世界去住了 8",
       "updated_text": "2026-10-03",
-      "url": "https://tw.linovelib.com/novel/5336.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5336/5336s.jpg?1791031859",
-      "latest_url": "https://tw.linovelib.com/novel/5336/catalog",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/2142.html",
+      "cover": "https://tw.linovelib.com/files/article/image/2/2142/2142s.jpg?1791041416",
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/2142/vol_337624.html"
     },
     {
       "id": "35000fe5ada3e375",
@@ -693,19 +957,7 @@
       "updated_text": "2026-10-03",
       "url": "https://www.mangacopy.com/comic/8yue31ridechangxia",
       "cover": "https://s0.mangafunb.fun/8/8yue31ridechangxia/cover/1749955769.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "12a3f880e530f05d",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "被認為隱藏了真正實力的精靈師，其實每次都全力以赴",
-      "latest": "最新更新",
-      "updated_text": "2026-10-03",
-      "url": "https://www.mangacopy.com/comic/brwyclzzsldjlsqsmcdqlyf",
-      "cover": "https://sb.mangafunb.fun/b/brwyclzzsldjlsqsmcdqlyf/cover/1790964020.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "9427c8b98b9263ac",
@@ -717,7 +969,7 @@
       "updated_text": "2026-10-03",
       "url": "https://www.mangacopy.com/comic/naoodngxueshenghui",
       "cover": "https://sn.mangafunb.fun/n/naoodngxueshenghui/cover/1785949380.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "431a8642c90458ff",
@@ -729,7 +981,7 @@
       "updated_text": "2026-10-03",
       "url": "https://www.mangacopy.com/comic/qbysmwmdz",
       "cover": "https://sq.mangafunb.fun/q/qbysmwmdz/cover/1782445067.png.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "15b4654ed1c6941e",
@@ -741,107 +993,20 @@
       "updated_text": "2026-10-03",
       "url": "https://www.mangacopy.com/comic/ongjuexiaojiedemimiqidao",
       "cover": "https://so.mangafunb.fun/o/ongjuexiaojiedemimiqidao/cover/1790531082.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "f15bf434f60abccb",
+      "id": "b98c404cc03f4356",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "同班同學的殘念系美少女，就算...",
-      "latest": "返回",
+      "title": "【悲報】大小姐系墊底迷宮實況...",
+      "latest": "New 【悲报】大小姐系垫底迷宫实况主没发现自己忘记关台就海扁同行 但对方似乎是新手最强的闹事系实况主，本小姐因此一夕爆红成为传说!? 5 (网译)",
       "updated_text": "2026-10-02",
-      "url": "https://tw.linovelib.com/novel/5412.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5412/5412s.jpg?1790686097",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/"
-    },
-    {
-      "id": "869d9a345047feaf",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "敗北女角太多了！",
-      "latest": "New 败北女角太多了！ 9",
-      "updated_text": "2026-10-02",
-      "url": "https://tw.linovelib.com/novel/3095.html",
-      "cover": "https://tw.linovelib.com/files/article/image/3/3095/3095s.jpg?1783845093",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/3095/vol_328281.html"
-    },
-    {
-      "id": "26d7918616e4428a",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "原本只是協助妹妹進行迷宮直播...",
-      "latest": "New 原本只是协助妹妹进行迷宫直播的我，不小心在对上S级怪物时大开无双，结果就变成这样了 2",
-      "updated_text": "2026-10-02",
-      "url": "https://tw.linovelib.com/novel/4905.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4905/4905s.jpg?1790924434",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/4905/vol_337501.html"
-    },
-    {
-      "id": "b32342415f0f2bce",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "身為爆肝上班族的我，與睽違七...",
-      "latest": "New 身为爆肝上班族的我，与睽违七年重逢的美少女JK开始同居 5",
-      "updated_text": "2026-10-02",
-      "url": "https://tw.linovelib.com/novel/3834.html",
-      "cover": "https://tw.linovelib.com/files/article/image/3/3834/3834s.jpg?1790924223",
-      "fetched_at": "2026-10-04T18:31:01Z",
-      "latest_url": "https://tw.linovelib.com/novel/3834/vol_337494.html"
-    },
-    {
-      "id": "469cf7df09af986f",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "讓本尊來毀滅世界臥槽這麼髒我回去了",
-      "latest": "第410话",
-      "updated_text": "2026-10-02",
-      "url": "https://www.mangacopy.com/comic/yanimao",
-      "cover": "https://sy.mangafunb.fun/y/yanimao/cover/1786036043.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "9c4a8d19e97e9d47",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "香格裡拉·弗隴提亞~屎作獵人向神作發起挑戰~",
-      "latest": "最新更新",
-      "updated_text": "2026-10-02",
-      "url": "https://www.mangacopy.com/comic/xianggelilafulongtiyashizuolierenxiangshenzuofaqit",
-      "cover": "https://sx.mangafunb.fun/x/xianggelilafulongtiyashizuolierenxiangshenzuofaqit/cover/1657687797.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "bbd314f8ffa5aed3",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "秘密模式",
-      "latest": "第15话",
-      "updated_text": "2026-10-02",
-      "url": "https://www.mangacopy.com/comic/mimimoshi",
-      "cover": "https://sm.mangafunb.fun/m/mimimoshi/cover/1732510318.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "d5833c06956f4e6f",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "劉伊琳在公園廁所裡",
-      "latest": "最新更新",
-      "updated_text": "2026-10-02",
-      "url": "https://www.mangacopy.com/comic/liuyilinzaigongceli",
-      "cover": "https://sl.mangafunb.fun/l/liuyilinzaigongceli/cover/1790258065.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/4057.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4057/4057s.jpg?1772635258",
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/4057/vol_298338.html"
     },
     {
       "id": "992ed7ea9aa11811",
@@ -853,7 +1018,7 @@
       "updated_text": "2026-10-02",
       "url": "https://www.mangacopy.com/comic/daxiaojiecaibuhuiwangedouyouxi",
       "cover": "https://sd.mangafunb.fun/d/daxiaojiecaibuhuiwangedouyouxi/cover/1651390259.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "0d8f91b1eff671fa",
@@ -865,7 +1030,7 @@
       "updated_text": "2026-10-01",
       "url": "https://www.mangacopy.com/comic/aidapigegongfangdeliangren",
       "cover": "https://sa.mangafunb.fun/a/aidapigegongfangdeliangren/cover/1775281329.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "e7d64a43051668bc",
@@ -877,7 +1042,7 @@
       "updated_text": "2026-10-01",
       "url": "https://www.mangacopy.com/comic/bdtsyfcrl",
       "cover": "https://sb.mangafunb.fun/b/bdtsyfcrl/cover/1733315959.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "982a2a317786d432",
@@ -889,7 +1054,7 @@
       "updated_text": "2026-10-01",
       "url": "https://www.mangacopy.com/comic/shenmingyuchulian",
       "cover": "https://ss.mangafunb.fun/s/shenmingyuchulian/cover/1780773566.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "f41718ce1ab199c1",
@@ -901,19 +1066,7 @@
       "updated_text": "2026-09-30",
       "url": "https://www.mangacopy.com/comic/chengfayouxi",
       "cover": "https://sc.mangafunb.fun/c/chengfayouxi/cover/1790764779.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "af5a9af380802b50",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "暴力萬歲",
-      "latest": "第71话",
-      "updated_text": "2026-09-28",
-      "url": "https://www.mangacopy.com/comic/baoliwansui",
-      "cover": "https://sb.mangafunb.fun/b/baoliwansui/cover/1741168027.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "4b1af9ef99163e16",
@@ -925,19 +1078,7 @@
       "updated_text": "2026-09-26",
       "url": "https://www.mangacopy.com/comic/chudaoyuxiaoqingjiaozhiyiriliaolitie",
       "cover": "https://sc.mangafunb.fun/c/chudaoyuxiaoqingjiaozhiyiriliaolitie/cover/1651122503.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "fcb673fb579c5ead",
-      "type": "manga",
-      "source": "copymanga",
-      "source_label": "拷贝漫画 · CopyManga",
-      "title": "魔都精兵的奴隸",
-      "latest": "第187话",
-      "updated_text": "2026-09-25",
-      "url": "https://www.mangacopy.com/comic/modujingbingdenuli",
-      "cover": "https://sm.mangafunb.fun/m/modujingbingdenuli/cover/1684896820.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "b4c20094ba453429",
@@ -949,7 +1090,7 @@
       "updated_text": "2026-09-24",
       "url": "https://www.mangacopy.com/comic/wuyanxiadeaertiemisi",
       "cover": "https://sw.mangafunb.fun/w/wuyanxiadeaertiemisi/cover/1745680447.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "eee8ce57923d41eb",
@@ -961,7 +1102,7 @@
       "updated_text": "2026-09-24",
       "url": "https://www.mangacopy.com/comic/hzpyszbsdekadjxzqmzmdwqglsytm",
       "cover": "https://sh.mangafunb.fun/h/hzpyszbsdekadjxzqmzmdwqglsytm/cover/1777035877.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "61350a691803b839",
@@ -973,7 +1114,7 @@
       "updated_text": "2026-09-23",
       "url": "https://www.mangacopy.com/comic/pingfandashumwnedbjyxmhsh",
       "cover": "https://sp.mangafunb.fun/p/pingfandashumwnedbjyxmhsh/cover/1782755853.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "514fd0078d2c96e0",
@@ -985,7 +1126,7 @@
       "updated_text": "2026-09-22",
       "url": "https://www.mangacopy.com/comic/youzhewugeyimeidewo",
       "cover": "https://sy.mangafunb.fun/y/youzhewugeyimeidewo/cover/1777617616.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "d47ff4349d5a3b30",
@@ -997,7 +1138,7 @@
       "updated_text": "2026-09-22",
       "url": "https://www.mangacopy.com/comic/qmzmgzszjdrtgxsfcl",
       "cover": "https://sq.mangafunb.fun/q/qmzmgzszjdrtgxsfcl/cover/1781183085.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "3756b06c05d5dfa2",
@@ -1009,7 +1150,7 @@
       "updated_text": "2026-09-19",
       "url": "https://www.mangacopy.com/comic/fanpaixiaoshaoyeqianfanbaijixiangyaogaibianderican",
       "cover": "https://sf.mangafunb.fun/f/fanpaixiaoshaoyeqianfanbaijixiangyaogaibianderican/cover/1662374569.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "7dfadb192f0f77db",
@@ -1021,7 +1162,7 @@
       "updated_text": "2026-09-17",
       "url": "https://www.mangacopy.com/comic/dashouugongyuyounikeniyadeshaonv",
       "cover": "https://sd.mangafunb.fun/d/dashouugongyuyounikeniyadeshaonv/cover/1658572955.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "a6237b9bceda4edb",
@@ -1033,7 +1174,7 @@
       "updated_text": "2026-09-17",
       "url": "https://www.mangacopy.com/comic/molikujiedeanjingling",
       "cover": "https://sm.mangafunb.fun/m/molikujiedeanjingling/cover/1766158267.jpeg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "ab01ca870110c374",
@@ -1045,7 +1186,7 @@
       "updated_text": "2026-08-31",
       "url": "https://www.mangacopy.com/comic/baqianliubeikuojiuhuizhangda",
       "cover": "https://sb.mangafunb.fun/b/baqianliubeikuojiuhuizhangda/cover/1751736890.jpg.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "1310ec4c53fa5159",
@@ -1057,7 +1198,20 @@
       "updated_text": "2026-08-30",
       "url": "https://www.mangacopy.com/comic/gongluejinlin",
       "cover": "https://sg.mangafunb.fun/g/gongluejinlin/cover/1749180833.png.328x422.jpg",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "92335bcc7773bd7a",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "關於我轉生變成史萊姆這檔事",
+      "latest": "关于我转生变成史莱姆这档事 23",
+      "updated_text": "2026-08-03",
+      "url": "https://tw.linovelib.com/novel/6.html",
+      "cover": null,
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/6/vol_331459.html"
     },
     {
       "id": "7492ef2d119dacae",
@@ -1069,8 +1223,34 @@
       "updated_text": "2026-01-21",
       "url": "https://tw.linovelib.com/novel/7.html",
       "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z",
+      "fetched_at": "2026-10-05T21:48:03Z",
       "latest_url": "https://tw.linovelib.com/novel/7/vol_1826.html"
+    },
+    {
+      "id": "ef19eb84ba1a9d8b",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "在地下城尋求邂逅是否搞錯了什麼",
+      "latest": "在地下城寻求邂逅是否搞错了什么 21",
+      "updated_text": "2026-01-13",
+      "url": "https://tw.linovelib.com/novel/3.html",
+      "cover": null,
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/3/vol_304061.html"
+    },
+    {
+      "id": "d830dd4acfb3411c",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "問題兒童都來自異世界?",
+      "latest": "问题儿童都来自异世界? 短篇",
+      "updated_text": "2025-11-21",
+      "url": "https://tw.linovelib.com/novel/5.html",
+      "cover": null,
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/5/vol_1359.html"
     },
     {
       "id": "afe09d3f374dd1de",
@@ -1082,8 +1262,59 @@
       "updated_text": "2024-04-09",
       "url": "https://tw.linovelib.com/novel/8.html",
       "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z",
+      "fetched_at": "2026-10-05T21:48:03Z",
       "latest_url": "https://tw.linovelib.com/novel/8/vol_2020.html"
+    },
+    {
+      "id": "0b4bc94944a0d2ed",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "果然我的青春戀愛喜劇搞錯了",
+      "latest": "果然我的青春恋爱喜剧搞错了 DB特典 高三篇 新6",
+      "updated_text": "2024-03-18",
+      "url": "https://tw.linovelib.com/novel/2.html",
+      "cover": null,
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/2/vol_146495.html"
+    },
+    {
+      "id": "e974a33fa55280f0",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "惡魔高校DxD",
+      "latest": "恶魔高校DxD 短篇集 DX.7 祖先大人是捣蛋鬼？",
+      "updated_text": "2024-02-25",
+      "url": "https://tw.linovelib.com/novel/1.html",
+      "cover": null,
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/1/vol_184339.html"
+    },
+    {
+      "id": "8dceeb8b2fec8e8b",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "精靈使的劍舞",
+      "latest": "精灵使的剑舞 20 共鸣之圣魔剑",
+      "updated_text": "2024-01-11",
+      "url": "https://tw.linovelib.com/novel/4.html",
+      "cover": null,
+      "fetched_at": "2026-10-05T21:48:03Z",
+      "latest_url": "https://tw.linovelib.com/novel/4/vol_1206.html"
+    },
+    {
+      "id": "7cdf8613baf56d80",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "甜蜜陷阱！～攻陷召喚勇者的美...",
+      "latest": "最新更新",
+      "updated_text": "",
+      "url": "https://tw.linovelib.com/novel/5303.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5303/5303s.jpg?1791205402",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "5a1e01c20215c4b8",
@@ -1095,55 +1326,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/4279.html",
       "cover": "https://tw.linovelib.com/files/article/image/4/4279/4279s.jpg?1789737354",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "02180b83543efcdd",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "轉生附體炮灰♂角色的我絕不放棄...",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/4774.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4774/4774s.jpg?1788685013",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "c5651a7ad9dc9ca5",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "與攻陷了無數女生的海王交換了身體",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/4971.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4971/4971s.jpg?1786433314",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "3766b582434073e5",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "靠美容魔法開啟異世界冒險後宮",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5414.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5414/5414s.jpg?1790708214",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "0c3bc20f6242385b",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "御姐派的我，為何會喜歡上蘿莉...",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5243.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5243/5243s.jpg?1790876263",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "7e001954642de828",
@@ -1155,19 +1338,55 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5422.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5422/5422s.jpg?1791052491",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "57dbf76295e9d8d2",
+      "id": "1a8954298d898b19",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "中了40億圓樂透的我要搬到異世...",
+      "title": "東京迷途魔法師",
       "latest": "最新更新",
       "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/2142.html",
-      "cover": "https://tw.linovelib.com/files/article/image/2/2142/2142s.jpg?1791041416",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/5421.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5421/5421s.jpg?1791041323",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "6d7a0edf46896167",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "古立特宇宙",
+      "latest": "最新更新",
+      "updated_text": "",
+      "url": "https://tw.linovelib.com/novel/3713.html",
+      "cover": "https://tw.linovelib.com/files/article/image/3/3713/3713s.jpg?1791039291",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "ce63cb1553994a75",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "絕對劍感",
+      "latest": "最新更新",
+      "updated_text": "",
+      "url": "https://tw.linovelib.com/novel/5245.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5245/5245s.jpg?1782491192",
+      "fetched_at": "2026-10-05T21:48:03Z"
+    },
+    {
+      "id": "f045051847b9c435",
+      "type": "novel",
+      "source": "linovelib",
+      "source_label": "BiliNovel / Linovelib",
+      "title": "平凡職業造就世界最強",
+      "latest": "最新更新",
+      "updated_text": "",
+      "url": "https://tw.linovelib.com/novel/71.html",
+      "cover": "https://tw.linovelib.com/files/article/image/0/71/71s.jpg?1750473482",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "f585b8231db9688a",
@@ -1179,19 +1398,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/4699.html",
       "cover": "https://tw.linovelib.com/files/article/image/4/4699/4699s.jpg?1768161808",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "247e0550ab68d735",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "唯獨不會選擇你",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5271.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5271/5271s.jpg?1784188384",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "a60e6060c37af1c8",
@@ -1203,7 +1410,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/4672.html",
       "cover": "https://tw.linovelib.com/files/article/image/4/4672/4672s.jpg?1789562816",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "77dbfe2f02995401",
@@ -1215,7 +1422,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/4441.html",
       "cover": "https://tw.linovelib.com/files/article/image/4/4441/4441s.jpg?1790968758",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "422870d50547a025",
@@ -1227,7 +1434,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5420.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5420/5420s.jpg?1790965578",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "8adee9bb821fae3b",
@@ -1239,7 +1446,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5304.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5304/5304s.jpg?1789961223",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "e4d7fc38aa2908f1",
@@ -1251,7 +1458,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/3483.html",
       "cover": "https://tw.linovelib.com/files/article/image/3/3483/3483s.jpg?1790606695",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "4442ae510a0debd1",
@@ -1263,7 +1470,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5276.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5276/5276s.jpg?1784917273",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "96093a982ba03f4a",
@@ -1275,79 +1482,55 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/3645.html",
       "cover": "https://tw.linovelib.com/files/article/image/3/3645/3645s.jpg?1789465764",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "e974a33fa55280f0",
+      "id": "f15bf434f60abccb",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "惡魔高校DxD",
+      "title": "同班同學的殘念系美少女，就算...",
       "latest": "最新更新",
       "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/1.html",
-      "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/5412.html",
+      "cover": "https://tw.linovelib.com/files/article/image/5/5412/5412s.jpg?1790686097",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "0b4bc94944a0d2ed",
+      "id": "869d9a345047feaf",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "果然我的青春戀愛喜劇搞錯了",
+      "title": "敗北女角太多了！",
       "latest": "最新更新",
       "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/2.html",
-      "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/3095.html",
+      "cover": "https://tw.linovelib.com/files/article/image/3/3095/3095s.jpg?1783845093",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "ef19eb84ba1a9d8b",
+      "id": "26d7918616e4428a",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "在地下城尋求邂逅是否搞錯了什麼",
+      "title": "原本只是協助妹妹進行迷宮直播...",
       "latest": "最新更新",
       "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/3.html",
-      "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/4905.html",
+      "cover": "https://tw.linovelib.com/files/article/image/4/4905/4905s.jpg?1790924434",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
-      "id": "8dceeb8b2fec8e8b",
+      "id": "b32342415f0f2bce",
       "type": "novel",
       "source": "linovelib",
       "source_label": "BiliNovel / Linovelib",
-      "title": "精靈使的劍舞",
+      "title": "身為爆肝上班族的我，與睽違七...",
       "latest": "最新更新",
       "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/4.html",
-      "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "d830dd4acfb3411c",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "問題兒童都來自異世界?",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5.html",
-      "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "92335bcc7773bd7a",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "關於我轉生變成史萊姆這檔事",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/6.html",
-      "cover": null,
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "url": "https://tw.linovelib.com/novel/3834.html",
+      "cover": "https://tw.linovelib.com/files/article/image/3/3834/3834s.jpg?1790924223",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "b0fce3db252f351a",
@@ -1359,7 +1542,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5419.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5419/5419s.jpg?1790923633",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "4e1f3b9b7930324c",
@@ -1371,7 +1554,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5415.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5415/5415s.jpg?1790753299",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "142c6cb6598b0dec",
@@ -1382,8 +1565,8 @@
       "latest": "最新更新",
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/4678.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4678/4678s.jpg?1790638257",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "cover": "https://tw.linovelib.com/files/article/image/4/4678/4678s.jpg?1791189794",
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "a6e70a10d2ea93e8",
@@ -1395,7 +1578,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/5418.html",
       "cover": "https://tw.linovelib.com/files/article/image/5/5418/5418s.jpg?1790877529",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     },
     {
       "id": "227bab4e0060f5a3",
@@ -1407,163 +1590,7 @@
       "updated_text": "",
       "url": "https://tw.linovelib.com/novel/2090.html",
       "cover": "https://tw.linovelib.com/files/article/image/2/2090/2090s.jpg?1790876874",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "b98c404cc03f4356",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "【悲報】大小姐系墊底迷宮實況...",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/4057.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4057/4057s.jpg?1772635258",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "db9523dead98f064",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "講話沒大沒小的正妹學妹，撒起...",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5197.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5197/5197s.jpg?1790848181",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "fd246901d706883d",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "新說 狼與辛香料 狼與羊皮紙",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/2294.html",
-      "cover": "https://tw.linovelib.com/files/article/image/2/2294/2294s.jpg?1790847935",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "48300fc50b4df25d",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "靈犀的述夢人",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5045.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5045/5045s.jpg?1786959487",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "f67dba4c53f04cc2",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "七星降靈學園的惡魔",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/2051.html",
-      "cover": "https://tw.linovelib.com/files/article/image/2/2051/2051s.jpg?1790844615",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "6e837cd653bc90d7",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "十字架×王の證",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/2076.html",
-      "cover": "https://tw.linovelib.com/files/article/image/2/2076/2076s.jpg?1790841105",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "587e40e660fc4706",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "落後的馴獸師慢生活",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5291.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5291/5291s.jpg?1790826459",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "b00efbd8cef08b2e",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "心靈感應 x 超妹妹",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/4222.html",
-      "cover": "https://tw.linovelib.com/files/article/image/4/4222/4222s.jpg?1784472454",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "99774e744b177de5",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "怪人的沙拉碗",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/3523.html",
-      "cover": "https://tw.linovelib.com/files/article/image/3/3523/3523s.jpg?1790794689",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "ba5a485a440c3028",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "秋津皇國興亡記",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5060.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5060/5060s.jpg?1787303691",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "791d271012f46281",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "探索者",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5251.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5251/5251s.jpg?1790490001",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "f18b1fda2e2885fe",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "這是你與我的最後戰場，或是開...",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/2380.html",
-      "cover": "https://tw.linovelib.com/files/article/image/2/2380/2380s.jpg?1790757774",
-      "fetched_at": "2026-10-04T18:31:01Z"
-    },
-    {
-      "id": "3e70044f62fb4f31",
-      "type": "novel",
-      "source": "linovelib",
-      "source_label": "BiliNovel / Linovelib",
-      "title": "奪戀教室 在男女比例崩壞的世界...",
-      "latest": "最新更新",
-      "updated_text": "",
-      "url": "https://tw.linovelib.com/novel/5392.html",
-      "cover": "https://tw.linovelib.com/files/article/image/5/5392/5392s.jpg?1790361007",
-      "fetched_at": "2026-10-04T18:31:01Z"
+      "fetched_at": "2026-10-05T21:48:03Z"
     }
   ],
   "sources": {
@@ -1571,7 +1598,7 @@
       "label": "漫画柜",
       "ok": true,
       "count": 20,
-      "checked_at": "2026-10-04T18:31:01Z",
+      "checked_at": "2026-10-05T21:48:03Z",
       "date_complete": 20,
       "date_missing": 0
     },
@@ -1579,15 +1606,15 @@
       "label": "BiliNovel / Linovelib",
       "ok": true,
       "count": 60,
-      "checked_at": "2026-10-04T18:31:01Z",
-      "date_complete": 20,
-      "date_missing": 40
+      "checked_at": "2026-10-05T21:48:03Z",
+      "date_complete": 36,
+      "date_missing": 24
     },
     "copymanga": {
       "label": "拷贝漫画 · CopyManga",
       "ok": true,
       "count": 48,
-      "checked_at": "2026-10-04T18:31:01Z",
+      "checked_at": "2026-10-05T21:48:03Z",
       "date_complete": 48,
       "date_missing": 0
     }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T20:26:01Z",
+  "generated_at": "2026-10-08T20:28:51Z",
   "chart_date": "2026/10/07",
   "weekly_chart": [
     {
@@ -207,8 +207,8 @@
       "is_new": true,
       "title": "Variety",
       "artist": "Mrs.GREEN APPLE",
-      "artwork": "https://www.billboard-japan.com/scale/jackets/00000098/202x_P2_G5771172W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/491746",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000090/202x_image90523.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/688845",
       "youtube_music_url": "https://music.youtube.com/search?q=Variety+Mrs.GREEN+APPLE"
     },
     {
@@ -440,8 +440,8 @@
       "album": "",
       "release_date": "",
       "period": "本周新进榜",
-      "artwork": "https://www.billboard-japan.com/scale/jackets/00000098/202x_P2_G5771172W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/491746",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000090/202x_image90523.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/688845",
       "youtube_music_url": "https://music.youtube.com/search?q=Variety+Mrs.GREEN+APPLE",
       "source": "billboard_debut",
       "source_label": "Billboard JAPAN · 本周新进榜"
@@ -610,8 +610,8 @@
       "album": "",
       "release_date": "",
       "period": "本周新进榜",
-      "artwork": "https://www.billboard-japan.com/scale/jackets/00000098/202x_P2_G5771172W.JPG",
-      "url": "https://www.billboard-japan.com/goods/detail/491746",
+      "artwork": "https://www.billboard-japan.com/scale/rankinfo/00000090/202x_image90523.jpg",
+      "url": "https://www.billboard-japan.com/artists/detail/688845",
       "youtube_music_url": "https://music.youtube.com/search?q=Variety+Mrs.GREEN+APPLE",
       "source": "billboard_debut",
       "source_label": "Billboard JAPAN · 本周新进榜"
@@ -678,13 +678,13 @@
       "label": "Billboard JAPAN Hot 100",
       "ok": true,
       "count": 30,
-      "checked_at": "2026-10-07T20:26:01Z"
+      "checked_at": "2026-10-08T20:28:51Z"
     },
     "apple_music_weekly_new": {
       "label": "Apple Music Japan · 本周新曲",
       "ok": true,
       "count": 12,
-      "checked_at": "2026-10-07T20:26:01Z",
+      "checked_at": "2026-10-08T20:28:51Z",
       "fallback": "Billboard JAPAN Hot 100 本周新进榜",
       "error": "RuntimeError: Apple Music Best New Songs heading not found"
     }

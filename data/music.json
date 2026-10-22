@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T19:06:06Z",
+  "generated_at": "2026-10-22T19:12:25Z",
   "chart_date": "",
   "weekly_chart": [],
   "new_releases": [],
@@ -9,14 +9,14 @@
       "label": "Billboard JAPAN Hot 100",
       "ok": false,
       "count": 0,
-      "checked_at": "2026-10-21T19:06:06Z",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.billboard-japan.com', port=443): Max retries exceeded with url: /charts/detail?a=hot100 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.billboard-japan.com', port=443) at 0x7f5677ce59d0>, 'Connection to www.billboard-japan.com timed out. (connect timeout=30)'))"
+      "checked_at": "2026-10-22T19:12:25Z",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.billboard-japan.com', port=443): Max retries exceeded with url: /charts/detail?a=hot100 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.billboard-japan.com', port=443) at 0x7f0aea9f1af0>, 'Connection to www.billboard-japan.com timed out. (connect timeout=30)'))"
     },
     "apple_music_weekly_new": {
       "label": "Apple Music Japan · 本周新曲",
       "ok": false,
       "count": 0,
-      "checked_at": "2026-10-21T19:06:06Z",
+      "checked_at": "2026-10-22T19:12:25Z",
       "fallback": "",
       "error": "RuntimeError: Apple Music Best New Songs heading not found"
     }

@@ -16,7 +16,7 @@ const fmt=d=>{if(!d)return '—';const x=new Date(d);if(Number.isNaN(+x))return 
 const relativeTime=d=>{if(!d)return '';const x=new Date(d);if(Number.isNaN(+x))return '';const sec=Math.max(0,(Date.now()-x)/1000);if(sec<3600)return `${Math.max(1,Math.floor(sec/60))} 分钟前`;if(sec<86400)return `${Math.floor(sec/3600)} 小时前`;if(sec<86400*7)return `${Math.floor(sec/86400)} 天前`;return new Intl.DateTimeFormat('zh-CN',{month:'numeric',day:'numeric'}).format(x)};
 function loadLocalArray(key){try{const x=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(x)?x:[]}catch{return []}}
 function saveLocalArray(key,value){localStorage.setItem(key,JSON.stringify(value))}
-async function loadJSON(url,fallback){try{const r=await fetch(`${url}?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw 0;return await r.json()}catch{return fallback}}
+async function loadJSON(url,fallback){if(url.startsWith('data/')){const name=url.slice(5);const api=['site-updates.json','music.json','game-releases.json'].includes(name)?'https://pt-universe-api.summer07-nanjolno.workers.dev/api/data/'+name:'https://ximinhu66.github.io/PT-Universe/apps/tsugi-checker/'+url;try{const r=await fetch(api+'?v='+Date.now(),{cache:'no-store'});if(r.ok)return await r.json()}catch{}}try{const r=await fetch(`${url}?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw 0;return await r.json()}catch{return fallback}}
 function normalizeUrl(raw){try{const u=new URL(raw,location.href);u.hash='';u.search='';return u.href.replace(/\/$/,'')}catch{return String(raw||'').replace(/[?#].*$/,'').replace(/\/$/,'')}}
 function workKey(x){return `${x.source||''}|${normalizeUrl(x.url||'')}`}
 function updateToken(x){return `${x.latest_url||''}|${x.latest||x.latest_chapter||''}|${x.chapter_count||''}`}
@@ -246,3 +246,4 @@ $('#search').addEventListener('input',e=>{state.query=e.target.value.trim();rend
 $('#refreshBtn').onclick=load;$('#themeBtn').onclick=()=>applyTheme(document.documentElement.dataset.theme==='light'?'dark':'light');$('#markAllRead').onclick=()=>{[...(state.feed?.updates||[]),...state.localUpdates].forEach(x=>state.read.add(x.id));saveRead();renderLibraryUpdates()};
 $('#artistSearchBtn').onclick=runArtistSearch;$('#artistSearchInput').addEventListener('keydown',e=>{if(e.key==='Enter')runArtistSearch()});$('#refreshArtistsBtn').onclick=renderFollowedArtists;
 applyTheme(document.documentElement.dataset.theme||'dark');load();
+

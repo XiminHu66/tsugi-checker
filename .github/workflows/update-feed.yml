@@ -1,149 +1,34 @@
-name: Update feed & deploy Pages
-
-on:
+name: Deploy legacy page (canonical PT data)
+'on':
   push:
-    branches: [main]
-  workflow_dispatch:
-  schedule:
-    # Primary daily refresh at 08:00 Pacific. GitHub handles PST/PDT.
-    - cron: "0 8 * * *"
-      timezone: "America/Los_Angeles"
-    # Retry at 08:30. It skips scraping when the 08:00 run already succeeded.
-    - cron: "30 8 * * *"
-      timezone: "America/Los_Angeles"
-
+    branches:
+    - main
+    paths:
+    - index.html
+    - app.js
+    - '*.css'
+    - web/**
+  workflow_dispatch: {}
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
-
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
-
 jobs:
-  update-and-build:
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Decide whether to refresh sources
-        id: mode
-        shell: bash
-        run: |
-          EVENT="${{ github.event_name }}"
-          MESSAGE="${{ github.event.head_commit.message }}"
-
-          if [[ "$EVENT" == "workflow_dispatch" || "$MESSAGE" == *"[refresh]"* ]]; then
-            echo "scrape=true" >> "$GITHUB_OUTPUT"
-            echo "reason=manual_or_refresh_commit" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          if [[ "$EVENT" != "schedule" ]]; then
-            echo "scrape=false" >> "$GITHUB_OUTPUT"
-            echo "reason=deploy_only_push" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # Read the latest main branch so the 08:30 retry can see a successful
-          # 08:00 refresh even if this scheduled run started from an older SHA.
-          git fetch origin main --quiet
-          if git show origin/main:data/site-updates.json > /tmp/tsugi-site-updates.json 2>/dev/null; then
-            if python - <<'PY'
-          import json, sys
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-
-          tz = ZoneInfo("America/Los_Angeles")
-          now = datetime.now(tz)
-          try:
-              data = json.load(open("/tmp/tsugi-site-updates.json", encoding="utf-8"))
-              raw = data.get("generated_at") or ""
-              refreshed = datetime.fromisoformat(raw.replace("Z", "+00:00")).astimezone(tz)
-              fresh = refreshed.date() == now.date() and refreshed.hour >= 8
-          except Exception:
-              fresh = False
-          sys.exit(0 if fresh else 1)
-          PY
-            then
-              echo "scrape=false" >> "$GITHUB_OUTPUT"
-              echo "reason=already_refreshed_after_08_today" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-          fi
-
-          echo "scrape=true" >> "$GITHUB_OUTPUT"
-          echo "reason=scheduled_08_refresh_needed" >> "$GITHUB_OUTPUT"
-
-      - name: Show refresh decision
-        run: |
-          echo "scrape=${{ steps.mode.outputs.scrape }}"
-          echo "reason=${{ steps.mode.outputs.reason }}"
-
-      - name: Setup Python
-        if: steps.mode.outputs.scrape == 'true'
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Install dependencies
-        if: steps.mode.outputs.scrape == 'true'
-        run: |
-          pip install -r requirements.txt
-          python -m playwright install --with-deps chromium
-
-      - name: Refresh reading, music, games and news feeds
-        if: steps.mode.outputs.scrape == 'true'
-        run: |
-          python scraper/main.py
-          python scraper/site_dates.py
-          python scraper/steam_pc.py
-          python scraper/game_enrich.py
-
-      - name: Commit refreshed data
-        if: steps.mode.outputs.scrape == 'true'
-        run: |
-          git config user.name "tsugi-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/feed.json data/feed.xml data/state.json data/site-updates.json data/acg-news.json data/music.json data/game-releases.json data/game-state.json
-          if git diff --cached --quiet; then
-            echo "No data changes"
-          else
-            git commit -m "chore: refresh reading feed"
-            git pull --rebase -X theirs origin main
-            git push origin HEAD:main
-          fi
-
-      - name: Prepare static site
-        run: |
-          rm -rf _site
-          mkdir -p _site/config _site/data
-          cp index.html styles.css v5.css app.js games.css games.js ui-settings.css ui-settings.js _site/
-          touch _site/.nojekyll
-          cp config/library.json config/content.json _site/config/
-          cp data/feed.json data/feed.xml data/site-updates.json data/acg-news.json data/music.json data/game-releases.json _site/data/
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: _site
-
   deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: update-and-build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - uses: actions/checkout@v4
+    - uses: actions/configure-pages@v5
+    - uses: actions/upload-pages-artifact@v3
+      with:
+        path: .
+        retention-days: 1
+    - uses: actions/deploy-pages@v4
+      id: deployment
